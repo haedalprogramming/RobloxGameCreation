@@ -1,10 +1,12 @@
 # RobloxGameCreation
 로블록스로 배우는 게임 제작 기초
 
+# Goal
+게임 제작의 기초를 이해하고 로블록스를 이용하여 기초 게임을 만드는 실습을 한다.
+
 # Target
- - 로블록스 이해
- - lua 언어 기초 사용법 익히기
- - 로블록스 엔진 조작
+ - 게임개발의 기초를 알고 싶은 사람
+ - 로블록스로 게임을 제작해 보고 싶은 사람
 
 # Contents
 
@@ -26,10 +28,11 @@
     - Construct Your World
     - Optimize Your Experience
     
- - 4일차 : Experience Tutorials - Gameplay Scripting Curriculum
+ - 4일차 : Experience Tutorials - Gameplay Scripting Curriculum & 간단한 게임 제작 실습
     - Spawning and Respawning
     - Implementing Blaster Behavior
     - Detecting Hits
+    - 게임 제작 실습
 
 
 # Reference
