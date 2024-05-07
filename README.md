@@ -16,24 +16,37 @@
     - Creating Your First Experience
     - Coding Fundamentals
     
- - 2일차 : Experience Tutorials - Core
+ - 2일차 : Experience Tutorials 1
     - Build a gray box
     - Script the Gameplay
     - Polish the Experience
-
- - 3일차 : Experience Tutorials - Environmental Art
     - Greybox Your Environment
     - Develop Polished Assets
     - Assemble an Asset Library
     - Construct Your World
     - Optimize Your Experience
-    
- - 4일차 : Experience Tutorials - Gameplay Scripting Curriculum & 간단한 게임 제작 실습
-    - Spawning and Respawning
-    - Implementing Blaster Behavior
-    - Detecting Hits
-    - 게임 제작 실습
+
+ - 3일차 : Experience Tutorials 2 && Avatar
+    - Experience Tutorials
+      - Spawning and Respawning
+      - Implementing Blaster Behavior
+      - Detecting Hits
+    - Avatar
+      - Avatar Editor Service
+      - Avatar Inspect Menu
+      - Avatar Context Menu
+      - Disabling Default UI Elements
+
+ - 4일차 : Adventure Game 만들기 및 배포
+    - Roblox Developer 101
+    - 게시
+    - 홍보
+    - 수익 창출
+    - 로컬라이제이션
+    - 에널리틱스
+    - 커뮤니티
 
 
 # Reference
  - https://create.roblox.com/docs/ko-kr/get-started
+ - https://create.roblox.com/docs/ko-kr/education/lesson-plans/roblox-developer/landing
