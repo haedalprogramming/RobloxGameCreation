@@ -51,4 +51,4 @@ Roblox Studio를 설치하려면 다음 단계를 따르세요:
 ## 출처
  - [Roblox Studio 설치하기](https://create.roblox.com/docs/ko-kr/studio/setting-up-roblox-studio)
 ---
-## [다음](./03_Lua_programmimg_basic.md)
+## [다음](./03_Creating_Your_First_Experience.md)
