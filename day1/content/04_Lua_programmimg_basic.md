@@ -5408,4 +5408,4 @@ end
 ## 출처
  - [Coding Fundamentals](https://create.roblox.com/docs/ko-kr/tutorials/fundamentals/coding-1/coding-fundamentals)
 ---
-## [다음](./04_Roblox_tutorial.md)
+## [다음](./05_Roblox_tutorial.md)
