@@ -88,9 +88,61 @@
       - [플레이스홀더 재료 적용](#플레이스홀더-재료-적용)
       - [레이아웃 테스트](#레이아웃-테스트)
     - [Chapter 2 - Develop Polished Assets](#chapter-2---develop-polished-assets)
+      - [예술 스타일 선택](#예술-스타일-선택)
+      - [텍스처 디자인](#텍스처-디자인)
+        - [타일 가능한 텍스처](#타일-가능한-텍스처)
+        - [트림 시트](#트림-시트)
+      - [모듈형 키트 디자인](#모듈형-키트-디자인)
+      - [소품 디자인](#소품-디자인)
     - [Chapter 3 - Assemble an Asset Library](#chapter-3---assemble-an-asset-library)
+      - [사용자 정의 재료 만들기](#사용자-정의-재료-만들기)
+      - [SurfaceAppearance 패키지 만들기](#surfaceappearance-패키지-만들기)
+      - [모듈형 에셋 및 소품 가져오기](#모듈형-에셋-및-소품-가져오기)
+      - [SurfaceAppearance 데이터 적용](#surfaceappearance-데이터-적용)
+      - [물리 및 렌더링 매개 변수 설정](#물리-및-렌더링-매개-변수-설정)
+        - [고정됨](#고정됨)
+        - [충돌 가능](#충돌-가능)
+        - [터치 가능](#터치-가능)
+        - [쿼리 가능](#쿼리-가능)
+        - [그림자 캐스팅](#그림자-캐스팅)
+        - [양면 렌더링](#양면-렌더링)
+        - [충돌 충실도](#충돌-충실도)
+        - [렌더링 충실도](#렌더링-충실도)
+      - [에셋을 패키지로 변환하기](#에셋을-패키지로-변환하기)
     - [Chapter 4 - Construct Your World](#chapter-4---construct-your-world)
+      - [에셋 라이브러리 적용하기](#에셋-라이브러리-적용하기)
+        - [바닥](#바닥)
+        - [스폰 존](#스폰-존-1)
+        - [전투 포켓](#전투-포켓)
+        - [외곽 복도](#외곽-복도)
+        - [문](#문)
+        - [외부 에셋](#외부-에셋)
+          - [타워](#타워)
+          - [기둥](#기둥)
+          - [화분](#화분)
+        - [지붕](#지붕)
+          - [천창](#천창)
+          - [천장](#천장)
+          - [상단 지붕](#상단-지붕)
+          - [오버행](#오버행)
+          - [트림](#트림)
+      - [불필요한 기하학 삭제](#불필요한-기하학-삭제)
+      - [지형 조각하기](#지형-조각하기)
+      - [플레이 가능한 영역 포함](#플레이-가능한-영역-포함)
+      - [특수 효과 구성](#특수-효과-구성)
+        - [배경 구름](#배경-구름)
+        - [전경 구름](#전경-구름)
+        - [먼지 입자](#먼지-입자)
+      - [조명 소스 구성](#조명-소스-구성)
+        - [전역 조명](#전역-조명)
+        - [로컬 조명](#로컬-조명)
     - [Chapter 5 - Optimize Your Experience](#chapter-5---optimize-your-experience)
+      - [물리 및 렌더링 매개변수 검토](#물리-및-렌더링-매개변수-검토)
+      - [비본질적 콘텐츠 제거](#비본질적-콘텐츠-제거)
+        - [중복 텍스처 제거](#중복-텍스처-제거)
+        - [기하학 최적화](#기하학-최적화)
+        - [중첩된 투명도 삭제](#중첩된-투명도-삭제)
+  - [Gameplay Scripting](#gameplay-scripting)
   - [출처](#출처)
   - [다음](#다음)
 
@@ -3838,11 +3890,4801 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 ### Chapter 2 - Develop Polished Assets
 
+**정교한 자산 개발**은 그레이박스 환경을 대체하거나 변환하여 경험의 미적 목표와 게임 디자인 요구 사항을 충족시키기 위해 고품질 자산을 계획하고 만드는 과정입니다. 그레이박스 과정에서 3D 공간에 자산을 배치하는 기본 아이디어를 얻은 후, 환경을 생동감 있게 만들기 위해 필요한 자산이 무엇인지 시각화하는 것이 훨씬 쉬워집니다.
+
+[환경 예술 자산 라이브러리](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library)를 참조하여, 이 섹션에서는 기본 그레이박스 레이아웃을 미래 지향적인 레이저 태그 환경으로 전환하는 데 필요한 준비 과정을 안내합니다. 여기에는 다음과 같은 지침이 포함됩니다:
+
+- 디자인 프로세스에서 자산을 만들기 위한 모든 결정을 영향을 미치는 예술 스타일 선택.
+- 타일 가능한 텍스처, 트림 시트, 모듈형 키트 및 소품을 설계하여 예술 스타일에 맞게 통일성 있게 만들기.
+
+이 섹션을 완료한 후, 추가 지형, 광원 및 특수 효과를 사용하여 3D 공간에 모든 정교한 자산을 배치하고, 환경에 캐릭터와 스토리텔링 요소를 추가하는 방법을 배우게 됩니다.
+
+<img src="../img/05_Roblox_tutorial/Overview.png" alt="An polished group of assets that make up an entryway." width="100%"/>
+
+<Alert severity="info">
+    자산을 정교하게 다듬고 환경을 구성하는 과정은 처음 아이디어에서 최종 아트까지의 직선 경로처럼 보이지 않는 경우가 많습니다. 각 단계 간의 반복 작업은 정상이며 개발 과정에서 거의 항상 필요합니다.
+</Alert>
+
+#### 예술 스타일 선택
+
+디자인 프로세스의 시작에서 예술 스타일을 선택하면 자산의 미적 처리를 위한 주요 기준점을 가질 수 있습니다. 이를 시각적 기본 규칙으로 간주하고 자산을 디자인할 때마다 참고하여 환경이 전달하고자 하는 내용을 사용자에게 항상 알려줄 수 있도록 합니다. 효과적인 예술 스타일은 사용자가 플레이하는 세계에 대한 정보, 예를 들어 기후, 풍부한 역사 또는 기술과의 관계 등을 제공합니다.
+
+많은 개발자는 분위기 또는 테마 보드를 만들고, 원하는 세계의 시각적 표현을 얻을 때까지 필요한 만큼의 사진을 추가합니다. 예를 들어, 최종 샘플 레이저 태그 환경의 예술 스타일은 3D 공간의 주요 요소, 예를 들어 무성한 초목, 둥근 프레임, 직사각형 콘크리트 형태 및 스타일이 통일된 금속 장식을 참조합니다. 사용자가 참조 이미지를 직접 보지 못할 수도 있지만, 세계의 정체성에서 그 영향력을 느낄 수 있습니다.
+
+<img src="../img/05_Roblox_tutorial/Art-Style.png" alt="A collage of reference images for the sample laser tag experience." width="80%"/>
+
+#### 텍스처 디자인
+
+이제 경험을 위한 예술 스타일이 마련되었으므로 레이아웃을 검토하고 3D 공간의 재료를 만들기 위해 필요한 텍스처를 파악할 시간입니다. 환경은 종종 넓은 표면을 덮을 수 있는 텍스처와 추가 기하학적 요소 없이 자산에 세부 사항을 제공할 수 있는 텍스처가 필요합니다. 예를 들어, 그레이박스 환경은 야외 공간을 덮을 수 있는 이끼, 꽃 및 돌과 같은 텍스처와, 문틀에 패널 및 볼트와 같은 세부 사항을 제공하는 텍스처가 필요합니다.
+
+이 요구 사항을 충족시키기 위해 사용할 수 있는 두 가지 고급 텍스처링 방법은 타일 가능한 텍스처와 트림 시트입니다. 다음 섹션에서는 이 두 가지 텍스처 방법에 대한 정보와 지침을 제공하며, [크리에이터 스토어](../../production/creator-store.md)에서 텍스처를 찾거나 타사 도구에서 디자인할 때 고려할 사항을 포함합니다.
+
+##### 타일 가능한 텍스처
+
+**타일 가능한 텍스처**는 X **및** Y 축에서 타일링할 수 있는 텍스처로, 바닥, 벽 및 지형과 같은 환경의 넓은 표면을 덮을 수 있습니다. 이 유형의 텍스처는 블록 `Class.Part|Parts`에 적용한 후 최소한의 수동 조정을 필요로 합니다. 이는 블록이 평평한 표면을 가지고 있기 때문에 텍스처가 더 복잡한 기하학적 구조에서 변형될 가능성이 없기 때문입니다. 또한, `Class.MaterialService` 내의 `Class.MaterialVariant` 객체로 타일 가능한 텍스처를 가져와 지형에 적용할 수 있습니다. 이 과정은 다음 섹션의 [사용자 정의 재료 생성](../environmental-art/assemble-an-asset-library.md#creating-custom-materials)에서 배울 수 있습니다.
+
+<img src="../img/05_Roblox_tutorial/TileableTextures-Part.png" alt="A top-down view of a block part with a tileable moss with flowers material applied." width="100%"/>
+
+타일 가능한 텍스처의 가장 기본적인 규칙은 **이음매가 없어야 한다**는 것입니다. 그렇지 않으면 텍스처가 표면에서 시작되고 끝나는 지점이 사용자에게 눈에 띄어 경험에 대한 몰입감을 깨뜨릴 수 있습니다. 따라서 타일 가능한 텍스처는 실제 세계에서 이음매가 없는 잔디나 돌과 같은 자연 재료에 잘 어울립니다. 실제로 샘플 레이저 태그 경험에서는 야외 공간을 나타내기 위해 다음 네 가지 유기적인 타일 가능한 텍스처를 사용하며, 이 텍스처를 이 튜토리얼의 [월드 빌딩](../environmental-art/construct-your-world.md) 섹션에서 사용할 수 있습니다.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/TileableTextures-Moss.png" alt="A sphere part with a tileable moss material applied." width="100%"/>
+    <figcaption>Moss</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/TileableTextures-MossFlowers.png" alt="A sphere part with a tileable moss with flowers material applied." width="100%"/>
+    <figcaption>MossFlowers</figcaption>
+  </figure>
+</GridContainer>
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/TileableTextures-MossStones.png" alt="A sphere part with a tileable moss with stones material applied." width="100%"/>
+    <figcaption>MossStones</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/TileableTextures-Stones.png" alt="A sphere part with a tileable stones material applied." width="100%"/>
+    <figcaption>Stones</figcaption>
+  </figure>
+</GridContainer>
+
+이 모든 샘플 타일 가능한 텍스처가 이끼, 꽃 및 돌 요소의 균일한 분포를 가지고 있음을 주목하세요. 만약 큰 돌이나 꽃 패치와 같은 눈에 띄는 요소를 포함하면 사용자는 텍스처가 반복되고 있음을 인식하게 됩니다. 예를 들어, 다음 두 이미지에서 첫 번째 이미지는 눈에 띄는 흙 패치가 있어 텍스처의 반복을 눈에 띄게 합니다. 두 번째 이미지는 이 패치를 훨씬 작게 만들어 텍스처의 요소를 균형 있게 만들어 반복을 덜 눈에 띄게 합니다.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/TileableTextures-WithElement.jpg" alt="A tileable rock texture with a distinct patch of rocks highlighted to show that the repetition of the distinct element is noticeable." width="100%"/>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/TileableTextures-NoElement.jpg" alt="A tileable rock texture with no distinct elements to show that this technique makes the repetition of elements not noticeable." width="100%"/>
+  </figure>
+</GridContainer>
+
+[서브스턴스 디자이너](https://www.adobe.com/products/substance3d-designer)나 [블렌더](https://www.blender.org/)와 같은 타사 모델링 도구에서 자체 타일 가능한 텍스처를 디자인하기로 결정한 경우 다음 사항을 염두에 두세요:
+
+- 텍스처는 최대 1024x1024 크기로 만들 수 있지만, 이 최대 크기에 가까울수록 성능 비용이 높아집니다.
+- 눈에 띄는 요소가 다른
+
+ 요소보다 더 구별되지 않도록 균일한 가시적 분포를 만듭니다.
+- 타일 가능한 텍스처가 기술적으로 이음매가 없더라도, 이미지 전체를 검토하여 텍스처의 반복이 눈에 띄지 않도록 합니다.
+
+이 마지막 포인트는 완전히 제거하기는 거의 불가능하지만, 스튜디오 재료를 유기적으로 타일링하거나 반복을 효과적으로 숨기기 위해 추가 데칼 오버레이를 추가할 수 있습니다. 이러한 기술에 대한 자세한 내용은 [사용자 정의 재료 생성](../environmental-art/assemble-an-asset-library.md#creating-custom-materials) 및 [모듈형 환경 조립 - 가시적 반복 감소](../../tutorials/3D-art/assembling-modular-environments.md#reducing-visible-repetition)를 참조하세요.
+
+##### 트림 시트
+
+**트림 시트**는 X **또는** Y 축 중 하나에서 타일링할 수 있는 텍스처로, 추가 텍스처를 가져오지 않고도 경험에 시각적 복잡성을 크게 추가할 수 있어 메모리에 부정적인 영향을 미치지 않습니다. 트림 시트의 각 행 또는 열은 고유한 시각적 외관을 가지고 있어 UV 데이터를 메시로 매핑할 때 다양한 표면 처리를 선택할 수 있습니다. 예를 들어, 다음 두 이미지에서 문틀과 천장 자산은 동일한 트림 시트의 다른 레이어를 사용하여 공간에 세부 작업을 추가합니다.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/TrimSheets-Doorway.jpg" alt="An doorway with trim sheet textures applied." width="100%"/>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/TrimSheets-Ceiling.jpg" alt="A group of ceiling tiles with trim sheet textures applied." width="100%"/>
+  </figure>
+</GridContainer>
+
+트림 시트의 가장 기본적인 규칙은 단일 객체에만 적용할 수 있는 맥락적 세부 사항을 피하는 것입니다. 이는 트림 시트가 세계의 여러 유형의 객체에 사용될 수 있어야 하며, 매우 구체적인 세부 사항은 3D 공간에서 반복될 때 사용자에게 눈에 띄기 때문입니다. 예를 들어, [듀발 쇼케이스의 미스터리](../../resources/the-mystery-of-duvall-drive/materializing-the-world.md#surface-appearance-and-trim-maps)의 다음 이미지에서, 좌측 가구 세트의 트림 시트는 우측 가구 세트의 트림 시트보다 더 많은 얼룩 세부 사항을 포함합니다. 추가 얼룩 세부 사항이 반복되면서 눈에 띄는 차이를 확인할 수 있습니다.
+
+<img src="../img/05_Roblox_tutorial/furniture-set-stain.png" alt="The same furniture set has different trim sheets applied. The furniture set on the left with more distict stain elements has noticeable repetition." width="100%"/>
+
+이 기본 규칙을 따르며, 최종 샘플 레이저 태그 환경에서는 모듈형 키트와 소품에 시각적 흥미와 일관성을 더하기 위해 여섯 개의 간단한 세부 작업 행을 포함하는 다음 트림 시트 텍스처 맵을 사용합니다. 이 <a href="../img/05_Roblox_tutorial/TrimSheetTextureMaps.zip" download>트림 시트</a>를 UV 언랩핑 프로세스에서 사용할 수 있으며, 자산 라이브러리를 조립할 때 `Class.SurfaceAppearance` 객체에서 텍스처 맵을 활용할 수 있습니다. 각 텍스처 맵이 메시에 제공하는 정보에 대한 자세한 내용은 [PBR 텍스처 - 텍스처 맵](../../art/modeling/surface-appearance.md#texture-maps)을 참조하세요.
+
+<Alert severity="info">
+    이 트림 시트 파일은 타사 모델링 도구에서 UV 언랩핑 프로세스에만 유용합니다. UV 언랩핑 프로세스를 완료하지 않고 텍스처 맵을 `Class.SurfaceAppearance` 객체에 업로드하려고 하면, 스튜디오에서 텍스처 자체에 매핑할 데이터를 찾을 수 없습니다.
+</Alert>
+
+<img src="../img/05_Roblox_tutorial/Trimsheet.png" alt="The sample laser tag experience's trim sheet." width="50%"/>
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/TrimSheets-Albedo.png" alt="The sample laser tag experience's trim sheet's albedo texture map." width="100%"/>
+    <figcaption>Albedo</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/TrimSheets-Normal.png" alt="The sample laser tag experience's trim sheet's normal texture map." width="100%"/>
+    <figcaption>Normal</figcaption>
+  </figure>
+</GridContainer>
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/TrimSheets-Roughness.png" alt="The sample laser tag experience's trim sheet's roughness texture map." width="100%"/>
+    <figcaption>Roughness</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/TrimSheets-Metalness.png" alt="The sample laser tag experience's trim sheet's metalness texture map." width="100%"/>
+    <figcaption>Metalness</figcaption>
+  </figure>
+</GridContainer>
+
+[서브스턴스 디자이너](https://www.adobe.com/products/substance3d-designer), [블렌더](https://www.blender.org/) 또는 [ZBrush](https://www.maxon.net/en/zbrush)와 같은 타사 모델링 도구에서 자체 트림 시트를 디자인하기로 결정한 경우 다음 사항을 염두에 두세요:
+
+- 텍스처는 최대 1024x1024 크기로 만들 수 있지만, 이 최대 크기에 가까울수록 성능 비용이 높아집니다.
+- 트림 시트는 X 및 Y 축 모두에서 동일한 길이를 가져야 합니다.
+- 더 많은 맥락적 세부 사항을 포함하도록 다른 디자인 선택을 할 수 있지만, 한 번 트림 시트에 세부 사항이 포함되면 쉽게 숨길 수 없습니다.
+- 자산 라이브러리를 만들 때 참조하기 쉽도록 트림 시트의 텍스처 맵을 내보내세요.
+
+이 기술에 대한 자세한 내용은 [건축 디자인 - 트림 시트 생성]을 참조하세요.
+
+#### 모듈형 키트 디자인
+
+모듈형 키트는 더 큰 복합 객체의 변형을 만들기 위해 원활하게 연결할 수 있는 자산 세트입니다. 모듈형 키트를 개발 과정의 일부로 사용하면 경험의 각 개별 자산을 수동으로 만들 필요가 없기 때문에 유용합니다. 대신, 몇 가지 자산만 만들어 다양한 장면에 재사용 및 사용자 정의하여 빠르게 작업할 수 있습니다.
+
+이 프로세스는 그레이박스 환경을 대체하거나 변환하는 속도를 크게 높일 뿐만 아니라, 트림 시트를 모듈형 키트의 메시에 UV 랩핑하여 각 개별 객체가 일관성을 느끼도록 도와줍니다. 예를 들어, 최종 샘플 레이저 태그 환경은 단일 **SA_EC_Trim_Metal_A** 트림 시트를 사용하여 모듈형 자산에 UV 랩핑하여 대부분의 게임플레이가 이루어지는 건물을 만듭니다. 여기에는 1층과 2층 사이의 고도를 조정하는 자산도 포함됩니다.
+
+<img src="../img/05_Roblox_tutorial/DesigningModularKits-ModularKit.jpg" alt="The sample laser tag experience's modular kit." width="100%"/>
+
+이 모듈형 키트의 각 자산은 앞으로 가장 낮은 모서리 또는 건물의 논리적 위치에 스냅할 수 있도록 그리드 스냅을 활성화할 때 5 스터드 간격으로 스냅할 수 있는 위치에 일관된 피벗 포인트 위치를 가지고 있습니다. 또한, 각 자산은 최소한 5 스터드 높이와 너비를 가지고 있어 자산을 회전하고 이동할 때 충돌하는 기하학적 요소가 없습니다. 이 개념에 대한 자세한 내용은 [모듈형 환경 조립 - 일관된 피벗 포인트 위치의 중요성]을 참조하세요.
+
+<video controls src="../img/05_Roblox_tutorial/DesigningModularKits-Snapping.mp4" width="100%"></video>
+
+[샘플 모듈형 키트](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library)를 사용하거나 수정하여 이 튜토리얼의 [월드 빌딩](../environmental-art/construct-your-world.md) 섹션에서 그레이박스 기하학을 대체할 수 있습니다. 그러나 [블렌더](https://www.blender.org/) 또는 [마야](https://www.autodesk.com/products/maya/overview)와 같은 타사 모델링 도구에서 자체 모듈형 키트를 디자인하기로 결정한 경우 다음 사항을 염두에 두세요:
+
+- 모듈형 자산은 그리드 스냅을 활성화할 때 상대적으로 일관된 피벗 위치를 가져야 합니다.
+- 각 자산은 키트의 최소 높이와 너비로 나눌 수 있는 최대 높이와 너비를 가져야 합니다. 예를 들어, 샘플 키트의 가장 큰 자산은 15 x 5 스터드이며, 이는 가장 작은 자산인 5 x 5 스터드로 나눌 수 있습니다.
+- 복도와 같은 큰 자산을 명확한 명명 규칙을 사용하여 모델 아래에 별도의 메시로 분리하는 것이 유용합니다. 예를 들어, 복도 `Class.Model`에는 `UpperTrim`, `LowerTrim` 및 `Wall` `Class.MeshPart` 객체가 포함됩니다. 이를 통해 모델이 경험 내에서 어디에 있는지에 따라 개별 재료, 충돌 및 렌더링 매개 변수를 수정하거나 불필요한 기하학을 제거할 수 있습니다.
+
+어떤 모듈형 키트를 사용하든지, 자산이 서로 충돌하는지 여부를 확인하기 위해 자주 테스트하고 여러 관점에서 자산을 보는 것이 중요합니다. 만약 충돌하는 기하학이 있다면, 이는 자산의 피벗 포인트 위치가 다른 자산과 상대적으로 일관되지 않음을 의미합니다.
+
+#### 소품 디자인
+
+소품은 환경의 시각적 스토리텔링 수준을 높이고 사용자가 있는 세계에 대한 중요한 컨텍스트를 제공하는 비모듈형 자산입니다. 예를 들어, 사용자가 동굴을 탐험할 때 빛나는 구체와 해골 같은 소품을 보면 그 환경이 마법적이고 위험하다는 것을 유추할 수 있으며, 이는 신중하게 진행하는 것이 현명할 수 있습니다.
+
+소품은 경험의 예술 스타일과 연결될 때 가장 효과적입니다. 예를 들어, 최종 샘플 레이저 태그 환경은 소품을 사용하여 환경의 기술과 자연의 관계에 대한 컨텍스트를 사용자에게 제공합니다. 특히, 소품 키트에는 깨끗한 고급 기술 패널, 상자, 소화기 및 보안 카메라와 함께 큰 돌과 다양한 식물이 포함되어 있어 이 세계가 기술 발전을 중요시하지만, 지구를 희생시키지 않는다는 것을 사용자에게 알려줍니다.
+
+<img src="../img/05_Roblox_tutorial/DesigningProps-PropsKit.png" alt="The sample laser tag experience's prop kit." width="100%"/>
+
+모듈형 자산과 달리 소품은 더 큰 복합 객체를 만들기 위해 스냅할 필요가 없기 때문에 일관된 피벗 포인트 위치를 가질 필요는 없습니다. 그러나 3D 공간에 배치해야 하는 위치에 따라 논리적인 피벗 포인트 위치를 가져야 합니다. 예를 들어, 다음 이미지에서 소화기 소품은 벽에 스냅할 수 있도록 객체의 뒤쪽에 피벗 포인트 위치를 가지고 있으며, 상자는 바닥에 스냅할 수 있도록 객체의 아래쪽에 피벗 포인트 위치를 가지고 있습니다. 이를 통해 벽이나 바닥에 상관없이 보편적인 컨텍스트 배치가 가능합니다.
+
+<img src="../img/05_Roblox_tutorial/DesigningProps-Scale.jpg" alt="" width="100%"/>
+
+이 튜토리얼의 [월드 빌딩](../environmental-art/construct-your-world.md) 섹션에서 [환경 예술 자산 라이브러리](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library)의 소품을 사용하거나 수정할 수 있습니다. 그러나 [블렌더](https://www.blender.org/) 또는 [마야](https://www.autodesk.com/products/maya/overview)와 같은 타사 모델링 도구에서 자체 소품을 디자인하기로 결정한 경우 다음 사항을 염두에 두세요:
+
+- 사용자는 소품을 여러 각도에서 볼 수 있으므로, 사용자가 소품이 무엇인지 이해할 수 있을 만큼 충분한 디테일을 포함해야 합니다. 하지만 성능에 영향을 미치지 않도록 너무 많은 디테일을 포함하지 않는 것이 중요합니다. 소품의 실루엣만 보고도 사용자가 무엇인지 알 수 있도록 충분한 기하학을 포함하는 것이 좋습니다. 이 개념에 대한 자세한 내용은 [움직이는 세계 개발 - 폭풍의 눈 설정]을 참조하세요.
+- 모듈형 자산에 사용한 동일한 트림 시트를 사용하여 환경 내에서 이미 사용 중인 텍스처를 효율적으로 사용하고, 모든 자산이 스타일적으로 일관되도록 할 수 있습니다.
+- 소품을 환경에서 재사용할수록 소품의 독특한 시각적 표식이 더 눈에 띄게 됩니다.
+
+그레이박스 환경을 대체하거나 변환하기 위해 필요한 모든 고품질 자산을 확보한 후, 이 튜토리얼의 다음 섹션으로 이동하여 그레이박스 환경을 미적으로 매력적인 설정으로 변환하는 데 사용할 수 있는 자산 라이브러리를 조립하는 방법을 배울 수 있습니다.
+
 ### Chapter 3 - Assemble an Asset Library
+
+**에셋 라이브러리 구성**은 경험 내에서 쉽게 액세스하고 재사용할 수 있도록 중앙 위치에 컬렉션 에셋을 가져오고 구성하는 과정입니다. 이 과정은 각 에셋의 값을 구성하여 중저가 장치에서 성능을 향상시키고 메모리 사용을 최적화하면 환경을 구성할 준비를 할 때 상당한 시간을 절약할 수 있습니다.
+
+[Environment Art - Assembling](https://www.roblox.com/games/14447787049/Environment-Art-Assembling) `.rbxl` 파일을 참고하여, 이 환경 아트 커리큘럼 섹션에서는 다음과 같은 단계별 지침을 포함하여 완성된 에셋에서 에셋 라이브러리를 구성하는 방법을 보여줍니다:
+
+- 타일 가능한 텍스처에서 지형을 위한 사용자 정의 재료 만들기.
+- 트림 시트를 위한 SurfaceAppearance 객체를 만들고, 이를 에셋 라이브러리의 언랩된 메시에 적용하기.
+- 모든 장치에서 최적의 성능을 보장하기 위해 에셋의 렌더링 매개 변수 설정.
+- 에셋을 패키지로 변환하여 모든 프로젝트에서 업데이트하고 재사용할 수 있도록 하기.
+
+이 섹션을 완료한 후에는 창의적인 방식으로 에셋 라이브러리를 활용하여 그레이박스 환경을 대체하거나 변환하고, 전체 3D 공간을 향상시키는 최종 터치를 추가하는 방법을 배우게 됩니다.
+
+<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Overview.png" alt="The sample laser tag experience's modular and prop kit." width="100%"/>
+
+<Alert severity="info">
+    타일 가능한 텍스처, 트림 시트, 모듈형 에셋 및 소품을 스튜디오로 가져와 에셋 라이브러리를 컴파일하기 전에, 데이터 유형(예: 트림 시트, 데칼, 모듈형 에셋 및 소품)에 따라 모든 콘텐츠를 폴더 구조로 정리하는 것이 모범 사례입니다. 이렇게 하면 사용자 정의 재료 및 시각적 처리를 만들 때 참조하기가 쉬워집니다.
+</Alert>
+
+#### 사용자 정의 재료 만들기
+
+스튜디오는 `Class.MaterialService` 내에 `Class.MaterialVariant` 객체로 사용자 정의 재료를 나타냅니다. 이러한 `Class.MaterialVariant` 객체는 네 가지 타일 가능한 [텍스처 맵]을 결합하여 물리적 특성을 가진 고품질 사용자 정의 재료를 생성하는 네 가지 속성을 가지고 있습니다:
+
+- `Class.MaterialVariant.ColorMap` – 알베도 텍스처 맵을 나타냅니다.
+- `Class.MaterialVariant.MetalnessMap` – 금속성 텍스처 맵을 나타냅니다.
+- `Class.MaterialVariant.NormalMap` – 노멀 텍스처 맵을 나타냅니다.
+- `Class.MaterialVariant.RoughnessMap` – 거칠기 텍스처 맵을 나타냅니다.
+
+이 속성에 텍스처 맵을 제공한 후, 새 사용자 정의 재료를 파트, 메시 및 지형에 적용할 수 있습니다. 샘플 레이저 태그 환경 내의 Lumpy Moss, Flowering Lumpy Moss, Lumpy Moss with Stones 및 Stones 사용자 정의 재료를 생성하기 위해 샘플 텍스처 맵 `.png` 파일을 사용하거나 수정할 수 있으며, 또는 이 튜토리얼의 이전 섹션에서 디자인한 텍스처를 사용할 수 있습니다.
+
+타일 가능한 텍스처를 위한 `Class.MaterialVariant` 객체를 만들려면 다음 단계를 따르세요:
+
+1. 메뉴 바의 **홈** 또는 **모델** 탭에서 **Material Manager** 버튼을 클릭합니다. **Material Manager** 창이 열립니다.
+2. **Materials** 목록에서 타일 가능한 텍스처와 가장 잘 맞는 기본 재료를 선택합니다. 예를 들어, Lumpy Moss 타일 가능한 텍스처에 대한 `Class.MaterialVariant` 객체를 만들 경우 기본 지면 재료를 선택하여 재료의 물리적 특성을 상속받도록 합니다.
+3. **도구 모음**에서 **⊕** 아이콘을 클릭합니다. 새 `Class.MaterialVariant`가 팔레트에 사용자 정의 재료임을 나타내는 아이콘과 함께 표시됩니다.
+
+   <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Custom-Material-Icon.png" width="100%" alt="New MaterialVariant tile in Material Manager with icon to indicate a custom material" />
+
+4. **Inspector**에서 **General** 섹션으로 이동한 다음, 타일 가능한 텍스처의 이름에 맞게 재료 이름을 변경합니다.
+
+   <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CustomMaterials-4.jpg" alt="The Inspector view with the name of the material highlighted." width="40%"/>
+
+5. **Texture Maps** 섹션에서 **Color** 오른쪽의 **Import** 버튼을 클릭합니다. 파일 브라우저가 표시됩니다.
+
+   <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CustomMaterials-5.jpg" alt="The Texture Maps section of the Inspector view with the Import button highlighted." width="40%"/>
+
+6. 파일 브라우저에서 해당 타일 가능한 텍스처에 대한 **Albedo** 텍스처 맵 `.png` 파일을 선택한 다음 **열기** 버튼을 클릭합니다. 파일 브라우저가 닫히고 새 색상 맵이 자산 ID와 함께 표시됩니다.
+7. **Metalness**, **Normal** 및 **Roughness** 텍스처 맵에 대해 이 과정을 반복합니다. 사용자 정의 재료가 텍스처 맵을 반영하도록 업데이트됩니다.
+
+   <GridContainer numColumns="2">
+     <figure>
+       <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CustomMaterials-7a.jpg" alt="All texture maps for the Moss_Lumpy_A material." width="85%"/>
+     </figure>
+     <figure>
+       <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CustomMaterials-7b.jpg" alt=" sphere part with the Moss_Lumpy_A material applied." width="100%"/>
+     </figure>
+   </GridContainer>
+
+8. **Overrides** 섹션에서 **Set as Override** 토글을 활성화하여 지형에 지면을 적용할 때 스튜디오에서 이 사용자 정의 재료를 사용하도록 합니다.
+
+   <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CustomMaterials-8.jpg" alt="The Set as Override toggle enabled." width="40%"/>
+
+9. **(선택 사항)** 유기 재료를 나타내는 사용자 정의 재료를 만드는 경우,
+
+   1. **Tiling** 섹션에서 **Pattern** 드롭다운을 클릭합니다.
+   2. **Organic**을 선택하여 출력을 무작위화하고 보이는 타일링을 줄입니다.
+
+   <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CustomMaterials-9.jpg" alt="The Tiling section of the Inspector view with its settings." width="40%"/>
+
+10. 경험에 포함할 모든 타일 가능한 텍스처에 대해 이 과정을 반복합니다.
+
+#### SurfaceAppearance 패키지 만들기
+
+스튜디오는 `Class.MeshPart|MeshParts`에 부모로 설정할 수 있는 `Class.SurfaceAppearance` 객체 내에서 트림 시트를 활용합니다. 사용자 정의 재료와 유사하게, `Class.SurfaceAppearance` 객체는 트림 시트 텍스처 맵을 결합하여 고품질 3D 시각적 표면 처리를 만드는 네 가지 속성을 가지고 있습니다:
+
+- `Class.SurfaceAppearance.ColorMap` – 알베도 텍스처 맵을 나타냅니다.
+- `Class.SurfaceAppearance.MetalnessMap` – 금속성 텍스처 맵을 나타냅니다.
+- `Class.SurfaceAppearance.NormalMap` – 노멀 텍스처 맵을 나타냅니다.
+- `Class.SurfaceAppearance.RoughnessMap` – 거칠기 텍스처 맵을 나타냅니다.
+
+이 속성에 텍스처 맵을 제공한 후, `Class.SurfaceAppearance` 객체를 트림 시트에 매핑된 UV 데이터를 포함하는 `Class.MeshPart`의 자식으로 만들 수 있으며, UV 데이터가 자동으로 부모 메시에 적용됩니다. 이 때문에 `Class.SurfaceAppearance` 객체를 [패키지](../../projects/assets/packages.md)로 만드는 것이 유용합니다. 이렇게 하면 모든 모듈형 에셋 및 소품에서 동일한 `Class.SurfaceAppearance` 객체를 재사용할 수 있습니다. 예를 들어, 다음 메시들은 모두 동일한 트림 시트 레이아웃에 매핑된 UV 데이터를 가지고 있으며, 이는 단일 `Class.SurfaceAppearance` 객체 패키지로 표현됩니다.
+
+<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/SAPackages-Intro.jpg" alt="" width="80%"/>
+
+최종 샘플 레이저 태그 환경 내에서 샘플 모듈형 에셋 및 소품에 대한 UV 데이터를 존중하는 `Class.SurfaceAppearance` 객체를 생성
+
+하기 위해 샘플 텍스처 맵 `.png` 파일을 사용하거나 수정할 수 있으며, 또는 이전 섹션에서 디자인한 텍스처를 사용하여 모듈형 에셋 및 소품에 적용할 수 있습니다.
+
+모듈형 키트 및 소품에 자식으로 설정할 수 있는 `Class.SurfaceAppearance` 패키지를 만들려면 다음 단계를 따르세요:
+
+1. **Workspace**에 **SurfaceAppearance** 객체를 삽입합니다.
+2. **SurfaceAppearance** 객체를 선택한 다음 **Properties** 창에서 **ColorMap** 속성을 선택합니다. 팝업이 표시됩니다.
+3. **Add Image…** 버튼을 클릭합니다. 파일 브라우저가 표시됩니다.
+
+   <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/SAPackages-3.jpg" alt="The ColorMap pop-up with the Add Image button highlighted." width="30%"/>
+
+4. 해당 타일 가능한 텍스처에 대한 **Albedo** 텍스처 맵을 선택한 다음 **열기** 버튼을 클릭합니다. 파일 브라우저가 닫히고 **ColorMap** 속성이 새 자산 ID로 업데이트됩니다.
+5. **MetalnessMap**, **NormalMap** 및 **RoughnessMap** 속성에 대해 이 과정을 반복하여 파일 브라우저에서 각각의 텍스처 맵을 선택합니다.
+6. **Explorer** 창에서 **SurfaceAppearance** 객체를 마우스 오른쪽 버튼으로 클릭한 다음 컨텍스트 메뉴에서 **Convert to Package**를 선택합니다. **Convert to Package** 대화 상자가 표시됩니다.
+7. **Title** 및 **Description** 필드를 채우고 소유권을 자신 또는 그룹으로 설정한 다음 **제출** 버튼을 클릭합니다. 완료되면 체인 링크 기호가 `SurfaceAppearance` 객체 아이콘에 표시되어 패키지임을 나타냅니다.
+
+   <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/SAPackages-7.jpg" alt="The Surface Appearance icon with a chain link symbol." width="30%"/>
+
+8. **(선택 사항)** `SurfaceAppearance` 객체의 자식 **PackageLink** 객체를 선택한 다음 **Properties** 창에서 **AutoUpdate**를 활성화하여 **SurfaceAppearance** 객체를 수정할 때 패키지가 자동으로 업데이트되도록 합니다.
+
+#### 모듈형 에셋 및 소품 가져오기
+
+스튜디오는 가져온 모듈형 에셋 및 소품을 각 에셋의 구성 요소에 대해 자식 `Class.MeshPart|MeshParts`가 있는 `Class.Model` 객체로 나타냅니다. 예를 들어, 상단 트림, 하단 트림 및 벽 구성 요소가 있는 벽 섹션을 가져오면 스튜디오는 `.fbx` 또는 `.obj` 파일을 **Wall_Section** `Class.Model`로 나타내며, 별도의 자식 **Top_Trim**, **Bottom_Trim** 및 **Wall** `Class.MeshPart|MeshParts`를 포함합니다.
+
+<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Importing-Intro.png" alt="" width="30%"/>
+
+3D 임포터를 사용하여 샘플 모듈형 키트 및 소품을 에셋 라이브러리에서 사용할 수 있도록 스튜디오로 가져오거나, 이전 섹션에서 디자인한 에셋을 가져올 수 있습니다. 이 도구의 기능에 대한 자세한 내용은 [3D Importer](../../art/modeling/3d-importer.md)를 참조하세요.
+
+모듈형 에셋 및 소품을 경험에 가져오려면 다음 단계를 따르세요:
+
+1. **홈** 또는 **아바타** 탭에서 **3D 가져오기** 버튼을 클릭합니다. 파일 브라우저가 표시됩니다.
+
+   <img alt="3D Importer Panels" src="../img/05_Roblox_tutorial/Construct Your World/Avatar-Tab-Import-3D.png" alt="Studio's Avatar tab with the 3D Importer highlighted." width="100%" />
+
+2. 모듈형 에셋 또는 소품에 대한 `.fbx` 파일을 선택합니다.
+3. 객체 미리 보기를 확인하고 객체에 대한 가져오기 설정이 올바른지 확인합니다.
+
+   <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Importing-3.jpg" alt="" width="80%"/>
+
+4. [경고 또는 오류 메시지](../../art/modeling/3d-importer.md#warnings-and-errors)를 확인합니다.
+5. **가져오기**를 클릭합니다. 에셋이 **Explorer** 창과 뷰포트에 표시됩니다.
+6. 각 모듈형 에셋 및 소품에 대해 이 과정을 반복합니다.
+7. 그레이박스 기하학 근처의 경험 영역으로 모든 에셋을 이동합니다. 이 영역이 에셋 라이브러리입니다.
+
+#### SurfaceAppearance 데이터 적용
+
+타사 모델링 소프트웨어에서 메쉬의 UV를 언랩하는 과정을 거치면, 소프트웨어는 UV 데이터를 메쉬의 `.fbx` 또는 `.obj` 파일 내에 저장합니다. 해당 메쉬를 스튜디오로 가져오면, 결과 `Class.MeshPart` 객체는 해당 데이터를 유지하지만, 트림 시트의 텍스처 맵 속성을 가진 `Class.SurfaceAppearance` 객체를 적용하여 에셋에 트림 텍스처를 표시해야 합니다.
+
+에셋 라이브러리의 언랩된 메시에 `Class.SurfaceAppearance` 텍스처 맵 데이터를 적용하려면 다음 단계를 따르세요:
+
+1. **Explorer** 창에서 **SurfaceAppearance** 패키지를 클릭한 다음 <kbd>Ctrl</kbd><kbd>D</kbd> (<kbd>⌘</kbd><kbd>D</kbd>)를 눌러 복제합니다.
+2. 복제된 **SurfaceAppearance** 패키지를 모듈형 에셋 또는 소품의 자식으로 만듭니다. 에셋이 UV 데이터를 텍스처 맵에 적용하고 시각적 처리를 표시합니다.
+3. 각 모듈형 에셋 및 소품에 대해 이 과정을 반복합니다.
+
+#### 물리 및 렌더링 매개 변수 설정
+
+이제 에셋이 스튜디오에 있으므로, 모든 사용자를 위해 높은 시각적 품질을 유지하면서 메모리 및 GPU 제한이 있는 장치에서도 에셋을 유지할 수 있도록 물리 및 렌더링 매개 변수를 설정하는 것이 중요합니다. 일반적으로 이 섹션의 지침을 준수할수록 경험의 성능이 향상됩니다. 그러나 전반적인 환경 내에서 각 에셋을 배치할 계획이 있는 위치의 맥락을 신중히 고려하여 미적 목표 및 게임 플레이 요구 사항을 유지하는 것이 중요합니다.
+
+##### 고정됨
+
+`Class.BasePart.Anchored` 속성은 Roblox 엔진의 물리 시스템이 객체의 위치에 영향을 미치는지 여부를 결정합니다. 이 속성을 `Class.Part` 또는 `Class.MeshPart`에 대해 활성화하면 객체가 경험에서 항상 실행되는 동적 시뮬레이션의 물리적 계산에서 제거되어 객체가 중력이나 다른 객체의 충돌로 인해 위치가 변경되지 않습니다.
+
+물리적 반응을 시뮬레이션하지 않는 객체는 이러한 물리적 계산에 필요한 GPU를 차지하지 않으므로 렌더링하기 더 저렴합니다. GPU를 해제하면 특히 빠른 게임 플레이를 위해 GPU를 절약해야 하는 저가 장치에서 경험의 성능이 향상됩니다. 이러한 이유로 최종 샘플 레이저 태그 환경에서 문을 제외한 **모든** 에셋이 고정됩니다.
+
+##### 충돌 가능
+
+`Class.BasePart.CanCollide` 속성은 객체가 다른 객체와 물리적으로 상호작용할 수 있는지 여부를 결정합니다. 이 속성을 `Class.Part` 또는 `Class.MeshPart`에 대해 활성화하면 객체는 침투할 수 없으며, Roblox 엔진이 물리 계산에 이를 고려합니다. 이러한 계산은 엔진이 물리 계산에서 고려해야 할 객체가 많을 경우 경험의 성능에 영향을 줄 수 있습니다.
+
+성능에 미치는 영향을 줄이기 위해, 사용자가 절대 상호작용하지 않을 객체에 대해 이 속성을 비활성화합니다. 예를 들어, 최종 샘플 레이저 태그 환경에서는 모든 식물에 대해 이 속성이 비활성화됩니다.
+
+<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/SettingParameters-CanCollide.png" alt="" width="60%"/>
+
+##### 터치 가능
+
+`Class.BasePart.CanTouch` 속성은 객체에서 `Class.BasePart.Touched|Touched` 및 `Class.BasePart.TouchEnded|TouchEnded` 이벤트가 발생할 수 있는지 여부를 결정합니다. 이 속성을 `Class.Part` 또는 `Class.MeshPart`에 대해 활성화하면 Roblox 엔진이 객체의 터치 이벤트 상태를 확인하여 이벤트를 트리거하거나 중지해야 하는지 확인합니다.
+
+이 프로세스는 매 프레임마다 발생하므로 많은 객체에 대해 엔진이 터치 이벤트 상태를 확인해야 하는 경우 메모리 사용량이 상당히 증가할 수 있습니다. 이 영향을 줄이기 위해 이벤트를 트리거해야 하는 객체에 대해서만
+
+ 이 속성을 활성화합니다.
+
+##### 쿼리 가능
+
+`Class.BasePart.CanQuery` 속성은 Roblox 엔진이 레이캐스팅과 같은 공간 쿼리 작업 중에 객체를 고려하는지 여부를 결정합니다. 스튜디오는 기본적으로 모든 `Class.Part` 또는 `Class.MeshPart`에 대해 이 속성을 활성화하여 Roblox 엔진이 각 객체가 공간 쿼리 작업을 호출해야 하는지 확인합니다. 이 프로세스는 매 프레임마다 발생하며, 많은 객체에 대해 이러한 확인을 해야 하는 경우 메모리 사용량이 상당히 증가할 수 있습니다.
+
+이 속성을 비활성화하면 성능에 미치는 영향을 줄일 수 있으므로, Roblox 엔진이 공간 쿼리 작업을 고려할 필요가 없는 객체에 대해 이 속성을 비활성화하는 것이 좋습니다. 이 속성을 비활성화할 위치에 대한 결정을 내릴 때 각 에셋이 게임 플레이에 어떤 영향을 미치는지 고려합니다. 예를 들어, 최종 샘플 레이저 태그 환경에서는 사용자가 레이저 태그 총에서 레이저를 쏠 때 엔진이 이러한 표면을 고려해야 하므로 건물의 모든 벽에 대해 이 속성을 활성화 상태로 유지합니다. 엔진이 이러한 에셋을 고려하지 않으면 레이저가 건물을 뚫고 지나가는 것처럼 행동합니다.
+
+##### 그림자 캐스팅
+
+`Class.BasePart.CastShadow` 속성은 객체가 그림자를 캐스팅하는지 여부를 결정합니다. 이 속성을 `Class.Part` 또는 `Class.MeshPart`에 대해 활성화하면, Roblox 엔진이 객체의 모든 정점 위치를 런타임에 계산한 다음, 태양에서 인접 객체까지 레이캐스트를 그려 다른 객체와 충돌하여 그림자를 만듭니다.
+
+이 계산은 특히 기하학적 복잡성을 가진 많은 객체가 있는 경우 성능에 영향을 미칠 수 있습니다. 기하학적 복잡성을 가진 객체는 단순한 기하학적 객체보다 더 많은 다각형을 가지므로, 엔진이 객체의 그림자를 계산해야 하는 정점이 더 많아집니다. 객체에 다각형이 적을수록 작업이 빠르고 그림자가 저렴합니다.
+
+<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/SettingParameters-CastShadow1.png" alt="A wall section with few polygons, and a plant with many polygons casting shadows on a white wall." width="80%"/>
+
+그림자는 3D 기하학적 깊이를 가진 객체에 사실감을 더할 수 있으므로, 이 속성을 비활성화할 위치를 결정할 때 객체가 환경에 큰 시각적 개선을 제공하는 위치와 사용자가 그림자의 누락을 눈치챌 수 있는 위치를 고려합니다. 예를 들어, 복잡한 그림자는 사용자가 보게 될 야외 공간에서 몰입감을 제공할 수 있지만, 사용자가 상호작용하지 않는 천장에서 살짝 보이는 식물에는 필요하지 않습니다.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CastShadow-Enabled.jpg" alt="Foliage casting shadows." width="100%"/>
+    <figcaption>`Class.BasePart.CastShadow` = 활성화</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CastShadow-Disabled.jpg" alt="Foliage not casting shadows." width="100%"/>
+    <figcaption>`Class.BasePart.CastShadow` = 비활성화</figcaption>
+  </figure>
+</GridContainer>
+
+##### 양면 렌더링
+
+`Class.MeshPart.DoubleSided` 속성은 메시의 두 면 또는 다각형을 모두 렌더링할지 여부를 결정합니다. 이 속성을 평면 `Class.MeshPart`(예: 나뭇잎, 머리카락 또는 천 카드)에 대해 활성화하면, Roblox 엔진이 메시의 두 면 또는 다각형을 렌더링하여 사용자가 객체를 어떤 각도에서 보더라도 객체의 전체성을 볼 수 있도록 합니다. 예를 들어, 다음 나뭇잎은 단일 면 평면 메시로, 이 속성을 활성화하면 카메라를 향한 모든 나뭇잎이 사용자에게 표시됩니다.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/DoubleSided-Enabled.png" alt="A tree with all planar meshes facing the camera." width="100%"/>
+    <figcaption>`Class.MeshPart.DoubleSided` = 활성화</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/DoubleSided-Disabled.png" alt="A tree with less leaves because all planar meshes facing away from the camera are disabled." width="100%"/>
+    <figcaption>`Class.MeshPart.DoubleSided` = 비활성화</figcaption>
+  </figure>
+</GridContainer>
+
+이 속성은 환경에 사실감을 더하는 데 유용하지만, 성능에 영향을 미칠 수 있습니다. 엔진이 객체의 폴리곤을 두 번 렌더링해야 하기 때문입니다: 한 번은 사용자의 카메라를 향한 방향을 위해, 다른 한 번은 사용자의 카메라를 향하지 않은 메시를 위해. 성능에 미치는 영향을 줄이기 위해 최종 샘플 레이저 태그 환경에서는 이 속성을 나뭇잎에 대해서만 활성화합니다. 이는 3D 공간에서 사실감을 위해 시각적으로 강한 영향을 미칩니다.
+
+##### 충돌 충실도
+
+`Class.MeshPart.CollisionFidelity` 속성은 메시 또는 유니온의 물리적 히트박스가 시각적 표현과 얼마나 가까운지를 결정합니다. 기본적으로 이 설정은 메시의 기하학적 모양과 거의 일치하는 히트박스를 렌더링합니다. 예를 들어, 다음 이미지의 성 메시는 기본 히트박스가 메시의 기하학적 모양과 거의 일치합니다.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-MeshPart.jpg" alt="A grey castle mesh." width="100%"/>
+    <figcaption>원본 메시</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Default.jpg" alt="The same castle mesh with a colorful hitbox that shows where users can collide with the castle." width="100%"/>
+    <figcaption>기본값</figcaption>
+  </figure>
+</GridContainer>
+
+이 속성을 다른 값으로 설정하여 메시의 히트박스 정밀도를 줄일 수 있습니다. 예를 들어, 이 속성을 **Hull**로 설정하면 Roblox 엔진이 메시의 히트박스 정점을 크게 줄이고, 이 속성을 **Box**로 설정하면 엔진이 메시의 히트박스를 큐브로 줄입니다. 또한 메시의 히트박스 정밀도를 높이고 싶다면, 이 속성을 **PreciseConvexDecomposition**으로 설정하여 히트박스의 정점 수를 늘릴 수 있습니다.
+
+<GridContainer numColumns="3">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Box.jpg" alt="The same castle mesh with cube hitbox that shows where users can collide with the castle." width="100%"/>
+    <figcaption>박스</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Hull.jpg" alt="The same castle mesh with a cylindrical hitbox that shows where users can collide with the castle." width="100%"/>
+    <figcaption>Hull</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Precise.jpg" alt="The same castle mesh with a colorful hitbox that shows where users can collide with the castle. This version shows more colorful faces than the default hitbox." width="100%"/>
+    <figcaption>PreciseConvexDecomposition</figcaption>
+  </figure>
+</GridContainer>
+
+`Class.BasePart.CastShadow`와 유사하게, 엔진이 렌더링해야 하는 정점이 많을수록 성능에 영향을 미칩니다. 따라서 사용자가 각 메시와 어떻게 상호작용할지를 고려하여 메시의 히트박스 정점을 줄일 수 있는지 여부를 신중히 생각해야 합니다. 히트박스가 정밀할 필요가 없는 경우, 이 속성을 **Box** 또는 **Hull**로 설정합니다.
+
+이 개념을 설명하기 위해, 최종 샘플 레이저 태그 환경에서 1층과 2층 사이의 상승을 제공하는 벽 모델의 모든 메시 히트박스를 표시한 다음 이미지를 참조하세요. 기본 히트박스는 사용자가 해당 방향으로 이동하지 못하도록 막아야 할 벽의 목적으로 불필요한 기하학적 요소를 포함하고 있습니다. 이 속성을 **Box**로 설정하면 히트박스의 불필요한 기하학적 요소
+
+를 제거하면서도 히트박스의 목적을 유지할 수 있습니다.
+
+<GridContainer numColumns="3">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-WallMesh.jpg" alt="A wall model that provides a rise in elevation." width="100%"/>
+    <figcaption>원본 메시</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-Default.jpg" alt="The same wall model with a colorful hitbox that shows where users can collide with the wall." width="100%"/>
+    <figcaption>기본값</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-Box.jpg" alt="The same wall model with a colorful hitbox for the trim, but only a box hitbox for the wall mesh." width="100%"/>
+    <figcaption>박스</figcaption>
+  </figure>
+</GridContainer>
+
+이 결정을 내릴 때 기본값을 변경하는 것이 사용자가 환경을 탐색하는 데 부정적인 영향을 미칠 수 있는지 신중히 고려해야 합니다. 예를 들어, 벽 모델의 트림 메시에 대해 이 속성을 **Box**로 설정하면 사용자가 벽 근처에서 점프할 때 히트박스와 충돌할 수 있습니다. 대신, 이 메시를 **Hull**로 설정하여 정점 수를 줄이면서도 히트박스를 메시의 기하학적 모양에 가깝게 유지합니다.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-BoxTop.jpg" alt="A wall model with a box hitbox for the top trip. Because the box sticks out, users can unintentionally collide with the top trim." width="100%"/>
+    <figcaption>박스</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-Hull.jpg" alt="The same wall model with a hull hitbox for the top trip. Because hull hitbox conforms much closer to the top of the model, allowing users to avoid colliding with the trim." width="100%"/>
+    <figcaption>Hull</figcaption>
+  </figure>
+</GridContainer>
+
+히트박스가 메시의 모양에 정확히 맞아야 하는 경우, 특히 사용자가 해당 모양과 충돌하는 방식을 정확하게 제어해야 할 때, 히트박스가 메시의 모양에 정확히 맞아야 할 때가 있습니다. 예를 들어, 최종 샘플 레이저 태그 환경에서는 사용자가 전투 포켓에 들어가거나 나갈 수 있도록 문 자체와 충돌하지 않도록 해야 합니다.
+
+<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-Doorway.png" alt="A doorway model with optimized hitbox meshes." width="50%"/>
+
+<Alert severity="info">
+    스튜디오에서 충돌 충실도를 시각화하려면 **파일** 메뉴에서 **스튜디오 설정**을 열고 **Show Decomposition Geometry**를 활성화합니다.
+</Alert>
+
+##### 렌더링 충실도
+
+`Class.MeshPart.RenderFidelity` 속성은 사용자에게 표시되는 메시의 디테일 수준을 결정합니다. 이 속성을 **Performance**로 설정하면 Roblox 엔진이 사용자가 메시에서 멀어질수록 메시의 충실도를 줄이며, 이 속성을 **Precise**로 설정하면 사용자가 메시와의 거리에 관계없이 모든 정점을 정확히 렌더링합니다.
+
+엔진이 사용자에게 어느 거리에서도 정밀하게 렌더링해야 하는 객체가 많을수록, 특히 정점 수가 많은 객체일수록 성능에 영향을 미칩니다. 성능에 미치는 영향을 줄이기 위해, 이 속성을 **Performance**로 설정하여 샘플 에셋 라이브러리의 나뭇잎과 같은 기하학적 복잡성을 가진 객체에 대해 설정합니다. 이들은 게임 플레이 요구 사항에 따라 먼 거리에서도 전체를 표시할 필요가 없습니다. 이는 전체 시각적 품질을 유지하면서 경험의 폴리곤 수를 줄입니다.
+
+#### 에셋을 패키지로 변환하기
+
+이제 모듈형 에셋이 스튜디오에 있으며 모든 사용자를 위해 높은 시각적 품질을 유지하면서 렌더링 매개 변수가 설정되었으므로, 에셋을 패키지로 변환할 시간입니다. 에셋을 패키지로 변환하는 것이 중요한 이유는 현재 경험 및 다른 프로젝트에서 반복해서 재사용할 수 있기 때문입니다. 또한, 패키지의 모든 인스턴스에 즉시 반영되는 수정을 쉽게 할 수 있어 반복 작업 시간을 크게 절약할 수 있습니다.
+
+이미 `Class.SurfaceAppearance` 객체가 패키지이므로, `Class.Model` 객체를 패키지로 변환하면 중첩 패키지가 됩니다. 중첩 패키지는 자식 객체의 복잡한 계층 구조를 유지하면서 개별 구성 요소를 독립적으로 수정할 수 있습니다. 이는 에셋의 개별 구성 요소를 보다 쉽게 제어할 수 있게 해줍니다.
+
+<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/ConvertingAssets-Intro.png" alt="" width="30%"/>
+
+모듈형 에셋 및 소품을 패키지로 변환하려면 다음 단계를 따르세요:
+
+1. **Explorer** 창에서 모듈형 에셋 또는 소품을 마우스 오른쪽 버튼으로 클릭한 다음 컨텍스트 메뉴에서 **Convert to Package**를 선택합니다. **Convert to Package** 대화 상자가 표시됩니다.
+2. **Title** 및 **Description** 필드를 채우고 소유권을 자신 또는 그룹으로 설정한 다음 **제출** 버튼을 클릭합니다. 완료되면 체인 링크 기호가 모델의 아이콘에 표시되어 패키지임을 나타냅니다.
+
+   <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/ConvertingAssets-2.png" alt="The Model icon with a chain link symbol." width="30%"/>
+
+3. 각 모듈형 에셋 및 소품에 대해 이 과정을 반복합니다.
+
+에셋 라이브러리의 전체 레이아웃에 만족하면, 이제 새로 완성된 에셋으로 환경을 장식하고, 세계에 생명을 불어넣기 위해 3D 공간의 추가 요소를 구성하는 방법을 배우게 됩니다.
 
 ### Chapter 4 - Construct Your World
 
+**세계 구성하기**, 또는 월드빌딩은 에셋 라이브러리에서 정교한 에셋을 사용하여 환경을 장식한 후, 3D 공간의 추가 요소를 추가하고 구성하여 세계에 생명을 불어넣는 과정입니다. 이 흥미로운 작업 단계에서는 모든 비전과 노력이 통합되어 완전하고 게시 준비가 완료된 일관된 환경을 볼 수 있습니다.
+
+[환경 예술 - 구성](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) `.rbxl` 파일을 참조하여, 이 환경 예술 교육 과정의 이 섹션에서는 팀 기반 1인칭 레이저 태그 슈팅 게임 환경의 각 구역을 차별화하기 위해 고품질 에셋과 사용자 정의 재료를 그레이박스 기하학에 적용하는 방법에 대해 단계별 지침을 제공합니다.
+
+- 건물의 건축물과 야외 공간에 에셋 라이브러리를 적용하여 사용자에게 전체 세계에 대한 정보를 제공합니다.
+- 사용자 정의 타일 텍스처를 사용하여 건물이 위치한 섬을 조각합니다.
+- 플레이 가능한 영역을 제한하여 사용자가 섬에서 떨어지지 않고 전투에 머물도록 합니다.
+- 움직임, 온기, 사실감을 더하기 위해 특수 효과와 조명 소스를 구성합니다.
+
+이 섹션을 완료하면, 모든 기기에서 최적의 성능을 보장하기 위해 콘텐츠를 검토하고 구성하는 방법을 배우게 됩니다.
+
+<img src="../img/05_Roblox_tutorial/Construct Your World/Overview.png" width="100%"/>
+
+<Alert severity="info">
+    이 튜토리얼의 이 섹션에서는 [환경 예술 에셋 라이브러리](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library)를 사용하여 샘플 최종 환경을 **정확히** 재구성하는 방법을 보여줍니다. 처음부터 끝까지 약 90분 이내에 완료할 수 있습니다. 제공된 좌표를 사용하고 싶지 않다면, 자신의 경험에 맞게 기하학을 조정하거나 나머지 튜토리얼을 위해 샘플 자체를 사용할 수 있습니다.
+</Alert>
+
+#### 에셋 라이브러리 적용하기
+
+환경을 구성하는 첫 번째 단계는 에셋 라이브러리를 3D 공간에 적용하는 것입니다. 이 과정은 종종 다음 작업 카테고리 중 하나에 속합니다.
+
+- 원래 디자인과 정확히 일치하도록 그레이박스 기하학에 에셋 라이브러리를 직접 적용합니다.
+- 그레이박스 기하학을 원래 디자인의 의도를 존중하면서 완전히 다른 것으로 변환합니다.
+- 그레이박스 기하학을 다른 것으로 변환하면서 에셋 라이브러리를 새로운 객체에 적용하여 환경 전체에서 일관성을 유지합니다.
+
+그레이박싱과 에셋 라이브러리를 사용하여 환경을 구성하는 과정은 원래 디자인에서 최종 예술로 가는 직선 경로와 거의 유사하지 않습니다. 각 단계 및 단계 간의 반복은 새로운 방법을 찾아 사용자의 경험을 향상시키기 위해 개발 과정에서 정상적이고 거의 항상 필요합니다. 예를 들어, **바닥** 섹션의 지침은 건물 내부의 위치를 사용자에게 더 잘 알려주기 위해 원래 바닥 그레이박스 기하학을 새로운 구역으로 변환합니다.
+
+<img src="../img/05_Roblox_tutorial/Construct Your World/ApplyingLibraryDiagram.png" width="100%"/>
+
+이 튜토리얼의 샘플 [환경 예술 - 구성](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) `.rbxl` 파일 내에서 최종 환경을 정확히 재구성하는 이러한 지침을 따르면서 각 단계가 환경에 캐릭터를 추가하고 사용자에게 전체 세계에 대한 정보를 제공하는 방법을 관찰하십시오. **자신의 경험의 사양에 맞게 프로세스의 모든 부분을 조정할 수 있습니다**. 자신의 세계에 따라 환경의 필요가 다를 수 있습니다.
+
+##### 바닥
+
+바닥의 원래 그레이박스 디자인은 건물을 각 팀을 위한 두 부분으로 나누는 것이었습니다. 이것은 각 절반을 해당 팀을 위한 자체 공간으로 시각화하고, 지도 중심을 구분하는 데 유용했습니다. 그러나 환경을 구성하기 시작하면 벽이 이 목적을 더 효과적으로 수행할 수 있고, 바닥은 사용자가 건물의 외부와의 관계에서 자신이 어디에 있는지 파악하는 데 더 유용하다는 것을 알 수 있습니다.
+
+예를 들어, 최종 샘플 레이저 태그 환경은 사용자가 건물 내부를 탐색하고 있는지, 건물 외부 공간에 접근하고 있는지를 알리기 위해 고유한 재료를 사용하여 새로운 바닥 조각을 사용합니다. 사용자가 건물 내부에 있을 때는 **GlossyTiles** `Class.MaterialVariant`가 적용된 표면을 걷고, 나중에 이 튜토리얼에서 만들 오버행 조각 아래 또는 중간 마당에서 걸을 때는 **Concrete_Tiles_A** `Class.MaterialVariant`가 적용된 표면을 걷습니다. 이 두 재료는 샘플 [환경 예술 에셋 라이브러리](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library)에서 찾을 수 있습니다.
+
+<img src="../img/05_Roblox_tutorial/Construct Your World/Floors-Intro.jpg" width="60%"/>
+
+이 기술은 원래 그레이박스 기하학을 대체하고 변환하지만, 수평 이동 외에도 경험 전반에 걸쳐 시야 및 교전 거리를 제어하는 ​​피크와 계곡을 만드는 원래 디자인 의도를 존중합니다. 즉, 사용자는 모든 물리적 및 감정적 상승 및 하강 감각을 유지하면서도 3D 공간에서 자신의 위치를 파악할 수 있는 이점을 갖게 됩니다.
+
+<Tabs>
+  <TabItem key = "1" label="자신만의 만들기">
+
+자신만의 에셋 라이브러리를 바닥에 적용하려면:
+
+1. **블록** 부품을 사용하여 실내 바닥을 위한 대칭 표면을 만듭니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/GeneralFloors-1.jpg" width="100%"/>
+
+1. **쐐기** 부품을 사용하여 건물 내부의 주요 바닥과 메자닌 바닥 사이에 **높이를 상승**시킵니다.
+1. 이러한 실내 부품을 선택한 다음 **속성** 창에서 **색상**, **재료** 및/또는 **MaterialVariant**를 설정하여 환경의 다른 표면과 차별화된 시각적 처리를 적용합니다. 이를 통해 플레이어는 항상 건물 내부에 있음을 알 수 있습니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/GeneralFloors-2.jpg" width="100%"/>
+
+1. **블록** 부품을 사용하여 **야외 바닥**을 위한 대칭 표면을 만듭니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/GeneralFloors-3.jpg" width="100%"/>
+
+1. **쐐기** 부품을 사용하여 건물 외부의 주요 바닥과 메자닌 바닥 사이에 **높이를 상승**시킵니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/GeneralFloors-4.jpg" width="100%"/>
+
+1. **블록** 또는 **쐐기** 부품을 사용하여 건물 외부의 주요 바닥과 야외 바닥 사이에 높이를 **낮춥니다**.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/GeneralFloors-5.jpg" width="100%"/>
+
+1. 이러한 야외 부품을 선택한 다음 **속성** 창에서 **색상**, **재료** 및/또는 **MaterialVariant**를 설정하여 환경의 다른 표면과 차별화된 시각적 처리를 적용합니다. 이를 통해 플레이어는 항상 건물 외부에 있음을 알 수 있습니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/GeneralFloors-6.jpg" width="100%"/>
+
+1. 이러한 바닥 부품을 모두 고정합니다.
+
+  </TabItem>
+  <TabItem key = "2" label="샘플 재구성">
+
+샘플 [환경 예술 - 구성](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 파일 내에서 바닥을 정확히 재구성하려면:
+
+1. 실내 바닥을 위한 다음 **블록** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>부품</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>왼
+
+쪽 상단 영역</td>
+   <td>`57.5, 6, 142`</td>
+   <td>`-123.75, 2, 281`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 하단 영역</td>
+   <td>`64, 6, 164.5`</td>
+   <td>`-63, 2, 269.75`</td>
+   </tr>
+   <tr>
+   <td>중앙 상단 영역</td>
+   <td>`53, 6, 60`</td>
+   <td>`-119.5, 7, 160`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 상단 영역</td>
+   <td>`57.5, 6, 142`</td>
+   <td>`-123.75, 2, 48.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 하단 영역</td>
+   <td>`64, 5, 162.5`</td>
+   <td>`-63, 2.5, 51.25`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Floors-1.jpg" width="100%"/>
+
+2. 이러한 부품을 선택한 다음 **속성** 창에서
+
+   1. **색상**을 **248, 248, 248**로 설정합니다.
+   1. **재료**를 **콘크리트**로 설정합니다.
+   1. **MaterialVariant**를 **GlossyTiles**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Floors-2.jpg" width="100%"/>
+
+3. 야외 바닥을 위한 다음 **블록** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>부품</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>중앙 상단 영역</td>
+   <td>`13, 6, 64`</td>
+   <td>`-86.5, 7, 158`</td>
+   </tr>
+   <tr>
+   <td>중앙 중간 영역</td>
+   <td>`29, 1, 55`</td>
+   <td>`-45.5, 4.5, 160`</td>
+   </tr>
+   <tr>
+   <td>중앙 하단 영역</td>
+   <td>`18, 11, 100`</td>
+   <td>`-14, -0.5, 160`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Floors-3.jpg" width="100%"/>
+
+4. 이러한 부품을 선택한 다음 **속성** 창에서
+
+   1. **색상**을 **233, 218, 218**로 설정합니다.
+   1. **재료**를 **콘크리트**로 설정합니다.
+   1. **MaterialVariant**를 **Concrete_Tiles_A**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Floors-4.jpg" width="100%"/>
+
+5. 바닥 사이의 높이를 위해 다음 **FloorRamp** 모듈형 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   <th>MaterialVariant</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`14, 6, 20`</td>
+   <td>`-102.5, 7, 200`</td>
+   <td>`0, 0, 0`</td>
+   <td>`GlossyTiles`</td>
+   </tr>
+   <tr>
+   <td>`14, 6, 20`</td>
+   <td>`-102.5, 7, 120`</td>
+   <td>`0, 180, 0`</td>
+   <td>`GlossyTiles`</td>
+   </tr>
+   <tr>
+   <td>`50, 6, 20`</td>
+   <td>`-70, 7, 160`</td>
+   <td>`0, 90, 0`</td>
+   <td>`Concrete_Tiles_A`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Floors-5.jpg" width="100%"/>
+
+6. 야외 공간으로 내려가는 계단을 위해 다음 **블록** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>부품</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>상단 계단</td>
+   <td>`8, 1, 260`</td>
+   <td>`-27, 4.5, 160`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 첫 번째 계단</td>
+   <td>`3, 1, 74`</td>
+   <td>`-14.5, 0.5, 250.75`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 두 번째 계단</td>
+   <td>`3, 1, 74`</td>
+   <td>`-17, 1.5, 250.75`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 세 번째 계단</td>
+   <td>`3, 1, 74`</td>
+   <td>`-19.5, 2.5, 250.75`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 네 번째 계단</td>
+   <td>`3, 1, 74`</td>
+   <td>`-22, 3.5, 250.75`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 첫 번째 계단</td>
+   <td>`3, 1, 74`</td>
+   <td>`-14.5, 0.5, 72`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 두 번째 계단</td>
+   <td>`3, 1, 74`</td>
+   <td>`-17, 1.5, 72`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 세 번째 계단</td>
+   <td>`3, 1, 74`</td>
+   <td>`-19.5, 2.5, 72`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 네 번째 계단</td>
+   <td>`3, 1, 74`</td>
+   <td>`-22, 3.5, 72`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Floors-6.jpg" width="100%"/>
+
+7. 이러한 부품을 선택한 다음 **속성** 창에서
+
+   1. **색상**을 **233, 218, 218**로 설정합니다.
+   1. **재료**를 **콘크리트**로 설정합니다.
+   1. **MaterialVariant**를 **Concrete_Tiles_A**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Floors-7.jpg" width="100%"/>
+
+8. 이러한 부품과 모듈형 에셋을 모두 고정합니다.
+
+  </TabItem>
+</Tabs>
+
+##### 스폰 존
+
+스폰 존의 원래 그레이박스 디자인은 사용자가 매치 시작 시 각 팀에 합류할 수 있는 맵의 반대쪽 끝에 위치한 영역을 만드는 것이었습니다. 이러한 스폰 존의 배치는 사용자가 매치 시작 시 적의 사격에서 멀리 떨어진 안전한 위치를 가질 수 있도록 합니다.
+
+<img src="../img/05_Roblox_tutorial/Construct Your World/ThreeLaneLayout-SpawnZones.jpg" width="100%"/>
+
+최종 샘플 레이저 태그 환경은 이 디자인의 의도를 유지하면서 색상 테마를 추가합니다: 맵의 왼쪽에 모이는 팀은 **파스텔 블루그린** 색상을, 맵의 오른쪽에 모이는 팀은 **카네이션 핑크** 색상을 사용합니다. 이 튜토리얼의 이 섹션에서는 각 팀의 스폰 존 근처 지역을 구분하기 위해 동일한 색상 테마를 계속 사용할 것입니다.
+
+<Tabs>
+  <TabItem key = "1" label="자신만의 만들기">
+
+자신만의 에셋 라이브러리를 스폰 존에 적용하려면:
+
+1. **벽**, **코너**, **문틀** 모듈형 에셋을 **왼쪽 스폰 존** 내부에 추가하고 구성합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/SpawnZones-1.jpg" width="100%"/>
+
+1. 벽 구성 요소를 선택한 다음 **속성** 창에서 **색상**을 **고유한** 색조로 설정합니다. 이 색상을 맵의 나머지 부분에서도 계속 사용하여 플레이어가 이 팀의 색상 테마와 관련하여 자신의 위치를 알 수 있도록 합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/SpawnZones-2.jpg" width="100%"/>
+
+1. 이 과정을 **오른쪽 스폰 존**에서도 반복합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/SpawnZones-4.jpg" width="100%"/>
+
+1. 이러한 스폰 존 에셋을 모두 고정합니다.
+
+  </TabItem>
+  <TabItem key = "2" label="샘플 재구성">
+
+샘플 [환경 예술 - 구성](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 장소 파일 내에서 스폰 존을 정확히 재구성하려면:
+
+1. 왼쪽 스폰 존에 다음 **모듈형** 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>에셋 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-110, 5, 335`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-110, 5, 320`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-110, 5, 305`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-105, 5, 300`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-85, 5, 300`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-70, 5, 300`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-50, 5, 300`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-45, 5, 305`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-45, 5, 320`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-45, 5, 335`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-50, 5, 340`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-65, 5, 340`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-80, 5, 340`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-95, 5, 340`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallMid</td>
+   <td>`-105, 5, 340`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/SpawnZones-1.jpg" width="100%"/>
+
+2. 이 에셋의 벽 구성 요소를 선택한 다음 **속성** 창에서 **색상**을 **88, 218, 171**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/SpawnZones-2.jpg" width="100%"/>
+
+3. 오른쪽 스폰 존에 다음 **모듈형** 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>에셋 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-110, 5, 15`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-110, 5, -0`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-110, 5, -15`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-105, 5, -20`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-90, 5, -20`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-75, 5, -20`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-60, 5, -20`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallMid</td>
+   <td>`-50, 5, -20`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-45, 5, -15`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-45, 5, -0`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-45, 5
+
+, 15`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-50, 5, 20`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-70, 5, 20`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-85, 5, 20`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-105, 5, 20`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/SpawnZones-3.jpg" width="100%"/>
+
+4. 이 에셋의 벽 구성 요소를 선택한 다음 **속성** 창에서 **색상**을 **255, 170, 255**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/SpawnZones-4.jpg" width="100%"/>
+
+5. 이러한 모듈형 에셋을 모두 고정합니다.
+
+  </TabItem>
+</Tabs>
+
+##### 전투 포켓
+
+전투 포켓의 원래 그레이박스 디자인은 맵의 주요 경로가 교차하는 지점에 전투를 위한 의도된 공간을 만드는 것이었습니다. 또한, 원래 그레이박스 디자인에서는 각 전투 포켓에 최대 세 개의 입구 또는 출구 지점만 포함하도록 하여 사용자가 공간을 탐색할 때 선택 과부하를 주지 않도록 했습니다.
+
+최종 샘플 레이저 태그 환경은 샘플 [환경 예술 에셋 라이브러리](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library)를 직접 그레이박스 지오메트리에 적용하여 원래 디자인을 정확히 일치시키면서도 이전 섹션에서 소개된 색상 테마를 사용하여 각 팀의 스폰 존 근처 지역을 구분합니다. 이러한 색상과 바닥 재료를 사용하면 사용자는 건물 주위 어디에 있든 자신이 있는 위치를 빠르게 파악할 수 있으며, 건물 바닥의 그레이박스 디자인의 원래 의도를 존중합니다.
+
+<img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-Intro1.jpg" width="100%"/>
+
+또한, 이 섹션의 기술은 샘플 에셋 라이브러리의 소품을 왼쪽 및 오른쪽 전투 포켓에 적용하여 환경에 캐릭터를 추가하고 사용자가 없더라도 그 자체로 생명을 갖고 있는 것처럼 보이는 신빙성을 제공합니다. 이 과정을 **세트 드레싱**이라고도 하며, 사용자에게 그들이 방문하는 세계에 대한 직접적 및 간접적인 정보를 제공합니다. 예를 들어, 이 섹션의 표지판 및 식물 소품은 [연마된 에셋 개발](../environmental-art/develop-polished-assets.md)에서 샘플 아트 스타일을 강화하고, 사용자가 첨단 기술 환경에 있지만 여전히 유기 생명을 우선시하는 장소에 있음을 알립니다.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-Intro2.jpg" width="100%"/>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-Intro3.jpg" width="100%"/>
+  </figure>
+</GridContainer>
+
+<Tabs>
+  <TabItem key = "1" label="자신만의 만들기">
+
+자신만의 에셋 라이브러리를 전투 포켓에 적용하려면:
+
+1. **왼쪽 전투 포켓**의 내부 및 외부에 적용할 수 있는 소품 또는 **벽**, **코너**, **문틀**, **문** 모듈형 에셋을 추가하고 구성합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/GeneralCombatPockets-1.jpg" width="100%"/>
+
+1. 왼쪽 전투 포켓 외부의 벽 구성 요소를 선택한 다음 **속성** 창에서 색상을 왼쪽 스폰 존의 색상 테마와 **동일한** 색조로 설정합니다. 이를 통해 플레이어는 주요 경로 및 교차 경로를 탐색할 때 이 팀의 색상 테마와 관련하여 자신의 위치를 파악할 수 있습니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/GeneralCombatPockets-2.jpg" width="100%"/>
+
+1. 왼쪽 전투 포켓 내부의 벽 구성 요소를 선택한 다음 **속성** 창에서 색상을 **고유한** 색조로 설정합니다. 이를 통해 플레이어는 전투 포켓 내에서 출구를 통해 볼 때 자신의 위치를 파악할 수 있습니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-6.jpg" width="100%"/>
+
+1. 이 과정을 **중앙 전투 포켓** 및 **오른쪽 전투 포켓**에서도 반복합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-16.jpg" width="100%"/>
+
+1. 이러한 전투 포켓 에셋을 모두 고정합니다.
+
+  </TabItem>
+  <TabItem key = "2" label="샘플 재구성">
+
+샘플 [환경 예술 - 구성](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 장소 파일 내에서 전투 포켓을 정확히 재구성하려면:
+
+1. 왼쪽 전투 포켓 외부에 다음 **모듈형** 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>에셋 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-105, 5, 280`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-105, 5, 280`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-105, 5, 265`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallSmall</td>
+   <td>`-105, 5, 265`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-100, 5, 265`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>Door</td>
+   <td>`-95, 5, 260`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-95, 5, 260`</td>
+   <td>`0, -180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-95, 5, 240`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-95, 5, 225`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-95, 5, 225`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-80, 5, 225`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-60, 5, 225`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-45, 5, 225`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallSmall</td>
+   <td>`-45, 5, 225`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-45, 5, 230`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-45, 5, 245`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-45, 5, 260`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-45, 5, 275`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallMid</td>
+   <td>`-45, 5, 275`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallSmall</td>
+   <td>`-55, 5, 275`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-60, 5, 275`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallMid</td>
+   <td>`-80, 5, 275`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-90, 5, 275`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-95, 5, 280`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallMid</td>
+   <td>`-95, 5, 280`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-1.jpg" width="100%"/>
+
+2. 이 에셋의 벽 구성 요소를 선택한 다음 **속성** 창에서 **색상**을 **88, 218, 171**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-2.jpg" width="100%"/>
+
+3. 왼쪽 전투 포켓 외부에 다음 **소품** 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>에셋 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Extinguisher</td>
+   <td>`-44, 10, 254.5`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallHanging</td>
+   <td>`-44, 12.5, 248.5`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallConsoleA</td>
+   <td>`-44, 5.5, 233`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>Extinguisher</td>
+   <td>`-96, 10, 242`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-3.jpg" width="100%"/>
+
+4. 왼쪽 전투 포켓 내부에 다음 **모듈형** 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>에셋 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-90, 5, 265`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallSmall</td>
+   <td>`-90, 5, 260`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-90, 5, 240`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-85, 5, 235`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallSmall</td>
+   <td>`-80, 5, 235`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-60, 5, 235`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-55, 5, 240`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-55, 5, 255`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallMid</td>
+   <td>`-55, 5, 265`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-60, 5, 270`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-80, 5, 270`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallSmall</td>
+   <td>`-85, 5, 270`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-4.jpg" width="100%"/>
+
+5. 이 에셋의 벽 구성 요소를 선택한 다음 **속성** 창에서
+
+   1. **색상**을 **211, 190, 150**로 설정합니다.
+   1. **MaterialVariant**를 **MetalPanels**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-5.jpg" width="100%"/>
+
+6. 커버용 소품으로 **PlanterSmall** 에셋을 **CFrame.Position** **-67.5, 5, 252.5** 및 **CFrame.Orientation** **0, 90, 0**에 추가합니다. 건물에 더 많은 유기 생명을 추가하려면 에셋 라이브러리에서 식물 에셋을 플랜터 상단에 추가할 수 있습니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-6.jpg" width="100%"/>
+
+7. 중앙 전투 포켓 외부에 다음 **모듈형** 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>에셋 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>WallSmall</td>
+   <td>`-40, 5, 195`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-40, 5, 200`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-40, 5, 200`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-60, 5, 200`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-75, 5, 200`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallSmall</td>
+   <td>`-80, 5, 205`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-80, 5, 210`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-80, 5, 210`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-95, 5, 210`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallRiseA</td>
+   <td>`-95, 5, 210`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallMid</td>
+   <td>`-95, 10, 190`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-95, 10, 180`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-100, 10, 175`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-115, 10, 175`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallSmall</td>
+   <td>`-115, 10, 175`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-115, 10, 170`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallSmall</td>
+   <td>`-115, 10, 150`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-115, 10, 145`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-115, 10, 145`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-100, 10, 145`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallMid</td>
+   <td>`-95, 10, 140`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallRiseB</td>
+   <td>`-95, 5, 110`</td>
+   <td>`0, -180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-95, 5, 110`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-95, 5, 110`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-80, 5, 110`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallSmall</td>
+   <td>`-80, 5, 110`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-80, 5, 115`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-75, 5, 120`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-60, 5, 120`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-40, 5, 120`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallSmall</td>
+   <td>`-40, 5, 120`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-7.jpg" width="100%"/>
+
+8. 이 에셋의 벽 구성 요소를 선택한 다음 **속성** 창에서
+
+   1. **색상**을 **181, 173, 156**로 설정합니다.
+   1. **MaterialVariant**를 **Concrete_Ribbed_A**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-8.jpg" width="100%"/>
+
+9. 중앙 전투 포켓 내부에 다음 **모듈형** 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>에셋 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-60, 5, 185`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallRiseB</td>
+   <td>`-60, 5, 185`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallSmall</td>
+   <td>`-85, 10, 185`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-90, 10, 180`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallMid</td>
+   <td>`-90, 10, 170`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-90, 10, 150`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallMid</td>
+   <td>`-90, 10, 140`</td>
+   <td>`0, 0, 0`</td>
+  
+
+ </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-85, 10, 135`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallSmall</td>
+   <td>`-80, 10, 135`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallRiseA</td>
+   <td>`-60, 5, 135`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-40, 5, 135`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimAShort</td>
+   <td>`-65, 5, 151`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimAShort</td>
+   <td>`-75, 5, 169`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimAMid</td>
+   <td>`-65, 5, 169`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimAMid</td>
+   <td>`-65, 10, 167`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimACorner</td>
+   <td>`-65, 5, 169`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimACorner</td>
+   <td>`-65, 5, 151`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFramePlug</td>
+   <td>`-40, 5, 200`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFramePlug</td>
+   <td>`-60, 5, 185`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFramePlug</td>
+   <td>`-100, 10, 170`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFramePlug</td>
+   <td>`-105, 10, 170`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFramePlug</td>
+   <td>`-110, 10, 170`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFramePlug</td>
+   <td>`-105, 10, 150`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFramePlug</td>
+   <td>`-60, 5, 120`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFramePlug</td>
+   <td>`-40, 5, 135`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-9.jpg" width="100%"/>
+
+10. 이 에셋의 벽 구성 요소를 선택한 다음 **속성** 창에서
+
+    1. **색상**을 **181, 173, 156**로 설정합니다.
+    1. **MaterialVariant**를 **Concrete_Ribbed_A**로 설정합니다.
+
+    <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-10.jpg" width="100%"/>
+
+11. 오른쪽 전투 포켓 외부에 다음 **모듈형** 에셋을 추가하고 구성합니다:
+
+    <table>
+    <thead>
+    <tr>
+    <th>에셋 이름</th>
+    <th>CFrame.Position</th>
+    <th>CFrame.Orientation</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>WallCornerOuter</td>
+    <td>`-95, 5, 95`</td>
+    <td>`0, -90, 0`</td>
+    </tr>
+    <tr>
+    <td>WallLarge</td>
+    <td>`-95, 5, 95`</td>
+    <td>`0, 180, 0`</td>
+    </tr>
+    <tr>
+    <td>DoorFrame</td>
+    <td>`-95, 5, 80`</td>
+    <td>`0, 180, 0`</td>
+    </tr>
+    <tr>
+    <td>WallCornerInner</td>
+    <td>`-95, 5, 60`</td>
+    <td>`0, -90, 0`</td>
+    </tr>
+    <tr>
+    <td>WallSmall</td>
+    <td>`-100, 5, 55`</td>
+    <td>`0, -90, 0`</td>
+    </tr>
+    <tr>
+    <td>WallCornerOuter</td>
+    <td>`-105, 5, 55`</td>
+    <td>`0, -90, 0`</td>
+    </tr>
+    <tr>
+    <td>WallLarge</td>
+    <td>`-105, 5, 55`</td>
+    <td>`0, 180, 0`</td>
+    </tr>
+    <tr>
+    <td>WallCornerOuter</td>
+    <td>`-105, 5, 40`</td>
+    <td>`0, 180, 0`</td>
+    </tr>
+    <tr>
+    <td>WallMid</td>
+    <td>`-105, 5, 40`</td>
+    <td>`0, 90, 0`</td>
+    </tr>
+    <tr>
+    <td>WallCornerOuter</td>
+    <td>`-95, 5, 40`</td>
+    <td>`0, 90, 0`</td>
+    </tr>
+    <tr>
+    <td>WallCornerInner</td>
+    <td>`-95, 5, 40`</td>
+    <td>`0, 90, 0`</td>
+    </tr>
+    <tr>
+    <td>WallMid</td>
+    <td>`-90, 5, 45`</td>
+    <td>`0, 90, 0`</td>
+    </tr>
+    <tr>
+    <td>DoorFrame</td>
+    <td>`-80, 5, 45`</td>
+    <td>`0, 90, 0`</td>
+    </tr>
+    <tr>
+    <td>WallLarge</td>
+    <td>`-60, 5, 45`</td>
+    <td>`0, 90, 0`</td>
+    </tr>
+    <tr>
+    <td>WallCornerOuter</td>
+    <td>`-45, 5, 45`</td>
+    <td>`0, 90, 0`</td>
+    </tr>
+    <tr>
+    <td>WallSmall</td>
+    <td>`-45, 5, 45`</td>
+    <td>`0, 0, 0`</td>
+    </tr>
+    <tr>
+    <td>WallLarge</td>
+    <td>`-45, 5, 50`</td>
+    <td>`0, 0, 0`</td>
+    </tr>
+    <tr>
+    <td>WallLarge</td>
+    <td>`-45, 5, 65`</td>
+    <td>`0, 0, 0`</td>
+    </tr>
+    <tr>
+    <td>WallLarge</td>
+    <td>`-45, 5, 80`</td>
+    <td>`0, 0, 0`</td>
+    </tr>
+    <tr>
+    <td>WallCornerOuter</td>
+    <td>`-45, 5, 
+
+95`</td>
+    <td>`0, 0, 0`</td>
+    </tr>
+    <tr>
+    <td>WallMid</td>
+    <td>`-45, 5, 95`</td>
+    <td>`0, -90, 0`</td>
+    </tr>
+    <tr>
+    <td>WallSmall</td>
+    <td>`-55, 5, 95`</td>
+    <td>`0, -90, 0`</td>
+    </tr>
+    <tr>
+    <td>DoorFrame</td>
+    <td>`-60, 5, 95`</td>
+    <td>`0, -90, 0`</td>
+    </tr>
+    <tr>
+    <td>WallLarge</td>
+    <td>`-80, 5, 95`</td>
+    <td>`0, -90, 0`</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-11.jpg" width="100%"/>
+
+12. 이 에셋의 벽 구성 요소를 선택한 다음 **속성** 창에서 **색상**을 **255, 170, 255**로 설정합니다.
+
+    <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-12.jpg" width="100%"/>
+
+13. 오른쪽 전투 포켓 외부에 다음 **소품** 에셋을 추가하고 구성합니다:
+
+    <table>
+    <thead>
+    <tr>
+    <th>에셋 이름</th>
+    <th>CFrame.Position</th>
+    <th>CFrame.Orientation</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>Extinguisher</td>
+    <td>`-44, 10, 75.5`</td>
+    <td>`0, 0, 0`</td>
+    </tr>
+    <tr>
+    <td>WallHanging</td>
+    <td>`-44, 5.5, 88`</td>
+    <td>`0, 0, 0`</td>
+    </tr>
+    <tr>
+    <td>WallConsoleA</td>
+    <td>`-44, 12.5, 70.5`</td>
+    <td>`0, 0, 0`</td>
+    </tr>
+    <tr>
+    <td>Extinguisher</td>
+    <td>`-96, 10, 62`</td>
+    <td>`0, 180, 0`</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-13.jpg" width="100%"/>
+
+14. 오른쪽 전투 포켓 내부에 다음 **모듈형** 에셋을 추가하고 구성합니다:
+
+    <table>
+    <thead>
+    <tr>
+    <th>에셋 이름</th>
+    <th>CFrame.Position</th>
+    <th>CFrame.Orientation</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>WallCornerInner</td>
+    <td>`-90, 5, 80`</td>
+    <td>`0, 90, 0`</td>
+    </tr>
+    <tr>
+    <td>DoorFrame</td>
+    <td>`-90, 5, 60`</td>
+    <td>`0, 0, 0`</td>
+    </tr>
+    <tr>
+    <td>WallSmall</td>
+    <td>`-90, 5, 55`</td>
+    <td>`0, 0, 0`</td>
+    </tr>
+    <tr>
+    <td>WallCornerInner</td>
+    <td>`-85, 5, 50`</td>
+    <td>`0, 0, 0`</td>
+    </tr>
+    <tr>
+    <td>WallSmall</td>
+    <td>`-80, 5, 50`</td>
+    <td>`0, -90, 0`</td>
+    </tr>
+    <tr>
+    <td>DoorFrame</td>
+    <td>`-60, 5, 50`</td>
+    <td>`0, -90, 0`</td>
+    </tr>
+    <tr>
+    <td>WallCornerInner</td>
+    <td>`-55, 5, 55`</td>
+    <td>`0, -90, 0`</td>
+    </tr>
+    <tr>
+    <td>WallLarge</td>
+    <td>`-55, 5, 70`</td>
+    <td>`0, 180, 0`</td>
+    </tr>
+    <tr>
+    <td>WallMid</td>
+    <td>`-55, 5, 80`</td>
+    <td>`0, 180, 0`</td>
+    </tr>
+    <tr>
+    <td>WallCornerInner</td>
+    <td>`-60, 5, 85`</td>
+    <td>`0, 180, 0`</td>
+    </tr>
+    <tr>
+    <td>DoorFrame</td>
+    <td>`-80, 5, 85`</td>
+    <td>`0, 90, 0`</td>
+    </tr>
+    <tr>
+    <td>WallSmall</td>
+    <td>`-85, 5, 85`</td>
+    <td>`0, 90, 0`</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-14.jpg" width="100%"/>
+
+15. 이 에셋의 벽 구성 요소를 선택한 다음 **속성** 창에서
+
+    1. **색상**을 **255, 170, 255**로 설정합니다.
+    1. **MaterialVariant**를 **MetalPanels**로 설정합니다.
+
+    <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-15.jpg" width="100%"/>
+
+16. 커버용 소품으로 **PlanterSmall** 에셋을 **CFrame.Position** **-67.5, 5, 67.5** 및 **CFrame.Orientation** **0, 90, 0**에 추가합니다. 건물에 더 많은 유기 생명을 추가하려면 에셋 라이브러리에서 식물 에셋을 플랜터 상단에 추가할 수 있습니다.
+
+    <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-16.jpg" width="100%"/>
+
+17. 이러한 소품 및 모듈형 에셋을 모두 고정합니다.
+
+  </TabItem>
+</Tabs>
+
+##### 외곽 복도
+
+이전 섹션에서 전투 포켓의 외부에 에셋 라이브러리를 적용하여 대부분의 교차 차선이 연마된 에셋을 포함하게 되었지만, 건물의 외곽을 구성하는 복도는 포함되지 않았습니다. 이전 섹션의 동일한 색상 체계를 사용하는 것 외에도, 최종 샘플 레이저 태그 환경은 벽 에셋을 기본 주황색으로 유지하여 사용자가 건물의 뒷부분에 위치한 곳을 인지할 수 있도록 합니다.
+
+예를 들어, 다음 이미지에서 보는 관점에서 사용자는 건물 내 위치를 쉽게 파악할 수 있는 다음 정보를 즉시 얻을 수 있습니다:
+
+- **리브드 콘크리트**는 왼쪽으로 이동하면 중간 전투 포켓에 들어간다는 것을 사용자에게 알립니다.
+- **노란 벽**은 앞으로 이동하면 건물의 뒤쪽과 내부 주요 차선에 도달하게 됨을 사용자에게 알립니다.
+- **핑크 벽**은 오른쪽으로 이동하면 오른쪽 전투 포켓에 들어가며, 지도 오른쪽에 가장 가까운 위치에 있다는 것을 사용자에게 알립니다.
+
+<img src="../img/05_Roblox_tutorial/Construct Your World/Perimeter-Intro1.jpg" width="100%"/>
+
+샘플 [Environment Art Asset Library](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library)를 벽의 그레이박스 지오메트리에 직접 적용하여 원래 디자인을 정확히 재현하는 이 기술 외에도, 사용자에게 적의 사격으로부터 피할 수 있는 덮개를 제공하기 위해 상자 소품 에셋 형태로 지오메트리를 추가합니다. 이 디자인 반복은 돌출된 복도 공간과 고도 변화를 통해 시야를 차단하고 교전 거리를 분할하려는 의도를 계속 존중합니다.
+
+<img src="../img/05_Roblox_tutorial/Construct Your World/Perimeter-Intro2.jpg" width="100%"/>
+
+<Tabs>
+  <TabItem key = "1" label="직접 만들기">
+
+외곽 복도에 에셋 라이브러리를 적용하려면:
+
+1. 건물의 **왼쪽** 외곽 복도에 적합한 소품이나 **벽**, **모서리**, **문틀** 모듈형 에셋을 추가하고 구성합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Perimeter-1.jpg" width="100%"/>
+
+1. 벽 구성 요소를 선택한 다음 **속성** 창에서 왼쪽 스폰 존의 색상 테마와 **동일한** 색상으로 **색상**을 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Perimeter-2.jpg" width="100%"/>
+
+1. 건물 **뒤쪽** 외곽 복도에 적합한 소품이나 **벽**, **모서리**, **문틀** 모듈형 에셋을 추가하고 구성합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Perimeter-4.jpg" width="100%"/>
+
+1. 벽 구성 요소를 선택한 다음 **속성** 창에서 **고유한** 색상으로 **색상**을 설정합니다. 이는 플레이어가 내부 주요 차선과의 관계에서 자신의 위치를 인식할 수 있도록 합니다. 샘플 환경에서는 이러한 에셋을 기본 색상으로 유지합니다.
+1. 건물의 오른쪽 외곽 복도에 적합한 소품이나 **벽**, **모서리**, **문틀** 모듈형 에셋을 추가하고 구성합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Perimeter-5.jpg" width="100%"/>
+
+1. 벽 구성 요소를 선택한 다음 속성 창에서 오른쪽 스폰 존의 색상 테마와 동일한 색상으로 색상을 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Perimeter-6.jpg" width="100%"/>
+
+1. 이 모든 외곽 복도 에셋을 고정합니다.
+
+  </TabItem>
+  <TabItem key = "2" label="샘플 재현">
+
+샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 외곽 복도를 정확히 재현하려면:
+
+1. 건물의 왼쪽 외곽 복도에 다음 **모듈형** 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>에셋 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-50, 5, 295`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-70, 5, 295`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-85, 5, 295`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-105, 5, 295`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-120, 5, 295`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Perimeter-1.jpg" width="100%"/>
+
+2. 이 에셋의 벽 구성 요소를 선택한 다음 **속성** 창에서 **색상**을 **255, 170, 255**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Perimeter-2.jpg" width="100%"/>
+
+3. 건물 뒤쪽 외곽 복도에 다음 **모듈형** 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>에셋 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-125, 5, 290`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-125, 5, 275`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-125, 5, 260`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-125, 5, 245`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallSmall</td>
+   <td>`-125, 5, 240`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-120, 5, 235`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallMid</td>
+   <td>`-110, 5, 235`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-110, 5, 235`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-110, 5, 220`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallMid</td>
+   <td>`-110, 5, 210`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallRiseB</td>
+   <td>`-110, 5, 210`</td>
+   <td>`0, 
+
+0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-110, 10, 190`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-125, 10, 190`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-140, 10, 190`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-145, 10, 185`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallSmall</td>
+   <td>`-145, 10, 180`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-145, 10, 165`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-145, 10, 150`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-145, 10, 135`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-140, 10, 130`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-125, 10, 130`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-110, 10, 130`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-110, 10, 130`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallRiseA</td>
+   <td>`-110, 5, 110`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallMid</td>
+   <td>`-110, 5, 100`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-110, 5, 85`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerOuter</td>
+   <td>`-110, 5, 85`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallMid</td>
+   <td>`-120, 5, 85`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-125, 5, 80`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-125, 5, 65`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-125, 5, 50`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-125, 5, 35`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallSmall</td>
+   <td>`-125, 5, 30`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallCornerInner</td>
+   <td>`-120, 5, 25`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Perimeter-3.jpg" width="100%"/>
+
+4. 건물 뒤쪽 외곽 복도에 다음 **소품** 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>에셋 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>SecurityCamera</td>
+   <td>`-120, 20, 290`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallHanging</td>
+   <td>`-124, 13, 287.5`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>CrateMedium</td>
+   <td>`-120, 5, 260`</td>
+   <td>`0, -180, 0`</td>
+   </tr>
+   <tr>
+   <td>CrateSmall</td>
+   <td>`-110, 5, 250`</td>
+   <td>`0, 135, 0`</td>
+   </tr>
+   <tr>
+   <td>WallHanging</td>
+   <td>`-109, 13, 217.5`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>WallHanging</td>
+   <td>`-109, 13, 103`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>CrateSmall</td>
+   <td>`-110, 5, 70`</td>
+   <td>`0, 135, 0`</td>
+   </tr>
+   <tr>
+   <td>CrateMedium</td>
+   <td>`-120, 5, 65`</td>
+   <td>`0, -180, 0`</td>
+   </tr>
+   <tr>
+   <td>WallHanging</td>
+   <td>`-124, 13, 37.5`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>SecurityCamera</td>
+   <td>`-120, 20, 30`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Perimeter-4.jpg" width="100%"/>
+
+5. 건물의 오른쪽 외곽 복도에 다음 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>Part</th>
+   <th>Size</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-105, 5, 25`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-85, 5, 25`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge</td>
+   <td>`-70, 5, 25`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>DoorFrame</td>
+   <td>`-50, 5, 25`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>WallLarge
+
+</td>
+   <td>`-35, 5, 25`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Perimeter-5.jpg" width="100%"/>
+
+6. 이 에셋의 벽 구성 요소를 선택한 다음 **속성** 창에서 **색상**을 **255, 170, 255**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Perimeter-6.jpg" width="100%"/>
+
+7. 이 모든 소품 및 모듈형 에셋을 고정합니다.
+
+  </TabItem>
+</Tabs>
+
+##### 문
+
+최종 샘플 레이저 태그 환경은 원래 디자인을 정확히 재현하기 위해 그레이박스 지오메트리에 문을 직접 적용하지만, 모든 출입구에 문 에셋이 있는 것은 아닙니다. 자신의 경험 요구 사항에 따라 전투 포켓 내 전투를 제어하려는 방식에 따라 더 많거나 적은 수의 문이 필요할 수 있습니다. 더 많은 문은 사용자가 전투 포켓에 들어가거나 나올 때 대기 시간을 더 길게 만들 수 있지만, 적은 문은 원치 않는 시야를 열 수 있습니다.
+
+이 때문에 여러 변형을 플레이 테스트하여 다양한 플레이 스타일을 실험하는 것이 좋습니다. 실제로, 전투 포켓에 한쪽에서만 사용자가 열 수 있는 문 에셋을 배치하거나 아예 열리지 않도록 실험할 수도 있습니다.
+
+<Tabs>
+  <TabItem key = "1" label="직접 만들기">
+
+문에 에셋 라이브러리를 적용하려면:
+
+1. 전투 포켓의 출입구에 **문** 모듈형 에셋을 추가하고 구성합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Doors-2.jpg" width="100%"/>
+
+1. **(선택 사항)** 이 모든 문 에셋을 고정합니다.
+
+  </TabItem>
+  <TabItem key = "2" label="샘플 재현">
+
+샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 문을 정확히 재현하려면:
+
+1. 왼쪽 전투 포켓에 다음 **문** 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`-60, 5, 275`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>`-95, 5, 260`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Doors-1.jpg" width="100%"/>
+
+2. 오른쪽 전투 포켓에 다음 **문** 에셋을 추가하고 구성합니다:
+
+<table>
+<thead>
+<tr>
+<th>CFrame.Position</th>
+<th>CFrame.Orientation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>`-90, 5, 60`</td>
+<td>`0, 0, 0`</td>
+</tr>
+<tr>
+<td>`-80, 5, 45`</td>
+<td>`0, 90, 0`</td>
+</tr>
+</tbody>
+</table>
+
+<img src="../img/05_Roblox_tutorial/Construct Your World/Doors-2.jpg" width="100%"/>
+
+  </TabItem>
+</Tabs>
+
+##### 외부 에셋
+
+외부 에셋에 대한 원래 그레이박스 디자인은 사용자가 외부 주요 차선을 탐색하는 동안 적의 사격으로부터 덮개를 제공하는 물체의 위치를 설정하는 것이었습니다. 이는 사용자가 계단을 오르내리거나 중간 전투 포켓을 건너거나 야외 공간에 있을 때 무엇이 도움이 될지를 시각화하는 데 유용했지만, 환경을 구성하면서 이러한 덮개 물체에 대해 다양한 용도를 제공하여 이 디자인을 개선할 수 있습니다.
+
+다음 섹션에서는 초기 플레이스홀더 에셋을 경험의 아트 스타일을 따르면서 원래 디자인의 의도를 유지하는 미적으로 즐거운 객체로 변환하는 방법에 대한 지침을 제공합니다.
+
+###### 타워
+
+야외 공간을 위한 첫 번째 외부 에셋은 외부 주요 차선과 교차하는 중간 전투 포켓 바로 바깥에 있는 두 개의 타워입니다. 이 섹션의 기술은 시각적으로 미적인 객체를 생성할 뿐만 아니라, 사용자에게 환경에서의 규모를 제공하는 객체를 생성합니다. 지금까지 다른 모든 객체는 사용자 캐릭터와 거의 같은 크기였지만 이 타워는 **사용자 캐릭터보다 훨씬 큽니다**, 이는 건축물 또는 건물이 위치한 전체 섬의 배경 스토리에 대한 흥미를 불러일으킬 수 있습니다.
+
+<Tabs>
+  <TabItem key = "1" label="직접 만들기">
+
+타워에 에셋 라이브러리를 적용하려면:
+
+1. **블록** 파트를 사용하여 환경에서 규모를 제공하는 플레이어보다 훨씬 큰 타워를 만듭니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/GeneralTowers-1.jpg" width="100%"/>
+
+1. 경험의 아트 스타일에 따라 다른 블록 파트에 고유한 색상과 재질을 적용합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Towers-1.jpg" width="100%"/>
+
+1. 이 타워를 복제한 다음, 지도의 대칭 위치에 배치합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Towers-3.jpg" width="100%"/>
+
+1. 이 모든 파트를 고정합니다.
+
+  </TabItem>
+  <TabItem key = "2" label="샘플 재현">
+
+샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 타워를 정확히 재현하려면:
+
+1. 왼쪽 타워에 다음 **블록** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>Part</th>
+   <th>Size</th>
+   <th>CFrame.Position</th>
+   <th>Color</th>
+   <th>Material</th>
+   <th>MaterialVariant</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Large Spire</td>
+   <td>`16, 98, 11`</td>
+   <td>`-32, 58, 186.5`</td>
+   <td>`248, 248, 248`</td>
+   <td>`Concrete`</td>
+   <td>`Concrete_Board_Formed_A`</td>
+   </tr>
+   <tr>
+   <td>Middle Spire</td>
+   <td>`17.369, 77.734, 3.42`</td>
+   <td>`-32, 72, 186.5`</td>
+   <td>`181, 173, 156`</td>
+   <td>`Concrete`</td>
+   <td>`Concrete_Board_Formed_A`</td>
+   </tr>
+   <tr>
+   <td>Bottom wide spire</td>
+   <td>`13, 75, 15`</td>
+   <td>`-31.5, 42.5, 186.5`</td>
+   <td>`181, 173, 156`</td>
+   <td>`Concrete`</td>
+   <td>`Concrete_Ribbed_A`</td>
+   </tr>
+   <tr>
+   <td>Top Wide Spire</td>
+   <td>`17.288, 4, 15`</td>
+   <td>`-33.5, 83, 186.5`</td>
+   <td>`181, 173, 156`</td>
+   <td>`Concrete`</td>
+   <td>`Concrete_Ribbed_A`</td>
+   </tr>
+   <tr>
+   <td>Base</td>
+   <td>`21, 5, 15`</td>
+   <td>`-29.5, 7.5, 186.5`</td>
+   <td>`181, 173, 156`</td>
+   <td>`Sand`</td>
+   <td>`MossStones`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Towers-1
+
+.jpg" width="100%"/>
+
+2. 모든 것을 모델로 그룹화한 다음 모델을 복제합니다.
+3. 복제된 타워를 **CFrame.Position**으로 **-30.572, 57.93, 133.5**에 이동합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Towers-3.jpg" width="100%"/>
+
+4. 이 두 모델을 모두 고정합니다.
+
+  </TabItem>
+</Tabs>
+
+###### 기둥
+
+야외 공간에 변환할 수 있는 두 번째 외부 에셋은 이 튜토리얼에서 나중에 만들 오버행 피스를 지탱하는 두 개의 기둥입니다. 타워와 마찬가지로 이 섹션의 기술은 시각적으로 미적인 객체를 생성할 뿐만 아니라, 사용자에게 전체 환경에서 자신이 있는 위치에 대한 추가적인 시각적 단서를 제공합니다. 예를 들어, 각 기둥에는 파스텔 블루-그린 또는 카네이션 핑크 디테일이 있어 사용자가 자신 또는 적의 스폰 존에 가장 가까운 곳에 있는지를 알 수 있습니다.
+
+<Tabs>
+  <TabItem key = "1" label="직접 만들기">
+
+1. **블록** 및 **쐐기** 부품을 사용하여 건물의 지붕을 지탱할 기둥을 만듭니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/GeneralColumns-1.jpg" width="100%"/>
+
+1. 경험의 아트 스타일에 따라 다른 부품에 고유한 색상과 재질을 적용합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Columns-2.jpg" width="100%"/>
+
+1. 이 기둥을 복제한 다음, 지도의 대칭 위치에 배치합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Columns-5.jpg" width="100%"/>
+
+1. **(선택 사항)** 각 기둥의 한 부분 색상을 변경하여 각 팀의 색상 테마에 맞춥니다.
+
+1. 이 모든 부품을 고정합니다.
+
+  </TabItem>
+  <TabItem key = "2" label="샘플 재현">
+
+샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 기둥을 정확히 재현하려면:
+
+1. 왼쪽 기둥에 다음 **블록** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>부품</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   <th>색상</th>
+   <th>재질</th>
+   <th>MaterialVariant</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>상단 벽</td>
+   <td>`15, 20, 5`</td>
+   <td>`-22.5, 20, 238.5`</td>
+   <td>`0, 0, 0`</td>
+   <td>`248, 248, 248`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Ribbed_A`</td>
+   </tr>
+   <tr>
+   <td>하단 벽</td>
+   <td>`15, 9, 5`</td>
+   <td>`-22.5, 5.5, 238.5`</td>
+   <td>`0, 0, 0`</td>
+   <td>`181, 173, 156`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Ribbed_A`</td>
+   </tr>
+   <tr>
+   <td>상단 베이스</td>
+   <td>`6.483, 1, 6.583`</td>
+   <td>`-27.304, 5.298, 238.498`</td>
+   <td>`0, 0, 0`</td>
+   <td>`181, 173, 156`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Ribbed_A`</td>
+   </tr>
+   <tr>
+   <td>하단 베이스</td>
+   <td>`6.483, 1.5, 19.652`</td>
+   <td>`-15.154, 1.479, 238.5`</td>
+   <td>`-21.622, -90, 0`</td>
+   <td>`181, 173, 156`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Tie_Holes_A`</td>
+   </tr>
+   <tr>
+   <td>색상 디테일</td>
+   <td>`1.734, 18.179, 6`</td>
+   <td>`-22.547, 23.597, 238.4`</td>
+   <td>`0, -180, 62`</td>
+   <td>`103, 255, 199`</td>
+   <td>`콘크리트`</td>
+   <td>`<없음>`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Columns-1.jpg" width="100%"/>
+
+2. 왼쪽 기둥 상단에 다음 **쐐기** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   <th>색상</th>
+   <th>재질</th>
+   <th>MaterialVariant</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`7, 11, 21`</td>
+   <td>`-18.5, 25.5, 238.5`</td>
+   <td>`0, -90, 180`</td>
+   <td>`248, 248, 248`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Board_Formed_A`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Columns-2.jpg" width="100%"/>
+
+3. 모든 것을 모델로 그룹화한 다음 모델을 복제합니다.
+4. 복제된 기둥을 **CFrame.Position** **-18.169, 14.081, 81.5** 및 **CFrame.Orientation** **0, -90, 180** 위치로 이동합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Columns-4.jpg" width="100%"/>
+
+5. 파스텔 블루-그린 **블록** 부품을 선택한 다음 **속성** 창에서 **색상** 속성을 **255, 170, 255**로 설정하여 지도의 오른쪽 팀의 색상 테마에 맞춥니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Columns-5.jpg" width="100%"/>
+
+6. 이 두 모델을 모두 고정합니다.
+
+  </TabItem>
+</Tabs>
+
+###### 화분
+
+야외 공간에 변환할 수 있는 마지막 외부 에셋은 외부 주요 차선을 따라 전체적으로 확장된 여덟 개의 화분입니다. [고체 모델링](../../parts/solid-modeling.md) 작업을 사용하여 부품을 결합하고 분리하여 각 화분의 베이스를 형성한 다음, 다양한 재료, 식물, 또는 트림 에셋 구성을 적용하여 각 화분이 3D 공간에서 독특하게 느껴지도록 할 수 있습니다.
+
+가장 왼쪽에 있는 화분에 에셋 라이브러리를 적용하려면:
+
+1. 가장 왼쪽에 있는 화분에 다음 **블록** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>부품</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>화분 외부</td>
+   <td>`20, 11, 5`</td>
+   <td>`-15, 4.5, 257.5`</td>
+   </tr>
+   <tr>
+   <td>디봇</td>
+   <td>`18.5, 1, 4`</td>
+   <td>`-15, 9.75, 257.5`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Planters-1.jpg" width="100%"/>
+
+2. 디봇 부품을 선택합니다.
+3. 메뉴 바에서 **모델** 탭으로 이동한 다음 **무효화** 버튼을 클릭합니다. 부품이 반투명으로 변합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Model-Tab-Negate.png" alt="모델 탭에서 무효화 도구 표시" width="732" />
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Planters-3.jpg" width="100%"/>
+
+4. 무효화된 부품과 화분 외부 부품을 모두 선택합니다.
+5. **모델** 탭에서 **연합** 버튼을 클릭합니다. 무효화된 부품이 겹치는 화분 외부 부품에서 잘립니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Model-Tab-Union-Negated.png" alt="모델 탭에서 연합 도구 표시" width="732" />
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Planters-5.jpg" width="100%"/>
+
+6. 연합을 선택한 다음 **속성** 창에서,
+
+   1. **색상**을 **181, 173, 156**으로 설정합니다.
+   1. **재료**를 **콘크리트**로 설정합니다.
+   1. **MaterialVariant**를 **Concrete_Board_Formed_A**로 설정합니다.
+   1. **UsePartColor**를 활성화합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Planters-6.jpg" width="100%"/>
+
+7. 화분의 흙과 테두리를 위한 다음 **블록** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>부품</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   <th>색상</th>
+   <th>재질</th>
+   <th>MaterialVariant</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>흙</td>
+   <td>`19, 0.5, 4`</td>
+   <td>`-15, 9.25, 257.5`</td>
+   <td>`0, 0, 0`</td>
+   <td>`248, 248, 248`</td>
+   <td>`LeafyGrass`</td>
+   <td>`Moss_Lumpy_Stones_A`</td>
+   </tr>
+   <tr>
+   <td>상단 화분 테두리</td>
+   <td>`1.652, 1, 6.483`</td>
+   <td>`-24.838, 5.298, 257.741`</td>
+   <td>`0, 0, 0`</td>
+   <td>`181, 173, 156`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Tie_Holes_A`</td>
+   </tr>
+   <tr>
+   <td>하단 화분 테두리</td>
+   <td>`6.483, 1.5, 19.652`</td>
+   <td>`-15.154, 1.479, 257.758`</td>
+   <td>`0, 0, -21.62`</td>
+   <td>`181, 173, 156`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Tie_Holes_A`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Planters-7.jpg" width="100%"/>
+
+8. 야외 공간에 더 많은 유기 생명을 추가하기 위해 화분 상단에 식물 에셋을 추가합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Planters-8.jpg" width="100%"/>
+
+9. 이 모든 부품과 식물 에셋을 고정합니다.
+
+고체 모델링 도구를 사용하는 방법을 알게 되었으므로, 다양한 외부, 재료, 식물 종류 및 트림 조각을 사용하여 다양한 유형의 화분을 실험해 볼 수 있습니다. 예를 들어, 최종 샘플 레이저 태그 환경 내의 다른 변형 화분은 'L' 모양을 만들거나, **블록** 부품과 흰색 트림을 함께 레이어링하여 맵의 중앙에서 더 높은 덮개를 제공합니다.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Construct Your World/Planters-9.jpg" width="100%"/>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Construct Your World/Planters-10.jpg" width="100%"/>
+  </figure>
+</GridContainer>
+
+<img src="../img/05_Roblox_tutorial/Construct Your World/Planters-11.jpg" width="100%"/>
+
+##### 지붕
+
+원래의 그레이박스 디자인에는 건물에 지붕이 포함되지 않았습니다. 이는 당신이 디자인하고 건설한 세 개의 차선 맵 레이아웃을 볼 수 없게 만들었기 때문입니다. 그러나 이제 건물 내부가 조명 소스를 구성하는 것 외에는 완료되었으므로 새로운 기하학에 에셋 라이브러리를 적용하여 건물을 완성하고 사용자에게 야외 공간으로부터의 쉼터를 제공할 수 있습니다.
+
+건물의 지붕은 최종 샘플 레이저 태그 환경에서 가장 복잡한 에셋 중 하나입니다. 여러 층이 서로 및 내부 기하학과 맞아야 하기 때문입니다. 다음 지침은 최상위 기하학부터 지붕의 둘레를 둘러싼 마지막 트림 층까지 각 층을 구성하는 방법을 안내합니다.
+
+<img src="../img/05_Roblox_tutorial/Construct Your World/Roof-Intro.jpg" width="100%"/>
+
+###### 천창
+
+지붕의 첫 번째 최상위 층은 천창 기하학입니다. 이 층의 목적은 내부 전투 구역에 외부 조명을 제공하는 것입니다.
+
+<Tabs>
+  <TabItem key = "1" label="직접 만들기">
+
+자신의 에셋 라이브러리를 천창에 적용하려면:
+
+1. 건물의 천장에 **천창** 모듈식 에셋을 추가하고 구성합니다. 이를 통해 전투 구역에 전역 조명을 제공하고 플레이어에게 더 풍부한 몰입감을 제공합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Skylight-5.jpg" width="100%"/>
+
+1. **블록** 부품을 사용하여 일부 천창에 유리를 만듭니다.
+
+   1. **블록** 부품을 천창에 추가하고 위치시킵니다.
+
+      <img src="../img/05_Roblox_tutorial/Construct Your World/Skylight-6.jpg" width="100%"/>
+
+   1. 부품을 선택한 다음 **속성** 창에서,
+
+      1. **색상**을 **105, 162, 172**로 설정합니다.
+      1. **재질**을 **네온**으로 설정합니다.
+      1. **투명도**를 **0.6**으로 설정합니다.
+
+      <img src="../img/05_Roblox_tutorial/Construct Your World/Skylight-7.jpg" width="100%"/>
+
+1. 이 모든 천창 에셋을 고정합니다.
+
+  </TabItem>
+  <TabItem key = "2" label="샘플 재현">
+
+샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 천창을 정확히 재현하려면:
+
+1. 왼쪽 천창에 다음 **모듈식** 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>에셋 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-60, 20, 265`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-85, 20, 240`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-60, 20, 240`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-85, 20, 265`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightSmall</td>
+   <td>`-70, 20, 240`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightSmall</td>
+   <td>`-85, 20, 250`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightSmall</td>
+   <td>`-75, 20, 265`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightSmall</td>
+   <td>`-60, 20, 255`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Skylight-1.jpg" width="100%"/>
+
+2. 왼쪽 상단 천창에 다음 **모듈식** 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>에셋 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-120, 20, 280`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-110, 20, 280`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-120, 20, 240`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-110, 20, 240`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-110, 20, 252.5`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-120, 20, 245`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-120, 20, 260`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-110, 20, 260`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-120, 20, 267.5`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-120, 20, 252.5`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-110, 20, 267.5`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-110, 20, 275`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Skylight-2.jpg" width="100%"/>
+
+3. 중간 천창에 다음 **모듈식** 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>에셋 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-120, 25, 140`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-140, 25, 140`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-120, 25, 180`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-140, 25, 180`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-120, 25, 170`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-140, 25, 150`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightSmall</td>
+   <td>`-120, 25, 155`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightSmall</td>
+   <td>`-140, 25, 165`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Skylight-3.jpg" width="100%"/>
+
+4. 오른쪽 상단 천창에 다음 **모듈식** 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>에셋 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-110, 20, 40`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-120
+
+, 20, 80`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-110, 20, 80`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-120, 20, 40`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-110, 20, 67.5`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-110, 20, 60`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-110, 20, 75`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-120, 20, 52.5`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-110, 20, 52.5`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-120, 20, 60`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-120, 20, 67.5`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightLarge</td>
+   <td>`-120, 20, 45`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Skylight-4.jpg" width="100%"/>
+
+5. 오른쪽 천창에 다음 **모듈식** 에셋을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>에셋 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-85, 20, 80`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-60, 20, 80`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-85, 20, 55`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightCornerInner</td>
+   <td>`-60, 20, 55`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightSmall</td>
+   <td>`-70, 20, 55`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightSmall</td>
+   <td>`-85, 20, 65`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightSmall</td>
+   <td>`-75, 20, 80`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>SkylightSmall</td>
+   <td>`-60, 20, 70`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Skylight-5.jpg" width="100%"/>
+
+6. 건물 뒤쪽에 있는 두 천창의 유리를 위해 다음 **블록** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>부품</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>왼쪽 유리</td>
+   <td>`10, 1.574, 39`</td>
+   <td>`-115, 21.395, 260.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 유리</td>
+   <td>`10, 1.574, 39`</td>
+   <td>`-115, 21.395, 60.5`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Skylight-6.jpg" width="100%"/>
+
+7. 이 두 부품을 선택한 다음 **속성** 창에서:
+
+   1. **색상**을 **105, 162, 172**로 설정합니다.
+   1. **재질**을 **네온**으로 설정합니다.
+   1. **투명도**를 **0.6**으로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Skylight-7.jpg" width="100%"/>
+
+8. 이 모든 부품과 모듈식 에셋을 고정합니다.
+9. **(선택 사항)** 건물 내부를 탐험할 때 사용자가 볼 수 있는 다양한 시각적 요소를 위해 왼쪽, 중간, 오른쪽 천창 주위에 식물 에셋을 추가하여 천장에 색상을 더할 수 있습니다.
+
+<img src="../img/05_Roblox_tutorial/Construct Your World/Skylight-8.jpg" width="100%"/>
+
+  </TabItem>
+</Tabs>
+
+###### 천장
+
+지붕의 두 번째 층은 사용자가 건물 내부를 탐색할 때 뷰의 상단에 보이는 천장 기하학입니다. 이 층의 목적은 각 벽 자산의 상단 장식 트림 사이의 열린 영역을 채우는 것입니다.
+
+<Tabs>
+  <TabItem key = "1" label="직접 만들기">
+
+자신의 에셋 라이브러리를 지붕의 천장에 적용하려면:
+
+1. **블록** 및 **쐐기** 부품을 사용하여 천창 주위의 빈 공간을 채웁니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Ceiling-3.jpg" width="100%"/>
+
+1. 이러한 부품을 선택한 다음 **속성** 창에서 **색상**, **재질** 및/또는 **재질 변형**을 설정하여 환경의 다른 표면과 시각적으로 구별되는 처리를 적용합니다. 이것은 플레이어가 카메라를 빠르게 이동할 때 자신을 방향지을 수 있도록 도와줍니다.
+1. 이러한 모든 천장 에셋을 고정합니다.
+
+  </TabItem>
+  <TabItem key = "2" label="샘플 재현">
+
+샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 천장을 정확히 재현하려면:
+
+1. 채우기용으로 다음 **블록** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`55, 1, 30`</td>
+   <td>`-77.5, 20.5, 320`</td>
+   </tr>
+   <tr>
+   <td>`30, 1, 5`</td>
+   <td>`-105, 20.5, 287.5`</td>
+   </tr>
+   <tr>
+   <td>`10, 1, 5`</td>
+   <td>`-115, 20.5, 282.5`</td>
+   </tr>
+   <tr>
+   <td>`50, 1, 10`</td>
+   <td>`-65, 20.5, 285`</td>
+   </tr>
+   <tr>
+   <td>`10, 1, 85`</td>
+   <td>`-35, 20.5, 247.5`</td>
+   </tr>
+   <tr>
+   <td>`10, 1, 20`</td>
+   <td>`-105, 20.5, 250`</td>
+   </tr>
+   <tr>
+   <td>`5, 1, 35`</td>
+   <td>`-102.5, 20.5, 222.5`</td>
+   </tr>
+   <tr>
+   <td>`25, 1, 5`</td>
+   <td>`-87.5, 20.5, 217.5`</td>
+   </tr>
+   <tr>
+   <td>`35, 1, 15`</td>
+   <td>`-57.5, 20.5, 212.5`</td>
+   </tr>
+   <tr>
+   <td>`5, 1, 10`</td>
+   <td>`-32.5, 20.5, 200`</td>
+   </tr>
+   <tr>
+   <td>`5, 1, 15`</td>
+   <td>`-102.5, 25.5, 187.5`</td>
+   </tr>
+   <tr>
+   <td>`35, 1, 5`</td>
+   <td>`-122.5, 25.5, 182.5`</td>
+   </tr>
+   <tr>
+   <td>`35, 1, 5`</td>
+   <td>`-122.5, 25.5, 137.5`</td>
+   </tr>
+   <tr>
+   <td>`5, 1, 15`</td>
+   <td>`-102.5, 25.5, 132.5`</td>
+   </tr>
+   <tr>
+   <td>`5, 1, 35`</td>
+   <td>`-102.5, 20.5, 97.5`</td>
+   </tr>
+   <tr>
+   <td>`25, 1, 5`</td>
+   <td>`-87.5, 20.5, 102.5`</td>
+   </tr>
+   <tr>
+   <td>`35, 1, 15`</td>
+   <td>`-57.5, 20.5, 107.5`</td>
+   </tr>
+   <tr>
+   <td>`10, 1, 85`</td>
+   <td>`-35, 20.5, 72.5`</td>
+   </tr>
+   <tr>
+   <td>`5, 1, 10`</td>
+   <td>`-32.5, 20.5, 120.5`</td>
+   </tr>
+   <tr>
+   <td>`10, 1, 20`</td>
+   <td>`-105, 20.5, 70`</td>
+   </tr>
+   <tr>
+   <td>`10, 1, 5`</td>
+   <td>`-115, 20.5, 37.5`</td>
+   </tr>
+   <tr>
+   <td>`30, 1, 5`</td>
+   <td>`-105, 20.5, 32.5`</td>
+   </tr>
+   <tr>
+   <td>`50, 1, 10`</td>
+   <td>`-65, 20.5, 35`</td>
+   </tr>
+   <tr>
+   <td>`55, 1, 30`</td>
+   <td>`-77.5, 20.5, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Ceiling-1.jpg" width="100%"/>
+
+2. 다음 **쐐기** 부품을 추가하여 높은 천장을 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`5, 5, 10`</td>
+   <td>`-102.5, 22.5, 200`</td>
+   <td>`0, 0, 180`</td>
+   </tr>
+   <tr>
+   <td>`5, 5, 10`</td>
+   <td>`-102.5, 22.5, 120`</td>
+   <td>`0, 180, 180`</td>
+   </tr>
+   </tbody>
+   </table>
+
+3. 이 모든 천장 부품을 선택한 다음 **속성** 창에서:
+
+   1. **색상**을 **248, 248, 248**로 설정합니다.
+   1. **재질 변형**을 **MetalPanels**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Ceiling-3.jpg" width="100%"/>
+
+4. 이 모든 부품을 고정합니다.
+
+  </TabItem>
+</Tabs>
+
+###### 상단 지붕
+
+지붕의 세 번째 층은 상단 지붕 기하학입니다. 이 층의 목적은 사용자가 야외 공간에서 건물을 볼 때 볼 수 있는 가장 바깥쪽 지붕 영역에 볼륨을 추가하는 것입니다. 또한 천창에 깊이를 더해 건물이 내부와 외부에서 더 완성된 모습으로 보이게 합니다.
+
+<Tabs>
+  <TabItem key = "1" label="직접 만들기">
+
+지붕의 상단에 자신의 에셋 라이브러리를 적용하려면:
+
+1. **블록** 및 **쐐기** 부품을 사용하여 천창을 가리지 않으면서 천장을 덮는 두꺼운 층을 추가합니다. 이 표면은 플레이어가 야외 공간에서 건물을 볼 때 볼 수 있는 것입니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/TopRoof-3.jpg" width="100%"/>
+
+1. 이러한 부품을 선택한 다음 **속성** 창에서 **색상**, **재질** 및/또는 **재질 변형**을 설정하여 환경의 아트 스타일에 맞는 시각적 처리를 적용합니다
+
+.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/TopRoof-4.jpg" width="100%"/>
+
+1. 이 모든 상단 지붕 에셋을 고정합니다.
+
+  </TabItem>
+  <TabItem key = "2" label="샘플 재현">
+
+샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 지붕의 상단을 정확히 재현하려면:
+
+1. 지도 왼쪽에 다음 **블록** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`126, 15, 90`</td>
+   <td>`-92, 28.5, 325`</td>
+   </tr>
+   <tr>
+   <td>`35, 15, 40`</td>
+   <td>`-137.5, 28.5, 260`</td>
+   </tr>
+   <tr>
+   <td>`25, 15, 40`</td>
+   <td>`-97.5, 28.5, 260`</td>
+   </tr>
+   <tr>
+   <td>`35, 15, 15`</td>
+   <td>`-72.5, 28.5, 272.5`</td>
+   </tr>
+   <tr>
+   <td>`25, 15, 75`</td>
+   <td>`-42.5, 28.5, 242.5`</td>
+   </tr>
+   <tr>
+   <td>`100, 15, 35`</td>
+   <td>`-105, 28.5, 222.5`</td>
+   </tr>
+   <tr>
+   <td>`65, 15, 10`</td>
+   <td>`-62.5, 28.5, 200`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/TopRoof-1.jpg" width="100%"/>
+
+2. 지도 상단 중앙에 다음 **블록** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`15, 10, 90`</td>
+   <td>`-147.5, 31, 160`</td>
+   </tr>
+   <tr>
+   <td>`20, 10, 25`</td>
+   <td>`-130, 31, 192.5`</td>
+   </tr>
+   <tr>
+   <td>`20, 10, 25`</td>
+   <td>`-130, 31, 127.5`</td>
+   </tr>
+   <tr>
+   <td>`26, 10, 90`</td>
+   <td>`-107, 31, 160`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/TopRoof-2.jpg" width="100%"/>
+
+3. 지도 오른쪽에 다음 **블록** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`100, 15, 35`</td>
+   <td>`-105, 28.5, 97.5`</td>
+   </tr>
+   <tr>
+   <td>`65, 15, 10`</td>
+   <td>`-62.5, 28.5, 120`</td>
+   </tr>
+   <tr>
+   <td>`35, 15, 40`</td>
+   <td>`-137.5, 28.5, 60`</td>
+   </tr>
+   <tr>
+   <td>`25, 15, 40`</td>
+   <td>`-97.5, 28.5, 60`</td>
+   </tr>
+   <tr>
+   <td>`35, 15, 15`</td>
+   <td>`-72.5, 28.5, 47.5`</td>
+   </tr>
+   <tr>
+   <td>`25, 15, 75`</td>
+   <td>`-42.5, 28.5, 77.5`</td>
+   </tr>
+   <tr>
+   <td>`126, 15, 90`</td>
+   <td>`-92, 28.5, -5`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/TopRoof-3.jpg" width="100%"/>
+
+4. 이 모든 상단 지붕 부품을 선택한 다음 **속성** 창에서:
+
+   1. **색상**을 **181, 173, 156**로 설정합니다.
+   1. **재질**을 **콘크리트**로 설정합니다.
+   1. **재질 변형**을 **Concrete_Tie_Holes_A**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/TopRoof-4.jpg" width="100%"/>
+
+5. 지도 하단 중앙에 다음 **블록** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`54, 5, 15`</td>
+   <td>`-67, 28.5, 187.5`</td>
+   </tr>
+   <tr>
+   <td>`9, 5, 40`</td>
+   <td>`-89.5, 28.5, 160`</td>
+   </tr>
+   <tr>
+   <td>`54, 5, 15`</td>
+   <td>`-67, 28.5, 132.5`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/TopRoof-5.jpg" width="100%"/>
+
+6. 이 모든 상단 지붕 부품을 선택한 다음 **속성** 창에서 **재질**을 **콘크리트**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/TopRoof-6.jpg" width="100%"/>
+
+7. 지도 중앙의 측면에 다음 **블록** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`25, 5, 15`</td>
+   <td>`-52.5, 23.5, 187.5`</td>
+   </tr>
+   <tr>
+   <td>`25, 5, 15`</td>
+   <td>`-52.5, 23.5, 132.5`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/TopRoof-7.jpg" width="100%"/>
+
+8. 지도 중앙의 측면에 다음 **쐐기** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`15, 5, 10`</td>
+   <td>`-70, 23.5, 187.5`</td>
+   <td>`0, 90, 180`</td>
+   </tr>
+   <tr>
+   <td>`15, 5, 10`</td>
+   <td>`-70, 23.5, 132.5`</td>
+   <td>`0, 90, 180`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/TopRoof-8.jpg" width="100%"/>
+
+9. 이 모든 상단 지붕 부품을 선택한 다음 **속성** 창에서:
+
+   1. **색상**을
+
+ **248, 248, 248**로 설정합니다.
+   1. **재질 변형**을 **MetalPanels**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/TopRoof-9.jpg" width="100%"/>
+
+10. 이 모든 부품을 고정합니다.
+
+  </TabItem>
+</Tabs>
+
+###### 오버행
+
+지붕의 네 번째 층은 건물이 구조적으로 견고하게 유지되도록 기둥 자산이 지탱하는 오버행 기하학입니다. 이 층의 목적은 외부 주요 차선을 탐색하는 사용자에게 미관상으로 보기 좋은 차양 공간을 제공하는 것입니다.
+
+<Tabs>
+  <TabItem key="1" label="직접 만들기">
+
+지붕의 오버행에 자신의 자산 라이브러리를 적용하려면:
+
+1. **블록** 및 **쐐기** 부품을 사용하여 기둥이 지탱할 수 있는 두꺼운 오버행을 추가합니다. 이 표면은 플레이어가 외부 주요 차선을 탐색할 때 태양으로부터 부분적인 차양을 제공합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Overhang-4.jpg" width="100%"/>
+
+1. 이러한 부품을 선택한 다음 **속성** 창에서 **색상**, **재질**, 및/또는 **재질 변형**을 설정하여 경험의 아트 스타일에 따라 시각적 처리를 적용합니다.
+1. 이 모든 오버행 부품을 고정합니다.
+
+  </TabItem>
+  <TabItem key="2" label="샘플 재현">
+
+샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 오버행을 정확히 재현하려면:
+
+1. 지도 왼쪽에 다음 **블록** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>색상</th>
+   <th>재질</th>
+   <th>재질 변형</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`16, 5, 90`</td>
+   <td>`-16, 38.5, 240`</td>
+   <td>`181, 173, 156`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Board_Formed_A`</td>
+   </tr>
+   <tr>
+   <td>`21, 5, 90`</td>
+   <td>`-18.5, 33.5, 240`</td>
+   <td>`181, 173, 156`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Tie_Holes_A`</td>
+   </tr>
+   <tr>
+   <td>`1, 16, 91`</td>
+   <td>`-29.5, 28, 239.5`</td>
+   <td>`181, 173, 156`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Board_Formed_A`</td>
+   </tr>
+   <tr>
+   <td>`0.5, 0.9, 91`</td>
+   <td>`-30, 20.4, 239.5`</td>
+   <td>`91, 93, 105`</td>
+   <td>`금속`</td>
+   <td>`<없음>`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Overhang-1.jpg" width="100%"/>
+
+2. 지도 왼쪽에 다음 **쐐기** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   <th>색상</th>
+   <th>재질</th>
+   <th>재질 변형</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`2, 11, 21`</td>
+   <td>`-18.5, 25.5, 278`</td>
+   <td>`0, -90, 180`</td>
+   <td>`248, 248, 248`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Board_Formed_A`</td>
+   </tr>
+   <tr>
+   <td>`88, 10, 20`</td>
+   <td>`-19, 26, 240`</td>
+   <td>`0, -90, 180`</td>
+   <td>`181, 173, 156`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Board_Formed_A`</td>
+   </tr>
+   <tr>
+   <td>`2, 11, 21`</td>
+   <td>`-18.5, 25.5, 202`</td>
+   <td>`0, -90, 180`</td>
+   <td>`248, 248, 248`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Board_Formed_A`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Overhang-2.jpg" width="100%"/>
+
+3. 지도 오른쪽에 다음 **블록** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>색상</th>
+   <th>재질</th>
+   <th>재질 변형</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`12, 5, 90`</td>
+   <td>`-14, 38.5, 80`</td>
+   <td>`181, 173, 156`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Board_Formed_A`</td>
+   </tr>
+   <tr>
+   <td>`21, 5, 90`</td>
+   <td>`-18.5, 33.5, 80`</td>
+   <td>`181, 173, 156`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Board_Formed_A`</td>
+   </tr>
+   <tr>
+   <td>`1, 16, 91`</td>
+   <td>`-29.5, 28, 80.5`</td>
+   <td>`181, 173, 156`</td>
+   <td>`콘크리트`</td>
+   <td>`<없음>`</td>
+   </tr>
+   <tr>
+   <td>`0.5, 0.9, 91`</td>
+   <td>`-30, 20.4, 80.5`</td>
+   <td>`91, 93, 105`</td>
+   <td>`금속`</td>
+   <td>`<없음>`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Overhang-3.jpg" width="100%"/>
+
+4. 지도 오른쪽에 다음 **쐐기** 부품을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   <th>색상</th>
+   <th>재질</th>
+   <th>재질 변형</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`2, 11, 21`</td>
+   <td>`-18.5, 25.5, 118`</td>
+   <td>`0, -90, 180`</td>
+   <td>`255, 255, 255`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Board_Formed_A`</td>
+   </tr>
+   <tr>
+   <td>`88, 10, 20`</td>
+   <td>`-19, 26, 80`</td>
+   <td>`0, -90, 180`</td>
+   <td>`181, 173, 156`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Board_Formed_A`</td>
+   </tr>
+   <tr>
+   <td>`2, 11, 21`</td>
+   <td>`-18.5, 25.5, 42`</td>
+   <td>`0, -90, 180`</td>
+   <td>`255, 
+
+255, 255`</td>
+   <td>`콘크리트`</td>
+   <td>`Concrete_Board_Formed_A`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Overhang-4.jpg" width="100%"/>
+
+5. 이 모든 부품을 고정합니다.
+
+  </TabItem>
+</Tabs>
+
+###### 트림
+
+지붕의 마지막 층은 지붕 주변을 둘러싸는 트림 기하학입니다. 이 층의 목적은 외부 공간에서 방을 바라보는 사용자에게 이전 각 층 간의 시각적 일관성을 제공하는 것입니다.
+
+<Tabs>
+  <TabItem key="1" label="직접 만들기">
+
+지붕의 트림에 자신의 자산 라이브러리를 적용하려면:
+
+1. 지붕의 오버행을 따라 **트림** 모듈 자산을 추가하고 구성합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Trim-5.jpg" width="100%"/>
+
+1. 이러한 부품을 선택한 다음 **속성** 창에서 **색상**, **재질**, 및/또는 **재질 변형**을 설정하여 경험의 아트 스타일에 따라 시각적 처리를 적용합니다.
+1. 이 모든 오버행 부품을 고정합니다.
+
+  </TabItem>
+  <TabItem key="2" label="샘플 재현">
+
+샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 트림을 정확히 재현하려면:
+
+1. 다음 **모듈식** 자산을 상단 트림에 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>자산 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>ExtTrimBLong</td>
+   <td>`-48, 37, 285`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBLong</td>
+   <td>`-8, 37, 285`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBLong</td>
+   <td>`-8, 37, 240`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBLong</td>
+   <td>`-8, 37, 195`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBLong</td>
+   <td>`-48, 37, 195`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBLong</td>
+   <td>`-89, 37, 195`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBLong</td>
+   <td>`-89, 37, 160`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBLong</td>
+   <td>`-88, 37, 125`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBLong</td>
+   <td>`-48, 37, 125`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBLong</td>
+   <td>`-8, 37, 125`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBLong</td>
+   <td>`-8, 37, 80`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBLong</td>
+   <td>`-8, 37, 35`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBCorner</td>
+   <td>`-8, 37, 285`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBCorner</td>
+   <td>`-8, 37, 195`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBCorner</td>
+   <td>`-8, 37, 125`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBCorner</td>
+   <td>`-8, 37, 35`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Trim-1.jpg" width="100%"/>
+
+2. 이러한 트림 자산을 선택한 다음 **속성** 창에서 **색상**을 **248, 248, 248**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Trim-2.jpg" width="100%"/>
+
+3. 다음 **모듈식** 자산을 하단 트림에 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>자산 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>ExtTrimALong</td>
+   <td>`-48, 31, 285`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimALong</td>
+   <td>`-8, 31, 285`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimAShort</td>
+   <td>`-8, 31, 245`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimALong</td>
+   <td>`-8, 31, 235`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimALong</td>
+   <td>`-8, 31, 195`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimALong</td>
+   <td>`-48, 31, 195`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimALong</td>
+   <td>`-88, 31, 195`</td>
+   <td>`-88, 31, 195`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimALong</td>
+   <td>`-88, 31, 125`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimALong</td>
+   <td>`-48, 31, 125`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimALong</td>
+   <td>`-8, 31, 125`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimAShort</td>
+   <td>`-8, 31, 85`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimALong</td>
+   <td>`-8, 31, 75`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimALong</td>
+   <td
+
+>`-8, 31, 35`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBCorner</td>
+   <td>`-8, 31, 285`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBCorner</td>
+   <td>`-8, 31, 195`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBCorner</td>
+   <td>`-8, 31, 125`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimBCorner</td>
+   <td>`-8, 31, 35`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Trim-3.jpg" width="100%"/>
+
+4. 지붕 중앙의 트림에 다음 **모듈식** 자산을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>자산 이름</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>ExtTrimAShort</td>
+   <td>`-24, 26, 195`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimAMid</td>
+   <td>`-24, 26, 194`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimALong</td>
+   <td>`-24, 26, 179`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimAMid</td>
+   <td>`-64, 26, 179`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimALong</td>
+   <td>`-85, 26, 178`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimAMid</td>
+   <td>`-84, 26, 141`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimALong</td>
+   <td>`-64, 26, 141`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimAMid</td>
+   <td>`-24, 26, 141`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimAShort</td>
+   <td>`-24, 26, 126`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimACorner</td>
+   <td>`-24, 26, 194`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimACorner</td>
+   <td>`-24, 26, 179`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimACorner</td>
+   <td>`-84, 26, 178`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimACorner</td>
+   <td>`-84, 26, 142`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimACorner</td>
+   <td>`-24, 26, 141`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>ExtTrimACorner</td>
+   <td>`-24, 26, 126`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Trim-4.jpg" width="100%"/>
+
+5. 이러한 트림 자산을 선택한 다음 **속성** 창에서 **색상**을 **255, 170, 0**으로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Trim-5.jpg" width="100%"/>
+
+6. 이 모든 트림 자산을 고정합니다.
+
+  </TabItem>
+</Tabs>
+
+#### 불필요한 기하학 삭제
+
+이제 건물이 완성되었으므로, 기초 회색 박스 기하학 및 바닥판을 삭제할 차례입니다. 이 과정은 사용자가 보거나 상호작용하지 않을 불필요한 폴리곤을 제거하여 메모리와 성능을 향상시킵니다. 특히 메모리와 그래픽 처리 장치(GPU) 제한이 있는 장치에서 큰 효과를 볼 수 있습니다. 또한 바닥판을 제거하면 건물이 하늘에 떠 있게 되어 다음 섹션에서 야외 공간의 지형을 조각하는 데 도움이 됩니다.
+
+불필요한 기하학을 삭제하려면:
+
+1. **탐색기(Explorer)** 창에서 이 튜토리얼의 첫 번째 섹션에서 사용된 모든 회색 박스 기하학을 삭제합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/DeletingGeo-1.png" width="100%"/>
+
+2. 바닥판 객체를 삭제합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/DeletingGeo-2.png" width="100%"/>
+
+#### 지형 조각하기
+
+현재 환경은 화분 속의 식물을 제외하면 대부분 건축적입니다. 그러나 [발전된 자산 개발](../environmental-art/develop-polished-assets.md)의 샘플 아트 스타일을 따르면, 3D 공간은 사용자에게 세계가 기술 발전을 중요시하지만 지구를 희생시키지는 않는다는 것을 알리기 위해 미래 지향적 기술과 무성한 녹지가 잘 어우러져야 합니다.
+
+[지형 편집기(Terrain Editor)](../../parts/terrain.md)를 사용하면 세부적이고 현실적인 지형을 빠르게 생성하고 조각하여 야외 공간에 생명을 불어넣을 수 있습니다. [자산 라이브러리 구성](../environmental-art/assemble-an-asset-library.md)에서 사용자 정의 재료를 만들 때 재질 재정의를 설정했기 때문에, 지형 편집기 브러시를 통해 이끼, 꽃, 돌길 등을 추가하여 환경과 일치하는 타일 텍스처를 사용할 수도 있습니다.
+
+<Alert severity="info">
+    지형 조각은 예술의 한 형태이며, 브러시 스트로크와 미세한 재료 수정을 정확히 재현하는 것은 어렵습니다. 자신의 경험에 맞는 지형을 만든다면, 샘플 레이저 태그 환경과 다르게 보이고 느껴지는 것은 정상적이고 기대되는 일입니다.
+</Alert>
+
+<Tabs>
+  <TabItem key="1" label="직접 만들기">
+
+야외 지역에 자신의 지형을 적용하려면:
+
+1. **지형 편집기(Terrain Editor)**를 엽니다.
+
+   1. 메뉴 모음에서 **모델(Model)** 탭으로 이동합니다.
+   1. **편집기(Editor)** 아이콘을 클릭합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Home-Tab-Terrain-Editor.png" width="716" alt="Home 탭에서 지형 편집기 아이콘 표시" />
+
+1. **편집(Edit)** 탭으로 이동한 다음 **그리기(Draw)** 버튼을 클릭합니다.
+1. **브러시 설정(Brush Settings)** 섹션에서 지형에 추가하려는 재료에 맞게 브러시를 사용자 정의합니다. 예를 들어, 샘플은 다음 이미지의 설정으로 이 과정을 시작합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Terrain-3.jpg" width="40%"/>
+
+1. **재료 설정(Materials Settings)** 섹션에서 **비활성 영역**의 재료를 선택합니다. 예를 들어, 물이나 균열이 있는 용암을 선택한 다음 뷰포트에서 플레이 가능한 영역의 끝을 그립니다. 이 재료는 야외 공간의 지도가 끝나는 지점을 나타냅니다.
+
+   <video controls src="../img/05_Roblox_tutorial/Construct Your World/Terrain-4.mp4" width="100%"></video>
+
+1. **재료 설정(Materials Settings)** 섹션으로 다시 이동한 다음 **플레이 가능한 영역**의 재료를 선택합니다. 예를 들어, 잔디, 포장 도로, 나무 판자 등을 선택한 다음 뷰포트에서 플레이 가능한 영역의 시작 지점을 그립니다. 이 재료는 야외 공간의 지도가 시작되는 지점을 나타냅니다.
+
+   <video controls src="../img/05_Roblox_tutorial/Construct Your World/Terrain-6.mp4" width="100%"></video>
+
+1. **지형 편집기(Terrain Editor)**로 다시 이동한 다음 **페인트(Paint)** 도구를 선택합니다.
+1. **브러시 설정(Brush Settings)** 섹션에서 지형에 추가하려는 재료에 맞게 브러시를 사용자 정의하고 새로운 재료를 선택합니다.
+1. 뷰포트에서 외부 차선을 따라 그립니다. 이 재료는 플레이어가 야외 공간을 탐색할 때 주요 경로를 나타냅니다.
+
+   <video controls src="../img/05_Roblox_tutorial/Construct Your World/Terrain-9.mp4" width="100%"></video>
+
+1. **(선택 사항)** 시각적 변화를 위해 야외 공간에 적합한 소품을 추가하고 구성합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Terrain-10.jpg" width="100%"/>
+
+  </TabItem>
+  <TabItem key="2" label="샘플 재현">
+
+샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 지형을 재현하려면:
+
+1. **지형 편집기(Terrain Editor)**를 엽니다.
+
+   1. 메뉴 모음에서 **모델(Model)** 탭으로 이동합니다.
+   1. **편집기(Editor)** 아이콘을 클릭합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Home-Tab-Terrain-Editor.png" width="716" alt="Home 탭에서 지형 편집기 아이콘 표시" />
+
+2. **편집(Edit)** 탭으로 이동한 다음 **그리기(Draw)** 버튼을 클릭합니다.
+3. **브러시 설정(Brush Settings)** 섹션에서,
+
+   1. **브러시 모드(Brush Mode)**를 **추가(Add)**로 설정합니다.
+   1. 브러시 모양을 원통형으로 설정합니다.
+   1. **기본 크기(Base Size)**를 **16**으로 설정합니다.
+   1. **높이(Height)**를 **5**로 설정합니다.
+   1. **피벗 위치(Pivot Position)**를 **상단(Top)**으로 설정합니다.
+   1. **평면 잠금(Plane Lock)**을 **수동(Manual)**으로 설정합니다.
+   1. **편집 평면(Edit Plane)** 설정에서,
+      1. **편집(Edit)** 버튼을 클릭합니다.
+      1. **위치(Position)**를 **0, -1, 0**으로 설정합니다.
+      1. **적용(Apply)** 버튼을 클릭합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Terrain-3.jpg" width="40%"/>
+
+4. **재료 설정(Material Settings)** 섹션에서 **물(Water)** 재료를 선택한 다음 뷰포트에서 건물 주위를 반달 모양으로 그립니다.
+
+   <video controls src="../img/05_Roblox_tutorial/Construct Your World/Terrain-4.mp4" width="100%"></video>
+
+5. 지형 편집기의 **브러시 설정(Brush Settings)** 섹션으로 다시 이동한 다음,
+
+   1. **기본 크기(Base Size)**를 **10**으로 설정합니다.
+   1. **높이(Height)**를 **10**으로 설정합니다.
+   1. **부품 무시(Ignore Parts)**를 **True/Enabled**로 설정합니다.
+   1. **편집 평면(Edit Plane)** 설정에서,
+      1. **편집(Edit)** 버튼을 클릭합니다.
+      1. **위치(Position)**를 **0, 0, 0**으로 설정합니다.
+      1. **적용(Apply)** 버튼을 클릭합니다.
+
+6. **재료 설정(Material Settings)** 섹션에서 **슬레이트(Slate)** 재료를 선택한 다음 뷰포트에서 건축물과 수영장을 분리하는 또 다른 반달 모양을 그린 후 수영장 외부에 얇은 경계를 그립니다.
+
+   <video controls src="../img/05_Roblox_tutorial/Construct Your World/Terrain-6.mp4" width="100%"></video>
+
+7. **지형 편집기(Terrain Editor)**로 다시 이동한 다음 **페인트(Paint)** 도구를 선택합니다.
+8. **브러시 설정(Brush Settings)** 섹션에서,
+   1. 브러시 모양을 원통형으로 설정합니다.
+   1. **기본 크기(Base Size)**를 **3**으로 설정합니다.
+   1.
+
+ **피벗 위치(Pivot Position)**를 **상단(Top)**으로 설정합니다.
+   1. **평면 잠금(Plane Lock)**을 **끔(Off)**으로 설정합니다.
+9. **재료 설정(Material Settings)** 섹션에서 **진흙(Mud)**, **잎이 많은 잔디(Leafy Grass)**, **지면(Ground)**, **모래(Sand)**, **소금(Salt)**, **슬레이트(Slate)**, **눈(Snow)** 커스텀 재료를 번갈아 가며 선택한 다음 뷰포트에서 나머지 영역을 그립니다.
+
+   <video controls src="../img/05_Roblox_tutorial/Construct Your World/Terrain-9.mp4" width="100%"></video>
+
+10. 자산 라이브러리를 사용하여,
+
+    1. 팀으로 나누기 전에 사용자가 조인할 수 있는 스폰 영역으로 `Class.CFrame.Position`이 **201.726, -14.315, 183.5**인 **떠 있는 섬(FloatingIsland)** 자산을 추가합니다.
+    1. 플레이 가능한 영역의 경계를 따라 다양한 `Class.MeshPart.Size` 및 `Class.CFrame.Orientation` 값을 가진 바위 자산을 산재시킵니다.
+    1. 야외 공간에 유기적 생명력을 더하기 위해 야외 공간 주변에 식물 자산을 산재시킵니다.
+
+    <img src="../img/05_Roblox_tutorial/Construct Your World/Terrain-10.jpg" width="100%"/>
+
+  </TabItem>
+</Tabs>
+
+#### 플레이 가능한 영역 포함
+
+경험을 플레이 테스트하고 섬에서 벗어나면 캐릭터가 프로젝트의 `Class.Workspace.FallenPartsDestroyHeight`에 도달할 때까지 떨어지게 되며, 이후 팀의 스폰 존으로 다시 리스폰됩니다. 사용자가 섬에서 떨어지지 않도록 하거나 팀으로 나누기 전에 떠 있는 스폰 존에서 너무 일찍 경기에 참여하지 않도록 하려면 보이지 않는 장벽으로 플레이 가능한 영역을 포함시켜야 합니다.
+
+이 섹션의 값은 최종 샘플 레이저 태그 환경의 지형에 크게 의존합니다. 사용자 경험의 맞춤 지형에 따라 장벽에 틈이 없는지 플레이 테스트를 통해 확인하는 것이 좋습니다.
+
+<Tabs>
+  <TabItem key="1" label="직접 만들기">
+
+경험에서 플레이 가능한 영역을 포함하려면:
+
+1. **블록** 부품을 사용하여 야외 영역의 플레이 가능한 영역을 둘러싸세요. 이러한 부품이 충분히 높아 플레이어가 장벽을 뛰어넘을 수 없도록 하고, 지도의 가장자리에서 떨어질 수 있는 틈이 없도록 하는 것이 중요합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/ContainingPlayableArea-1.jpg" width="100%"/>
+
+1. 이 부품들을 선택한 후 **속성(Properties)** 창에서,
+   1. **투명도(Transparency)**를 **1**로 설정합니다.
+   1. **CanCollide**를 비활성화합니다.
+   1. **Anchored**를 활성화합니다.
+
+  </TabItem>
+  <TabItem key="2" label="샘플 재현">
+
+샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 플레이 가능한 영역을 정확히 재현하려면:
+
+1. 다음 **블록** 부품을 추가 및 구성하여 플레이 가능한 영역을 둘러싸세요. 다음 이미지에서 상단 포함 부품은 시각적 참조를 위해 반투명입니다.
+
+   <table>
+   <thead>
+   <tr>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`69, 71, 17`</td>
+   <td>`12.5, 23, -47.5`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>`89, 71, 22`</td>
+   <td>`39, 23, -18`</td>
+   <td>`0, -45, 0`</td>
+   </tr>
+   <tr>
+   <td>`83, 71, 22`</td>
+   <td>`70.5, 23, 46`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>`54, 71, 42`</td>
+   <td>`93, 23, 95`</td>
+   <td>`0, -50, 0`</td>
+   </tr>
+   <tr>
+   <td>`129, 71, 85`</td>
+   <td>`137, 23, 179`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>`155, 71, 22`</td>
+   <td>`55, 23, 292`</td>
+   <td>`0, -135, 0`</td>
+   </tr>
+   <tr>
+   <td>`29, 71, 22`</td>
+   <td>`-7.5, 23, 337`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>`34, 71, 6`</td>
+   <td>`182, 23, 165`</td>
+   <td>`0, -135, 0`</td>
+   </tr>
+   <tr>
+   <td>`34, 71, 6`</td>
+   <td>`196.5, 23, 157`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>`34, 71, 6`</td>
+   <td>`212.5, 23, 160`</td>
+   <td>`0, 135, 0`</td>
+   </tr>
+   <tr>
+   <td>`34, 71, 6`</td>
+   <td>`224, 23, 181`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>`34, 71, 6`</td>
+   <td>`216, 23, 198`</td>
+   <td>`0, -135, 0`</td>
+   </tr>
+   <tr>
+   <td>`34, 71, 6`</td>
+   <td>`195, 23, 203`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>`34, 71, 6`</td>
+   <td>`181, 23, 194`</td>
+   <td>`0, 135, 0`</td>
+   </tr>
+   <tr>
+   <td>`379, 32, 389`</td>
+   <td>`41, 42, 153`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/ContainingPlayableArea-1.jpg" width="100%"/>
+
+2. 이 부품들을 선택한 후 **속성(Properties)** 창에서,
+   1. **투명도(Transparency)**를 **1**로 설정합니다.
+   1. **CanCollide**를 비활성화합니다.
+   1. **Anchored**를 활성화합니다.
+
+  </TabItem>
+</Tabs>
+
+#### 특수 효과 구성
+
+자산 라이브러리의 자산을 사용하여 건물의 건축물과 야외 공간이 거의 완성되었지만, 의식적으로나 무의식적으로 전체 환경이 정적이라고 느꼈을 수 있습니다. 이는 현실적인 환경에는 하늘을 가로지르는 구름, 초목을 스치는 바람, 공간을 탐색하는 생명체 등 다양한 소스에서 오는 움직임이 포함되어 있기 때문입니다.
+
+특수 효과를 구성하여 환경에 동적 움직임을 추가하고 사용자에게 감정을 불러일으킴으로써 현실적인 환경을 모방할 수 있습니다. 이 과정은 종종 세상을 더 살아 있게 만들어 사용자에게 깊은 몰입감을 제공하며 경험에 접근할 때 지원됩니다.
+
+<video controls src="../img/05_Roblox_tutorial/Construct Your World/SpecialEffects-Intro.mp4" width="100%"></video>
+
+##### 배경 구름
+
+최종 샘플 레이저 태그 환경이 3D 공간에 움직임을 추가하기 위해 사용하는 첫 번째 특수 효과는 동적 구름이라는 효과입니다. [동적 구름](../../environment/clouds.md)은 현실적인 구름으로 하늘을 천천히 떠다니며, 사용자에게 멀리 있지만 환경에 여전히 존재하는 느낌을 주는 움직임을 만듭니다. `Class.Clouds` 객체를 통해 외관을 조정하여 고유한 분위기를 만들 수 있으며, 글로벌 바람을 통해 방향과 속도를 맞춤 설정할 수 있습니다.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-Intro1.jpg" width="100%"/>
+    <figcaption>동적 구름 없이</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-Intro2.jpg" width="100%"/>
+    <figcaption>기본 동적 구름과 함께</figcaption>
+  </figure>
+</GridContainer>
+
+<Tabs>
+  <TabItem key="1" label="직접 만들기">
+
+배경에 동적 구름을 추가하고 구성하려면:
+
+1. **탐색기(Explorer)** 창에서 **지형(Terrain)** 객체에 **구름(Clouds)** 객체를 추가합니다.
+
+   1. **지형(Terrain)** 객체 위에 마우스를 올리고 **⊕** 버튼을 클릭합니다. 컨텍스트 메뉴가 표시됩니다.
+   1. 컨텍스트 메뉴에서 **구름(Clouds)** 객체를 삽입합니다.
+
+      <img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-1.jpg" width="40%"/
+
+>
+
+2. **구름(Clouds)** 객체를 선택한 후 **속성(Properties)** 창에서,
+   1. **덮개(Cover)**를 **0**(구름 없음)에서 **1**(전체 구름 덮개) 사이의 값으로 설정합니다.
+   1. **밀도(Density)**를 **0**(가볍고 투명한 구름)에서 **1**(무겁고 어두운 구름) 사이의 값으로 설정합니다.
+   1. 경험의 예술 스타일에 따라 구름 입자의 재료 색상인 **색상(Color)**을 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-2.jpg" width="100%"/>
+
+  </TabItem>
+  <TabItem key="2" label="샘플 재현">
+
+배경에 동적 구름을 추가하고 구성하려면:
+
+1. **탐색기(Explorer)** 창에서 **지형(Terrain)** 객체에 **구름(Clouds)** 객체를 추가합니다.
+
+   1. **지형(Terrain)** 객체 위에 마우스를 올리고 **⊕** 버튼을 클릭합니다. 컨텍스트 메뉴가 표시됩니다.
+   1. 컨텍스트 메뉴에서 **구름(Clouds)** 객체를 삽입합니다.
+
+      <img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-1.jpg" width="40%"/>
+
+2. **구름(Clouds)** 객체를 선택한 후 **속성(Properties)** 창에서,
+   1. **덮개(Cover)**를 **0.625**로 설정합니다.
+   1. **밀도(Density)**를 **0.5**로 설정합니다.
+   1. **색상(Color)**을 **143, 143, 143**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-2.jpg" width="100%"/>
+
+  </TabItem>
+</Tabs>
+
+##### 전경 구름
+
+최종 샘플 레이저 태그 환경이 3D 공간에 움직임을 추가하기 위해 사용하는 두 번째 특수 효과는 파티클 방출기라는 효과입니다. [파티클 방출기](../../effects/particle-emitters.md)는 파티클 방출기의 설정된 속성에 따라 수명 동안 보이고 작동하는 2D 이미지, 즉 파티클을 방출하며, 사용자에게 가까운 움직임을 만드는 데 유용합니다.
+
+파티클 방출기는 미세한 효과와 대담한 효과를 모두 달성할 수 있도록 많은 속성을 조정할 수 있습니다. 다음 지침은 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 전경 구름을 정확히 재현하는 방법을 보여주지만, 자신의 경험에 필요한 속성을 수정할 수 있습니다. 이러한 구름은 게임 플레이 공간과 정적인 배경 사이에서 크고 부드러운 움직임을 유지하는 것이 좋습니다.
+
+전경 구름을 추가하고 구성하려면:
+
+1. 사용자가 떠 있는 구름을 볼 수 있는 위치에 **블록** 부품을 추가합니다.
+2. 이 **블록** 부품을 선택한 후 **속성(Properties)** 창에서,
+   1. **투명도(Transparency)**를 **1**로 설정합니다.
+   1. **CanCollide**를 비활성화합니다.
+   1. **Anchored**를 활성화합니다.
+3. 이 부품 내에 파티클 방출기를 만듭니다.
+   1. **탐색기(Explorer)** 창에서 **블록** 부품 위에 마우스를 올리고 **⊕** 버튼을 클릭합니다. 컨텍스트 메뉴가 표시됩니다.
+   1. 컨텍스트 메뉴에서 **ParticleEmitter**를 삽입합니다. 파티클 방출기는 부품 영역 내에서 즉시 파티클을 방출합니다.
+4. 이 파티클 방출기를 선택한 후 **속성(Properties)** 창에서,
+
+   1. **색상(Color)**을 다음 이미지와 유사한 색상 시퀀스로 설정합니다.
+
+      <img src="../img/05_Roblox_tutorial/Construct Your World/ForegroundClouds-4a.png" width="100%"/>
+
+   1. **LightEmission**을 **0.3**으로 설정하여 텍스처와 주변 환경의 색상을 혼합합니다.
+   1. **LightInfluence**를 **0.2**로 설정하여 환경 빛이 파티클 색상에 미치는 영향을 미세하게 조정합니다.
+   1. **Orientation**을 **FacingCameraWorldUp**으로 설정하여 파티클이 항상 하늘을 향해 방출되도록 합니다.
+   1. **Size**를 **100**으로 설정하여 큰 구름을 만듭니다.
+   1. **Squash**를 **-0.25**로 설정하여 파티클을 수평으로 축소합니다.
+   1. **Texture**를 구름 이미지로 설정합니다. 샘플에서는 **rbxassetid://10714362544**를 사용합니다.
+   1. **Transparency**를 다음 이미지와 유사한 숫자 시퀀스로 설정합니다.
+
+      <img src="../img/05_Roblox_tutorial/Construct Your World/ForegroundClouds-4b.png" width="100%"/>
+
+   1. **Lifetime**을 **30**으로 설정하여 파티클이 30초 후에 사라지도록 합니다.
+   1. **Rate**를 **0.25**로 설정하여 파티클을 천천히 방출합니다.
+   1. **Acceleration**을 **0, -0.8, 0**으로 설정하여 파티클 속도에 영향을 줍니다.
+   1. **Drag**를 **0.1**로 설정하여 파티클의 속도가 시간에 따라 줄어들게 합니다.
+   1. **LockedToPart**를 활성화하여 파티클이 파티클 방출기와 가까이 유지되도록 합니다.
+
+   <video controls src="../img/05_Roblox_tutorial/Construct Your World/CloudVid1.mp4" width="100%"></video>
+
+5. 이 과정을 반복하여 구름 파티클 방출기를 환경 전체에 배치합니다.
+
+또한, 여러 파티클 방출기를 함께 레이어링하여 구름에 깊이를 더할 수 있습니다. 예를 들어, 최종 샘플 레이저 태그 환경에서는 전경 구름이 **색상(Color)** 속성이 **248, 248, 248**인 추가 파티클 방출기, **텍스처(Texture)** 속성이 **rbxassetid://10714433747**인 추가 파티클 방출기, **방출 속도(Rate)** 속성이 **0.1**인 추가 파티클 방출기와 함께 레이어링됩니다. 이 두 파티클 방출기는 샘플 [Environment Art Asset Library](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library)에서 찾을 수 있습니다.
+
+<video controls src="../img/05_Roblox_tutorial/Construct Your World/CloudVid2.mp4" width="100%"></video>
+
+<img src="../img/05_Roblox_tutorial/Construct Your World/ForegroundClouds-5.jpg" width="100%"/>
+
+##### 먼지 입자
+
+파티클 방출기는 많은 속성을 사용자 정의할 수 있기 때문에 발광 포털, 녹색의 빌로잉 연기, 생생한 폭발과 같은 흥미로운 시각적 효과를 만들 수 있는 다용도 특수 효과입니다. 최종 샘플 레이저 태그 환경은 이 섹션에서 사용자가 야외 공간을 탐색할 때 주변을 떠다니는 먼지 입자를 만들기 위해 다시 파티클 방출기를 사용합니다.
+
+전경 구름 단계와 유사하게, 다음 지침은 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 먼지 입자를 정확히 재현하는 방법을 보여주지만, 자신의 경험에 필요한 속성을 수정할 수 있습니다. 환경 내에서 미세한 움직임만 제공하기 위해 파티클 속도를 느리게 유지하는 것이 좋습니다.
+
+야외 공간을 위한 먼지 입자를 추가하고 구성하려면:
+
+1. 섬 전체를 덮는 환경에 **블록** 부품을 추가합니다.
+2. 이 **블록** 부품을 선택한 후 **속성(Properties)** 창에서,
+   1. **투명도(Transparency)**를 **1**로 설정합니다.
+   1. **CanCollide**를 비활성화합니다.
+   1. **Anchored**를 활성화합니다.
+3. 이 부품 내에 파티클 방출기를 만듭니다.
+   1. **탐색기(Explorer)** 창에서 **블록** 부품 위에 마우스를 올리고 **⊕** 버튼을 클릭합니다. 컨텍스트 메뉴가 표시됩니다.
+   1. 컨텍스트 메뉴에서 **ParticleEmitter**를 삽입합니다
+
+. 파티클 방출기는 부품 영역 내에서 즉시 파티클을 방출합니다.
+4. 이 파티클 방출기를 선택한 후 **속성(Properties)** 창에서,
+
+   1. **색상(Color)**을 **192, 241, 255**로 설정하여 파티클에 연한 파란색 색조를 부여합니다.
+   1. **크기(Size)**를 다음 이미지와 유사한 숫자 시퀀스로 설정합니다.
+
+      <img src="../img/05_Roblox_tutorial/Construct Your World/DustParticles-4b.png" width="100%"/>
+
+   1. **텍스처(Texture)**를 먼지 모트 이미지로 설정합니다. 샘플에서는 **rbxassetid://14302399641**를 사용합니다.
+   1. **투명도(Transparency)**를 다음 이미지와 유사한 숫자 시퀀스로 설정합니다.
+
+      <img src="../img/05_Roblox_tutorial/Construct Your World/DustParticles-4d.png" width="100%"/>
+
+   1. **ZOffset**을 **-5**로 설정하여 파티클을 카메라에서 멀리 이동시킵니다.
+   1. **Lifetime**을 **1, 10**으로 설정하여 파티클의 최소 및 최대 수명을 각각 1초와 10초로 설정합니다.
+   1. **Rate**를 **50000**으로 설정하여 환경에 많은 파티클을 생성합니다.
+   1. **RotSpeed**를 **-60**으로 설정하여 새로 방출된 파티클에 다양한 속도를 부여합니다.
+   1. **Speed**를 **1, 5**로 설정하여 파티클의 최소 및 최대 속도를 각각 초당 1 및 5 스터드로 설정합니다.
+   1. **Acceleration**을 **1, -1, 1**로 설정하여 파티클 속도에 영향을 줍니다.
+   1. **LockedToPart**를 활성화하여 파티클이 파티클 방출기와 가까이 유지되도록 합니다.
+
+   <video controls src="../img/05_Roblox_tutorial/Construct Your World/DustParticlesVid-1.mp4" width="100%"></video>
+
+#### 조명 소스 구성
+
+환경에 움직임을 추가한 후, 환경을 구성하는 마지막 단계는 조명 소스를 구성하는 것입니다. Studio는 두 가지 고급 유형의 조명 소스를 제공합니다:
+
+- **전역 조명(Global lighting)** - 전체 야외 환경에 조명을 제공합니다.
+- **로컬 조명(Local lighting)** - 경험 내에서 배치된 위치 주변에 조명을 제공합니다.
+
+두 가지 조명 소스 모두 중요합니다. 왜냐하면 경험에는 실내 및 야외 환경이 모두 포함되어 있어 사용자가 전투 중 주변에서 일어나는 일을 볼 수 있는 능력에 영향을 미치기 때문입니다.
+
+##### 전역 조명
+
+전역 조명은 경험 내에서 태양 또는 달의 광도를 나타냅니다. `Class.Lighting` 서비스의 몇 가지 기본 속성을 조정하여 사용자에게 그 빛이 나타나는 방식을 극적으로 변경할 수 있으며, 경험 내에 배치된 다른 객체와 상호작용하는 방식을 변경할 수 있습니다.
+
+Studio는 모든 경험에 대해 `Enum.Technology.ShadowMap` 조명 시스템으로 시작하여 전역 조명이 정밀한 그림자와 조명을 갖추도록 보장합니다. 그러나 환경을 강화하고 복도와 간판 위의 조명과 같은 로컬 조명 소스도 정밀한 그림자와 조명을 제공하려면 Studio에서 `Enum.Technology.Future` 조명 시스템을 직접 활성화해야 합니다. 이렇게 하면 전역 조명과 로컬 조명이 함께 작동하여 더 현실적이고 몰입감 있는 시각적 효과를 제공합니다.
+
+예를 들어, `Enum.Technology.Future` 조명 시스템은 사용자가 실내 또는 실외 공간에 있는지 자동으로 감지한 다음 적절한 조명 모델을 활성화합니다. 이는 사용자가 전투 포켓을 탐색할 때 바닥과 천장에서 반사를 반영할 수 있어 더 풍부한 시각적 경험을 제공합니다.
+
+<Tabs>
+  <TabItem key="1" label="직접 만들기">
+
+전역 조명을 구성하려면:
+
+1. **탐색기(Explorer)** 창에서 **Lighting** 서비스를 선택한 후 **속성(Properties)** 창에서 속성을 자신의 경험의 예술 스타일을 반영하는 값으로 설정합니다. 이러한 속성에 대한 자세한 내용은 [전역 조명](../../environment/lighting.md)을 참조하세요.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/GlobalLighting-1.jpg" width="100%"/>
+
+1. **탐색기(Explorer)** 창에서 **Lighting** 서비스의 자식 **Atmosphere** 객체를 선택한 후 **속성(Properties)** 창에서 속성을 자신의 경험의 예술 스타일을 반영하는 값으로 설정합니다. 이러한 속성에 대한 자세한 내용은 [대기 효과](../../environment/atmosphere.md)를 참조하세요.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/GlobalLighting-2.jpg" width="100%"/>
+
+1. **(선택 사항)** 블룸, 심도 효과, 태양광선과 같은 하나 이상의 사용자 정의 가능한 필터를 적용합니다. 이러한 속성에 대한 자세한 내용은 [후처리 효과](../../environment/post-processing-effects.md)를 참조하세요.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/GlobalLighting-4.jpg" width="100%"/>
+
+  </TabItem>
+  <TabItem key="2" label="샘플 재현">
+
+샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 전역 조명 구성을 정확히 재현하려면:
+
+1. **탐색기(Explorer)** 창에서 **Lighting** 서비스를 선택한 후 **속성(Properties)** 창에서,
+
+   1. **Ambient**를 **26, 34, 36**으로 설정합니다.
+   1. **OutdoorAmbient**를 **26, 34, 36**으로 설정합니다.
+   1. **ShadowSoftness**를 **0.15**로 설정합니다.
+   1. **Technology**를 **Future**로 설정합니다.
+   1. **GeographicLatitude**를 **-18**로 설정합니다.
+   1. **TimeOfDay**를 **-15:16:23**으로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/GlobalLighting-1.jpg" width="100%"/>
+
+2. **탐색기(Explorer)** 창에서 **Lighting** 서비스의 자식 **Atmosphere** 객체를 선택한 후 **속성(Properties)** 창에서,
+
+   1. **Density**를 **0.285**로 설정합니다.
+   1. **Offset**을 **0.65**로 설정합니다.
+   1. **Decay**를 **254, 254, 254**로 설정합니다.
+   1. **Glare**를 **0.3**으로 설정합니다.
+   1. **Haze**를 **2**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/GlobalLighting-2.jpg" width="100%"/>
+
+3. **탐색기(Explorer)** 창에서 **Lighting** 서비스의 자식 **Bloom** 객체를 선택한 후 **속성(Properties)** 창에서,
+
+   1. **Intensity**를 **1.5**로 설정합니다.
+   1. **Size**를 **56**으로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/GlobalLighting-3.jpg" width="100%"/>
+
+4. **탐색기(Explorer)** 창에서 **Lighting** 서비스의 자식 **DepthOfField** 객체를 선택한 후 **속성(Properties)** 창에서 **FarIntensity**를 **0.05**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/GlobalLighting-4.jpg" width="100%"/>
+
+  </TabItem>
+</Tabs>
+
+##### 로컬 조명
+
+로컬 조명은 경험 내의 로컬 [조명 소스](../../effects/light-sources.md)에서 나오는 빛으로, `Class.SpotLight`, `Class.SurfaceLight`, `Class.PointLight` 객체가 포함됩니다. 자신의 경험에 필요한 조명 소스를 알기 위해 경험의 필요성을 분석하는 것이 중요합니다. 예를 들어, 최종 샘플 레이저 태그 환경은 사용자가 전투 중 건물 내부의 다른 영역을 볼 수 있도록 도와주는 조명이 필요하며, 다양한 스폰 존 영역을 구분하기 위한 조명이 필요합니다.
+
+로컬 조명 소스는 사용자에게 참조점과 방향성을 제공합니다. 예를 들어, 샘플에서는 표면 조명을 사용하여 사용자가 주변을 탐색할 때 주변 또는 파란색-녹색 또는 분홍색 스폰 존 근처에 있는지 여부를 알리고, 스포트라이트를 사용하여 문과 복도를 강조합니다.
+
+<img src="../img/05_Roblox_tutorial/Construct Your World/LocalLighting-
+
+Intro.jpg" width="100%"/>
+
+<Alert severity="info">
+    조명 소스를 적용하는 것은 예술 형태이며, 경험의 필요를 충족하는 조명 구성을 찾는 데 시간이 걸립니다. 최종 샘플 레이저 태그 환경과 다르게 보이고 느껴지는 것은 정상적이고 예상되는 것입니다.
+</Alert>
+
+<Tabs>
+  <TabItem key="1" label="직접 만들기">
+
+자신만의 로컬 조명을 구성하려면:
+
+1. 건물 주변을 탐색하는 사용자에게 방향성을 제공하는 빛나는 조명을 주변 복도에 추가하고 구성합니다.
+
+   1. 주변 복도의 상단 근처에 **블록** 부품을 추가하고 위치시킨 후 **속성(Properties)** 창에서,
+      1. **색상(Color)**을 밝은 색상으로 설정합니다.
+      1. **재료(Material)**를 **네온(Neon)**으로 설정합니다.
+      1. **Anchored**를 활성화합니다.
+   1. **탐색기(Explorer)** 창에서 부품에 **SurfaceLight** 객체를 추가합니다.
+      1. 부품 위에 마우스를 올리고 **⊕** 버튼을 클릭합니다. 컨텍스트 메뉴가 표시됩니다.
+      1. 컨텍스트 메뉴에서 **SurfaceLight** 객체를 삽입합니다.
+   1. **SurfaceLight** 객체를 선택한 후 **속성(Properties)** 창에서,
+      1. **색상(Color)**을 밝은 색상으로 설정합니다.
+      1. **Face**를 빛이 비추고 싶은 방향으로 설정합니다.
+      1. **Range**를 빛이 도달할 범위를 반영하는 값으로 설정합니다.
+   1. 이 과정을 반복하여 빛나는 주변 조명을 완성합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/LocalLighting-1.jpg" width="100%"/>
+
+1. 교차 레인에 조명을 제공하는 작은 복도 내부 조명을 추가하고 구성합니다.
+
+   1. 교차 레인 복도의 상단 근처에 **블록** 부품을 추가하고 위치시킨 후 **속성(Properties)** 창에서,
+      1. **색상(Color)**을 밝은 색상으로 설정합니다.
+      1. **재료(Material)**를 **네온(Neon)**으로 설정합니다.
+      1. **Anchored**를 활성화합니다.
+   1. **탐색기(Explorer)** 창에서 부품에 **SpotLight** 객체를 추가합니다.
+      1. 부품 위에 마우스를 올리고 **⊕** 버튼을 클릭합니다. 컨텍스트 메뉴가 표시됩니다.
+      1. 컨텍스트 메뉴에서 **SpotLight** 객체를 삽입합니다.
+   1. **SpotLight** 객체를 선택한 후 **속성(Properties)** 창에서,
+      1. **각도(Angle)**를 빛이 비추고 싶은 각도를 반영하는 값으로 설정합니다.
+      1. **Face**를 빛이 비추고 싶은 방향으로 설정합니다.
+      1. **Range**를 빛이 도달할 범위를 반영하는 값으로 설정합니다.
+   1. 이 과정을 반복하여 문과 복도 위에 부품을 배치하고 조명에 만족할 때까지 구성합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/LocalLighting-2.jpg" width="100%"/>
+
+1. 스폰 존 조명을 추가하고 구성합니다.
+
+   1. 왼쪽 스폰 존의 크기에 맞는 **블록** 부품을 추가하고 스폰 존의 천장 위에 위치시킵니다.
+   1. **속성(Properties)** 창에서,
+      1. **색상(Color)**을 맵의 왼쪽 팀의 색상 테마로 설정합니다.
+      1. **재료(Material)**를 **네온(Neon)**으로 설정합니다.
+      1. **Anchored**를 활성화합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/LocalLighting-3a.jpg" width="100%"/>
+
+   1. 오른쪽 스폰 존에 대해 이 과정을 반복합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/LocalLighting-3B.jpg" width="100%"/>
+
+   1. **(선택 사항)** 자신의 자산 라이브러리에서 빛나는 조명기구를 건물의 내부 및 외부에 추가하고 고정합니다.
+
+  </TabItem>
+  <TabItem key="2" label="샘플 재현">
+
+샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 로컬 조명 구성을 정확히 재현하려면:
+
+1. 빛나는 주변 조명을 추가하고 구성합니다.
+
+   1. 빛나는 주변 조명 중 하나에 **블록** 부품을 추가한 후 **속성(Properties)** 창에서,
+      1. **색상(Color)**을 **199, 166, 147**로 설정합니다.
+      1. **재료(Material)**를 **네온(Neon)**으로 설정합니다.
+      1. **크기(Size)**를 **89.254, 1, 1**로 설정합니다.
+      1. **CFrame.Position**을 **-78.297, 21, 293.439**로 설정합니다.
+      1. **Anchored**를 활성화합니다.
+   1. **탐색기(Explorer)** 창에서 **블록** 부품에 **SurfaceLight** 객체를 추가합니다.
+      1. **블록** 부품 위에 마우스를 올리고 **⊕** 버튼을 클릭합니다. 컨텍스트 메뉴가 표시됩니다.
+      1. 컨텍스트 메뉴에서 **SurfaceLight** 객체를 삽입합니다.
+   1. **SurfaceLight** 객체를 선택한 후 **속성(Properties)** 창에서,
+      1. **색상(Color)**을 **211, 190, 150**로 설정합니다.
+      1. **Face**를 **Bottom**으로 설정합니다.
+      1. **Range**를 **21**로 설정합니다.
+   1. 이 과정을 반복하여 빛나는 주변 조명을 완성합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/LocalLighting-1.jpg" width="100%"/>
+
+2. 작은 복도 내부 조명을 추가하고 구성합니다.
+
+   1. 작은 복도 내부 조명 중 하나에 **블록** 부품을 추가한 후 **속성(Properties)** 창에서,
+      1. **색상(Color)**을 **163, 162, 165**로 설정합니다.
+      1. **재료(Material)**를 **네온(Neon)**으로 설정합니다.
+      1. **크기(Size)**를 **0.25, 0.25, 1**로 설정합니다.
+      1. **CFrame.Position**을 **-53.962, 19.936, 291.932**로 설정합니다.
+      1. **Anchored**를 활성화합니다.
+   1. **탐색기(Explorer)** 창에서 **블록** 부품에 **SpotLight** 객체를 추가합니다.
+      1. **블록** 부품 위에 마우스를 올리고 **⊕** 버튼을 클릭합니다. 컨텍스트 메뉴가 표시됩니다.
+      1. 컨텍스트 메뉴에서 **SpotLight** 객체를 삽입합니다.
+   1. **SpotLight** 객체를 선택한 후 **속성(Properties)** 창에서,
+      1. **각도(Angle)**를 **135**로 설정합니다.
+      1. **Face**를 **Bottom**으로 설정합니다.
+      1. **Range**를 **20**으로 설정합니다.
+   1. 이 과정을 반복하여 문과 복도 위에 부품을 배치하고 조명에 만족할 때까지 구성합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/LocalLighting-2.jpg" width="100%"/>
+
+3. 스폰 존 조명을 추가하고 구성합니다.
+
+   1. 왼쪽 스폰 존에 **블록** 부품을 추가한 후 **속성(Properties)** 창에서,
+      1. **색상(Color)**을 **88, 218, 171**로 설정합니다.
+      1. **재료(Material)**를 **네온(Neon)**으로 설정합니다.
+      1. **크기(Size)**를 **62.5, 1, 37.5**로 설정합니다.
+      1. **CFrame.Position**을 **-77, 20.6, 321**로 설정합니다.
+      1. **Anchored**를 활성화합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/LocalLighting-3a.jpg" width="100%"/>
+
+   1. 오른쪽 스폰 존에 **블록** 부품을 추가한 후 **속성(Properties)** 창에서,
+      1. **색상(Color)**을 **255, 170, 255**로 설정합니다.
+      1.
+
+ **재료(Material)**를 **네온(Neon)**으로 설정합니다.
+      1. **크기(Size)**를 **62.5, 1, 37.5**로 설정합니다.
+      1. **CFrame.Position**을 **-77, 20.6, 1**로 설정합니다.
+      1. **Anchored**를 활성화합니다.
+
+   <img src="../img/05_Roblox_tutorial/Construct Your World/LocalLighting-3B.jpg" width="100%"/>
+
+4. **(선택 사항)** 샘플 [Environment Art Asset Library](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library)를 사용하여 건물 내부 및 외부에 조명기구를 추가하고 고정합니다. 예를 들어, 최종 샘플 레이저 태그 환경에서는 **LightFixtureTall**, **LightFixtureShort**, **TouchScreenA**, **Roblox Sign** 조명기구를 사용하여 환경을 완성합니다.
+
+  </TabItem>
+</Tabs>
+
+<img src="../img/05_Roblox_tutorial/Construct Your World/LocalLighting-4.jpg" width="100%"/>
+
+환경의 외관과 느낌에 만족하면 프레임 속도와 성능 수준을 낮은 사양의 장치에서도 높게 유지하기 위해 자산과 Studio 설정을 구성할 수 있습니다. 이 과정을 통해 거의 모든 사용자가 환경을 볼 때 동일한 게임 플레이와 시각적 경험을 누릴 수 있습니다.
+
 ### Chapter 5 - Optimize Your Experience
+
+**경험을 최적화하는 것**은 메모리와 그래픽 처리 장치(GPU) 제한이 있는 장치에서도 프레임 속도와 성능 수준을 높게 유지하기 위해 자산 및 스튜디오 설정을 구성하는 과정입니다. 이 과정은 거의 모든 사용자가 환경을 볼 때 동일한 게임 플레이 및 시각적 경험을 가지도록 보장합니다.
+
+[Environment Art - Optimizing](https://www.roblox.com/games/14447845297/Environment-Art-Optimizing) `.rbxl` 파일을 참조하여, 이 섹션에서는 최적의 그래픽을 위해 장소 파일을 검토하고 구성하는 방법을 보여줍니다. 여기에는 다음에 대한 지침이 포함됩니다:
+
+- 각 자산의 물리 및 렌더링 매개변수를 검토하여 메모리 및 엔진 성능을 유지하는지 확인합니다.
+- Roblox 엔진이 자산을 렌더링하는 데 수행해야 하는 계산 양을 불필요하게 증가시키는 과도한 텍스처, 기하학, 또는 투명도를 제거합니다.
+
+Roblox 엔진이 대부분의 최적화 작업을 처리하지만, [Microprofiler](../../studio/microprofiler/index.md)를 사용하여 특정 프레임을 렌더링하는 데 더 많은 시간이 소요되는 위치를 확인하여 이 최적화 작업을 지원할 수 있습니다. 이 정보를 사용하여 매개변수 또는 과도한 콘텐츠와 관련하여 주의가 필요한 자산에 대해 정보에 입각한 결정을 내릴 수 있습니다.
+
+<img src="../img/05_Roblox_tutorial/Optimize Your Experience/Overview.jpg" alt="" width="100%"/>
+
+#### 물리 및 렌더링 매개변수 검토
+
+[Assemble an Asset Library](../environmental-art/assemble-an-asset-library.md)에서 메모리와 GPU 제한이 있는 장치에서도 자산이 높은 시각적 품질을 유지할 수 있도록 물리 및 렌더링 매개변수를 설정하는 것이 얼마나 중요한지 배웠습니다. 그러나 환경을 구축할 때 자산의 맥락적 위치와 목적에 따라 이러한 매개변수를 조정하는 것이 일반적입니다. 예를 들어, 최종 샘플 레이저 태그 환경의 대부분의 초목은 성능 비용이 들더라도 환경의 현실감을 더하기 위해 그림자를 드리웁니다.
+
+물리 및 렌더링 매개변수를 수정할 때, 개발 프로세스의 끝 부분에서 모든 매개변수를 검토하여 미적 목표와 게임 플레이 요구 사항을 유지하면서 최적화할 수 있는 매개변수를 확인하는 것이 유용합니다. 예를 들어, 게임 플레이 영역의 가장자리에 있는 초목에 대해 `Class.BasePart.CastShadow` 속성을 비활성화하여 사용자의 게임 플레이나 시각적 경험에 방해되지 않으면서 성능을 절약할 수 있습니다.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Optimize Your Experience/ReviewingParameters-Disabled.jpg" alt="An outdoor view of the sample laser tag experience that casts shadows." width="100%"/>
+    <figcaption>`Class.BasePart.CastShadow` = 비활성화됨</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Optimize Your Experience/ReviewingParameters-Enabled.jpg" alt="An outdoor view of the sample laser tag experience that doesn't cast shadows. There is almost no difference in this view, but it improves performance." width="100%"/>
+    <figcaption>`Class.BasePart.CastShadow` = 활성화됨</figcaption>
+  </figure>
+</GridContainer>
+
+#### 비본질적 콘텐츠 제거
+
+물리 및 렌더링 매개변수를 검토한 후, 동일한 텍스처의 다른 assetID, 높은 정점 수를 가진 복잡한 기하학, 또는 카메라 보기마다 겹쳐지는 투명도와 같은 게임 플레이에 영향을 미치지 않는 비본질적 콘텐츠를 검토하여 경험에서 제거할 수 있는지 확인할 수 있습니다. 다음 섹션에서는 이러한 콘텐츠를 검토할 수 있는 방법과 왜 최적화 노력에 도움이 되는지 설명합니다.
+
+##### 중복 텍스처 제거
+
+자산을 개발하고 환경을 구축하는 동안 미적 목표나 게임 플레이 요구 사항에 필요한 것을 찾을 때 메쉬 또는 텍스처를 반복하는 것이 일반적입니다. 자산을 [패키지](../../projects/assets/packages.md)로 변환하지 않으면, 이러한 반복을 스튜디오에 가져올 때 Roblox 엔진이 자산을 환경 내에서 렌더링할 때 참조해야 하는 고유한 assetID를 생성하게 됩니다.
+
+예를 들어, 다음 두 개의 소화전 메쉬를 각각 스튜디오에 가져오면, 비록 외관상으로 동일하더라도 Roblox 엔진은 이를 고유한 assetID를 가진 두 개의 객체로 처리합니다. 엔진이 호출해야 하는 고유 호출 수가 많을수록 메모리 및 성능에 미치는 영향이 커집니다. 이러한 이유로, 동일한 자산을 여러 번 사용할 때 각 인스턴스가 동일한 assetID를 사용하여 엔진이 이를 반복적으로 렌더링하기 위해 단일 호출만 필요하도록 하는 것이 중요합니다.
+
+<img src="../img/05_Roblox_tutorial/Optimize Your Experience/RemovingTextures-Firehydrants.jpg" alt="Two of the exact same fire hydrant with unique assetIDs. There is no visual difference but the duplicate assetIDs negatively impacts performance." width="100%"/>
+
+##### 기하학 최적화
+
+여러 장치에서 프레임 속도를 더 높이기 위해 더 많은 조정이 필요하다고 판단되면, 다음과 같은 방법으로 기하학을 최적화할 수 있는지 확인하는 것이 유용합니다:
+
+- 메쉬 그룹을 단일 자산으로 결합합니다.
+- 기하학적 복잡성이 높은 자산의 폴리곤 수를 줄입니다.
+
+첫 번째 기술을 확장하면, 경험 내의 모든 고유 자산은 GPU에 신호를 보내 Roblox 엔진이 자산을 올바르게 렌더링하기 위한 정보를 호출하는 드로우 콜을 나타냅니다. 고유 자산이 많을수록 시스템이 수행해야 하는 드로우 콜 수가 많아집니다. 따라서, 경험 내의 더 큰 구성 요소를 구성하는 메쉬 그룹이 있는 경우, 서드 파티 모델링 도구에서 이들을 함께 그룹화하여 여러 드로우 콜이 필요하지 않도록 할 수 있습니다.
+
+이 점을 설명하기 위해, 최종 샘플 레이저 태그 환경은 건물 외부에 있는 큰 탑을 만들기 위해 여러 부품과 메쉬를 부모로 설정합니다. 이러한 개별 구성 요소를 모두 결합하면 단일 assetID를 가진 단일 자산이 되어 드로우 콜 수를 8에서 1로 줄일 수 있습니다. 그러나 이 기술은 각 구성 요소의 위치나 재료와 같은 시각적 및 물리적 특성을 자유롭게 변경할 수 있는 능력을 제거한다는 점을 중요하게 고려해야 합니다.
+
+예를 들어, 다음 이미지에서 왼쪽 탑은 `Class.Model` 객체 아래 여러 자산으로 유지되며, 오른쪽 탑은 단일 자산입니다. 왼쪽 탑의 각 구성 요소를 개별적으로 수정할 수 있지만, 오른쪽 탑을 수정하면(예: 색상을 검정색으로 변경) 전체 객체에 영향을 미칩니다. 따라서 성능을 향상시키기 위해 어느 부분을 최적화할 수 있는지 알게 되었을 때, 환경 개발의 끝 부분에서 이 기술을 고려하는 것이 중요합니다.
+
+<img src="../img/05_Roblox_tutorial/Optimize Your Experience/OptimizingGeo-Towers.jpg" alt="A front view of the two towers. The tower on the left includes multiple assets under a single model, while the tower on the right decreases the amount of assets by removing all texture objects." width="100%"/>
+
+두 번째 기술을 확장하면, 기하학적 복잡성이 높은 자산은 더 많은 폴리곤을 가지고 있어 렌더링 시 엔진이 시각적 외관을 계산해야 하는 정점이 많아집니다. 이는 복잡성과 충실도가 낮은 자산이 렌더링 비용이 적어 성능과 메모리가 향상된다는 것을 의미합니다.
+
+<Alert severity="warning">
+두 번째 기술을 사용하기로 선택한 경우, 서드 파티 도구에서 기하학을 단순화한 후에는 새 assetID를 생성하지 않고 새로운 가져오기 항목으로 패키지를 업데이트하는 것이 중요합니다. 그렇지 않으면 Roblox 엔진이 각 assetID에 대해 별도의 호출을 수행해야 합니다.
+</Alert>
+
+##### 중첩된 투명도 삭제
+
+환경에 현실감을 제공하기 위해, 최종 샘플 레이저 태그 환경에는 다양한 투명도를 가진 많은 메쉬가 포함되어 있습니다. 예를 들어, 야외 공간의 초목, 미래 지향적 간판의 유리 또는 화분 난간 등입니다. 카메라가 앞뒤로 여러 반투명 객체를 볼 때, Roblox 엔진은 투명한 영역을 고려하여 겹쳐진 픽셀을 여러 번 렌더링
+
+해야 합니다. 이 과정을 고투명도 오버드로우라고 하며, 이는 성능에 큰 영향을 미칩니다.
+
+예를 들어, 샘플 환경의 화분을 고려해 보십시오. 엔진은 카메라에 가장 가까운 식물에서부터 야외 공간에 가장 가까운 식물까지의 잎 사이의 투명 영역을 레이어로 렌더링해야 하며, 이는 수십만 개의 오버드로우 픽셀에 해당합니다. 이러한 영향을 완화하기 위해, 환경 내 모든 반투명 객체의 레이아웃을 검토하고 특히 화면의 큰 영역에서 너무 많은 레이어가 겹치는 부분이 없도록 하는 것이 중요합니다.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Optimize Your Experience/LayeredTransparencies-Left.jpg" alt="A Rthro avatar facing a planter with multiple plants with transparency between the leaves." width="100%"/>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Optimize Your Experience/LayeredTransparencies-Right.jpg" alt="A side view of the Rthro avatar facing a planter with multiple plants with transparency between the leaves, and example layers of overdrawn pixels are highlighted to show where there is overdrawn in the environment." width="100%"/>
+  </figure>
+</GridContainer>
+
+모든 콘텐츠를 검토하여 모든 장치에서 최적화되었는지 확인하면, 이제 경험을 게시할 준비가 된 것입니다!
+
+<Alert severity="info">
+환경 예술 커리큘럼을 따르면서 경험한 것에 대해 듣고 싶습니다. 질문, 우려 사항 또는 추가적인 피드백이 있으시면, [Environmental Art Curriculum Q&A](https://devforum.roblox.com/t/feedback-on-environmental-art-curriculum/2592218)에 댓글을 남겨주세요.
+</Alert>
+
+---
+## Gameplay Scripting
+
 
 
 
