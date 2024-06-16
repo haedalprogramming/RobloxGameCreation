@@ -64,6 +64,33 @@
         - [대기 속성](#대기-속성)
           - [공기 입자 밀도 증가](#공기-입자-밀도-증가)
           - [먼 물체 블렌딩](#먼-물체-블렌딩)
+      - [Apply Polished Assets](#apply-polished-assets)
+        - [자산 라이브러리 가져오기](#자산-라이브러리-가져오기)
+        - [조직 구조 계속하기](#조직-구조-계속하기)
+        - [자산 라이브러리 적용하기](#자산-라이브러리-적용하기)
+          - [Platforms](#platforms)
+          - [Sea Stacks](#sea-stacks)
+          - [Coins](#coins)
+          - [Mountains](#mountains)
+        - [Playtest](#playtest)
+  - [Environmental Art Curriculum](#environmental-art-curriculum)
+    - [Chapter 1 - Greybox Your Environment](#chapter-1---greybox-your-environment)
+      - [세 개의 레인 맵 레이아웃](#세-개의-레인-맵-레이아웃)
+        - [스폰 존](#스폰-존)
+        - [주요 레인](#주요-레인)
+        - [교차 레인](#교차-레인)
+      - [플레이 가능한 영역 만들기](#플레이-가능한-영역-만들기)
+        - [바닥 지오메트리](#바닥-지오메트리)
+        - [주변 벽 지오메트리](#주변-벽-지오메트리)
+        - [스폰 존 지오메트리](#스폰-존-지오메트리)
+        - [전투 포켓 지오메트리](#전투-포켓-지오메트리)
+        - [외부 지오메트리](#외부-지오메트리)
+      - [플레이스홀더 재료 적용](#플레이스홀더-재료-적용)
+      - [레이아웃 테스트](#레이아웃-테스트)
+    - [Chapter 2 - Develop Polished Assets](#chapter-2---develop-polished-assets)
+    - [Chapter 3 - Assemble an Asset Library](#chapter-3---assemble-an-asset-library)
+    - [Chapter 4 - Construct Your World](#chapter-4---construct-your-world)
+    - [Chapter 5 - Optimize Your Experience](#chapter-5---optimize-your-experience)
   - [출처](#출처)
   - [다음](#다음)
 
@@ -1338,10 +1365,6 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 다음 지침에서는 주변 및 반사 조명의 색상을 변경하고, 그림자의 가장자리를 더 선명하게 만들고, 가장 고급 조명 기술을 활용하며, 샘플 [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) 설정에 맞게 태양과 세계의 위치를 수정하는 방법을 보여줍니다.
 
-```
-`Lighting` 서비스 내 추가 속성 개요는 [글로벌 조명]을 참조하세요.
-````
-
 ###### 조명의 색상 조정
 
 샘플 **Island Jump - Final** 경험의 `Lighting` 서비스 속성에 맞추는 첫 번째 단계는 환경에서 주변 및 반사 조명의 색상을 조정하는 것입니다. 주변 조명의 색상을 제어하는 두 가지 조명 서비스 속성이 있습니다:
@@ -1514,6 +1537,2314 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
     <img src="../img/05_Roblox_tutorial/Lighting-Post-Customization.jpg.webp" alt="The sample Island Jump experience's lighting visuals after the customization from this page." />
   </TabItem>
 </Tabs>
+
+#### Apply Polished Assets
+
+**고품질 자산 적용**은 최종 환경을 구성하는 마지막 단계로, 회색 상자 자리 표시 자산을 고품질의 세련된 자산으로 교체하여 경험의 미적 목표와 게임 디자인 요구를 충족시키는 과정입니다. 이 커리큘럼의 흥미진진한 섹션에서 여러분의 세계가 완성된 일관된 환경으로 변모하는 것을 확인할 수 있습니다.
+
+[Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) `.rbxl` 파일을 참고하여, 이 튜토리얼 섹션에서는 Creator Store를 사용하여 샘플 자산 라이브러리를 프로젝트에 추가하고, 새로운 자산을 의미 있는 카테고리로 정리하는 조직 구조를 계속 유지하며, 자산 라이브러리를 3D 공간에 적용하는 방법을 배웁니다.
+
+##### 자산 라이브러리 가져오기
+
+**Creator Store**는 Roblox 및 Roblox 커뮤니티에서 만든 모든 자산을 프로젝트에서 사용할 수 있도록 찾을 수 있는 Toolbox의 탭입니다. 여기에는 모델, 이미지, 메쉬, 오디오, 플러그인, 비디오 및 글꼴 자산이 포함됩니다. Creator Store를 사용하여 개별 자산이나 자산 라이브러리를 열린 경험에 직접 추가할 수 있습니다.
+
+자산 라이브러리는 쉽게 액세스하고 재사용할 수 있도록 경험의 중앙 위치에 배치할 수 있는 자산 모음입니다. Creator Store에서 사용할 자산 라이브러리에는 여섯 개의 3D 자산, 두 개의 사용자 정의 `MaterialVariant` 재료 및 [기본 시각 효과 만들기]에서 최종 입자 효과가 포함됩니다. 여섯 개의 메쉬는 다음과 같습니다:
+
+<GridContainer numColumns="3">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Platform-A-Model.jpg.webp" alt="A mesh that's a grassy, circular platform with concrete surrounding its edges." />
+    <figcaption>PlatformA</figcaption>
+  </figure>
+    <figure>
+     <img src="../img/05_Roblox_tutorial/Platform-B-Model.jpg.webp" alt="A mesh that's a grassy, circular platform with rock underneath."/>
+    <figcaption>PlatformB</figcaption>
+  </figure>
+    <figure>
+    <img src="../img/05_Roblox_tutorial/Coin-Mesh.jpg.webp" alt="A mesh that's a shiny golden coin with a Roblox logo in the middle." />
+    <figcaption>Coin</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Sea-Stack-Mesh.jpg.webp" alt="A mesh that's a large rock sea stack." />
+    <figcaption>SeaStackMesh</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Sea-Stack-Cave-Mesh.jpg.webp" alt="A mesh that's a large rock sea stack with a hollow tunnel in the middle." />
+    <figcaption>SeaStackCaveMesh</figcaption>
+  </figure>
+    <figure>
+    <img src="../img/05_Roblox_tutorial/Mountain-Mesh.jpg.webp" alt="A mesh that's a large snowy mountain." />
+    <figcaption>MountainMesh</figcaption>
+  </figure>
+</GridContainer>
+
+이 3D 자산 각각은 단일 `MeshPart` 객체 또는 여러 `MeshPart` 객체를 저장하는 `Model` 객체이며, 사용자 정의 재료 또는 현실적인 음영과 조명을 표현할 수 있는 물리 기반 렌더링(PBR) 텍스처를 사용합니다. 이 과정에 대한 자세한 내용은 [재료 - 사용자 정의 재료] 및 [PBR 텍스처]를 참조하세요.
+
+다음 구성 요소에서 **Add to Inventory** 링크를 클릭하여 Studio에서 인벤토리에 라이브러리를 추가할 수 있습니다. 자산이 인벤토리에 추가되면 플랫폼의 모든 프로젝트에서 이를 재사용할 수 있습니다.
+
+[Core-Building-and-Scripting-Library](https://create.roblox.com/store/asset/14238769242)
+
+인벤토리에서 경험으로 자산 라이브러리를 가져오려면:
+
+1. 메뉴 바에서 **View** 탭을 선택합니다.
+2. **Show** 섹션에서 **Toolbox**를 클릭합니다. **Toolbox** 창이 표시됩니다.
+
+   <img src="../img/05_Roblox_tutorial/View-Tab-Toolbox.png.webp" alt="Studio's View tab with the Toolbox tool highlighted." width="876" />
+
+3. **Toolbox** 창에서 **Inventory** 탭을 클릭합니다. **My Models** 정렬이 표시됩니다.
+
+   <img src="../img/05_Roblox_tutorial/Inventory-Tab.png.webp" alt="Studio's Toolbox window with the Inventory tab highlighted." width="360" />
+
+4. **Core Building and Scripting** 타일을 클릭합니다. 라이브러리가 뷰포트에 표시되지만 일부 메쉬는 올바른 텍스처를 표시하지 않습니다. 이는 재료가 아직 `MaterialService`에 없는 사용자 정의 변형으로 설정되어 있기 때문입니다.
+
+   <img src="../img/05_Roblox_tutorial/Asset-Library-Complete.jpg.webp" alt="All meshes from the asset library hover above the water. Some of the meshes are missing their textures so they appear gray." width="800" />
+
+5. **Explorer** 창에서 샘플 자산 라이브러리의 **Moss_Lumpy_A**와 **Moss_Strata_Noisy_A**를 선택한 다음, **MaterialService** 컨테이너로 드래그합니다. 자산 라이브러리가 업데이트되어 올바른 재료를 표시합니다.
+
+   <img src="../img/05_Roblox_tutorial/MaterialService-Contents.png.webp" alt="Studio's Explorer window with both the Moss_LumpyA and Moss_Strata_Noisy_A textures highlighted underneath MaterialService." width="320" />
+
+   <img src="../img/05_Roblox_tutorial/Asset-Library-Complete-With-Materials.jpg.webp" alt="All meshes from the asset library hover above the water, now complete with all of their textures." width="800" />
+
+##### 조직 구조 계속하기
+
+자산 라이브러리를 회색 상자 기하학에 적용하기 전에 [Greybox a Playable Area]에서 시작한 조직 구조를 계속 유지하여 환경에 추가할 새로운 자산에 대한 컨테이너 객체를 생성하는 것이 중요합니다. 이 과정은 Workspace를 조직적으로 유지하고 쉽게 스캔할 수 있도록 하여 특정 자산 그룹을 빠르게 업데이트할 수 있게 합니다.
+
+조직 구조에 추가 컨테이너 객체를 추가하려면:
+
+1. **Explorer** 창에서 **World** 폴더에 새 폴더 두 개를 삽입합니다.
+2. 폴더 이름을 각각 **Platforms**와 **Mountains**로 변경합니다.
+3. **Platforms** 폴더에 환경의 각 바다 스택 플랫폼에 대한 새 모델을 삽입하고, [Greybox a Playable Area]에서 만든 바다 스택 레벨 명명에 따라 이름을 변경합니다. 예를 들어, 샘플 경험에는 환경의 모든 플랫폼에 대해 18개의 개별 모델 컨테이너가 있습니다.
+
+   <img src="../img/05_Roblox_tutorial/Organization-Structure.jpg.webp" alt="Studio's Explorer window with all of the level model objects underneat the Platforms folder." width="25%" />
+
+##### 자산 라이브러리 적용하기
+
+
+다음 지침에서는 두 가지 다른 교육 경로를 제공합니다: 고유한 환경에 자산 라이브러리를 적용하거나, 샘플 [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) 경험 내 최종 환경을 정확히 재현하는 방법을 선택할 수 있습니다.
+
+
+이제 새로운 자산을 포함할 조직 구조를 갖추었으므로, 자산 라이브러리를 회색 상자 기하학에 적용하기 시작할 수 있습니다. 두 교육 경로 중 하나를 따르면서, 예제 이미지는 자리 표시 자산을 반투명하게 만들어 단계별 진행 상황을 볼 수 있습니다.
+
+<Tabs>
+  <TabItem key = "1" label="Graybox Version">
+    <img src="../img/05_Roblox_tutorial/Pre-Polished-Assets.jpg.webp" alt="A version of the sample Island Jump experience's placeholder greybox geometry." width="800" height="450" />
+  </TabItem>
+  <TabItem key = "2" label="Polished Assets">
+    <img src="../img/05_Roblox_tutorial/Final-Polished-Assets.jpg.webp" alt="A version of the sample Island Jump experience with polished geometry." width="800" height="450" />
+  </TabItem>
+</Tabs
+
+>
+
+###### Platforms
+
+샘플 자산 라이브러리에는 바다 스택 플랫폼 상단에 사용할 수 있는 두 가지 유형의 플랫폼이 포함되어 있습니다:
+
+- **PlatformA** – 초기 및 최종 플랫폼용 금속 원형 베이스를 포함합니다.
+- **PlatformB** – 중간 레벨 플랫폼용 기본 지형 캡을 포함합니다.
+
+두 플랫폼 유형 모두 두 개의 `MeshPart` 객체를 포함하는 `Model` 객체입니다.
+
+<img src="../img/05_Roblox_tutorial/Platform-Types.jpg.webp" alt="Platform A and Platform B are side-by-side, and highlighted with their platform type." width="80%" />
+
+<Tabs>
+  <TabItem key = "1" label="Apply Your Own Platforms">
+
+플랫폼에 자산 라이브러리를 적용하려면:
+
+1. **Explorer** 창에서 자산 라이브러리로 이동하여 **PlatformA**를 복사합니다.
+   1. **PlatformA**를 마우스 오른쪽 버튼으로 클릭합니다. 컨텍스트 메뉴가 표시됩니다.
+   1. 컨텍스트 메뉴에서 **복사**를 선택합니다.
+1. **Platforms** 폴더에서 **Level_1** 모델에 **PlatformA**를 붙여넣습니다.
+1. **Home** 탭에서 **Move** 및 **Scale** 도구를 사용하여 모델을 첫 번째 자리 표시 바다 스택 플랫폼의 크기로 위치시키고 크기를 조정합니다.
+
+   <img src="../img/05_Roblox_tutorial/First-Platform.jpg.webp" alt="A view of the sample laser tag experience with only the first platform visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+1. 이 과정을 반복하여 각 자리 표시 바다 스택 플랫폼의 상단에 **PlatformA** 또는 **PlatformB** 자산을 추가하고 구성합니다.
+
+   <img src="../img/05_Roblox_tutorial/Platforms-5.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+샘플 [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) 경험 내 바다 스택 플랫폼을 정확히 재현하려면:
+
+1. **Explorer** 창에서 자산 라이브러리로 이동하여 **PlatformA**를 복사합니다.
+   1. **PlatformA**를 마우스 오른쪽 버튼으로 클릭합니다. 컨텍스트 메뉴가 표시됩니다.
+   1. 컨텍스트 메뉴에서 **복사**를 선택합니다.
+2. **Platforms** 폴더에서 **Level_1** 모델에 **PlatformA**를 붙여넣습니다.
+3. **Properties** 창에서,
+
+   1. **Origin.Position**을 **-30, 3, 9**로 설정합니다.
+   1. **Scale**을 **2.2**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/First-Platform.jpg.webp" alt="A view of the sample laser tag experience with only the first platform visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+4. 이 과정을 반복하여 다음 **PlatformA** 자산을 해당 바다 스택 플랫폼 모델에 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>부모 모델</th>
+   <th>Origin.Position</th>
+   <th>Scale</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Level_2</td>
+   <td>`-24, 11, 24`</td>
+   <td>`1.4`</td>
+   </tr>
+   <tr>
+   <td>Level_3a</td>
+   <td>`34, 31, 9.5`</td>
+   <td>`0.7`</td>
+   </tr>
+   <tr>
+   <td>Level_3b</td>
+   <td>`79, 31, 2`</td>
+   <td>`0.6`</td>
+   </tr>
+   <tr>
+   <td>Level_7</td>
+   <td>`402, 312, 79`</td>
+   <td>`1.1`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Platforms-4.jpg.webp" alt="A view of the sample laser tag experience with all Platform A platforms visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+5. 다음 **PlatformB** 자산을 해당 바다 스택 플랫폼 모델에 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>부모 모델</th>
+   <th>Origin.Position</th>
+   <th>Scale</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Level_3c</td>
+   <td>`89, 31, 48`</td>
+   <td>`0.8`</td>
+   </tr>
+   <tr>
+   <td>Level_4a</td>
+   <td>`104, 65.5, 46.5`</td>
+   <td>`0.6`</td>
+   </tr>
+   <tr>
+   <td>Level_4b</td>
+   <td>`127, 66, 67.5`</td>
+   <td>`0.6`</td>
+   </tr>
+   <tr>
+   <td>Level_4b</td>
+   <td>`133.5, 164.5, 70.5`</td>
+   <td>`0.7`</td>
+   </tr>
+   <tr>
+   <td>Level_4c</td>
+   <td>`152, 65.5, 91`</td>
+   <td>`1`</td>
+   </tr>
+   <tr>
+   <td>Level_4d</td>
+   <td>`200, 66, 107`</td>
+   <td>`0.5`</td>
+   </tr>
+   <tr>
+   <td>Level_4e</td>
+   <td>`238.5, 66, 81`</td>
+   <td>`0.8`</td>
+   </tr>
+   <tr>
+   <td>Level_5a</td>
+   <td>`262, 120, 57.5`</td>
+   <td>`0.7`</td>
+   </tr>
+   <tr>
+   <td>Level_5b</td>
+   <td>`245, 122, 15`</td>
+   <td>`0.4`</td>
+   </tr>
+   <tr>
+   <td>Level_5c</td>
+   <td>`271, 122.5, -5.5`</td>
+   <td>`0.4`</td>
+   </tr>
+   <tr>
+   <td>Level_5d</td>
+   <td>`318, 121, -22`</td>
+   <td>`0.9`</td>
+   </tr>
+   <tr>
+   <td>Level_6a</td>
+   <td>`363, 201, -52.5`</td>
+   <td>`1.2`</td>
+   </tr>
+   <tr>
+   <td>Level_6b</td>
+   <td>`381, 201, 11`</td>
+   <td>`0.4`</td>
+   </tr>
+   <tr>
+   <td>Level_6c</td>
+   <td>`389, 201, 47`</td>
+   <td>`0.6`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Platforms-5.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+  </TabItem>
+</Tabs>
+
+###### Sea Stacks
+
+샘플 자산 라이브러리에는 바다 스택 플랫폼의 기둥을 형성하기 위해 창의적으로 쌓을 수 있는 두 가지 유형의 바다 스택 암석 형성이 포함되어 있습니다:
+
+- **SeaStackMesh** – 단단한 암석 형성을 포함합니다.
+- **SeaStackCaveMesh** – 터널과 단단한 상단을 포함합니다.
+
+두 플랫폼 유형 모두 `MeshPart` 객체입니다.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img width="100%" img src="../img/05_Roblox_tutorial/Sea-Stacks.jpg.webp" alt="A comparison of a single sea stack next to multiple sea stacks that are stacked on top of each other." />
+  </figure>
+  <figure>
+    <img width="100%" img src="../img/05_Roblox_tutorial/Completed-Sea-Stack.jpg.webp" alt="A demonstration of a SeaStackCaveMesh stacked on top of a PlatformB on top of a SeaStackMesh." />
+  </figure>
+</GridContainer>
+
+<Tabs>
+  <TabItem key = "1" label="Apply Your Own Sea Stacks">
+
+바다 스택에 자산 라이브러리를 적용하려면:
+
+1. **Explorer** 창에서 자산 라이브러리로 이동하여 **SeaStackMesh**를 복사합니다.
+2. **Platforms** 폴더에서 레벨 모델 중 하나에 **SeaStackMesh**를 붙여넣습니다.
+3. **Home** 탭에서 **Move**, **Scale** 및 **Rotate** 도구를 사용하여 메쉬를 자리 표시 바다 스택의 길이에 맞게 위치, 크기 조정 및 회전시킵니다. 필요한 경우 **SeaStackMesh** 메쉬를 여러 개 사용합니다.
+
+   <img src="../img/05_Roblox_tutorial/SeaStacks-3.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms visible with the polished assets, as well as the first sea stack. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+4. 이 과정을 반복하여 각 바다 스택과 터널에 대해 더 많은 **SeaStackMesh** 및 **SeaStackCaveMesh** 메쉬를 추가하고 구성합니다.
+
+   <img src="../img/05_Roblox_tutorial/SeaStacks-18.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms and sea stacks visible with the polished assets." width="80%" />
+
+5. 자리 표시 회색 상자 바다 스택 플랫폼을 삭제합니다.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+샘플 [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) 경험 내 바다 스택을 정확히 재현하려면:
+
+1. **Explorer** 창에서 자산 라이브러리로 이동하여 **SeaStackMesh**를 복사합니다.
+2. **Platforms** 폴더에서 **Level_3a** 모델에 **SeaStackMesh**를 세 번 붙여넣습니다.
+3. **Properties** 창에서 메쉬를 다음 값으로 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>Size</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`31, 31, 34`</td>
+   <td>`31, 14, 15.5`</td>
+   <td>`0, 72, 0`</td>
+   </tr>
+   <tr>
+   <td>`32, 37, 34`</td>
+   <td>`39, 11, 6`</td>
+   <td>`0, 162, 0`</td>
+   </tr>
+   <tr>
+   <td>`32, 36, 34`</td>
+   <td>`31, 13, 7.5`</td>
+   <td>`0, 68, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/SeaStacks-3.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms and level 1 sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+4. 이 과정을 반복하여 다음 **SeaStackMesh** 자산을 **Level_3b** 모델에 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>Size</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`35, 47, 36`</td>
+   <td>`80, 7, 4`</td>
+   <td>`0, -18, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/SeaStacks-4.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms and level 1-2 sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+5. 다음 **SeaStackMesh** 자산을 **Level_3c** 모델에 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>Size</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`52, 69, 53`</td>
+   <td>`90, -4, 48`</td>
+   <td>`0, -18, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/SeaStacks-5.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms and level 1-3 sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+6. 다음 **SeaStackMesh** 자산을 **Level_4a** 모델에 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>Size</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`43, 49, 43`</td>
+   <td>`103, 5, 48`</td>
+   <td>`0, -119, 0`</td>
+   </tr>
+   <tr>
+   <td>`37, 49, 38`</td>
+   <td>`104, 41, 47`</td>
+   <td>`0, -18, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/SeaStacks-6.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms and level 1-4a sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+7. 다음 자산을 **Level_4b** 모델에 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>Sea Stack 유형</th>
+   <th>Size</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>SeaStackCaveMesh</td>
+   <td>`54, 67, 53`</td>
+   <td>`131, 88, 71`</td>
+   <td>`0, -111, 0`</td>
+   </tr>
+   <tr>
+   <td>SeaStackMesh</td>
+   <td>`66, 85, 65`</td>
+   <td>`133, 23, 71`</td>
+   <td>`0, 87, 0`</td>
+   </tr>
+   <tr>
+   <td>SeaStackMesh</td>
+   <td>`46, 55, 47`</td>
+   <td>`133, 136, 71`</td>
+   <td>`0, -79, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/SeaStacks-7.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms and level 1-4a and 4b sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+8. 다음 **SeaStackMesh** 자산을 **Level_4c** 모델에 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>Size</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`63, 81, 62`</td>
+   <td>`151, 25, 91`</td>
+   <td>`0, -50, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/SeaStacks-8.jpg.webp" alt="A side view of the sample laser tag experience with level 4c sea stacks visible with the polished assets." width="80%" />
+
+9. 다음
+
+ **SeaStackMesh** 자산을 **Level_4d** 모델에 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>Size</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`35, 39, 35`</td>
+   <td>`198, -4, 108`</td>
+   <td>`0, -44, 0`</td>
+   </tr>
+   <tr>
+   <td>`33, 36, 32`</td>
+   <td>`199, 21, 108`</td>
+   <td>`0, -119, 0`</td>
+   </tr>
+   <tr>
+   <td>`27, 36, 28`</td>
+   <td>`199, 48, 108`</td>
+   <td>`0, -18, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/SeaStacks-9.jpg.webp" alt="A side view of the sample laser tag experience with level 4c and 4d sea stacks visible with the polished assets." width="80%" />
+
+10. 다음 **SeaStackMesh** 자산을 **Level_4e** 모델에 추가하고 구성합니다:
+
+      <table>
+      <thead>
+      <tr>
+      <th>Size</th>
+      <th>CFrame.Position</th>
+      <th>CFrame.Orientation</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>`57, 65, 57`</td>
+      <td>`239, -14, 82`</td>
+      <td>`0, -63, 0`</td>
+      </tr>
+      <tr>
+      <td>`48, 65, 50`</td>
+      <td>`239, 34, 81`</td>
+      <td>`0, 39, 0`</td>
+      </tr>
+      </tbody>
+      </table>
+
+      <img src="../img/05_Roblox_tutorial/SeaStacks-10.jpg.webp" alt="A side view of the sample laser tag experience with level 4c-4e sea stacks visible with the polished assets." width="80%" />
+
+11. 다음 **SeaStackMesh** 자산을 **Level_5a** 모델에 추가하고 구성합니다:
+
+      <table>
+      <thead>
+      <tr>
+      <th>Size</th>
+      <th>CFrame.Position</th>
+      <th>CFrame.Orientation</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>`56, 62, 54`</td>
+      <td>`264, 11, 55`</td>
+      <td>`0, 150, 0`</td>
+      </tr>
+      <tr>
+      <td>`50, 57, 50`</td>
+      <td>`263, 50, 57`</td>
+      <td>`0, 75, 0`</td>
+      </tr>
+      <tr>
+      <td>`43, 57, 44`</td>
+      <td>`262, 92, 57`</td>
+      <td>`0, 176, 0`</td>
+      </tr>
+      </tbody>
+      </table>
+
+      <img src="../img/05_Roblox_tutorial/SeaStacks-11.jpg.webp" alt="A side view of the sample laser tag experience with level 4c-5a sea stacks visible with the polished assets." width="80%" />
+
+12. 다음 **SeaStackMesh** 자산을 **Level_5b** 모델에 추가하고 구성합니다:
+
+      <table>
+      <thead>
+      <tr>
+      <th>Size</th>
+      <th>CFrame.Position</th>
+      <th>CFrame.Orientation</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>`47, 36, 40`</td>
+      <td>`245, -16, 15`</td>
+      <td>`0, 0, 0`</td>
+      </tr>
+      <tr>
+      <td>`38, 38, 41`</td>
+      <td>`245, 11, 14`</td>
+      <td>`0, 100, 0`</td>
+      </tr>
+      <tr>
+      <td>`36, 38, 34`</td>
+      <td>`243, 34, 15`</td>
+      <td>`0, -164, 0`</td>
+      </tr>
+      <tr>
+      <td>`31, 34, 30`</td>
+      <td>`244, 62, 16`</td>
+      <td>`0, -45, 0`</td>
+      </tr>
+      <tr>
+      <td>`28, 32, 28`</td>
+      <td>`244, 83, 15`</td>
+      <td>`0, -120, 0`</td>
+      </tr>
+      <tr>
+      <td>`24, 32, 24`</td>
+      <td>`244, 106, 15`</td>
+      <td>`0, -18, 0`</td>
+      </tr>
+      </tbody>
+      </table>
+
+      <img src="../img/05_Roblox_tutorial/SeaStacks-12.png.webp" alt="A view of the sample laser tag experience with all of the platforms and level 1-5b sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+13. 다음 **SeaStackMesh** 자산을 **Level_5c** 모델에 추가하고 구성합니다:
+
+      <table>
+      <thead>
+      <tr>
+      <th>Size</th>
+      <th>CFrame.Position</th>
+      <th>CFrame.Orientation</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>`45, 34, 38`</td>
+      <td>`270, -8, -6`</td>
+      <td>`0, 180, 0`</td>
+      </tr>
+      <tr>
+      <td>`36, 35, 38`</td>
+      <td>`270, 17, -5`</td>
+      <td>`0, -80, 0`</td>
+      </tr>
+      <tr>
+      <td>`34, 35, 32`</td>
+      <td>`272, 40, -5`</td>
+      <td>`0, 16, 0`</td>
+      </tr>
+      <tr>
+      <td>`29, 32, 29`</td>
+      <td>`271, 65, -7`</td>
+      <td>`0, 136, 0`</td>
+      </tr>
+      <tr>
+      <td>`26, 30, 26`</td>
+      <td>`271, 86, -6`</td>
+      <td>`0, 61, 0`</td>
+      </tr>
+      <tr>
+      <td>`22, 30, 23`</td>
+      <td>`270, 108, -6`</td>
+      <td>`0, 162, 0`</td>
+      </tr>
+      </tbody>
+      </table>
+
+      <img src="../img/05_Roblox_tutorial/SeaStacks-13.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms and level 1-5c sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+14. 다음 **SeaStackMesh** 자산을 **Level_5d** 모델에 추가하고 구성합니다:
+
+      <table>
+      <thead>
+      <tr>
+      <th>Size</th>
+      <th>CFrame.Position</th>
+      <th>CFrame.Orientation</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>`65, 71, 63`</td>
+      <td>`315, -5, -27`</td>
+      <td>`0, -161, 0`</td>
+      </tr>
+      <tr>
+      <td>`58, 66, 58`</td>
+      <td>`315, 39, -25`</td>
+      <td>`0, 124, 0`</td>
+      </tr>
+      <tr>
+      <td>`50, 66, 51`</td>
+      <td>`315, 89, -24`</td>
+      <td>`0, -134, 0`</td>
+      </tr>
+      </tbody>
+      </table>
+
+      <img src="../img/05_Roblox_tutorial/SeaStacks-14.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms and level 1-5d sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+15. 다음 **SeaStackMesh** 자산을 **Level_6a** 모델에 추가하고 구성합니다:
+
+      <table>
+      <thead>
+      <tr>
+      <th>Size</th>
+      <th>CFrame.Position</th>
+      <th>CFrame.Orientation</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>`94, 104, 92`</td>
+      <td>`358, 32, -56`</td>
+      <td>`0, -123, 0`</td>
+      </tr>
+      <tr>
+      <td>`85, 96, 84`</td>
+      <td>`360, 97, -54`</td>
+      <td>`0, 162, 0`</td>
+      </tr>
+      <tr>
+      <td>`72, 71, 74`</td>
+      <td>`361, 165, -52`</td>
+      <td>`0, -79, 0`</td>
+      </tr>
+      </tbody>
+      </table>
+
+      <img src="../img/05_Roblox_tutorial/SeaStacks-15.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms and level 1-6a sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+16. 다음 **SeaStackMesh** 자산을 **Level_6b** 모델에 추가하고 구성합니다:
+
+      <table>
+      <thead>
+      <tr>
+      <th>Size</th>
+      <th>CFrame.Position</th>
+      <th>CFrame.Orientation</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>`44, 65, 47`</td>
+      <td>`380, 17, 9`</td>
+      <td>`0, -143, 0`</td>
+      </tr>
+      <tr>
+      <td>`46, 44, 39`</td>
+      <td>`380, 61, 11`</td>
+      <td>`0, -78, 0`</td>
+      </tr>
+      <tr>
+      <td>`37, 37, 40`</td>
+      <td>`381, 92, 11`</td>
+      <td>`0, 22, 0`</td>
+      </tr>
+      <tr>
+      <td>`35, 37, 33`</td>
+      <td>`381, 115, 10`</td>
+      <td>`0, 118, 0`</td>
+      </tr>
+      <tr>
+      <td>`30, 33, 30`</td>
+      <td>`379, 141, 10`</td>
+      <td>`0, -123, 0`</td>
+      </tr>
+      <tr>
+      <td>`27, 31, 27`</td>
+      <td>`380, 162, 10`</td>
+      <td>`0, 162, 0`</td>
+      </tr>
+      <tr>
+      <td>`23, 31, 24`</td>
+      <td>`380, 185, 11`</td>
+      <td>`0, -96, 0`</td>
+      </tr>
+      </tbody>
+      </table>
+
+      <img src="../img/05_Roblox_tutorial/SeaStacks-16.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms and level 1-6b sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+17. 다음 **SeaStackMesh** 자산을 **Level_6c** 모델에 추가하고 구성합니다:
+
+      <table>
+      <thead>
+      <tr>
+      <th>Size</th>
+      <th>CFrame.Position</th>
+      <th>CFrame.Orientation</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>`68, 52, 57`</td>
+      <td>`387, 3, 48`</td>
+      <td>`0, -4, 0`</td>
+      </tr>
+      <tr>
+      <td>`54, 54, 58`</td>
+      <td>`388, 41, 47`</td>
+      <td>`0, 96, 0`</td>
+      </tr>
+      <tr>
+      <td>`52, 54, 48`</td>
+      <td>`385, 75, 47`</td>
+      <td>`0, -168, 0`</td>
+      </tr>
+      <tr>
+      <td>`44, 49, 43`</td>
+      <td>`385, 114, 49`</td>
+      <td>`0, -49, 0`</td>
+      </tr>
+      <tr>
+      <td>`40, 45, 40`</td>
+      <td>`386, 145, 48`</td>
+      <td>`0, -124, 0`</td>
+      </tr>
+      <tr>
+      <td>`34, 45, 35`</td>
+      <td>`387, 178, 48`</td>
+      <td>`0, -22, 0`</td>
+      </tr>
+      </tbody>
+      </table>
+
+      <img src="../img/05_Roblox_tutorial/SeaStacks-17.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms and level 1-6c sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+18. 다음 **SeaStackMesh** 자산을 **Level_7a** 모델에 추가하고 구성합니다:
+
+      <table>
+      <thead>
+      <tr>
+      <th>Size</th>
+      <th>CFrame.Position</th>
+      <th>CFrame.Orientation</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>`96, 98, 102`</td>
+      <td>`406, 19, 82`</td>
+      <td>`0, -41, 0`</td>
+      </tr>
+      <tr>
+      <td>`92, 98, 84`</td>
+      <td>`407, 81, 82`</td>
+      <td>`0, -19, 0`</td>
+      </tr>
+      <tr>
+      <td>`81, 90, 79`</td>
+      <td>`407, 152, 80`</td>
+      <td>`0, 90, 0`</td>
+      </tr>
+      <tr>
+      <td>`73, 83, 73`</td>
+      <td>`404, 208, 80`</td>
+      <td>`0, 15, 0`</td>
+      </tr>
+      <tr>
+      <td>`62, 83, 64`</td>
+      <td>`403, 270, 79`</td>
+      <td>`0, 116, 0`</td>
+      </tr>
+      </tbody>
+      </table>
+
+      <img src="../img/05_Roblox_tutorial/SeaStacks-18.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms and level 1-7a sea stacks visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
+
+19. 자리 표시 회색 상자 바다 스택 플랫폼을 삭제합니다.
+
+  </TabItem>
+</Tabs>
+
+###### Coins
+
+샘플 자산 라이브러리에는 `MeshPart` 객체와 하위 `SurfaceAppearance` 객체가 있는 단일 **Coin** 자산이 포함되어 있습니다. `SurfaceAppearance` 객체는 동전에 반짝이는 금속 효과를 만들어 더 현실적이고 플레이어가 수집하기 더 매력적으로 만듭니다.
+
+이 객체를 초기 자리 표시 동전을 설정한 위치에 배치하거나 플레이어에게 더 유용하게 생각되는 위치로 위치와 방향 값을 수정할 수 있습니다.
+
+<img src="../img/05_Roblox_tutorial/Final-Coin.jpg.webp" alt="A close up view of a shiny gold coin with a Roblox icon in the middle. The coin floats over a grassy path of island." width="80%" />
+
+<Tabs>
+  <TabItem key = "1" label="Apply Your Own Coins">
+
+동전에 자산 라이브러리를 적용하려면:
+
+1. **Explorer** 창에서 자산 라이브러리로 이동하여 **Coin**을 복사합니다.
+1. **Platforms** 폴더에서 **Coins** 폴더에 **Coin**을
+
+ 붙여넣습니다.
+1. **Home** 탭에서 **Move** 및 **Rotate** 도구를 사용하여 메쉬를 첫 번째 자리 표시 동전의 구성과 동일한 구성으로 위치시키고 회전시킵니다.
+1. 이 과정을 반복하여 초기 동전 자리 표시 객체를 설정한 위치에 **coin** 자산을 추가하고 구성합니다.
+
+   <img src="../img/05_Roblox_tutorial/Coins-Final.jpg.webp" alt="A view of shiny gold coins hovering over each level of sea stack platform." width="80%" />
+
+1. 자리 표시 동전을 삭제합니다.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+샘플 [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) 경험 내 동전을 정확히 재현하려면:
+
+1. **Explorer** 창에서 자산 라이브러리로 이동하여 **Coin**을 복사합니다.
+2. **Platforms** 폴더에서 **Coins** 폴더에 **Coin**을 붙여넣습니다.
+3. **Properties** 창에서,
+   1. **CFrame.Position**을 **-121, 3, 6**으로 설정합니다.
+   1. **CFrame.Orientation**을 **0, -105, 0**으로 설정합니다.
+4. 이 과정을 반복하여 초기 동전 자리 표시 객체를 설정한 위치에 다음 **coin** 자산을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`-121, 3, 6`</td>
+   <td>`0, -105, 0`</td>
+   </tr>
+   <tr>
+   <td>`-107, 3, 10`</td>
+   <td>`0, -105, 0`</td>
+   </tr>
+   <tr>
+   <td>`-104, 3, 35`</td>
+   <td>`0, 120, 0`</td>
+   </tr>
+   <tr>
+   <td>`-86, 3, 61`</td>
+   <td>`0, 30, 0`</td>
+   </tr>
+   <tr>
+   <td>`-101, 3, -12`</td>
+   <td>`0, -15, 0`</td>
+   </tr>
+   <tr>
+   <td>`-22, 6, -39`</td>
+   <td>`0, 120, 0`</td>
+   </tr>
+   <tr>
+   <td>`-48, 6, -26`</td>
+   <td>`0, 75, 0`</td>
+   </tr>
+   <tr>
+   <td>`-65, 6, -6`</td>
+   <td>`0, 75, 0`</td>
+   </tr>
+   <tr>
+   <td>`-74, 6, 19`</td>
+   <td>`0, 75, 0`</td>
+   </tr>
+   <tr>
+   <td>`-67, 6, 46`</td>
+   <td>`0, 75, 0`</td>
+   </tr>
+   <tr>
+   <td>`-38, 14, 28`</td>
+   <td>`0, 75, 0`</td>
+   </tr>
+   <tr>
+   <td>`-8, 14, 8`</td>
+   <td>`0, 75, 0`</td>
+   </tr>
+   <tr>
+   <td>`-3, 14, 34`</td>
+   <td>`0, 75, 0`</td>
+   </tr>
+   <tr>
+   <td>`35, 33, 9`</td>
+   <td>`0, -105, 0`</td>
+   </tr>
+   <tr>
+   <td>`59, 39, 6`</td>
+   <td>`0, 90, 0`</td>
+   </tr>
+   <tr>
+   <td>`78, 33, 4`</td>
+   <td>`0, -75, 0`</td>
+   </tr>
+   <tr>
+   <td>`83, 39, 22`</td>
+   <td>`0, -165, 0`</td>
+   </tr>
+   <tr>
+   <td>`113, 70, 56`</td>
+   <td>`0, -135, 0`</td>
+   </tr>
+   <tr>
+   <td>`134, 70, 76`</td>
+   <td>`0, -135, 0`</td>
+   </tr>
+   <tr>
+   <td>`175, 70, 103`</td>
+   <td>`0, 75, 0`</td>
+   </tr>
+   <tr>
+   <td>`197, 70, 107`</td>
+   <td>`0, 105, 0`</td>
+   </tr>
+   <tr>
+   <td>`214, 81, 95`</td>
+   <td>`0, 120, 0`</td>
+   </tr>
+   <tr>
+   <td>`235, 99, 78`</td>
+   <td>`0, 135, 0`</td>
+   </tr>
+   <tr>
+   <td>`258, 125, 54`</td>
+   <td>`0, 135, 0`</td>
+   </tr>
+   <tr>
+   <td>`251, 132, 11`</td>
+   <td>`0, 135, 0`</td>
+   </tr>
+   <tr>
+   <td>`260, 140, 4`</td>
+   <td>`0, 135, 0`</td>
+   </tr>
+   <tr>
+   <td>`270, 132, -5`</td>
+   <td>`0, 135, 0`</td>
+   </tr>
+   <tr>
+   <td>`312, 162, -19`</td>
+   <td>`0, 105, 0`</td>
+   </tr>
+   <tr>
+   <td>`360, 206, -40`</td>
+   <td>`0, 69, 0`</td>
+   </tr>
+   <tr>
+   <td>`377, 260, -4`</td>
+   <td>`0, -145, 0`</td>
+   </tr>
+   <tr>
+   <td>`380, 206, 13`</td>
+   <td>`0, 12, 0`</td>
+   </tr>
+   <tr>
+   <td>`386, 260, 27`</td>
+   <td>`0, -145, 0`</td>
+   </tr>
+   <tr>
+   <td>`391, 206, 45`</td>
+   <td>`0, 12, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Coins-Final.jpg.webp" alt="A view of shiny gold coins hovering over each level of sea stack platform." width="80%" />
+
+5. 자리 표시 동전을 삭제합니다.
+
+  </TabItem>
+</Tabs>
+
+###### Mountains
+
+샘플 자산 라이브러리에는 단일 **MountainMesh** 자산이 포함되어 있어 세계의 배경을 장식하고 물 지형의 가장자리를 숨기며 바다 스택 플랫폼 주위의 환경을 둘러싸는 데 사용할 수 있습니다. 개별 산을 회전하고 크기를 조정하여 자산의 재료가 이웃 산과 섞이도록 할 수 있습니다. 이 기술은 전체 산맥이 단일 반복 메쉬라는 것을 플레이어가 감지하는 능력을 효과적으로 줄여줍니다.
+
+<img src="../img/05_Roblox_tutorial/Mountain-Meshes-Stacked.jpg.webp" alt="Several mountain meshes with different scales and rotation values overlap each other's edges to look like a mountain range. Each mesh has a light blue outline." width="80%" />
+
+<Tabs>
+  <TabItem key = "1" label="Apply Your Own Mountains">
+
+산에 자산 라이브러리를 적용하려면:
+
+1. **Explorer** 창에서 자산 라이브러리로 이동하여 **MountainMesh**를 복사합니다.
+1. **Platforms** 폴더에서 **Mountains** 폴더에 **MountainMesh**를 붙여넣습니다.
+1. **Home** 탭에서 **Move**, **Scale** 및 **Rotate** 도구를 사용하여 물 지형의 경계선을 따라 메쉬를 위치시키고, 크기를 조정하며 회전시킵니다.
+1. 이 과정을 반복하여 물 지형의 경계선이 덮일 때까지 다양한 크
+
+기와 회전의 산을 추가하고 구성합니다.
+
+   <img src="../img/05_Roblox_tutorial/Mountains-Final.jpg.webp" alt="A view of the polished sea stacks, platform, and coins, with a mountain range in the background." width="80%" />
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+샘플 [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) 경험 내 산을 정확히 재현하려면:
+
+1. **Explorer** 창에서 자산 라이브러리로 이동하여 **MountainMesh**를 복사합니다.
+2. **Platforms** 폴더에서 **Mountains** 폴더에 **MountainMesh**를 붙여넣습니다.
+3. **Properties** 창에서,
+   1. **Size**를 **2048, 334, 2048**로 설정합니다.
+   2. **CFrame.Position**을 **-1243, 115, -1402**로 설정합니다.
+   3. **CFrame.Orientation**을 **0, 46, 0**로 설정합니다.
+4. 이 과정을 반복하여 물 지형의 경계선을 따라 다음 산 자산을 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>Size</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`2048, 212, 2048`</td>
+   <td>`-326, 230, -1614`</td>
+   <td>`-15, -155, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 416, 1871`</td>
+   <td>`434, 160, -1543`</td>
+   <td>`0, -2, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 400, 2048`</td>
+   <td>`1200, 147, -1534`</td>
+   <td>`-15, -155, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 540, 1488`</td>
+   <td>`1726, 220, -1139`</td>
+   <td>`0, -95, 0`</td>
+   </tr>
+   <tr>
+   <td>`2044, 442, 2044`</td>
+   <td>`2344, 174, -413`</td>
+   <td>`0, 5, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 458, 2048`</td>
+   <td>`2267, 157, 1084`</td>
+   <td>`0, -81, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 678, 2048`</td>
+   <td>`1662, 221, 1804`</td>
+   <td>`0, 9, 0`</td>
+   </tr>
+   <tr>
+   <td>`2043, 352, 1467`</td>
+   <td>`1025, 147, 2462`</td>
+   <td>`0, 54, 0`</td>
+   </tr>
+   <tr>
+   <td>`1980, 531, 1742`</td>
+   <td>`361, 180, 2119`</td>
+   <td>`0, 21, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 415, 2048`</td>
+   <td>`-580, 160, 1961`</td>
+   <td>`0, -122, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 415, 2048`</td>
+   <td>`-900, 160, 1652`</td>
+   <td>`0, 24, 0`</td>
+   </tr>
+   <tr>
+   <td>`1321, 403, 1321`</td>
+   <td>`-1303, 133, 770`</td>
+   <td>`0, 55, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 335, 2048`</td>
+   <td>`-1653, 114, 161`</td>
+   <td>`0, -20, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 249, 2048`</td>
+   <td>`-1928, 79, -674`</td>
+   <td>`0, 24, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 450, 2048`</td>
+   <td>`-1426, 73, -895`</td>
+   <td>`0, -20, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Mountains-Final.jpg.webp" alt="A view of the polished sea stacks, platform, and coins, with a mountain range in the background." width="80%" />
+
+  </TabItem>
+</Tabs>
+
+##### Playtest
+
+자산 라이브러리를 적용하고 환경을 구성한 후에는 최종 자산의 레이아웃에서 발생한 변동이 플레이어의 게임 완료 능력에 영향을 미치지 않는지 확인하기 위해 경험을 플레이테스트해야 합니다.
+
+경험을 플레이테스트하려면:
+
+1. 메뉴 바에서 **Play** 버튼을 클릭합니다. Studio가 플레이테스트 모드로 전환됩니다.
+
+   <img src="../img/05_Roblox_tutorial/Quick-Access-Toolbar-Play.png.webp" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="716" />
+
+1. 경험을 플레이하고 스택 상단의 플레어에 도달해 보세요.
+1. 완료되면 메뉴 바로 이동하여 **Stop** 버튼을 클릭합니다. Studio가 플레이테스트 모드에서 종료됩니다.
+
+   <img src="../img/05_Roblox_tutorial/Quick-Access-Toolbar-Stop.png.webp" alt="Studio's Home tab with the Stop button highlighted in the menu bar." width="716" />
+
+Core Curriculum을 완료한 것을 축하드립니다! 이제 간단한 경험을 처음부터 끝까지 만드는 경험을 쌓았으므로 새로운 게임 플레이 기능이나 추가 레벨로 프로젝트를 확장하거나 Studio의 추가 [기능](../../../platform.md)을 탐색하거나 고품질 레이저 태그 환경을 만드는 방법을 가르쳐주는 [환경 예술 커리큘럼](../../environmental-art/index.md)과 같은 추가 튜토리얼 커리큘럼을 따를 수 있습니다. 창작을 즐기세요!
+
+<Alert severity="info">
+Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추가 피드백이 있으시면 [Core Curriculum Q&A](https://devforum.roblox.com/t/feedback-on-core-curriculum/2592219)에 댓글을 남겨 주세요.
+</Alert>
+
+---
+## Environmental Art Curriculum
+
+**Environmental Art**은 게임플레이 요구 사항을 구현하고 사용자 경험에 몰입하게 하며 세계 자체에 대한 맥락 정보를 제공하는 3D 환경을 생성하고 구성하는 분야입니다.
+
+여러분은 단계별 프로세스와 레벨 디자인, 자산 개발, 메모리 및 성능 최적화를 위한 최선의 실천을 통해 1인칭 슈팅 레이저 태그 경험을 위한 [고품질 환경](https://www.roblox.com/games/14447845297/Environment-Art-Optimizing)을 재현하는 방법을 배우게 됩니다. 이를 통해 자신만의 경험에 구현할 수 있습니다.
+
+이 과정은 Roblox Studio에서 일반적인 빌딩 개념과 도구에 익숙한 독자를 대상으로 합니다. 환경을 만드는 방법을 배우는 데 도움이 필요하다면 [핵심 커리큘럼](#core)을 시도해 보세요.
+
+### Chapter 1 - Greybox Your Environment
+
+**그레이박싱 환경**, 매싱 아웃 또는 환경 블로킹이라고도 불리는 이 과정은 자산을 다듬기 전에 사용자가 게임플레이를 어떻게 경험할지 알아내기 위해 3D 공간에 간단한 형태를 추가하는 과정입니다. 이 과정은 플레이 가능한 영역의 레이아웃에서 발생할 수 있는 문제를 발견하는 데 중요합니다. 예를 들어, 이동하기 어려운 지역, 특정 관점에서의 불공평한 이점, 사용자 캐릭터에 비해 비율이 맞지 않는 자산 등이 있습니다.
+
+[Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) `.rbxl` 파일을 참고하여 이 섹션에서는 팀 기반 1인칭 레이저 태그 슈터 경험을 위한 표준 세 개의 레인 맵 레이아웃을 그레이박싱하는 방법을 단계별로 설명합니다. 이 과정에는 다음과 같은 내용이 포함됩니다:
+
+- 다양한 플레이 스타일을 위한 전략적 전투를 유도하는 플레이 가능한 영역 생성.
+- 사용자의 위치와 방향을 알려주는 플레이스홀더 재료 적용.
+- 레이아웃 테스트를 통해 재미있고 플레이할 수 있는 문제를 포함하지 않는지 확인.
+
+이 섹션을 완료한 후에는 그레이박스 환경을 대체하거나 변환할 고품질 자산을 개발하고 게임 디자인 요구 사항을 충족하는 방법을 배우게 됩니다.
+
+<img src="../img/05_Roblox_tutorial/PlaceholderMaterials.jpg.webp" alt="An angled top-down view of the final greybox environment with placeholder materials to mark unique sections of the map." width="100%"/>
+
+#### 세 개의 레인 맵 레이아웃
+
+**세 개의 레인 맵 레이아웃**은 맵의 반대쪽에 각 팀의 스폰 존이 있는 1인칭 슈터 맵 레이아웃으로, 각 팀이 스폰 존으로 이동할 수 있는 세 개의 주요 레인과 하나의 주요 레인에서 다른 레인으로 이동할 수 있는 교차 레인이 포함됩니다. 이 유형의 맵 레이아웃은 사용자가 매치에 참여하자마자 전투 구역에 빠르게 진입하게 하며, 사용자가 선택하는 주요 레인에 따라 다양한 플레이 스타일을 허용하기 때문에 1인칭 슈터 경험에 일반적으로 사용됩니다.
+
+다음 섹션에서는 세 개의 레인 맵 레이아웃의 각 구성 요소를 설명하며, 각 구성 요소가 1인칭 슈터 경험 내에서 의도적인 게임플레이 상호작용을 생성하는 방법을 고려합니다.
+
+##### 스폰 존
+
+**스폰 존**은 사용자가 매치 시작 시 팀에 합류하거나 체력이 0이 된 후 다시 게임에 합류하는 맵의 영역입니다. 최소한 각 팀은 사용자가 경험에 처음 합류할 때 중앙 스폰 존을 가져야 합니다. 많은 개발자는 사용자가 매치 시작 전에 경험을 탐색할 시간을 주기 위해 이러한 중앙 스폰 존을 맵의 반대쪽 끝에 배치합니다.
+
+<img src="../img/05_Roblox_tutorial/ThreeLaneLayout-SpawnZones.jpg" alt="A top-down view of the baseplate with each team's spawn zone highlighted on opposite sides of the map." width="100%"/>
+
+또한, 많은 팀 기반 1인칭 슈터 경험에는 사용자가 체력이 0이 된 후 무작위로 다시 스폰할 수 있는 맵 전체에 스폰 존이 포함됩니다. 이러한 분산된 스폰 존의 배치는 특히 전투가 많은 지역 근처에 스폰 존을 배치할 때 경험의 난이도를 크게 증가시킬 수 있습니다. 게임플레이를 간단하게 유지하기 위해 샘플 레이저 태그 그레이박스 환경에는 각 팀에 하나의 중앙 스폰 존만 포함됩니다.
+
+##### 주요 레인
+
+**주요 레인**은 스폰 존에서 다른 스폰 존으로 이어지는 맵의 경로입니다. 세 개의 레인 맵 레이아웃에는 세 개의 주요 레인이 포함되며, 개발자는 경험의 전체 환경적 맥락에 따라 이를 개념화합니다. 예를 들어, 샘플 레이저 태그 맵에는 실내 및 실외 환경이 모두 있기 때문에 주요 레인의 이름은 다음과 같습니다:
+
+- **실내** - 건물 입구에서 가장 먼 내부 레인.
+- **중앙** - 내부 및 외부 주요 레인 사이에 있는 레인.
+- **외부** - 건물 입구와 가장 가까운 레인으로, 부분적으로 실내와 실외에 있습니다.
+
+대부분의 세 개의 레인 맵 레이아웃을 사용하는 1인칭 슈터 경험에서, 중앙 주요 레인은 실내 또는 외부 주요 레인 모두에서 공격을 받을 수 있기 때문에 맵의 가장 많은 전투가 발생하는 지역과 교차합니다. 반면, 내부 또는 외부 주요 레인을 이동하는 사용자는 중앙 주요 레인에서만 공격을 받을 수 있습니다.
+
+<img src="../img/05_Roblox_tutorial/ThreeLaneLayout-PrimaryLanes.jpg" alt="A top-down view of the baseplate with three primary lanes highlighted between each team's spawn zone on opposite sides of the map." width="100%"/>
+
+##### 교차 레인
+
+**교차 레인**은 모든 주요 레인과 교차하며, 내부 주요 레인에서 외부 주요 레인까지 이어지는 경로입니다. 사용자는 이 경로를 사용하여 한 주요 레인에서 다른 주요 레인으로 이동할 수 있으며, 일반적으로 최소한의 장애물을 포함하여 사용자가 적의 공격을 피할 수 있도록 도와줍니다. 이는 장애물이 없는 구역이 사용자가 너무 오랫동안 한 장소에 머물지 않도록 장려하는 전이 공간을 생성하기 때문입니다.
+
+<img src="../img/05_Roblox_tutorial/ThreeLaneLayout-CrossLanes.jpg" alt="A top-down view of the baseplate with three primary lanes between each team's spawn zone on opposite sides of the map, as well as five cross lanes that intersect with the primary lanes." width="100%"/>
+
+중앙 주요 레인과 교차하는 교차 레인의 교차 지점 또는 **전투 포켓**은 내부 또는 외부 레인을 이동하는 사용자가 중앙 레인에 접근하고 쏠 수 있기 때문에 가장 많은 전투가 발생합니다. 중앙 레인을 이동하는 사용자는 내부 또는 외부 레인 방향으로 쏠 수 있습니다.
+
+<img src="../img/05_Roblox_tutorial/ThreeLaneLayout-IntersectingPoints.jpg" alt="A top-down view of the baseplate with three primary lanes between each team's spawn zone on opposite sides of the map, as well as five cross lanes that intersect with the primary lanes. The intersections between the primary and cross lanes are highlighted." width="100%"/>
+
+이러한 전투 포켓을 고려하여 세 개의 레인 맵 레이아웃을 구축하면 스폰 존에서의 거리를 분할하고 사용자가 서로 상호작용해야 하는 의도적인 공간을 생성할 수 있습니다. 이는 사용자가 빠른 게임플레이에 참여하고 주요 레인 간을 교차 레인을 사용하여 이동하면서 맵을 빨리 익히도록 장려합니다.
+
+#### 플레이 가능한 영역 만들기
+
+세 개의 레인 맵 레이아웃에 익숙해졌으니 이제 샘플 레이저 태그 그레이박스 환경의 플레이 가능한 영역을 만드는 방법을 배워보겠습니다. [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) `.rbxl` 파일의 지오메트리를 정확히 재현하는 이러한 지침을 따라가면 두 개의 스폰 존, 세 개의 주요 레인, 다섯 개의 교차 레인이 맵의 중간을 가로질러 대칭적으로 배치된 모습을 볼 수 있습니다.
+
+<img src="../img/05_Roblox_tutorial/CreatingPlayableAreas-Intro1.jpg" alt="A top-down view of the final greybox geometry with three primary lanes between each team's spawn zone on opposite sides of the map, as well as five cross lanes that intersect with the primary lanes. The intersections between the primary and cross lanes are highlighted." width="100%"/>
+
+<Alert severity="info">
+    다음 지침은 두 가지 다른 지침 경로를 제공합니다: 고유한 레이저 태그 환경을 나타내는 파트를 삽입하거나 샘플 [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) 장소 파일 내에서 그레이박스 환경을 정확히 재현하는 방식으로 파트를 삽입할 수 있습니다.
+</Alert>
+
+지오메트리를 경험의 사양에 맞게 조정하는 경우, 샘플 파일은 모든 문과 복도를 최소 10 스터드 너비로 유지하며, 모든 벽을 최소 10 스터드 높이로 유지합니다. 이러한 매개변수는 두 사용자가 복도와 문을 동시에 통과할 수 있도록 하고, Roblox의 기본 점프 높이인 5 스터드로 벽을 뛰어넘을 수 없도록 하며, 카메라가
+
+ 지오메트리와 간섭하지 않고 맵을 안전하게 이동할 수 있도록 합니다.
+
+<img src="../img/05_Roblox_tutorial/CreatingPlayableAreas-Intro2.png" alt="In a doorway, two lizard avatars are stacked on top of each other on the left, and two blocky avatars are stacked on top of each other on the right. This demonstrates that only two characters can pass each other in a doorway, and they cannot jump higher than the walls." width="60%"/>
+
+##### 바닥 지오메트리
+
+레이저 태그 그레이박스 환경을 만드는 첫 번째 단계는 각 바닥의 지오메트리를 생성하는 것입니다:
+
+- **메인 플로어** – 한 스폰 존에서 다른 스폰 존까지 이어집니다.
+- **메자닌 플로어** – 중간 전투 포켓의 절반을 차지하며, 고도를 높입니다.
+- **실외 플로어** – 실외 공간을 차지하며, 고도를 낮춥니다.
+
+경험을 위한 각 바닥의 지오메트리를 시각화하는 데 도움이 되도록, 메인 플로어는 노란색, 메자닌 플로어는 빨간색, 실외 플로어는 파란색으로 표시된 다음 이미지를 참고하세요.
+
+<img src="../img/05_Roblox_tutorial/Floor-Intro.jpg" alt="A top-down view of the final greybox environment with placeholder materials to mark the main, mezzanine, and outdoor floors." width="100%"/>
+
+경험에 피크와 밸리를 포함하는 공간을 갖는 것이 중요한 이유는 수평 이동 외에도 시야선과 교전 거리를 제어할 수 있기 때문입니다. 예를 들어, 모든 플레이 가능한 공간이 고도 변화가 없는 단일 바닥으로 이루어져 있다면, 벽이 없는 한 모든 사용자가 서로 상호작용할 수 있어, 다른 사용자가 보지 않는다는 전략 외에 사용자가 개발할 수 있는 전략이 거의 없게 됩니다. 그러나 피크와 밸리가 있는 경우, 사용자가 서로를 볼 수 있는 위치를 결정할 수 있습니다.
+
+또한, 고도의 상승은 물리적 및 감정적인 상승감을 제공하여 높은 지형에 있는 사용자가 전장을 조감하여 다음 이동 경로를 더 잘 파악할 수 있게 합니다. 이동할 준비가 되면, 고도의 하강은 물리적 및 감정적인 하강감을 제공하여 사용자가 적의 시야를 피하면서 빠르게 목표를 달성하도록 압박합니다.
+
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+자신만의 바닥 지오메트리를 생성하려면:
+
+1. **베이스플레이트** 템플릿으로 Roblox Studio를 엽니다.
+1. 메뉴 모음에서 **모델** 탭으로 이동한 다음 **그리드에 맞추기** 섹션에서,
+   1. **회전**을 **90**으로 설정합니다.
+   1. **이동**을 **5 스터드**로 설정합니다. 이를 통해 모든 그레이박스 지오메트리를 서로 5 스터드 간격으로 배치할 수 있습니다.
+
+   <img src="../img/05_Roblox_tutorial/SnapToGrid.jpg" alt="Studio's Model tab with the Snap to Grid settings highlighted." width="60%"/>
+
+1. **블록** 파트를 사용하여 건물의 **메인 플로어**를 위해 좌우 대칭 표면을 만듭니다. 이 지오메트리는 플레이 가능한 실내의 길이를 나타내며, 그 대칭은 맵의 중심을 나타냅니다.
+
+   <img src="../img/05_Roblox_tutorial/GeneralFloor-1.jpg" alt="An angled top-down view of the main floor greybox geometry highlighted in yellow." width="100%"/>
+
+1. **블록** 파트를 사용하여 건물의 **메자닌 플로어**를 위해 좌우 대칭 표면을 만듭니다. 이 지오메트리는 맵의 가장 높은 지형을 나타냅니다.
+
+   <img src="../img/05_Roblox_tutorial/Floor-3.jpg" alt="An angled top-down view of both the main and mezzanine floors. The mezzanine floor greybox geometry is highlighted in yellow." width="100%"/>
+
+1. **웨지** 파트를 사용하여 메인 플로어와 메자닌 플로어 사이의 **고도 상승**을 만듭니다. 이 지오메트리는 내부 주요 레인 또는 맵 중앙의 교차 레인을 이동하는 플레이어의 시야를 차단합니다.
+
+   <img src="../img/05_Roblox_tutorial/Floor-4.jpg" alt="An angled top-down view of both the main, mezzanine floor, and rise in elevation parts. The rise in elevation greybox geometry is highlighted in yellow." width="100%"/>
+
+1. **웨지** 파트를 사용하여 메인 플로어와 실외 플로어 사이의 **고도 하강**을 만듭니다. 이 지오메트리는 외부 주요 레인이며, 맵의 가장 낮은 지형으로 내려갑니다.
+
+   <img src="../img/05_Roblox_tutorial/Floor-5.jpg" alt="An angled top-down view of both the main, mezzanine floor, and rise and drop in elevation parts. The drop in elevation greybox geometry is highlighted in yellow." width="100%"/>
+
+1. 모든 파트를 고정합니다.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+샘플 [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) 장소 파일 내에서 바닥 지오메트리를 정확히 재현하려면:
+
+1. **베이스플레이트** 템플릿으로 Roblox Studio를 엽니다.
+1. 메뉴 모음에서 **모델** 탭으로 이동한 다음 **그리드에 맞추기** 섹션에서,
+   1. **회전**을 **90**으로 설정합니다.
+   1. **이동**을 **5 스터드**로 설정합니다. 이를 통해 모든 그레이박스 지오메트리를 서로 5 스터드 간격으로 배치할 수 있습니다.
+
+   <img src="../img/05_Roblox_tutorial/SnapToGrid.jpg" alt="Studio's Model tab with the Snap to Grid settings highlighted." width="60%"/>
+
+1. **블록** 파트를 추가하고 **메인 플로어**의 왼쪽 표면을 구성합니다. 이 프로세스를 사용하여 모든 플레이 가능한 영역을 만들 수 있습니다.
+
+   1. 메뉴 모음에서 **모델** 탭을 선택합니다.
+   1. **파츠** 섹션에서 드롭다운 화살표를 클릭하고 **블록**을 선택합니다. 블록 파트가 뷰포트에 표시됩니다.
+
+      <img src="../img/05_Roblox_tutorial/Model-Tab-Part-Tools.png.webp" width="660" alt="Studio's Model tab with the Part button and Part Type Picker elements highlighted." />
+
+   1. **탐색기** 창에서 블록을 선택한 다음 **속성** 창에서,
+      1. **크기**를 **105, 1, 185**로 설정합니다.
+      1. **CFrame.Position**을 **-77.5, 4.5, 252.5**로 설정합니다.
+
+   <img src="../img/05_Roblox_tutorial/Floor-1.jpg.webp" alt="An angled top-down view of the left-side of the main floor greybox geometry highlighted in yellow." width="100%"/>
+
+1. **메인 플로어**의 나머지 **블록** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>오른쪽 바닥</td>
+   <td>`105, 1, 185`</td>
+   <td>`-77.5, 4.5, 67.5`</td>
+   </tr>
+   <tr>
+   <td>중앙 왼쪽 바닥</td>
+   <td>`20, 10, 50`</td>
+   <td>`-15, 0, 185`</td>
+   </tr>
+   <tr>
+   <td>중앙 오른쪽 바닥</td>
+   <td>`20, 10, 50`</td>
+   <td>`-15, 0, 135`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Floor-2.jpg.webp" alt="An angled top-down view of the main floor geometry. The right-side and middle portion of the main floor greybox geometry is highlighted in yellow." width="100%"/>
+
+1. **메자닌 플로어**를 위한 **블록** 파
+
+트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>왼쪽 바닥</td>
+   <td>`70, 5, 35`</td>
+   <td>`-110, 7.5, 177.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 바닥</td>
+   <td>`70, 5, 35`</td>
+   <td>`-110, 7.5, 142.5`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 가장자리</td>
+   <td>`10, 5, 10`</td>
+   <td>`-70, 7.5, 165`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 가장자리</td>
+   <td>`10, 5, 10`</td>
+   <td>`-70, 7.5, 155`</td>
+   </tr>
+   <tr>
+   <td>가장자리 벽</td>
+   <td>`1, 3, 20`</td>
+   <td>`-65.5, 11.5, 160`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Floor-3.jpg" alt="An angled top-down view of both the main and mezzanine floors. The mezzanine floor greybox geometry is highlighted in yellow." width="100%"/>
+
+1. **메인 플로어**와 **메자닌 플로어** 사이의 **고도 상승**을 위한 **웨지** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>왼쪽 고도</td>
+   <td>`15, 5, 10`</td>
+   <td>`-102.5, 7.5, 200`</td>
+   <td>`0, 180, 0`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 고도</td>
+   <td>`15, 5, 10`</td>
+   <td>`-102.5, 7.5, 120`</td>
+   <td>`0, 0, 0`</td>
+   </tr>
+   <tr>
+   <td>중앙 왼쪽 고도</td>
+   <td>`15, 5, 10`</td>
+   <td>`-70, 7.5, 177.5`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   <tr>
+   <td>중앙 오른쪽 고도</td>
+   <td>`15, 5, 10`</td>
+   <td>`-70, 7.5, 142.5`</td>
+   <td>`0, -90, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Floor-4.jpg" alt="An angled top-down view of both the main, mezzanine floor, and rise in elevation parts. The rise in elevation greybox geometry is highlighted in yellow." width="100%"/>
+
+1. **메인 플로어**와 **실외 플로어** 사이의 **고도 하강**을 위한 **웨지** 파트를 추가하고 구성합니다. **크기**는 `270, 11, 45`, **CFrame.Position**은 `-2.5, -0.5, 160`, **CFrame.Orientation**은 `0, -90, 0`입니다.
+
+   <img src="../img/05_Roblox_tutorial/Floor-5.jpg" alt="An angled top-down view of both the main, mezzanine floor, and rise and drop in elevation parts. The drop in elevation greybox geometry is highlighted in yellow." width="100%"/>
+
+1. 모든 바닥 파트를 고정합니다.
+
+  </TabItem>
+</Tabs>
+
+##### 주변 벽 지오메트리
+
+레이저 태그 그레이박스 환경을 만드는 두 번째 단계는 건물의 주변 벽 지오메트리를 만드는 것입니다. 이는 경험의 실내 게임플레이를 위한 경계를 제공하고, 사용자가 어디로 가서 서로 상호작용할 수 있는지 안내합니다.
+
+경험을 위해 만드는 건물의 주변 벽 지오메트리를 시각화하는 데 도움이 되도록 다음 이미지를 참고하세요. 노란색으로 표시되어 있습니다.
+
+<img src="../img/05_Roblox_tutorial/Perimeter-Intro.jpg" alt="A top-down view of the final greybox environment with the perimeter wall geometry highlighted in yellow." width="100%"/>
+
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+자신만의 주변 벽 지오메트리를 생성하려면:
+
+1. **블록** 파트를 사용하여 건물의 메인 플로어 주변에 **주변 경계**를 만듭니다. 건물 입구의 가장자리를 제외합니다. 이 지오메트리는 플레이 가능한 영역을 벗어나지 않도록 하면서 건물에 들어오고 나갈 수 있도록 합니다.
+
+   <img src="../img/05_Roblox_tutorial/GeneralPerimeter-1.jpg" alt="An angled top-down view of the floor and perimeter walls. The perimeter wall geometry is highlighted in yellow." width="100%"/>
+
+1. 이 파트를 고정합니다.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+샘플 [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) 장소 파일 내에서 주변 벽 지오메트리를 정확히 재현하려면:
+
+1. **상단** 주변 벽을 위한 **블록** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>왼쪽 상단 벽</td>
+   <td>`30, 30, 185`</td>
+   <td>`-140, 20, 282.5`</td>
+   </tr>
+   <tr>
+   <td>중앙 상단 벽</td>
+   <td>`10, 30, 60`</td>
+   <td>`-150, 20, 160`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 상단 벽</td>
+   <td>`30, 30, 185`</td>
+   <td>`-140, 20, 37.5`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Perimeter-1.jpg.webp" alt="An angled top-down view of the floor and top perimeter walls. The top perimeter wall geometry is highlighted in yellow." width="100%"/>
+
+1. **측면** 주변 벽을 위한 **블록** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>왼쪽 벽</td>
+   <td>`105, 30, 35`</td>
+   <td>`-72.5, 20, 357.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 벽</td>
+   <td>`105, 30, 35`</td>
+   <td>`-72.5, 20, -37.5`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Perimeter-2.jpg.webp" alt="An angled top-down view of the floor, top perimeter walls, and side perimeter walls. The side perimeter wall geometry is highlighted in yellow." width="100%"/>
+
+1. **왼쪽 하단** 주변 벽을 위한 **블록** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>
+
+왼쪽 벽</td>
+   <td>`20, 20, 40`</td>
+   <td>`-34, 15, 320`</td>
+   </tr>
+   <tr>
+   <td>중앙 벽</td>
+   <td>`12, 45, 15`</td>
+   <td>`-29, 24.5, 297.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 벽</td>
+   <td>`5, 35, 5`</td>
+   <td>`-27.5, 19.5, 287.5`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Perimeter-3.jpg.webp" alt="An angled top-down view of the floor, top perimeter walls, side perimeter walls, and bottom-left perimeter walls. The bottom-left perimeter wall geometry is highlighted in yellow." width="100%"/>
+
+1. **오른쪽 하단** 주변 벽을 위한 **블록** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>왼쪽 벽</td>
+   <td>`5, 35, 5`</td>
+   <td>`-27.5, 19.5, 32.5`</td>
+   </tr>
+   <tr>
+   <td>중앙 벽</td>
+   <td>`12, 45, 15`</td>
+   <td>`-29, 24.5, 22.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 벽</td>
+   <td>`20, 20, 40`</td>
+   <td>`-35, 15, 0`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Perimeter-4.jpg.webp" alt="An angled top-down view of the floor, top perimeter walls, side perimeter walls, bottom perimeter walls. The bottom-right perimeter wall geometry is highlighted in yellow." width="100%"/>
+
+1. 이 주변 벽 파트를 모두 고정합니다.
+
+  </TabItem>
+</Tabs>
+
+##### 스폰 존 지오메트리
+
+레이저 태그 그레이박스 환경을 만드는 세 번째 단계는 각 팀의 스폰 존을 포함하는 지오메트리를 만드는 것입니다. 중앙 집중 스폰 존만 포함하는 경험의 경우, 이를 개별 방으로 구분하면 사용자가 매치에 처음 합류할 때 경험에 적응할 수 있으며, 체력이 0이 된 후 매치에 다시 합류할 때 적의 공격으로부터 보호받을 수 있습니다.
+
+[Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) `.rbxl` 파일에는 사용자가 합류할 수 있는 각 팀에 하나씩 두 개의 스폰 존이 있으며, 맵의 반대쪽 끝에 위치해 있습니다. 각 스폰 존에는 사용자가 주요 게임플레이 영역으로 빠르게 접근할 수 있도록 두 개의 출구가 있어, 두 개의 주요 레인에 빠르게 접근할 수 있으며, 스폰 존 근처의 교차 레인에서 적의 공격으로부터 보호받을 수 있습니다. 두 개의 출구가 있는 것은 중요한데, 하나의 출구만 있을 경우 사용자가 스폰 존에 들어가거나 나가려고 할 때 병목 현상이 발생할 수 있고, 세 개의 스폰 존은 매치 시작 후 적의 공격으로부터 충분한 보호를 제공하지 않기 때문입니다.
+
+<img src="../img/05_Roblox_tutorial/SpawnZone-ExitPoints.jpg" alt="An angled top-down view of a spawn zone with arrows pointing toward the two exit points and all paths users can take away from the spawn zone." width="60%"/>
+
+경험을 위해 만드는 스폰 존 영역의 지오메트리를 시각화하는 데 도움이 되도록 다음 이미지를 참고하세요. 노란색으로 표시되어 있습니다.
+
+<img src="../img/05_Roblox_tutorial/SpawnZone-Intro.jpg" alt="A top-down view of the final greybox environment with the spawn zone wall geometry highlighted in yellow." width="100%"/>
+
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+자신만의 스폰 존 지오메트리를 생성하려면:
+
+1. **블록** 파트를 사용하여 맵의 왼쪽 끝과 오른쪽 끝에 대칭적으로 각 팀의 **스폰 존**을 두 개의 출구로 분할합니다.
+
+   <img src="../img/05_Roblox_tutorial/GeneralSpawnZone-1.jpg" alt="An angled top-down view of the floor, perimeter, and spawn zone walls. The spawn zone wall geometry is highlighted in yellow." width="100%"/>
+
+1. 이 파트를 고정합니다.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+샘플 [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) 장소 파일 내에서 스폰 존 지오메트리를 정확히 재현하려면:
+
+1. 추가 **스폰 존 벽**을 위한 **블록** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>왼쪽 스폰 존 벽</td>
+   <td>`15, 15, 45`</td>
+   <td>`-117.5, 12.5, 317.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 스폰 존 벽</td>
+   <td>`15, 15, 45`</td>
+   <td>`-117.5, 12.5, 2.5`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/SpawnZone-1.jpg.webp" alt="An angled top-down view of the floor, perimeter, and top spawn zone walls. The top spawn zone wall geometry is highlighted in yellow." width="100%"/>
+
+1. 왼쪽 스폰 존의 **출입구**를 위한 **블록** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>왼쪽 스폰, 상단 벽</td>
+   <td>`10, 15, 5`</td>
+   <td>`-105, 12.5, 297.5`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 스폰, 상단 문</td>
+   <td>`10, 5, 5`</td>
+   <td>`-95, 17.5, 297.5`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 스폰, 중앙 벽</td>
+   <td>`25, 15, 5`</td>
+   <td>`-77.5, 12.5, 297.5`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 스폰, 하단 문</td>
+   <td>`10, 5, 5`</td>
+   <td>`-60, 17.5, 297.5`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 스폰, 하단 벽</td>
+   <td>`20, 15, 5`</td>
+   <td>`-45, 12.5, 297.5`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/SpawnZone-2.jpg.webp" alt="An angled top-down view of the floor, perimeter, top spawn zone walls, and left spawn zone walls. The left spawn zone wall geometry is highlighted in yellow." width="100%"/>
+
+1. 오른쪽 스폰 존의 **출입구**를 위한 **블록** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>오른쪽 스폰 상단 벽</td>
+   <td>`10, 15, 5`</td>
+   <td
+
+>`-105, 12.5, 22.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 스폰, 상단 문</td>
+   <td>`10, 5, 5`</td>
+   <td>`-95, 17.5, 22.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 스폰, 중앙 벽</td>
+   <td>`25, 15, 5`</td>
+   <td>`-77.5, 12.5, 22.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 스폰, 하단 문</td>
+   <td>`10, 5, 5`</td>
+   <td>`-60, 17.5, 22.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 스폰, 하단 벽</td>
+   <td>`20, 15, 5`</td>
+   <td>`-45, 12.5, 22.5`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/SpawnZone-3.jpg.webp" alt="An angled top-down view of the floor, perimeter, all spawn zone walls. The right spawn zone wall geometry is highlighted in yellow." width="100%"/>
+
+1. 이 스폰 존 파트를 모두 고정합니다.
+
+  </TabItem>
+</Tabs>
+
+##### 전투 포켓 지오메트리
+
+레이저 태그 그레이박스 환경을 만드는 네 번째 단계는 건물 내부의 전투 포켓 지오메트리를 만드는 것입니다. 이 지오메트리는 경험의 플레이 가능한 영역 대부분을 차지하며, 주요 레인과 교차 레인의 교차점에서 전투 포켓이 형성되어 건물 전체에 걸쳐 있습니다.
+
+이 섹션의 지침에서는 맵의 상단 보기 위치에 따라 이 지오메트리를 세 개의 별도 전투 포켓으로 설명합니다: 왼쪽 전투 포켓, 중간 전투 포켓, 오른쪽 전투 포켓. 대부분의 전투 포켓에는 사용자가 공간을 탐색할 때 선택 과부하를 피하기 위해 최대 세 개의 입구 또는 출구가 포함됩니다.
+
+<img src="../img/05_Roblox_tutorial/CombatPockets-Intro1.jpg" alt="A top-down view of the final greybox environment with the left, middle, and right combat pockets highlighted." width="100%"/>
+
+경험을 위해 만드는 전투 포켓 지오메트리를 시각화하는 데 도움이 되도록 다음 이미지를 참고하세요. 노란색으로 표시되어 있습니다.
+
+<img src="../img/05_Roblox_tutorial/CombatPockets-Intro2.jpg" alt="A top-down view of the final greybox environment with the combat pocket geometry highlighted in yellow." width="100%"/>
+
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+자신만의 전투 포켓 지오메트리를 생성하려면:
+
+1. **블록** 파트를 사용하여 두 개의 출구가 있는 **왼쪽 전투 포켓**을 만들고 플레이어가 중앙 레인을 이동할 수 있도록 하며, 한 개의 출구는 내부 주요 레인으로 열립니다. 이 지오메트리는 교차 레인을 위해 전투 포켓의 양쪽에 공간을 두고, 외부 주요 레인에서 플레이어의 진입을 차단해야 합니다.
+
+   <img src="../img/05_Roblox_tutorial/CombatPockets-1.jpg" alt="An angled top-down view of the floor, perimeter, spawn zone walls, and left combat pocket. The left combat pocket geometry is highlighted in yellow." width="100%"/>
+
+1. **블록** 파트를 사용하여 이 전투 포켓의 대칭 복사본을 다른 팀의 스폰 존 근처에 만들고 배치합니다. 이 지오메트리는 **오른쪽 전투 포켓**을 나타냅니다.
+
+   <img src="../img/05_Roblox_tutorial/GeneralCombatPockets-2.jpg" alt="An angled top-down view of the floor, perimeter, spawn zone walls, left combat pocket, and right combat pocket. The right combat pocket geometry is highlighted in yellow." width="100%"/>
+
+1. **블록** 파트를 사용하여 두 개의 출구가 있는 **중간 전투 포켓**을 만들고 플레이어가 중앙 레인을 이동할 수 있도록 하며, 한 개의 출구는 내부 주요 레인으로 열리고 가장자리에는 외부 주요 레인으로 이어지는 열린 공간을 만듭니다.
+
+   <img src="../img/05_Roblox_tutorial/GeneralCombatPockets-3.jpg" alt="An angled top-down view of the floor, perimeter, spawn zone walls, left combat pocket, middle combat pocket, and right combat pocket. The middle combat pocket geometry is highlighted in yellow." width="100%"/>
+
+1. **(선택 사항)** **블록** 파트를 사용하여 중앙 전투 포켓의 **복도 추가**를 만들어 내부 주요 레인의 시야선을 분할합니다.
+
+   <img src="../img/05_Roblox_tutorial/GeneralCombatPockets-4.jpg" alt="An angled top-down view of the floor, perimeter, spawn zone walls, left combat pocket, middle combat pocket, right combat pocket, and hallway addition walls. The hallway addition geometry is highlighted in yellow." width="100%"/>
+
+1. 이 파트를 고정합니다.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+샘플 [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) 장소 파일 내에서 전투 포켓 지오메트리를 정확히 재현하려면:
+
+1. **왼쪽 전투 포켓**을 위한 **블록** 파트를 추가하고 구성합니다.
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>상단 복도 확장</td>
+   <td>`10, 15, 15`</td>
+   <td>`-100, 12.5, 272.5`</td>
+   </tr>
+   <tr>
+   <td>상단 출입구, 왼쪽 벽</td>
+   <td>`5, 15, 15`</td>
+   <td>`-92.5, 12.5, 262.5`</td>
+   </tr>
+   <tr>
+   <td>상단 출입구, 오버행</td>
+   <td>`5, 5, 10`</td>
+   <td>`-92.5, 17.5, 250`</td>
+   </tr>
+   <tr>
+   <td>상단 출입구, 오른쪽 벽</td>
+   <td>`5, 15, 20`</td>
+   <td>`-92.5, 12.5, 235`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 출입구, 상단 벽</td>
+   <td>`20, 15, 5`</td>
+   <td>`-85, 12.5, 272.5`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 출입구, 오버행</td>
+   <td>`10, 5, 5`</td>
+   <td>`-70, 17.5, 272.5`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 출입구, 하단 벽</td>
+   <td>`20, 15, 5`</td>
+   <td>`-55, 12.5, 272.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 출입구, 상단 벽</td>
+   <td>`15, 15, 10`</td>
+   <td>`-82.5, 12.5, 230`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 출입구, 오버행</td>
+   <td>`10, 5, 10`</td>
+   <td>`-70, 17.5, 230`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 출입구, 하단 벽</td>
+   <td>`20, 15, 10`</td>
+   <td>`-55, 12.5, 230`</td>
+   </tr>
+   <tr>
+   <td>하단 벽</td>
+   <td>`10, 15, 35`</td>
+   <td>`-50, 12.5, 252.5
+
+`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/CombatPockets-1.jpg" alt="An angled top-down view of the floor, perimeter, spawn zone walls, and left combat pocket. The left combat pocket geometry is highlighted in yellow." width="100%"/>
+
+1. 내부 주요 레인의 시야선을 분할하는 중간 전투 포켓의 **상단 복도 추가**를 위한 **블록** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>왼쪽 복도 확장</td>
+   <td>`15, 20, 45`</td>
+   <td>`-117.5, 15, 212.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 복도 확장</td>
+   <td>`15, 20, 45`</td>
+   <td>`-117.5, 15, 107.5`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 복도</td>
+   <td>`5, 20, 45`</td>
+   <td>`-92.5, 15, 187.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 복도</td>
+   <td>`5, 20, 45`</td>
+   <td>`-92.5, 15, 132.5`</td>
+   </tr>
+   <tr>
+   <td>상단 복도 입구, 왼쪽 벽</td>
+   <td>`15, 15, 5`</td>
+   <td>`-102.5, 17.5, 172.5`</td>
+   </tr>
+   <tr>
+   <td>상단 복도 입구, 입구 왼쪽 벽</td>
+   <td>`5, 15, 10`</td>
+   <td>`-112.5, 17.5, 170`</td>
+   </tr>
+   <tr>
+   <td>상단 복도 입구, 오른쪽 벽</td>
+   <td>`15, 15, 5`</td>
+   <td>`-102.5, 17.5, 147.5`</td>
+   </tr>
+   <tr>
+   <td>상단 복도 입구, 입구 오른쪽 벽</td>
+   <td>`5, 15, 10`</td>
+   <td>`-112.5, 17.5, 150`</td>
+   </tr>
+   <tr>
+   <td>문 오버행</td>
+   <td>`5, 5, 10`</td>
+   <td>`-92.5, 22.5, 160`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/CombatPockets-2.jpg.webp" alt="An angled top-down view of the floor, perimeter, spawn zone walls, left combat pocket, and top hallway addition walls. The top hallway addition wall geometry is highlighted in yellow." width="100%"/>
+
+1. 중간 전투 포켓의 **중간 방**을 위한 **블록** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>복도로 확장되는 왼쪽 벽</td>
+   <td>`10, 20, 25`</td>
+   <td>`-85, 15, 197.5`</td>
+   </tr>
+   <tr>
+   <td>복도로 확장되는 오른쪽 벽</td>
+   <td>`10, 20, 25`</td>
+   <td>`-85, 15, 122.5`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 출입구, 상단 벽</td>
+   <td>`25, 20, 15`</td>
+   <td>`-67.5, 15, 192.5`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 출입구, 오버행</td>
+   <td>`10, 10, 15`</td>
+   <td>`-50, 20, 192.5`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 출입구, 하단 벽</td>
+   <td>`5, 20, 15`</td>
+   <td>`-42.5, 15, 192.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 출입구, 상단 벽</td>
+   <td>`25, 20, 15`</td>
+   <td>`-67.5, 15, 127.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 출입구, 오버행</td>
+   <td>`10, 10, 15`</td>
+   <td>`-50, 20, 127.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 출입구, 하단 벽</td>
+   <td>`5, 20, 15`</td>
+   <td>`-42.5, 15, 127.5`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/CombatPockets-3.jpg.webp" alt="An angled top-down view of the floor, perimeter, spawn zone walls, left combat pocket, top hallway addition walls, and the middle room of the middle combat pocket. The middle room of the middle combat pocket geometry is highlighted in yellow." width="100%"/>
+
+1. **오른쪽 전투 포켓**을 위한 **블록** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>상단 복도 확장</td>
+   <td>`10, 15, 15`</td>
+   <td>`-100, 12.5, 47.5`</td>
+   </tr>
+   <tr>
+   <td>상단 출입구, 왼쪽 벽</td>
+   <td>`5, 15, 20`</td>
+   <td>`-92.5, 12.5, 85`</td>
+   </tr>
+   <tr>
+   <td>상단 출입구, 오버행</td>
+   <td>`5, 5, 10`</td>
+   <td>`-92.5, 17.5, 70`</td>
+   </tr>
+   <tr>
+   <td>상단 출입구, 오른쪽 벽</td>
+   <td>`5, 15, 15`</td>
+   <td>`-92.5, 12.5, 57.5`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 출입구, 상단 벽</td>
+   <td>`15, 15, 10`</td>
+   <td>`-82.5, 12.5, 90`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 출입구, 오버행</td>
+   <td>`10, 5, 10`</td>
+   <td>`-70, 17.5, 90`</td>
+   </tr>
+   <tr>
+   <td>왼쪽 출입구, 하단 벽</td>
+   <td>`20, 15, 10`</td>
+   <td>`-55, 12.5, 90`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 출입구, 상단 벽</td>
+   <td>`20, 15, 5`</td>
+   <td>`-85, 12.5, 47.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 출입구, 오버행</td>
+   <td>`10, 5, 5`</td>
+   <td>`-70, 17.5, 47.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 출입구, 하단 벽
+
+</td>
+   <td>`20, 15, 5`</td>
+   <td>`-55, 12.5, 47.5`</td>
+   </tr>
+   <tr>
+   <td>하단 벽</td>
+   <td>`10, 15, 35`</td>
+   <td>`-50, 12.5, 67.5`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/CombatPockets-4.jpg.webp" alt="An angled top-down view of the floor, perimeter, spawn zone walls, left combat pocket, top hallway addition walls, middle combat pocket, and right combat pocket. The right combat pocket geometry is highlighted in yellow." width="100%"/>
+
+1. 이 전투 포켓 파트를 모두 고정합니다.
+
+  </TabItem>
+</Tabs>
+
+##### 외부 지오메트리
+
+레이저 태그 그레이박스 환경을 만드는 마지막 단계는 실외 공간을 위한 흥미로운 구성을 만들기 위한 플레이스홀더 외부 자산을 만들고, 외부 주요 레인을 이동하는 사용자에게 최소한의 커버를 제공하는 것입니다. 이 영역은 위험이 따르지만 적의 스폰 존으로 빠르게 이동할 수 있는 경로를 제공하기 때문에 중요합니다.
+
+경험을 위해 만드는 외부 자산의 지오메트리를 시각화하는 데 도움이 되도록 다음 이미지를 참고하세요. 노란색으로 표시되어 있습니다.
+
+<img src="../img/05_Roblox_tutorial/Exterior-Intro.jpg" alt="A top-down view of the final greybox environment with the exterior geometry highlighted in yellow." width="100%"/>
+
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+자신만의 외부 지오메트리를 생성하려면:
+
+1. **블록** 파트를 사용하여 외부 주요 레인 주변에 대칭 **장애물**을 만듭니다. 예를 들어, 샘플 그레이박스 환경은 나중에 타워, 기둥, 화단이 될 부품을 추가하여 시야를 차단합니다.
+
+   <img src="../img/05_Roblox_tutorial/GeneralExterior-1.jpg" alt="An angled top-down view of the floor, perimeter, spawn zone walls, combat pockets, and exterior geometry. The exterior geometry is highlighted in yellow." width="100%"/>
+
+1. 이 파트를 고정합니다.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+샘플 [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) 장소 파일 내에서 외부 지오메트리를 정확히 재현하려면:
+
+1. **왼쪽 타워**를 위한 **블록** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>왼쪽 벽</td>
+   <td>`15, 25, 5`</td>
+   <td>`-32.5, 22.5, 192.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 벽</td>
+   <td>`15, 40, 10`</td>
+   <td>`-32.5, 30, 185`</td>
+   </tr>
+   <tr>
+   <td>하단 가장자리</td>
+   <td>`20, 5, 15`</td>
+   <td>`-30, 7.5, 187.5`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Exterior-1.jpg.webp" alt="An angled top-down view of the floor, perimeter, spawn zone walls, combat pockets, and left tower geometry. The left tower geometry is highlighted in yellow." width="100%"/>
+
+1. **오른쪽 타워**를 위한 **블록** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>왼쪽 벽</td>
+   <td>`15, 40, 10`</td>
+   <td>`-32.5, 30, 135`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 벽</td>
+   <td>`15, 25, 5`</td>
+   <td>`-32.5, 22.5, 127.5`</td>
+   </tr>
+   <tr>
+   <td>하단 가장자리</td>
+   <td>`20, 5, 15`</td>
+   <td>`-30, 7.5, 132.5`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Exterior-2.jpg.webp" alt="An angled top-down view of the floor, perimeter, spawn zone walls, combat pockets, left tower, and right tower geometry. The right tower geometry is highlighted in yellow." width="100%"/>
+
+1. **타워 왼쪽의 장애물**을 위한 **블록** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>왼쪽 장애물</td>
+   <td>`20, 10, 5`</td>
+   <td>`-15, 5, 262.5`</td>
+   </tr>
+   <tr>
+   <td>중앙 장애물</td>
+   <td>`15, 30, 5`</td>
+   <td>`-22.5, 15, 237.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 장애물</td>
+   <td>`10, 10, 15`</td>
+   <td>`-5, 5, 202.5`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Exterior-3.jpg.webp" alt="An angled top-down view of the floor, perimeter, spawn zone walls, combat pockets, left tower, right tower, and obstacle geometry to the left of the left tower. The obstacle geometry to the left of the left tower are highlighted in yellow." width="100%"/>
+
+1. **타워 오른쪽의 장애물**을 위한 **블록** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>왼쪽 장애물</td>
+   <td>`10, 10, 15`</td>
+   <td>`-5, 5, 117.5`</td>
+   </tr>
+   <tr>
+   <td>중앙 장애물</td>
+   <td>`15, 30, 5`</td>
+   <td>`-22.5, 15, 82.5`</td>
+   </tr>
+   <tr>
+   <td>오른쪽 장애물</td>
+   <td>`20, 10, 5`</td>
+   <td>`-15, 5, 57.5`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Exterior-4.jpg.webp" alt="An angled top-down view of the floor, perimeter, spawn zone walls, combat pockets, left tower, right tower, and obstacle geometry to the left and right of the towers. The obstacle geometry to the right of the right tower are highlighted in yellow." width="100%"/>
+
+1. **타워 사이의 장애물**을 위한 **블록** 파트를 추가하고 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>파트</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>상단 장애물</td>
+   <td>`10, 5, 5`</td>
+   <td>`-50, 7.5, 160`</td>
+   </tr>
+   <tr>
+   <td>중앙 장애물</td>
+   <td>`20, 10, 10`</td>
+   <td
+
+>`-35, 10, 160`</td>
+   </tr>
+   <tr>
+   <td>하단 장애물</td>
+   <td>`10, 10, 30`</td>
+   <td>`0, 5, 160`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Exterior-5.jpg.webp" alt="An angled top-down view of the floor, perimeter, spawn zone walls, combat pockets, left tower, right tower, and obstacle geometry. The obstacle geometry between the towers are highlighted in yellow." width="100%"/>
+
+1. 이 타워 파트를 모두 고정합니다.
+
+  </TabItem>
+</Tabs>
+
+#### 플레이스홀더 재료 적용
+
+이제 플레이스홀더 지오메트리가 자리에 있으므로, 경험의 특정 위치를 사용자에게 알려주는 주요 영역에 플레이스홀더 재료를 적용할 시간입니다. 샘플 [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) `.rbxl` 파일은 다음 색상 지도를 사용하지만, 동일한 목적을 달성하기 위해 원하는 색상을 사용할 수 있습니다:
+
+- **상단 주변 벽의 딥 오렌지** – 사용자가 건물의 뒷면에 있는 위치를 알 수 있도록 합니다.
+- **모든 왼쪽 바닥의 퍼시몬** – 사용자가 건물의 오른쪽에 있는 위치를 알 수 있도록 합니다.
+- **모든 오른쪽 바닥의 라피스** – 사용자가 건물의 왼쪽에 있는 위치를 알 수 있도록 합니다.
+- **외부 고도의 밝은 녹색** – 사용자가 건물 외부에 있는 위치를 알 수 있도록 합니다.
+
+이 특정 주요 영역에 재료를 적용하는 것은 중요합니다. 사용자가 경험의 어느 위치에 있든 이 색상 중 하나라도 볼 수 있다면, 전체 맵 내에서 자신의 대략적인 위치를 빠르게 추론하고, 스폰 존과의 관계를 이해할 수 있기 때문입니다.
+
+예를 들어, 다음 사용자가 "빨간색" 팀에 속해 있을 때, 빨간색 바닥 위를 걷고 노란색 벽이 오른쪽에 있으면, 사용자는 내부 주요 레인에 있으며 자신의 스폰 존을 향해 이동하고 있음을 알 수 있습니다. 반대로, 파란색 바닥 위를 걷고 노란색 벽이 왼쪽에 있으면, 사용자는 내부 레인에 있으며 적 팀의 스폰 존을 향해 이동하고 있음을 알 수 있습니다.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Placeholder-Left.jpg" alt="A Rthro avatar standing on a red floor with a yellow wall to their right. This color configuration informs the user that they're in the interior primary lane and moving toward the red spawn zone." width="100%"/>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Placeholder-Right.jpg" alt="A Rthro avatar standing on a blue floor with a yellow wall to their left. This color configuration informs the user that they're in the interior primary lane and moving toward the blue spawn zone." width="100%"/>
+  </figure>
+</GridContainer>
+
+플레이스홀더 재료를 적용하려면:
+
+1. 상단 주변 벽과 상단 복도 추가물을 선택한 다음 `Class.Part.Color`를 **255, 176, 0**으로 설정합니다.
+1. 왼쪽 바닥 파트를 선택한 다음 `Class.Part.Color`를 **255, 89, 89**으로 설정합니다.
+1. 오른쪽 바닥 파트를 선택한 다음 `Class.Part.Color`를 **16, 42, 220**으로 설정합니다.
+1. 지상과 1층 사이의 고도를 위한 파트를 선택한 다음 `Class.Part.Color`를 **75, 151, 75**으로 설정합니다.
+
+<img src="../img/05_Roblox_tutorial/PlaceholderMaterials.jpg" alt="An angled top-down view of the final greybox environment with placeholder materials to mark unique sections of the map." width="100%"/>
+
+#### 레이아웃 테스트
+
+경험이 재미있고 기능적이며, 개발 과정의 거의 모든 단계에서 레이아웃을 지속적으로 테스트하는 것이 중요합니다. 이렇게 하면 프로세스가 진행될수록 작은 문제가 더 큰 문제로 발전하기 전에 잡을 수 있습니다. 테스트하면서 다음 질문을 스스로에게 던져보세요:
+
+- 어느 팀에게 유리하거나 불리한 점이 있습니까?
+- 사용자가 맵의 어느 지점에서도 성공적으로 자신의 위치를 파악하고 이해할 수 있습니까?
+- 맵의 어느 부분이 너무 많은 선택지로 사용자를 압도합니까?
+- 레이아웃이나 게임플레이에 대해 즐겁거나 좌절감을 느끼는 점은 무엇입니까?
+- 사용자가 이 지역에 있을 때 원하는 감정을 느끼게 할 수 있습니까?
+- 맵의 어느 부분을 우회하여 목표를 달성할 수 있습니까?
+
+경험을 테스트하려면:
+
+1. **테스트** 탭에서 **플레이** 아이콘으로 이동하여 **모드 선택기**를 클릭합니다.
+
+   <img src="../img/05_Roblox_tutorial/Model-Tab-Quick-Access-Play.png" width="770" alt="Studio's Model tab with the Play button highlighted in the menu bar." />
+
+2. 다음 플레이 테스트 옵션 중 하나를 선택합니다:
+
+   - **플레이** – 경험을 시뮬레이션하기 시작하여 아바타를 `Class.SpawnLocation` 또는 약 **0, 100, 0**의 좌표에 삽입합니다.
+   - **여기서 플레이** – 경험을 시뮬레이션하기 시작하여 아바타를 현재 카메라 위치 앞에 삽입합니다.
+   - **실행** – 아바타를 삽입하지 않고 경험을 시뮬레이션하기 시작합니다. 대신, 시뮬레이션은 현재 카메라 위치에서 시작되며 Studio 카메라 제어를 사용하여 주변을 탐색할 수 있습니다.
+
+플레이 테스트 중에는 기본 Roblox 경험과 동일한 컨트롤을 사용할 수 있습니다. 전체 레이아웃에 만족하면 그레이박스 지오메트리를 대체할 경험의 아트 스타일에 따라 자산을 만드는 작업을 시작할 수 있습니다.
+
+
+### Chapter 2 - Develop Polished Assets
+
+### Chapter 3 - Assemble an Asset Library
+
+### Chapter 4 - Construct Your World
+
+### Chapter 5 - Optimize Your Experience
+
+
 
 ---
 ## 출처
