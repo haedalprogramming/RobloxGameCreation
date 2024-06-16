@@ -143,6 +143,24 @@
         - [기하학 최적화](#기하학-최적화)
         - [중첩된 투명도 삭제](#중첩된-투명도-삭제)
   - [Gameplay Scripting](#gameplay-scripting)
+    - [Gameplay Scripting Curriculum](#gameplay-scripting-curriculum)
+    - [Chapter 1 - Spawning and Respawning](#chapter-1---spawning-and-respawning)
+      - [새로운 플레이어 추가](#새로운-플레이어-추가)
+      - [포스 필드 커스터마이즈](#포스-필드-커스터마이즈)
+      - [클라이언트 상태 처리](#클라이언트-상태-처리)
+      - [캐릭터 리스폰](#캐릭터-리스폰)
+      - [기타 설정](#기타-설정)
+    - [Chapter 2 - Implementing Blasters](#chapter-2---implementing-blasters)
+      - [플레이어 입력 감지](#플레이어-입력-감지)
+      - [플레이어가 발사할 수 있는지 확인](#플레이어가-발사할-수-있는지-확인)
+      - [발사 데이터 생성](#발사-데이터-생성)
+      - [서버에 알리기](#서버에-알리기)
+      - [블래스터 재설정](#블래스터-재설정)
+    - [Chapter 3 - Detecting Hits](#chapter-3---detecting-hits)
+      - [발사 방향 얻기](#발사-방향-얻기)
+      - [광선 캐스팅](#광선-캐스팅)
+      - [발사 검증](#발사-검증)
+      - [플레이어 체력 감소](#플레이어-체력-감소)
   - [출처](#출처)
   - [다음](#다음)
 
@@ -8684,12 +8702,782 @@ Roblox 엔진이 대부분의 최적화 작업을 처리하지만, [Microprofile
 
 ---
 ## Gameplay Scripting
+### Gameplay Scripting Curriculum
 
 
+**게임 플레이 스크립팅**은 경험을 재미있고 흥미롭게 만드는 행동을 프로그래밍하는 분야로, 3D 공간에서의 논리, 움직임, 이벤트 및 객체 간의 상호작용 등을 포함합니다.
 
+이번 과정에서는 대규모 복잡한 프로젝트의 일반적인 구성과 주요 구현 세부 사항을 따라가며, 1인칭 슈터 레이저 태그 경험을 위한 게임 플레이 스크립팅을 배우게 됩니다. 여기에는 사용자 정의 값을 사용하여 새로운 행동을 생성할 수 있는 여러 기회도 포함됩니다.
+
+이 과정은 일반적인 코딩 개념, 스튜디오의 데이터 모델 및 클라이언트-서버 관계에 익숙한 독자를 대상으로 합니다. 코딩을 배우는 데 도움이 필요하면 [코딩 기초](./04_Lua_programmimg_basic.md)를 시도해 보세요.
+
+### Chapter 1 - Spawning and Respawning
+
+**스포닝**은 경험 내에서 객체나 캐릭터를 생성하는 과정이며, **리스포닝**은 캐릭터의 체력이 0이 되거나 맵에서 떨어지는 등의 제거 조건을 충족한 후 객체나 캐릭터를 다시 추가하는 과정입니다. 이 두 과정은 플레이어가 경험에 참여하고 기술을 향상시키기 위해 계속 플레이할 수 있도록 보장하는 중요한 역할을 합니다.
+
+[샘플 레이저 태그 경험](https://www.roblox.com/games/14817965191/Laser-Tag-1A)을 참조하여, 이 튜토리얼 섹션에서는 Roblox의 내장 기능을 사용하고 커스터마이즈하여 스포닝 및 리스포닝을 처리하는 방법을 가르치며, 다음과 같은 스크립팅 가이드를 포함합니다:
+
+- 환경 내의 임의의 스폰 지점에서 새로운 플레이어와 그들의 캐릭터를 추가하는 방법.
+- 플레이어가 스폰 및 리스폰할 때 피해를 방지하는 포스 필드를 커스터마이즈하는 방법.
+- 게임 플레이가 적절한 시간에 올바르게 작동하도록 클라이언트 상태를 처리하는 방법.
+- 경기에서 태그 아웃된 후 캐릭터를 리스폰하는 방법.
+- 게임 플레이 및 캐릭터 파라미터 설정에 중요한 소규모, 기타 작업 수행 방법.
+
+이 섹션에는 많은 스크립팅 내용이 포함되어 있지만, 경험을 생성할 때 모든 것을 처음부터 작성하는 대신 기존 구성 요소를 활용하고 빠르게 반복하며 시스템이 비전에 맞도록 사용자 정의 구현이 필요한지 파악하는 것을 권장합니다. 이 섹션을 완료한 후에는 플레이어에게 정확하고 만족스러운 블래스터 동작을 구현하는 방법을 배우게 됩니다.
+
+#### 새로운 플레이어 추가
+
+스튜디오의 Luau 코드 는 이벤트 중심으로 작동하는 경우가 많습니다. 이는 스크립트가 Roblox 서비스의 이벤트를 감지하고 이에 반응하여 함수를 호출하는 것을 의미합니다. 예를 들어, 멀티플레이어 경험에 새로운 플레이어를 추가할 때 플레이어가 성공적으로 연결되기 위해 필요한 모든 것을 처리하는 이벤트가 있어야 합니다. 샘플 레이저 태그 경험에서 해당 이벤트는 `Players.PlayerAdded:Connect`입니다.
+
+`Players.PlayerAdded:Connect`는 여러 스크립트에서 사용됩니다. <kbd>Ctrl/Cmd+Shift+F</kbd> 단축키를 사용하여 `Players.PlayerAdded:Connect`를 검색하면 경험의 초기 설정을 이해하는 데 좋은 시작점을 제공하는 결과를 확인할 수 있습니다.
+
+<img src="../img/05_Roblox_tutorial/Spawning and Respawning/tutorial-gs-player-added.png" alt="Studio's Find All window with the Players.PlayerAdded results highlighted." width="80%"/>
+
+예를 들어, **ServerScriptService** > **SetupHumanoid**를 엽니다. `Class.Player`와 `Class.Player.Character|Character`의 구분이 이 스크립트를 이해하는 데 중요합니다:
+
+- **플레이어**는 연결된 클라이언트이고, **캐릭터**는 `Class.Humanoid` 모델입니다.
+- 플레이어는 블래스터를 선택하고 리더보드에 추가되어야 합니다. 캐릭터는 스폰되고 블래스터를 받아야 합니다.
+
+`SetupHumanoid`는 플레이어가 캐릭터를 가지고 있는지(방금 참여했는지) 여부를 즉시 확인합니다. 캐릭터를 찾은 후 `onCharacterAdded()`를 호출하고, 캐릭터에서 `Class.Humanoid` 모델을 가져와 **ServerScriptService** > **SetupHumanoid** > **setupHumanoidAsync**로 전달하여 커스터마이즈합니다. 이러한 값을 설정한 후, 스크립트는 캐릭터의 체력이 0이 될 때까지 대기합니다. 이 튜토리얼의 다음 섹션에서 리스폰에 대해 더 배울 것입니다.
+
+```lua title="setupHumanoidAsync"
+local function setupHumanoidAsync(player: Player, humanoid: Humanoid)
+
+	humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.Subject
+	humanoid.NameDisplayDistance = 1000
+	humanoid.HealthDisplayDistance = 1000
+	humanoid.NameOcclusion = Enum.NameOcclusion.OccludeAll
+	humanoid.HealthDisplayType = Enum.HumanoidHealthDisplayType.AlwaysOn
+	humanoid.BreakJointsOnDeath = false
+
+	humanoid.Died:Wait()
+	onHumanoidDied(player, humanoid)
+end
+```
+
+<br></br>
+
+이 스크립트에서 중요한 점은 이러한 속성들이 완전히 선택 사항이라는 것입니다. 함수의 첫 6줄을 제거해도 경험은 여전히 정상적으로 작동합니다. 각 속성은 게임 플레이 목표를 충족시키기 위해 디자인 결정을 내릴 수 있도록 해줍니다. 예를 들어:
+
+- 캐릭터 이름을 더 가까운 거리에서 표시하려면 `Class.Humanoid.NameDisplayDistance` 값을 줄이십시오.
+- 캐릭터의 체력이 100% 이하일 때만 체력을 표시하려면 `Class.Humanoid.HealthDisplayType`을 **DisplayWhenDamaged**로 설정하십시오.
+- 체력이 0이 되면 캐릭터가 분해되도록 하려면 `Class.Humanoid.BreakJointsOnDeath`을 **True**로 설정하십시오.
+
+이 속성의 값을 변경하면 새 설정의 영향을 확인하기 위해 플레이테스트하는 것이 중요합니다. **테스트** 탭의 **클라이언트와 서버** 섹션에서 최소 두 개의 캐릭터를 선택하여 멀티플레이어 환경에서 플레이어가 경험하는 것을 재현할 수 있습니다.
+
+<img src="../img/05_Roblox_tutorial/Spawning and Respawning/tutorial-gs-server.png" alt="Studio's Test tab with the the players dropdown highlighted. This setting needs to be at least two players to see the impact of your new settings." width="60%"/>
+
+<Alert severity="info">
+이 값들을 변경하고 여러 플레이어와 함께 플레이테스트하여 경험의 게임 플레이에 어떻게 영향을 미치는지 확인해보세요. 예를 들어, 체력 표시를 숨기면 플레이어의 전략이 어떻게 바뀔까요?
+</Alert>
+
+또 다른 `Players.PlayerAdded:Connect` 이벤트의 예는 **ServerScriptService** > **PlayerStateHandler**에 있습니다. 이전 예제와 마찬가지로, `PlayerStateHandler`는 캐릭터를 즉시 확인합니다. 캐릭터가 로드된 후, 스크립트는 플레이어 속성을 경험의 초기 상태인 `SelectingBlaster` 상태로 설정합니다. 이 상태에서는 플레이어가 블래스터 유형을 선택할 수 있으며, 선택하는 동안 피해를 방지하는 포스 필드가 포함됩니다.
+
+```lua title="PlayerStateHandler"
+local function onPlayerAdded(player: Player)
+	player.CharacterAdded:Connect(function()
+		-- Set and handle the initial player state upon spawning: selecting a blaster
+		player:SetAttribute(PlayerAttribute.playerState, PlayerState.SelectingBlaster)
+		onPlayerStateChanged(player, PlayerState.SelectingBlaster)
+	end)
+end
+```
+
+<br></br>
+
+`PlayerStateHandler`의 특정 변수 중 하나는 `attributeChangedConnectionByPlayer`입니다. 이 테이블은 모든 플레이어와 `GetAttributeChangedSignal`에 대한 `Datatype.RBXScriptConnection|Connections`를 저장합니다. 이 연결을 테이블에 저장하는 이유는 플레이어가 경험을 떠날 때 `PlayerStateHandler`가 이를 **해제**할 수 있도록 하기 위함입니다. 이 과정은 연결 수가 시간이 지남에 따라 계속 증가하는 것을 방지하는 일종의 메모리 관리 역할을 합니다.
+
+```lua title="PlayerStateHandler"
+local attributeChangedConnectionByPlayer = {}
+local function onPlayerAdded(player: Player)
+
+	-- Handle all future updates to player state
+	attributeChangedConnectionByPlayer[player] = player
+		:GetAttributeChangedSignal(PlayerAttribute.playerState)
+		:Connect(function()
+			local newPlayerState = player:GetAttribute(PlayerAttribute.playerState)
+			onPlayerStateChanged(player, newPlayerState)
+		end)
+end
+
+-- Disconnect from the attribute changed connection when the player leaves
+local function onPlayerRemoving(player: Player)
+	if attributeChangedConnectionByPlayer[player] then
+		attributeChangedConnectionByPlayer[player]:Disconnect()
+		attributeChangedConnectionByPlayer[player] = nil
+	end
+end
+```
+
+<br></br>
+
+두 `onPlayerAdded()` 연결 함수는 모두 `onPlayerStateChanged()`를 호출합니다. 초기 설정 중 `onPlayerAdded()`는 `PlayerState`를 `SelectingBlaster`로 설정하므로 첫 번째 `if` 문이 거짓으로 평가되고 `BlasterState`를 비활성화합니다. 이 튜토리얼의 다음 섹션인 [블래스터 구현](./implementing-blasters.md)에서 이 과정에 대해 더 자세히 배울 것입니다.
+
+```lua title="PlayerStateHandler"
+local function onPlayerStateChanged(player: Player, newPlayerState: string)
+	-- Blaster state is 'Ready' only if player state is 'Playing'
+	local newBlasterState = if newPlayerState == PlayerState.Playing then BlasterState.Ready else BlasterState.Disabled
+
+	-- Schedule the destroy force field logic when the player begins playing
+	if newPlayerState == PlayerState.Playing then
+		scheduleDestroyForceField(player)
+	end
+
+	player:SetAttribute(PlayerAttribute.bl
+
+asterStateServer, newBlasterState)
+end
+```
+
+<br></br>
+
+이 함수에 중단점을 추가하거나 `print()` 문을 사용하면 `onPlayerStateChanged()`가 경험 내에서 초기 설정 중 한 번, 메인 코드 경로에서 한 번, 플레이어가 블래스터를 선택한 후 한 번 등 자주 호출되는 것을 확인할 수 있습니다. 또한 플레이어가 블래스터를 선택한 후 **ServerScriptService** > **BlasterSelectedHandler**가 `PlayerState`를 `Playing`으로 설정하고, `PlayerStateHandler`가 `scheduleDestroyForceField()`를 호출하여 포스 필드를 제거할 수 있습니다.
+
+#### 포스 필드 커스터마이즈
+
+샘플 레이저 태그 경험은 플레이어가 블래스터를 선택하는 동안 피해를 방지하기 위해 스튜디오의 내장 `Class.ForceField` 클래스를 사용합니다. 플레이어가 포스 필드와 함께 스폰되는 유일한 요구 사항은 `Class.SpawnLocation.Duration` 속성이 0보다 큰 스폰 지점을 포함하는 것입니다. 샘플은 포스 필드를 활성화하기 위해 9,999라는 임의의 값을 사용하며, 실제 지속 시간은 **ReplicatedStorage** > **ForceFieldClientVisuals**에서 프로그래밍 방식으로 처리됩니다.
+
+`setupHumanoidAsync`와 마찬가지로 `ForceFieldClientVisuals`의 대부분의 줄은 선택 사항입니다. 예를 들어, 다음 스크립트처럼 함수의 내용을 주석 처리하면 기본 스파클링 포스 필드를 사용하게 되며, **StarterGui** > **ForceFieldGui**에 있는 육각형 스크립트는 사용되지 않습니다.
+
+```lua title="Commenting Out Properties in ForceFieldClientVisuals"
+local function onCharacterAddedAsync(character: Model)
+    -- local forceField = character:WaitForChild("ForceField")
+    -- forceField.Visible = false
+    -- localPlayer.PlayerGui:WaitForChild("ForceFieldGui").Enabled = true
+    -- forceField.Destroying:Wait()
+    -- localPlayer.PlayerGui.ForceFieldGui.Enabled = false
+end
+```
+
+<br></br>
+
+사용자 정의 포스 필드는 새로운 `Class.ParticleEmitter`가 아닌 GUI이므로 `ForceFieldClientVisuals` 스크립트는 각 플레이어의 1인칭 시각에만 영향을 미치며, 다른 플레이어를 볼 때는 3인칭 시각에 기본 Roblox 외관이 유지됩니다. 포스 필드를 수정하는 방법에 대한 자세한 내용은 `Class.ForceField.Visible`을 참조하십시오.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Spawning and Respawning/tutorial-gs-hex.png" alt="First-person force field visuals include a futuristic hexagonal grid on the perimeter of the screen." width="100%"/>
+    <figcaption>1인칭 포스 필드 시각 효과</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Spawning and Respawning/tutorial-gs-field.png" alt="Third-person force field visuals include a blue sparkling orb around the player spawning into the experience." width="100%"/>
+    <figcaption>3인칭 포스 필드 시각 효과</figcaption>
+  </figure>
+</GridContainer>
+
+포스 필드는 플레이어가 스폰 및 리스폰하는 동안 적 플레이어로부터 피해를 입지 않도록 충분한 시간을 제공하지만, 결국 레이저 태그 메인 게임 플레이를 위해 사라져야 합니다. 포스 필드 제거를 처리하는 스크립트는 **ReplicatedStorage** > **scheduleDestroyForceField**에 있으며, 세 가지 고유한 조건을 확인합니다:
+
+- 플레이어가 블래스터를 선택한 후, 포스 필드는 플레이어가 주변 환경에 적응할 수 있을 만큼 오래 지속되어야 합니다.
+- 이 적응 시간 동안 포스 필드는 이점이 될 수 없으므로 플레이어가 블래스터를 쏘는 순간 사라져야 합니다.
+- 플레이어가 블래스터를 쏘기 전에 또는 포스 필드가 시간 초과되기 전에 캐릭터를 리셋하면 포스 필드는 사라져야 합니다.
+
+`scheduleDestroyForceField` 스크립트의 각 조건은 `endForceField()`를 호출합니다.
+
+```lua title="scheduleDestroyForceField"
+-- End force field if player blasts
+local blasterStateAttribute = getBlasterStateAttribute()
+attributeChangedConnection = player:GetAttributeChangedSignal(blasterStateAttribute):Connect(function()
+	local currentBlasterState = player:GetAttribute(blasterStateAttribute)
+	if currentBlasterState == BlasterState.Blasting then
+		endForceField()
+	end
+end)
+
+-- End force field if player resets
+characterRespawnedConnection = player.CharacterRemoving:Connect(endForceField)
+
+-- End force field after 8 seconds
+task.delay(MAX_FORCE_FIELD_TIME, endForceField)
+```
+
+<br></br>
+
+`endForceField()`는 `forceFieldEnded` 부울 변수를 포함한 특이한 `if` 문을 가지고 있습니다. 확인은 순차적으로 실행되므로 스크립트는 `endForceField()` 함수를 두 번 또는 세 번 호출할 수 있습니다. `forceFieldEnded` 부울 변수는 함수가 포스 필드를 한 번만 파괴하도록 보장합니다.
+
+```lua title="scheduleDestroyForceField"
+local function endForceField()
+	if forceFieldEnded then
+		return
+	end
+	forceFieldEnded = true
+
+	attributeChangedConnection:Disconnect()
+	characterRespawnedConnection:Disconnect()
+	destroyForceField(player)
+end
+```
+
+<Alert severity="info">
+이 유형의 상황을 처리하는 방법에 대해 더 알고 싶다면 [디바운스 패턴](../../scripting/debounce.md)을 참조하세요.
+</Alert>
+
+#### 클라이언트 상태 처리
+
+이 섹션의 대부분은 **ServerScriptService** > **PlayerStateHandler**에 집중하고 있지만, 동일한 이름의 스크립트가 **ReplicatedStorage**에도 있습니다. 이렇게 분리한 이유는 클라이언트-서버 아키텍처 때문입니다:
+
+- 클라이언트는 실시간으로 적절히 반응할 수 있도록 플레이어 상태 정보를 이해해야 합니다. 예를 들어, 올바른 사용자 인터페이스 요소를 표시하거나, 플레이어가 움직이고 발사할 수 있도록 합니다.
+
+- 서버는 이러한 동일한 정보가 필요하며, 이는 익스플로잇을 방지하는 데 도움이 됩니다. 예를 들어, 서버는 플레이어 상태를 사용하여 캐릭터 스폰 및 장비 설정, 포스 필드 비활성화, 리더보드 표시 등의 작업을 수행해야 합니다. 이것이 이 스크립트가 **ReplicatedStorage**에 있고 순수하게 클라이언트 측 위치에 있지 않은 이유입니다.
+
+이 핵심 로직을 확인하려면 **ReplicatedStorage** > **PlayerStateHandler**의 다음 스크립트를 검토하십시오. 이 스크립트는 사용자의 현재 상태를 확인한 다음 해당 상태에 대한 적절한 동작을 처리하는 함수를 호출합니다.
+
+```lua title="PlayerStateHandler"
+local function onPlayerStateChanged(newPlayerState: string)
+	if newPlayerState == PlayerState.SelectingBlaster then
+		onSelectingBlaster()
+	elseif newPlayerState == PlayerState.Playing then
+		onPlaying()
+	elseif newPlayerState == PlayerState.TaggedOut then
+		onTaggedOut()
+	else
+		warn(`Invalid player state ({newPlayerState})`)
+	end
+end
+```
+
+<br></br>
+
+모든 이벤트 응답은 유사한 동작을 요구하기 때문에 논리적으로 이 스크립트에 그룹화되어 있습니다. 예를 들어, 블래스터 선택 중에는 플레이어가 무적이고 움직일 수 없어야 합니다. 서버는 이미 포스 필드를 처리하지만, 클라이언트는 움직임을 처리합니다. 예를 들어, `StarterPlayer` 속성을 확인하면 `CharacterWalkSpeed`와 `CharacterJumpHeight`가 모두 0으로 설정되어 있는 것을 볼 수 있습니다. 이는 플레이어가 블래스터 유형을 선택할 때까지 정지 상태를 유지하도록 합니다.
+
+`onPlaying()` 함수도 유사하게 간단합니다. 움직임을 활성화하고, 메인 HUD로 전환하고, 블래스터를 활성화하며, 서버와 동일한 포스 필드 함수를 호출합니다.
+
+```lua title="PlayerStateHandler"
+local function onPlaying()
+	togglePlayerMovement(true)
+	setGuiExclusivelyEnabled(playerGui.HUDGui)
+
+	localPlayer:SetAttribute(PlayerAttribute.blasterStateClient, BlasterState.Ready)
+
+	scheduleDestroyForceField()
+end
+```
+
+#### 캐릭터 리스폰
+
+샘플 레이저 태그 경험은 **ReplicatedStorage** > **PlayerStateHandler**의 `onTaggedOut()` 상태를 통해 캐릭터를 경기로 다시 리스폰합니다. `onSelectingBlaster()` 및 `onPlaying()` 상태와 마찬가지로, `onTaggedOut()`은 `playerState` 속성 변경에 따라 고유한 동작을 트리거합니다. 구체적으로, 플레이어의 움직임을 비활성화하고, 리스폰 UI를 표시하며, 블래스터를 비활성화합니다.
+
+```lua title="PlayerStateHandler"
+local function onTaggedOut()
+	-- Disable controls while tagged out
+	togglePlayerMovement(false)
+	togglePlayerCamera(false)
+	setGuiExclusivelyEnabled(playerGui.OutStateGui)
+
+	-- Disable blaster while tagged out
+	local
+
+Player:SetAttribute(PlayerAttribute.blasterStateClient, BlasterState.Disabled)
+end
+```
+
+<br></br>
+
+이 동작을 테스트하려면 <kbd>Esc</kbd> 키를 누르고, **설정** 탭으로 이동한 다음 **캐릭터 리셋** 버튼을 클릭할 수 있습니다. 리스폰 화면을 트리거하면 이동하거나, 카메라를 회전하거나, 블래스터를 쏠 수 없다는 것을 알 수 있습니다.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Spawning and Respawning/Reset-Character-Button.png" alt="Roblox's settings menu with the Reset Character button highlighted." width="80%"/>
+    <figcaption>캐릭터 리셋 버튼</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/05_Roblox_tutorial/Spawning and Respawning/tutorial-gs-tagged-out.png" alt="The respawn screen displays as a player respawns back into the match." width="100%"/>
+    <figcaption>리스폰 화면</figcaption>
+  </figure>
+</GridContainer>
+
+이 스크립트는 실제로 캐릭터를 리스폰하지 않고, 캐릭터의 동작을 중지시키고, 서버가 캐릭터를 리스폰하고 있다는 시각적 피드백을 제공합니다. 예를 들어, **ServerScriptService** > **SetupHumanoid** > **setupHumanoidAsync** > **onHumanoidDied**를 확인하면, 스크립트는 `PlayerState`를 `TaggedOut`로 설정하고, 시각적 표시기를 추가합니다. 실제 리스폰 로직은 Roblox의 내장 동작입니다.
+
+플레이어가 다시 경기로 리스폰하면, 스폰 지점에서 리스폰됩니다. **Workspace**를 확인하면 모든 스폰 지점이 `Class.SpawnLocation.Neutral`로 설정되어 있어 플레이어가 임의의 위치에서 리스폰됩니다. 리스폰 시간을 커스터마이즈하려면 `SetupHumanoid` 상단에 다음 줄을 추가할 수 있습니다. 이 기술에 대해 더 자세히 알고 싶다면 `Class.Players.RespawnTime`을 참조하십시오.
+
+```lua title="SetupHumanoid"
+local Players = game:GetService("Players")
+Players.RespawnTime = 10 -- new line, in seconds
+```
+
+<Alert severity="info">
+팀 기반 경험에서는 플레이어가 스폰 지점의 하위 집합에서만 스폰되기를 원할 수 있습니다. 이 경우 `Class.SpawnLocation.TeamColor` 속성을 사용하여 이러한 하위 집합을 지정할 수 있습니다. 체크포인트와 같은 진행 시스템이 있는 경험에서는 `Class.Player.RespawnLocation`을 사용하여 정확한 위치를 지정할 수 있습니다.
+</Alert>
+
+#### 기타 설정
+
+초기 설정의 일부로, 샘플 레이저 태그 경험은 다음과 같은 작지만 중요한 단계를 수행합니다:
+
+- 경험에는 기본 Roblox 체력 재생을 비활성화하는 **StarterPlayer** > **StarterCharacterScripts** > **Health**라는 빈 스크립트가 포함되어 있습니다. 이 속성의 동작에 대한 설명은 `Class.Humanoid.Health`를 참조하십시오.
+
+- 경험은 `StarterPlayer.CameraMode.LockFirstPerson` 속성을 설정하여 1인칭 카메라를 사용합니다. 사용자가 1인칭 및 3인칭 카메라 사이를 전환할 수 있게 하려면 속성을 프로그래밍 방식으로 변경해야 하며, 시점 변경에 따라 제어 및 UI를 수정해야 합니다.
+
+- 경험은 기본 Roblox 리더보드를 사용하여 "포인트" 단위를 사용하며, 플레이어는 다른 플레이어를 태그 아웃할 때마다 포인트를 획득합니다. **ServerScriptService** > **SetupLeaderboard**에서 구성을 확인할 수 있으며, [경험 내 리더보드](../../players/leaderboards.md)에서 전체 개요를 제공합니다. `onPlayerTagged`가 리더보드에 포인트를 추가합니다. 이 작업에 대해 더 자세히 배우려면 [히트 감지](detecting-hits.md)를 참조하십시오.
+
+이제 플레이어가 스폰되고 블래스터를 선택하며 1인칭 시점에서 조준할 수 있게 되었으니, 다음 섹션에서는 각 블래스터의 동작을 뒷받침하는 스크립트에 대해 배웁니다.
+
+### Chapter 2 - Implementing Blasters
+
+**블래스터 동작 구현**은 1인칭 슈팅 게임에서 발사 메커니즘을 프로그래밍하는 과정입니다. 플레이어는 클릭하거나 버튼을 눌러 발사할 수 있지만, 만족스럽고 정확한 발사 동작을 구현하는 것은 전체 게임 플레이의 즐거움을 향상시키기 때문에 중요합니다.
+
+[샘플 레이저 태그 경험](https://www.roblox.com/games/14817965191/Laser-Tag-1A)을 참조하여 이 튜토리얼 섹션에서는 두 가지 다른 유형의 블래스터 동작을 구현하는 스크립트에 대해 학습합니다. 이 섹션에서는 다음과 같은 가이드를 제공합니다:
+
+- 플레이어가 발사 버튼을 누를 때 감지하기.
+- 플레이어가 최근에 발사 버튼을 눌렀는지 여부를 확인하여 블래스터를 사용할 수 있는지 확인하기.
+- 발사 데이터를 생성하여 서버에 누가 발사를 시작했는지, 어디서 발사했는지, 각 레이저 빔의 최종 목적지가 어디인지 알려주기.
+- 발사 데이터가 다른 플레이어와 충돌했을 때 서버에 알리기.
+- 블래스터가 다시 발사할 수 있기 전에 충분한 시간이 지나도록 발사 사이에 블래스터를 재설정하기.
+
+이 섹션을 완료하면 블래스터가 다른 플레이어와 충돌했을 때 이를 감지하고, 각 블래스터 유형에 따라 해당 플레이어의 체력을 감소시키는 스크립트를 학습할 수 있습니다.
+
+#### 플레이어 입력 감지
+
+블래스터 동작을 구현하는 첫 번째 단계는 플레이어가 발사 버튼을 누를 때를 감지하는 것입니다. 플레이어가 발사 버튼을 누르는 입력 유형은 경험을 액세스하는 장치에 따라 다릅니다. 예를 들어, 샘플 레이저 태그 경험은 마우스 및 키보드, 게임패드, 터치 컨트롤을 지원합니다. 각 입력 유형은 **ReplicatedStorage** > **UserInputHandler**에서 확인할 수 있습니다.
+
+이 클라이언트 스크립트는 `Class.ContextActionService`를 사용하여 `MouseButton1`과 `ButtonR2`를 발사 동작에 바인딩합니다. 이는 플레이어가 왼쪽 마우스 버튼이나 게임패드의 R2 버튼을 누를 때마다 블래스터에서 레이저 빔을 발사하게 함을 의미합니다. HUDGui는 나중에 스크립트에서 연결되는 모바일 장치용 발사 버튼을 포함하고 있습니다.
+
+```lua title="UserInputHandler"
+ContextActionService:BindAction("_", onBlasterActivated, false,
+  Enum.UserInputType.MouseButton1,
+  Enum.KeyCode.ButtonR2
+)
+```
+
+<br></br>
+
+또한 `onBlasterActivated()` 정의에서 `Enum.UserInputState.Begin`을 사용하는 것이 중요합니다. 예를 들어, 블래스터 선택과 같은 많은 사용자 인터페이스 상호작용은 마우스 버튼이 올라올 때(`Enum.UserInputState.End`) 발생하여 사용자가 마지막 순간에 상호작용을 피할 기회를 제공합니다. 그러나 발사 메커니즘은 버튼이 내려가는 순간에 발생해야 반응성이 좋습니다.
+
+이를 설명하기 위해 `Enum.UserInputState.Begin`을 `Enum.UserInputState.End`로 변경하고, 발사의 반응성이 경험의 게임 플레이에 미치는 영향을 테스트할 수 있습니다. 예를 들어, 플레이어가 버튼을 누르고 있어도 발사가 트리거되지 않는다면 다른 플레이어를 태그할 때 경험이 어떻게 변할 수 있을지 생각해 보십시오.
+
+```lua title="UserInputHandler"
+local function onBlasterActivated(_actionName: string,
+  inputState: Enum.UserInputState, _inputObject: InputObject)
+    if inputState == Enum.UserInputState.End then  -- 업데이트된 줄, 나중에 변경을 되돌리세요
+        attemptBlastClient()
+    end
+end
+```
+
+#### 플레이어가 발사할 수 있는지 확인
+
+`UserInputHandler`가 버튼 클릭이나 화면 탭을 감지한 후, **ReplicatedStorage** > **Blaster** > **attemptBlastClient**를 호출하여 플레이어가 발사할 수 있는지 여부를 확인합니다. 샘플 레이저 태그 경험의 대부분의 검사와 마찬가지로, 클라이언트에서 먼저 검사한 후 나중에 서버에서 검사가 진행됩니다. `attemptBlastClient`는 **ReplicatedStorage** > **Blaster** > **canLocalPlayerBlast**를 호출하여 `blasterStateClient` 플레이어 속성을 간단히 확인합니다:
+
+```lua title="canLocalPlayerBlast"
+local function canLocalPlayerBlast(): boolean
+    return localPlayer:GetAttribute(PlayerAttribute.blasterStateClient) == BlasterState.Ready
+end
+```
+
+<br></br>
+
+**ReplicatedStorage** > **Blaster** > **BlasterState**를 살펴보면, 경험에는 세 가지 블래스터 상태가 있습니다: `Ready`, `Blasting`, 및 `Disabled`. 이 상태들의 영향을 확인하려면 경험을 플레이 테스트하고, **Players** 서비스에서 플레이어를 선택한 다음, **Properties** 창에서 **blasterStateClient** 속성을 관찰하십시오. 블래스터를 선택하는 동안 `Disabled`로 표시되고, 대부분의 시간 동안 `Ready`로, 버튼을 누른 후에는 `Blasting`으로 잠깐 표시되는 것을 알 수 있습니다.
+
+<video controls src="../img/05_Roblox_tutorial/Implementing Blaster Behavior/Blast-State-Video-State.mp4" width="100%"></video>
+
+이 약간의 지연 시간은 플레이어가 클릭할 수 있는 한 빨리 발사할 수 없도록 합니다. 예를 들어, 함수를 항상 true를 반환하도록 변경하면, 레이저 태그 게임 플레이에 비현실적인 빠른 발사를 할 수 있습니다.
+
+```lua title="canLocalPlayerBlast"
+local function canLocalPlayerBlast(): boolean
+    return true -- 업데이트된 줄, 나중에 변경을 되돌리세요
+end
+```
+
+<br></br>
+
+<video controls src="../img/05_Roblox_tutorial/Implementing Blaster Behavior/Blast-State-Video-True.mp4" width="100%"></video>
+
+#### 발사 데이터 생성
+
+플레이어의 블래스터가 `Ready` 상태에 있음을 확인한 후, `attemptBlastClient`는 **ReplicatedStorage** > **attemptBlastClient** > **blastClient**를 호출합니다. `blastClient`의 첫 번째 단계는 플레이어의 `blasterStateClient` 속성을 `Blasting`으로 설정하여 이전의 빠른 발사 케이스를 방지하는 것입니다.
+
+<Alert severity="info">
+`BlasterState`를 `Blasting`으로 변경하면 **ReplicatedStorage** > **SoundHandler**에서 소리가 재생됩니다.
+</Alert>
+
+다음 단계는 발사 데이터를 생성하는 것입니다. **ReplicatedStorage** > **Blaster** > **BlastData**를 검토하면 각 발사에는 세 가지 정보가 포함됩니다:
+
+- 발사를 시작한 플레이어.
+- 발사의 시작 지점을 나타내는 `DataType.CFrame`.
+- 각 레이저 빔의 최종 목적지와 맞은 플레이어를 포함하는 `RayResult` 테이블.
+
+이 데이터를 생성하려면, `blastClient`는 **ReplicatedStorage** > **attemptBlastClient** > **blastClient** > **generateBlastData**를 호출합니다. 아래에서 이 함수를 검토할 수 있습니다.
+
+```lua title="generateBlastData"
+local function generateBlastData(): BlastData.Type
+    local blasterConfig = getBlasterConfig()
+
+    local rayDirections = getDirectionsForBlast(
+        currentCamera.CFrame, blasterConfig)
+    local rayResults = castLaserRay(
+        localPlayer, currentCamera.CFrame.Position, rayDirections)
+
+    local blastData: BlastData.Type = {
+        player = localPlayer,
+        originCFrame = currentCamera.CFrame,
+        rayResults = rayResults,
+    }
+    return blastData
+end
+```
+
+<br></br>
+
+이 함수는 먼저 `getBlasterConfig`를 사용하여 플레이어의 블래스터 유형을 검색합니다. 샘플은 수평으로 넓게 퍼지는 여러 빔을 생성하는 블래스터와 단일 빔을 생성하는 블래스터의 두 가지 유형을 제공합니다. 그들의 구성은 **ReplicatedStorage** > **Instances** > **LaserBlastersFolder**에서 확인할 수 있습니다.
+
+함수는 `currentCamera.CFrame`을 발사 기점으로 사용하여 `getDirectionsForBlast`로 전달합니다. 이 시점에서 코드는 블래스터가 아닌 레이저 빔에 관한 것이며, 레이저 빔에 대한 자세한 내용은 튜토리얼의 [히트 감지](detecting-hits.md) 섹션에서 배웁니다. 마지막으로 `rayResults` 테이블을 생성한 후, `generateBlastData`는 필요한 모든 정보를 가지고 발사 데이터를 `blastClient`에 반환합니다.
+
+#### 서버에 알리기
+
+`blastClient`가 발사 데이터를 완성하면 두 가지 이벤트를 발생시킵니다:
+
+```lua title="blastClient"
+local laserBlastedBindableEvent = ReplicatedStorage.Instances.LaserBlastedBindableEvent
+local laserBlastedEvent = ReplicatedStorage.Instances.LaserBlastedEvent
+
+laserBlastedBindableEvent:Fire(blastData)
+laserBlastedEvent
+
+:FireServer(blastData)
+```
+
+<br></br>
+
+`Class.BindableEvent`는 다른 클라이언트 스크립트에 발사를 알립니다. 예를 들어, **ReplicatedStorage** > **FirstPersonBlasterVisuals**는 발사 애니메이션과 쿨다운 바와 같은 시각적 효과를 표시할 때 이 이벤트를 사용합니다. 마찬가지로, `Class.RemoteEvent`는 서버 스크립트에 발사를 알리고, **ServerScriptService** > **LaserBlastHandler**에서 발사 처리를 시작합니다.
+
+```lua title="LaserBlastHandler"
+local function onLaserBlastedEvent(playerBlasted: Player, blastData: BlastData.Type)
+    local validatedBlastData = getValidatedBlastData(playerBlasted, blastData)
+    if not validatedBlastData then
+        return
+    end
+
+    if not canPlayerBlast(playerBlasted) then
+        return
+    end
+
+    blastServer(playerBlasted)
+
+    processTaggedPlayers(playerBlasted, blastData)
+
+    for _, replicateToPlayer in Players:GetPlayers() do
+        if playerBlasted == replicateToPlayer then
+            continue
+        end
+        replicateBlastEvent:FireClient(replicateToPlayer, playerBlasted, blastData)
+    end
+end
+```
+
+<br></br>
+
+부정 행위를 방지하기 위해, 서버는 각 클라이언트가 보낸 데이터를 검증해야 합니다. 이러한 검사는 다음을 포함합니다:
+
+1. `BlastData`가 테이블인지? `Class.CFrame`과 `rayResults`라는 또 다른 테이블이 포함되어 있는지?
+1. 플레이어가 블래스터를 장착했는지?
+1. 플레이어가 캐릭터를 가지고 있으며, 월드 내에 위치가 있는지?
+1. 발사 데이터를 보낸 후, 플레이어가 발사한 위치에서 너무 멀리 이동했는지?
+
+이 마지막 검사는 판단이 필요하며, 서버 지연 시간과 플레이어 이동 속도에 따라, 각 경험에 맞는 다른 값을 과도한 것으로 판단할 수 있습니다. 이 판단을 설명하기 위해, `getValidatedBlastData`에 print 문을 추가하고 경험을 플레이 테스트하여 일반적인 위치 변화의 크기를 확인할 수 있습니다.
+
+```lua title="getValidatedBlastData"
+local distanceFromCharacterToOrigin = blastData.originCFrame.Position - rootPartCFrame.Position
+print(distanceFromCharacterToOrigin.Magnitude) -- 업데이트된 줄, 나중에 제거하세요
+if distanceFromCharacterToOrigin.Magnitude > ToleranceValues.DISTANCE_SANITY_CHECK_TOLERANCE_STUDS then
+    warn(`Player {player.Name} failed an origin sanity check while blasting`)
+    return
+end
+```
+
+<br></br>
+
+이동하고 발사할 때 출력 결과를 확인하십시오. 다음과 같은 출력이 나타날 수 있습니다:
+
+```text
+1.9019629955291748
+3.1549558639526367
+2.5742883682250977
+4.8044586181640625
+2.6434271335601807
+```
+
+**ReplicatedStorage** > **PlayerStateHandler** > **togglePlayerMovement**에서 플레이어의 이동 속도를 증가시키고 다시 플레이 테스트하면, 발사 사이에 과도한 이동으로 인해 많은 검사가 실패할 것입니다.
+
+```lua title="togglePlayerMovement"
+local ENABLED_WALK_SPEED = 60 -- 업데이트된 줄, 나중에 변경을 되돌리세요
+```
+
+<br></br>
+
+따라서 이동 속도를 증가시키기로 결정하면, **ServerStorage** > **ToleranceValues**에서 `DISTANCE_SANITY_CHECK_TOLERANCE_STUDS`를 조정하는 것을 고려하십시오. 이 문제에 접근하는 방법에 대해 자세히 알아보려면 [이동 검증](../../scripting/security/security-tactics.md#movement-validation)을 참조하십시오.
+
+서버는 다음을 수행합니다:
+
+- `rayResults`를 검증합니다.
+- 플레이어가 발사할 수 있는지 확인합니다.
+- 블래스터 상태를 재설정합니다.
+- 태그된 플레이어의 체력을 감소시킵니다.
+- 모든 다른 플레이어에게 발사를 복제하여 3인칭 시각적 효과를 볼 수 있도록 합니다.
+
+이러한 서버 작업에 대한 자세한 내용은 튜토리얼의 [히트 감지](detecting-hits.md) 섹션을 참조하십시오.
+
+#### 블래스터 재설정
+
+샘플 레이저 태그 경험에서 블래스터는 열 메커니즘을 사용합니다. 일정 수의 발사 후 다시 로드하는 대신, 발사 사이에 "쿨 다운" 시간이 필요합니다. 이 동일한 쿨다운 지연은 클라이언트(`blastClient`)와 서버(`blastServer`) 모두에서 발생하며, 서버는 진실의 소스로 작동합니다.
+
+```lua title="blastServer"
+local blasterConfig = getBlasterConfig(player)
+local secondsBetweenBlasts = blasterConfig:GetAttribute("secondsBetweenBlasts")
+
+task.delay(secondsBetweenBlasts, function()
+    local currentState = player:GetAttribute(PlayerAttribute.blasterStateServer)
+    if currentState == BlasterState.Blasting then
+        player:SetAttribute(PlayerAttribute.blasterStateServer, BlasterState.Ready)
+    end
+end)
+```
+
+<br></br>
+
+`secondsBetweenBlasts` 속성은 **ReplicatedStorage** > **Instances** > **LaserBlastersFolder**의 블래스터 구성의 일부입니다. `secondsBetweenBlasts` 지연이 지나면 플레이어는 다시 발사할 수 있으며, 전체 프로세스가 반복됩니다. 플레이어가 다시 발사할 수 있는 시간을 이해할 수 있도록 경험에는 쿨다운 바가 포함되어 있습니다.
+
+이 시점에서 플레이어는 스폰 및 리스폰, 조준 및 발사를 할 수 있지만, 경험은 여전히 각 발사의 결과를 결정해야 합니다. 튜토리얼의 다음 섹션에서는 블래스터가 발사가 다른 플레이어와 충돌할 때 이를 감지하고, 블래스터 설정에 따라 적절한 양의 플레이어 체력을 감소시키는 기능을 프로그래밍하는 방법을 배웁니다.
+
+### Chapter 3 - Detecting Hits
+
+**히트 감지**는 발사체가 플레이어와 충돌할 때 이를 식별하고 해당 플레이어의 체력을 감소시키는 과정입니다. 고수준에서 이 작업은 다음 중 하나로 생각할 수 있습니다:
+
+1. 발사체가 목표물에 맞았는지 여부를 물리적으로 시뮬레이션하는 검사.
+2. 블래스터가 목표물을 향해 조준되었는지 즉시 확인하는 검사.
+
+어떤 유형의 히트 감지를 사용하는지는 경험의 게임 플레이 요구 사항에 따라 다릅니다. 예를 들어, 발사체가 일정한 속도로 손에서 나가고, 공중에서 떨어지며, 날씨 조건에 따라 방향을 바꾸어야 하는 피구 경험에는 물리적으로 시뮬레이션된 검사가 적합합니다. 그러나 레이저 빔이 거의 무한한 속도를 가지며 중력 및 풍속과 같은 환경 요소를 무시해야 하는 레이저 태그 경험에는 즉시 확인 검사가 더 적합합니다.
+
+[샘플 레이저 태그 경험](https://www.roblox.com/games/14817965191/Laser-Tag-1A)을 참조하여 이 튜토리얼 섹션에서는 3D 공간에서 히트 감지를 구현하는 스크립트에 대해 학습합니다. 이 섹션에서는 다음과 같은 가이드를 제공합니다:
+
+- 현재 카메라 값과 플레이어의 블래스터 유형에서 발사 방향 얻기.
+- 발사체가 발사될 때 블래스터에서 직선 경로로 광선을 캐스팅하기.
+- 블래스터 데이터를 악용하지 못하도록 발사 검증하기.
+- 각 블래스터 유형의 발사 피해 및 플레이어가 맞은 광선의 수에 따라 플레이어 체력을 감소시키기.
+
+이 섹션을 완료한 후에는 오디오, 조명 및 특수 효과와 같은 추가 개발 주제를 탐구하여 게임 플레이를 향상시킬 수 있습니다.
+
+#### 발사 방향 얻기
+
+플레이어가 블래스터를 발사한 후, **ReplicatedStorage** > **attemptBlastClient** > **blastClient** > **generateBlastData**는 히트 감지 과정을 시작하기 위해 두 가지 함수를 호출합니다: `rayDirections()`와 `rayResults()`.
+
+```lua title="generateBlastData"
+local rayDirections = getDirectionsForBlast(currentCamera.CFrame, blasterConfig)
+local rayResults = castLaserRay(localPlayer, currentCamera.CFrame.Position, rayDirections)
+```
+
+<br></br>
+
+`rayDirections`의 입력 값은 간단합니다: 현재 카메라 위치와 회전 값, 플레이어의 블래스터 유형입니다. 샘플 레이저 태그 경험이 단일 레이저 빔을 생성하는 블래스터만 제공했다면 **ReplicatedStorage** > **LaserRay** > **getDirectionsForBlast**는 불필요했을 것입니다. 왜냐하면 발사 방향을 계산하기 위해 `currentCamera.CFrame.LookVector`를 사용할 수 있기 때문입니다.
+
+그러나 샘플은 수평으로 넓은 퍼짐을 가진 여러 레이저 빔을 생성하는 추가 블래스터 유형을 제공하므로 `getDirectionsForBlast`는 블래스터 구성 내의 각 레이저 빔의 각도에 따라 퍼짐을 계산해야 합니다:
+
+```lua title="getDirectionsForBlast"
+if numLasers == 1 then
+	-- 단일 레이저의 경우, 직선으로 조준
+	table.insert(directions, originCFrame.LookVector)
+elseif numLasers > 1 then
+	-- 여러 레이저의 경우, 레이저SpreadDegrees 간격으로 수평으로 퍼뜨림
+	local leftAngleBound = laserSpreadDegrees / 2
+	local rightAngleBound = -leftAngleBound
+	local degreeInterval = laserSpreadDegrees / (numLasers - 1)
+
+	for angle = rightAngleBound, leftAngleBound, degreeInterval do
+		local direction = (originCFrame * CFrame.Angles(0, math.rad(angle), 0)).LookVector
+		table.insert(directions, direction)
+	end
+end
+```
+
+<br></br>
+
+이 개념을 더 설명하기 위해, 수직으로 넓은 퍼짐을 가진 세 번째 블래스터 유형을 포함하려면 `spreadDirection`과 같은 새로운 블래스터 속성을 만들고, 다른 축을 사용하도록 `Datatype.CFrame` 계산을 조정할 수 있습니다. 예를 들어, 아래 스크립트에서 세 번째 블래스터 유형에 대한 `direction` 계산의 차이를 확인하십시오.
+
+```lua
+if numLasers == 1 then
+	table.insert(directions, originCFrame.LookVector)
+elseif numLasers > 1 then
+	local leftAngleBound = laserSpreadDegrees / 2
+	local rightAngleBound = -leftAngleBound
+	local degreeInterval = laserSpreadDegrees / (numLasers - 1)
+	for angle = rightAngleBound, leftAngleBound, degreeInterval do
+		local direction
+		if spreadDirection == "vertical" then
+			direction = (originCFrame * CFrame.Angles(math.rad(angle), 0, 0)).LookVector
+		else
+			direction = (originCFrame * CFrame.Angles(0, math.rad(angle), 0)).LookVector
+		end
+		table.insert(directions, direction)
+	end
+end
+return directions
+```
+
+<br></br>
+
+궁극적으로, `rayDirections()` 함수는 각 레이저 빔의 방향을 나타내는 `Datatype.Vector3|Vectors`의 테이블을 반환합니다. 도움이 된다면, 이 데이터가 어떻게 생겼는지 감을 잡기 위해 일부 로그를 추가할 수 있습니다.
+
+```lua title="generateBlastData"
+local rayDirections = getDirectionsForBlast(currentCamera.CFrame, blasterConfig)
+for _, direction in rayDirections do  -- 새 줄
+    print(direction)                  -- 새 줄
+end                                   -- 새 줄
+local rayResults = castLaserRay(localPlayer, currentCamera.CFrame.Position, rayDirections)
+```
+
+#### 광선 캐스팅
+
+**ReplicatedStorage** > **attemptBlastClient** > **blastClient** > **generateBlastData**의 두 번째 함수인 `castLaserRay()`는 스크립트 내에서 더 복잡한 작업을 수행합니다. 먼저 매개변수를 지정하여 레이캐스팅 목적을 위해 `Class.Workspace:Raycast()` 호출을 수행합니다. 레이캐스팅은 특정 방향과 정의된 길이로 `Datatype.Vector3` 지점에서 보이지 않는 광선을 보내고, 그 경로를 확인하여 다른 객체와 교차하는지 확인하는 과정입니다.
+
+이 정보는 발사체가 플레이어나 환경과 교차하는 시점과 위치를 확인할 수 있게 해주기 때문에 1인칭 슈터 경험에 특히 유용합니다. 예를 들어, 아래 이미지는 평행하게 캐스팅되는 두 개의 광선을 보여줍니다. 그들의 출발 지점과 방향에 따라, 광선 A는 벽을 지나 최대 거리까지 계속되고, 광선 B는 벽과 충돌합니다. 이 과정에 대한 자세한 내용은 [레이캐스팅](../../workspace/raycasting.md)을 참조하십시오.
+
+<figure>
+  <img src="../img/05_Roblox_tutorial/Detecting Hits/tutorial-gs-ray.png" width="60%" alt="광선 A는 벽을 통과하고, 광선 B는 벽과 충돌하는 다이어그램." />
+</figure>
+
+`castLaserRay()` 매개변수는 `Raycast()` 호출이 발사한 캐릭터를 제외한 워크스페이스의 모든 부분을 고려해야 한다고 지정합니다. 스크립트는 `directions` 테이블의 각 방향에 대해 광선을 캐스팅합니다. 광선이 무언가에 맞으면 `Datatype.RaycastResult`를 생성하며, 이는 다섯 가지 속성을 가집니다:
+
+- `Datatype.RaycastResult.Distance|Distance` – 광선의 출발 지점과 교차점 사이의 거리.
+- `Datatype.RaycastResult.Instance|Instance` – 광선이 교차하는 `Class.BasePart` 또는 `Class.Terrain` 셀.
+- `Datatype.RaycastResult.Material|Material` – 교차점의 `Enum.Material`.
+- `Datatype.RaycastResult.Position|Position` – 광선과 인스턴스 사이의 교차점의 `Datatype.Vector3` 위치.
+- `Datatype.RaycastResult.Normal|Normal` – 광선이 교차하는 면의 법선 벡터의 `Datatype.Vector3`.
+
+<Alert severity="warning">
+기본적으로, `Raycast()`는 `Class.BasePart.CanCollide` 속성을 존중하지 않습니다. 일부 부분이 순전히 장식적인 경우, 그들의 동작을 어떻게 처리할지 고려하고 `Datatype.RaycastParams.RespectCanCollide`를 참조하십시오.
+</Alert>
+
+샘플 레이저 태그 경험의 게임 플레이에서 가장 중요한 속성은 `Datatype.RaycastResult.Instance|Instance` 값입니다. 이는 광선이 다른 플레이어와 충돌할 때를 전달하기 때문입니다. 이 정보를 검색하기 위해 경험은 **ReplicatedStorage** > **LaserRay** > **castLaserRay** > **getPlayerFromDescendant** 헬퍼 함수를 사용합니다. 이 함수가 `nil`을 반환하면, 인스턴스는 플레이어의 일부가 아니므로 광선이 환경 내의 무생물 객체에 맞은 것입니다.
+
+`castLaserRay()`
+
+는 그런 다음 `Datatype.RaycastResult.Position|Position`과 `Datatype.RaycastResult.Normal|Normal`을 사용하여 광선의 `destination`이라고 부르는 새로운 `Datatype.CFrame`을 만듭니다. 모든 광선에는 목적지가 있으며, 이는 광선이 3D 공간에서 맞은 위치나 최대 거리 끝의 지점입니다. 플레이어의 조준 정확도에 따라, 많은 또는 대부분의 `taggedPlayer` 값은 nil입니다.
+
+```lua title="castLaserRay"
+if result then
+	-- 발사가 무언가에 맞았고, 플레이어인지 확인합니다.
+    destination = CFrame.lookAt(result.Position, result.Position + result.Normal)
+    taggedPlayer = getPlayerFromDescendant(result.Instance)
+else
+	-- 발사가 아무것도 맞지 않았으므로, 목적지는 최대 거리 끝의 지점입니다.
+	local distantPosition = origin + rayDirection * MAX_DISTANCE
+	destination = CFrame.lookAt(distantPosition, distantPosition - rayDirection)
+	taggedPlayer = nil
+end
+```
+
+<br></br>
+
+<Alert severity="info">
+`Datatype.RaycastResult.Distance|Distance`는 이 섹션의 스크립트에서 특별히 흥미롭지 않지만, 가까운 거리에서 더 많은 피해를 입히고 싶다면 이를 독특한 방식으로 활용할 수 있습니다. 마찬가지로, 이 섹션의 스크립트는 `Datatype.RaycastResult.Material|Material`을 고려하지 않지만, 손상 계산 중에 장갑 몸체와 약점을 구별하는 데 재료 유형을 사용할 수 있습니다.
+</Alert>
+
+#### 발사 검증
+
+부정 행위를 방지하기 위해, 이전 장에서 [블래스터 구현](implementing-blasters.md)은 `blastClient`가 `Class.RemoteEvent`를 사용하여 발사체를 서버에 알리고 각 클라이언트가 보낸 데이터를 확인하는 방법을 설명합니다. 이 광선 검증 과정은 **ServerScriptService** > **LaserBlastHandler** > **getValidatedBlastData** > **getValidatedRayResults**에서 발생하며, 각 검사는 중첩된 모듈 스크립트와 관련이 있습니다:
+
+1. 먼저, `getValidatedRayResults`는 `validateRayResult`를 호출하여 클라이언트에서 보낸 `rayResults` 테이블의 각 항목이 `Datatype.CFrame`과 `Player`(또는 nil)인지 확인합니다.
+
+1. 다음으로, `isRayAngleFromOriginValid`를 호출하여 레이저 퍼짐의 예상 각도를 클라이언트에서 보낸 각도와 비교합니다. 이 코드에서는 `ReplicatedStorage`의 장점이 나타나는데, 서버가 `getDirectionsForBlast`를 직접 호출하고, 반환 값을 "예상" 데이터로 저장한 다음 클라이언트에서 보낸 데이터와 비교할 수 있습니다.
+
+   이전 장에서 설명한 블래스터 검증과 마찬가지로, `isRayAngleFromOriginValid`는 각도의 "과도한" 차이를 결정하기 위해 허용 오차 값을 사용합니다:
+
+   ```lua title="isRayAngleFromOriginValid"
+   local claimedDirection = (rayResult.destination.Position - originCFrame.Position).Unit
+   local directionErrorDegrees = getAngleBetweenDirections(claimedDirection, expectedDirection)
+
+   return directionErrorDegrees <= ToleranceValues.BLAST_ANGLE_SANITY_CHECK_TOLERANCE_DEGREES
+   ```
+
+   <br></br>
+
+   Roblox는 가장 복잡한 수학 부분을 추상화하므로, 결과는 다양한 경험에 적용할 수 있는 짧고 매우 재사용 가능한 헬퍼 함수입니다:
+
+   ```lua title="getAngleBetweenDirections"
+   local function getAngleBetweenDirections(directionA: Vector3, directionB: Vector3)
+       local dotProduct = directionA:Dot(directionB)
+       local cosAngle = math.clamp(dotProduct, -1, 1)
+       local angle = math.acos(cosAngle)
+       return math.deg(angle)
+   end
+   ```
+
+   <br></br>
+
+1. 다음 검사는 가장 직관적입니다. `getValidatedBlastData`가 `DISTANCE_SANITY_CHECK_TOLERANCE_STUDS`를 사용하여 발사한 플레이어가 광선의 출발 지점 근처에 있었는지 확인하는 것처럼, `isPlayerNearPosition`은 동일한 논리를 사용하여 태그된 플레이어가 광선의 목적지 근처에 있었는지 확인합니다:
+
+   ```lua title="isPlayerNearPosition"
+   local distanceFromCharacterToPosition = position - character:GetPivot().Position
+   if distanceFromCharacterToPosition.Magnitude > ToleranceValues.DISTANCE_SANITY_CHECK_TOLERANCE_STUDS then
+       return false
+   end
+   ```
+
+<br></br>
+
+1. 마지막 검사는 `isRayPathObstructed`로, 클라이언트의 위치에서 광선의 목적지가 벽이나 다른 장애물 뒤에 있는지 확인하기 위해 레이 캐스트 작업의 변형을 사용합니다. 예를 들어, 악의적인 플레이어가 경험의 모든 벽을 체계적으로 제거하여 다른 플레이어를 태그하려고 하면, 서버는 광선이 무효하다는 것을 확인합니다. 왜냐하면 서버는 환경 내의 모든 객체 위치를 알고 있기 때문입니다.
+
+   ```lua title="isRayPathObstructed"
+   local scaledDirection = (rayResult.destination.Position - blastData.originCFrame.Position)
+   scaledDirection *= (scaledDirection.Magnitude - 1) / scaledDirection.Magnitude
+   ```
+
+<br></br>
+
+모든 반부정 전략이 포괄적이지는 않지만, 악의적인 플레이어가 어떻게 접근할 수 있는지를 고려하여 서버가 실행할 수 있는 검사를 설정하는 것이 중요합니다.
+
+#### 플레이어 체력 감소
+
+플레이어가 다른 플레이어를 태그한 것을 확인한 후, 샘플 레이저 태그 경험의 주요 게임 플레이 루프를 완료하기 위한 마지막 단계는 태그된 플레이어의 체력을 감소시키고, 리더보드를 증가시키며, 플레이어를 다시 경기로 리스폰시키는 것입니다.
+
+태그된 플레이어의 체력을 감소시키는 것부터 시작하여, [스폰 및 리스폰](spawn-respawn.md)은 `Class.Player`와 `Class.Player.Character`의 구별, 특히 캐릭터가 `Class.Humanoid` 모델이라는 것을 다룹니다. `Class.Humanoid` 모델에는 기본 값이 100인 `Class.Humanoid.Health|Health` 속성이 있습니다. 샘플 레이저 태그 경험은 자체 시스템을 구현하는 대신, 이 내장 속성을 사용하여 플레이어가 태그 아웃되기 전에 얼마나 많은 피해를 입어야 하는지를 추적합니다.
+
+경험은 각 블래스터의 `damagePerHit` 속성에 피해 값을 저장합니다. 예를 들어, 단일 레이저 빔을 발사하는 블래스터는 15 포인트의 피해를 입히므로, 이 블래스터로 다른 플레이어를 태그 아웃하기 위해서는 7번의 발사가 필요합니다. 플레이어를 태그 아웃하는 과정을 시작하기 위해 `LaserBlastHandler`는 **ServerScriptService** > **LaserBlastHandler** > **processTaggedPlayers**를 호출하여, 검증된 `rayResults` 테이블에서 플레이어를 확인하고 `damagePerHit`를 `onPlayerTagged`로 전달합니다.
+
+<Alert severity="info">
+이 과정은 각 **광선**에 대해 발생하며, 각 플레이어에 대해 발생하지 않습니다. 하나의 발사는 여러 레이저 빔을 가질 수 있으므로, 플레이어는 단일 발사에서 여러 번의 피해를 입을 수 있습니다.
+</Alert>
+
+<figure>
+  <img src="../img/05_Roblox_tutorial/Detecting Hits/tutorial-gs-health.png" alt="" width="80%" />
+</figure>
+
+`Class.Humanoid.Health|Health`는 음수를 허용하지 않으므로, `onPlayerTagged`에는 플레이어의 체력을 0 이상으로 유지하는 논리가 있습니다. 플레이어의 체력이 0 이상인지 확인한 후, 체력을 `damagePerHit`과 비교하고 두 값 중 작은 값을 사용합니다. 예를 들어, 플레이어가 10의 체력을 가지고 있고 15의 피해를 입히는 레이저 빔에 맞으면, 레이저는 10 포인트의 피해만 입힙니다.
+
+이 문제에 접근하는 방식이 다소 복잡해 보일 수 있습니다. 예를 들어, 체력이 음수가 될 경우 그냥 0으로 설정하지 않는 이유는 무엇일까요? 그 이유는 체력 값을 설정하면 포스 필드를 우회하기 때문입니다. `Class.Humanoid:TakeDamage()` 메서드를 사용하면 플레이어의 포스 필드가 활성화된 동안 피해를 입지 않도록 할 수 있습니다.
+
+```lua title="onPlayerTagged"
+local function onPlayerTagged(playerBlasted: Player, playerTagged: Player, damageAmount: number)
+	local character = playerTagged.Character
+
+	local humanoid = character and character:FindFirstChild("Humanoid")
+	if humanoid and humanoid.Health > 0 then
+
+		local damage = math.min(damageAmount, humanoid.Health)
+
+		humanoid:TakeDamage(damage)
+		if humanoid.Health <= 0 then
+			playerBlasted.leaderstats.Points.Value += 1
+		end
+	end
+end
+```
+
+<br></br>
+
+다음 단계는 리더보드를 증가시키는 것입니다. `LaserBlastHandler`가 발사 데이터
+
+와 함께 발사한 플레이어를 포함하는 것이 불필요해 보일 수 있지만, 이 정보가 없으면 경험은 다른 플레이어를 태그 아웃한 플레이어에게 점수를 줄 수 없습니다. 마지막으로, 태그 아웃된 플레이어는 다시 경기로 리스폰되며, 이는 [스폰 및 리스폰](spawn-respawn.md)에서 검토할 수 있습니다.
+
+이 커리큘럼의 세 장은 경험의 핵심 게임 플레이 루프를 다루지만, 여전히 탐구할 수 있는 많은 영역이 있습니다. 예를 들어:
+
+- **블래스터 비주얼**: **ReplicatedStorage** > **FirstPersonBlasterVisuals** 및 **ServerScriptService** > **ThirdPersonBlasterVisuals**를 참조하십시오.
+- **오디오**: **ReplicatedStorage** > **SoundHandler**를 참조하십시오.
+- **팀**: 이 경험을 팀 기반으로 수정하려면 어떻게 해야 할까요? 스폰 위치와 리더보드는 어떻게 변경되어야 할까요?
+- **승리**: 어떤 조건이 한 플레이어 또는 한 팀을 승자로 선언하는 데 적합할까요? 일정 시간 후 가장 많은 태그 아웃? 일정 수의 태그 아웃에 도달한 첫 번째 플레이어? 팀 기반 경험에서, 새로운 라운드가 시작될 때 이전 라운드의 플레이어 성과를 사용하여 팀을 균형 있게 할 수 있을까요?
+
+<Alert severity="info">
+게임플레이 스크립팅 커리큘럼을 따르는 경험에 대해 여러분의 의견을 듣고 싶습니다. 질문, 우려 사항 또는 추가 피드백이 있다면 [게임플레이 스크립팅 커리큘럼 Q&A](https://devforum.roblox.com/t/gameplay-scripting-curriculum-qa/2731896)에 댓글을 남겨주세요.
+</Alert>
 
 ---
 ## 출처
- - [Creating Your First Experience](https://create.roblox.com/docs/ko-kr/tutorials/first-experience)
+ - [Tutorials](https://create.roblox.com/docs/ko-kr/tutorials)
 ---
 ## [다음]()
