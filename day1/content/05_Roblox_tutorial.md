@@ -73,7 +73,7 @@
           - [Coins](#coins)
           - [Mountains](#mountains)
         - [Playtest](#playtest)
-  - [Environmental Art Curriculum](#environmental-art-curriculum)
+  - [Environmental Art](#environmental-art)
     - [Chapter 1 - Greybox Your Environment](#chapter-1---greybox-your-environment)
       - [세 개의 레인 맵 레이아웃](#세-개의-레인-맵-레이아웃)
         - [스폰 존](#스폰-존)
@@ -2791,7 +2791,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 </Alert>
 
 ---
-## Environmental Art Curriculum
+## Environmental Art
 
 **Environmental Art**은 게임플레이 요구 사항을 구현하고 사용자 경험에 몰입하게 하며 세계 자체에 대한 맥락 정보를 제공하는 3D 환경을 생성하고 구성하는 분야입니다.
 

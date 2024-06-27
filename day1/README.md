@@ -10,7 +10,7 @@
   - [Lua programmimg basic](./content/04_Lua_programmimg_basic.md)
   - [Roblox tutorial](./content/05_Roblox_tutorial.md)
     - [core](./content/05_Roblox_tutorial.md#core)
-    - [Environmental Art]
-    - [Gameplay Scripting]
+    - [Environmental Art](./content/05_Roblox_tutorial.md#environmental-art)
+    - [Gameplay Scripting](./content/05_Roblox_tutorial.md#gameplay-scripting)
 
  ## 출처
