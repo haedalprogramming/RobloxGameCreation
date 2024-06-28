@@ -10,43 +10,80 @@
 
 # Contents
 
- - 1일차 : 로블록스 이해, 환경설정
-    - 로블록스 소개
-    - Setting up Roblox Studio
-    - Creating Your First Experience
-    - Coding Fundamentals
-    
- - 2일차 : Experience Tutorials 1
-    - Build a gray box
-    - Script the Gameplay
-    - Polish the Experience
-    - Greybox Your Environment
-    - Develop Polished Assets
-    - Assemble an Asset Library
-    - Construct Your World
-    - Optimize Your Experience
+ - 1일차 : 로블록스 이해, 환경설정, Lua 프로그래밍, Roblox tutorial
+    - [Introduction](./day1/content/01_Introduction.md)
+    - [Roblox Studio 환경 설정](./day1/content/02_Roblox_Studio_환경_설정.md)
+    - [Creating Your First Experience](./day1/content/03_Creating_Your_First_Experience.md)
+    - [Lua programmimg basic](./day1/content/04_Lua_programmimg_basic.md)
+    - [Roblox tutorial](./day1/content/05_Roblox_tutorial.md)
+      - [core](./day1/content/05_Roblox_tutorial.md#core)
+      - [Environmental Art](./day1/content/05_Roblox_tutorial.md#environmental-art)
+      - [Gameplay Scripting](./day1/content/05_Roblox_tutorial.md#gameplay-scripting)
 
- - 3일차 : Experience Tutorials 2 && Avatar
-    - Experience Tutorials
-      - Spawning and Respawning
-      - Implementing Blaster Behavior
-      - Detecting Hits
+ - 2일차 : 로블록스 엔진 기능
+    - Project
+    - Assets
+    - 3D Workspace
+    - Scripting
+    - Enviroment
+    - Characters
+    - Players
+    - Input
+    - Sound
+    - User Interface
+    - Animation
+    - Chat
+    - Cloud Services
+
+ - 3일차 : Build It, Play It Challenges & Adventure Game & Battle Royale
+   - Mansion of Wonder
+   - Island of Move
+   - Galactic Speedway
+   - Create and Destroy
+   - Story Games
+   - Adventure Game 만들기
+   - Battle Royale Game 만들기
+
+ - 4일차 : Avatar
+   - Blender 환경설정
+   - Familiarize yourself with Blender
+   - Setting up Roblox Studio
+   - Rigid Accessories
+   - Clothing
+   - Bodies
+   - Use Caces
+   - Publishing and selling
+
+ - 5일차 : 3D Art in Roblox
+   - Getting started
+   - Modeling
+   - Texturing
+   - Animation
+   - Enviroment and lighting
+   - Example Projects
+      - The Mystery of Duvall Drive
+      - Beyond the Dark
+
+ - 6일차 : 로블록스 엔진 & 아바타 배포
+    - Engin
+      - The Roblox User Base
+      - Discovery
+      - Publishing
+      - Promotion
+      - Monetization
+      - Localization
+      - Analytics
+      - Community
     - Avatar
-      - Avatar Editor Service
-      - Avatar Inspect Menu
-      - Avatar Context Menu
-      - Disabling Default UI Elements
-
- - 4일차 : Adventure Game 만들기 및 배포
-    - Roblox Developer 101
-    - 게시
-    - 홍보
-    - 수익 창출
-    - 로컬라이제이션
-    - 에널리틱스
-    - 커뮤니티
-
+      - Marketplace Overview
+      - Policies and Guidelines
+      - Uploading and Publishing
+      - Marketplace Fees and Commissions
 
 # Reference
+ - https://create.roblox.com/docs/ko-kr/tutorials
  - https://create.roblox.com/docs/ko-kr/get-started
- - https://create.roblox.com/docs/ko-kr/education/lesson-plans/roblox-developer/landing
+ - https://create.roblox.com/docs/ko-kr/education/educator-onboarding/landing
+ - https://create.roblox.com/docs/art
+ - https://create.roblox.com/docs/avatar/tutorials
+ - https://create.roblox.com/docs/avatar
