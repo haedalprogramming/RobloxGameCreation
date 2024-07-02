@@ -27,20 +27,20 @@
    - [Create and Destroy](./day2/content/06_01_Create_and_Destroy.md)
    - [Story Games](./day2/content/07_01_Story_Games_Project.md)
 
- - 3일차 : 로블록스 엔진 기능
-    - Project
-    - Assets
-    - 3D Workspace
-    - Scripting
-    - Enviroment
-    - Characters
-    - Players
-    - Input
-    - Sound
-    - User Interface
-    - Animation
-    - Chat
-    - Cloud Services
+ - 3일차 : 로블록스 엔진 기능 & Creating an Adventure Game
+    - [Project](./day3/content/01_project.md)
+    - [Assets](./day3/content/02_assets.md)
+    - [3D Workspace](./day3/content/03_3D_workspace.md)
+    - [Scripting](./day3/content/04_Scripting.md)
+    - [Enviroment](./day3/content/05_Lighting_and_Effects.md)
+    - [Characters](./day3/content/06_Characters.md)
+    - [Players](./day3/content/07_Users_and_Players.md)
+    - [Input](./day3/content/08_Input_and_Camera.md)
+    - [Sound](./day3/content/09_Sound_and_Music.md)
+    - [User Interface](./day3/content/10_UI.md)
+    - [Animation](./day3/content/11_Animation.md)
+    - [Chat](./day3/content/12_chat.md)
+    - [Creating an Adventure Game](./day3/content/13_01_Creating_an_Adventure_Game.md)
 
  - 4일차 : Avatar
    - Blender 환경설정
