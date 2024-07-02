@@ -1,7 +1,8 @@
-# 게임 개발 3일차 : 로블록스 엔진 기능
+# 게임 개발 3일차 : 로블록스 엔진 기능 & Creating an Adventure Game & Battle Royale
 
 ## 학습 목표
  - 로블록스 엔진 기능 이해
+ - 게임 만들기 실습을 통한 기능 익히기
 
 ## 목차
   - [Project](./content/01_project.md)
@@ -17,6 +18,9 @@
   - [Animation](./content/11_Animation.md)
   - [Chat](./content/12_chat.md)
   - [Creating an Adventure Game](./content/13_01_Creating_an_Adventure_Game.md)
+  - [Creating a Battle Royale](./content/14_01_Creating_a_Battle_Royale.md)
 
  ## 출처
  - [Roblox engine guide](https://create.roblox.com/docs/ko-kr/get-started)
+ - [Creating an Adventure Game](https://create.roblox.com/docs/ko-kr/education/adventure-game-series/landing)
+ - [Creating an Adventure Game](https://create.roblox.com/docs/ko-kr/education/adventure-game-series/landing)

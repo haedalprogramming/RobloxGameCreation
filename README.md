@@ -27,7 +27,7 @@
    - [Create and Destroy](./day2/content/06_01_Create_and_Destroy.md)
    - [Story Games](./day2/content/07_01_Story_Games_Project.md)
 
- - 3일차 : 로블록스 엔진 기능 & Creating an Adventure Game
+ - 3일차 : 로블록스 엔진 기능 & Creating an Adventure Game & Battle Royale
     - [Project](./day3/content/01_project.md)
     - [Assets](./day3/content/02_assets.md)
     - [3D Workspace](./day3/content/03_3D_workspace.md)
@@ -41,6 +41,7 @@
     - [Animation](./day3/content/11_Animation.md)
     - [Chat](./day3/content/12_chat.md)
     - [Creating an Adventure Game](./day3/content/13_01_Creating_an_Adventure_Game.md)
+    - [Creating a Battle Royale](./day3/content/14_01_Creating_a_Battle_Royale.md)
 
  - 4일차 : Avatar
    - Blender 환경설정
