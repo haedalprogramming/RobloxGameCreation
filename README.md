@@ -20,14 +20,12 @@
       - [Environmental Art](./day1/content/05_Roblox_tutorial.md#environmental-art)
       - [Gameplay Scripting](./day1/content/05_Roblox_tutorial.md#gameplay-scripting)
 
- - 2일차 : Build It, Play It Challenges & Adventure Game & Battle Royale
-   - Mansion of Wonder
-   - Island of Move
-   - Galactic Speedway
-   - Create and Destroy
-   - Story Games
-   - Adventure Game 만들기
-   - Battle Royale Game 만들기
+ - 2일차 : Build It, Play It Challenges
+   - [Mansion of Wonder](./day2/content/01_01_Mansion_of_Wonder_Overview.md)
+   - [Island of Move](./day2/content/03_01_Island_of_Move.md)
+   - [Galactic Speedway](./day2/content/05_01_Galactic_Speedway.md)
+   - [Create and Destroy](./day2/content/06_01_Create_and_Destroy.md)
+   - [Story Games](./day2/content/07_01_Story_Games_Project.md)
 
  - 3일차 : 로블록스 엔진 기능
     - Project

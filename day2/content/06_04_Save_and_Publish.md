@@ -27,4 +27,4 @@
 [Save and Publish](https://create.roblox.com/docs/ko-kr/education/build-it-play-it-create-and-destroy/save-and-publish)
 
 ---
-## [다음](06_0)
+## [다음](06_05_Take_the_Challenge.md)
