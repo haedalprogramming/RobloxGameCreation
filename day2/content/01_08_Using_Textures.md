@@ -96,4 +96,4 @@ ParticleEmitter가 생성하는 모든 것, 흰 불꽃이든 불이든 사실은
 [Using Textures](https://create.roblox.com/docs/ko-kr/education/build-it-play-it-mansion-of-wonder/using-textures)
 
 ---
-## [다음](./01_09)
+## [다음](./01_09_Finish_the_Blast.md)

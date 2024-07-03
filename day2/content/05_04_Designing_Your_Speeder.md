@@ -71,7 +71,7 @@
 driftspeeder를 작업하려면 아래의 카메라 컨트롤을 사용하세요.
 
 <Alert severity="info">
-**카메라 컨트롤**
+<b>카메라 컨트롤</b>
 <table>
 <thead>
    <tr>

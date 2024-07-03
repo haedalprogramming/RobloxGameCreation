@@ -19,4 +19,4 @@
 [Third Challenge](https://create.roblox.com/docs/ko-kr/education/build-it-play-it-story-games/third-challenge)
 
 ---
-## [다음](07_1)
+## [다음](07_12_Completing_the_Challenge.md)
