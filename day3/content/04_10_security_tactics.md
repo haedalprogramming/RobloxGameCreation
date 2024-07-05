@@ -238,11 +238,11 @@ buyItemEvent.OnServerInvoke = buyItem
 
    <img src="../img/04_10_security_tactics/Movement-Validation-1.jpg" width="800" alt="직선 경로에서 이동하는 캐릭터의 위치를 1초 간격으로 비교하는 이미지" />
 
-1. 캐릭터의 `Humanoid.WalkSpeed|WalkSpeed` (초당 스터드) 기준으로 허용 가능한 최대 거리 변화를 결정합니다. 약간의 서버 지연을 허용하기 위해 ~1.4를 곱합니다. 예를 들어, 기본 `Humanoid.WalkSpeed|WalkSpeed`가 16일 때, 허용 가능한 델타는 ~22입니다.
+2. 캐릭터의 `WalkSpeed` (초당 스터드) 기준으로 허용 가능한 최대 거리 변화를 결정합니다. 약간의 서버 지연을 허용하기 위해 ~1.4를 곱합니다. 예를 들어, 기본 `WalkSpeed`가 16일 때, 허용 가능한 델타는 ~22입니다.
 
    <img src="../img/04_10_security_tactics/Movement-Validation-2.jpg" width="800" alt="캐릭터의 걷기 속도를 기준으로 허용 가능한 거리 변화를 보여주는 이미지" />
 
-1. 실제 거리 델타를 허용 가능한 델타와 비교하고 다음과 같이 진행합니다:
+3. 실제 거리 델타를 허용 가능한 델타와 비교하고 다음과 같이 진행합니다:
 
    - 허용 가능한 델타인 경우, 캐릭터의 새로운 위치를 캐시하여 다음 증분 검사를 준비합니다.
    - 예기치 않거나 허용할 수 없는 델타(잠재적인 속도/텔레포트 익스플로잇인 경우):
@@ -254,4 +254,4 @@ buyItemEvent.OnServerInvoke = buyItem
  - [Security Tactics and Cheat Mitigation](https://create.roblox.com/docs/scripting/security/security-tactics)
 
 ---
-## [다음](./05_Lighting_and_Effects.md)
+## [다음](./05_00_Lighting_and_Effects.md)

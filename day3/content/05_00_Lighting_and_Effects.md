@@ -74,4 +74,4 @@
  - [Lighting and Effects](https://create.roblox.com/docs/ko-kr/environment)
 
 ---
-## [다음](./06_Characters.md)
+## [다음](./05_01_Global_Lighting.md)
