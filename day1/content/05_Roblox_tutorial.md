@@ -1875,7 +1875,7 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 자산 라이브러리는 쉽게 액세스하고 재사용할 수 있도록 경험의 중앙 위치에 배치할 수 있는 자산 모음입니다. Creator Store에서 사용할 자산 라이브러리에는 여섯 개의 3D 자산, 두 개의 사용자 정의 `MaterialVariant` 재료 및 [기본 시각 효과 만들기]에서 최종 입자 효과가 포함됩니다. 여섯 개의 메쉬는 다음과 같습니다:
 
-<GridContainer numColumns="3">
+<!-- <GridContainer numColumns="3">
   <figure>
     <img src="../img/05_Roblox_tutorial/Platform-A-Model.jpg.webp" alt="A mesh that's a grassy, circular platform with concrete surrounding its edges." />
     <figcaption>PlatformA</figcaption>
@@ -1900,7 +1900,12 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
     <img src="../img/05_Roblox_tutorial/Mountain-Mesh.jpg.webp" alt="A mesh that's a large snowy mountain." />
     <figcaption>MountainMesh</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|<figure><img src="../img/05_Roblox_tutorial/Platform-A-Model.jpg.webp" width="100%"/>  <figcaption>PlatformA</figcaption></figure>|<figure><img src="../img/05_Roblox_tutorial/Platform-B-Model.jpg.webp" width="100%"/><figcaption>PlatformB</figcaption></figure>|<figure><img src="../img/05_Roblox_tutorial/Coin-Mesh.jpg.webp" width="100%" /><figcaption>Coin</figcaption></figure>|
+|---|---|---|
+|<figure><img src="../img/05_Roblox_tutorial/Sea-Stack-Mesh.jpg.webp" width=100% /><figcaption>SeaStackMesh</figcaption></figure>|<figure><img src="../img/05_Roblox_tutorial/Sea-Stack-Cave-Mesh.jpg.webp" width=100% /><figcaption>SeaStackCaveMesh</figcaption>|</figure><figure><img src="../img/05_Roblox_tutorial/Mountain-Mesh.jpg.webp" width=100% /><figcaption>MountainMesh</figcaption></figure>|
+
 
 이 3D 자산 각각은 단일 `MeshPart` 객체 또는 여러 `MeshPart` 객체를 저장하는 `Model` 객체이며, 사용자 정의 재료 또는 현실적인 음영과 조명을 표현할 수 있는 물리 기반 렌더링(PBR) 텍스처를 사용합니다. 이 과정에 대한 자세한 내용은 [재료 - 사용자 정의 재료] 및 [PBR 텍스처]를 참조하세요.
 
