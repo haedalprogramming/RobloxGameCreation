@@ -4247,7 +4247,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 이 모든 샘플 타일 가능한 텍스처가 이끼, 꽃 및 돌 요소의 균일한 분포를 가지고 있음을 주목하세요. 만약 큰 돌이나 꽃 패치와 같은 눈에 띄는 요소를 포함하면 사용자는 텍스처가 반복되고 있음을 인식하게 됩니다. 예를 들어, 다음 두 이미지에서 첫 번째 이미지는 눈에 띄는 흙 패치가 있어 텍스처의 반복을 눈에 띄게 합니다. 두 번째 이미지는 이 패치를 훨씬 작게 만들어 텍스처의 요소를 균형 있게 만들어 반복을 덜 눈에 띄게 합니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/TileableTextures-WithElement.jpg" alt="A tileable rock texture with a distinct patch of rocks highlighted to show that the repetition of the distinct element is noticeable." width="100%"/>
   </figure>
@@ -4255,6 +4255,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/TileableTextures-NoElement.jpg" alt="A tileable rock texture with no distinct elements to show that this technique makes the repetition of elements not noticeable." width="100%"/>
   </figure>
 </GridContainer>
+ -->
+
+|<img src="../img/05_Roblox_tutorial/TileableTextures-WithElement.jpg" alt="A tileable rock texture with a distinct patch of rocks highlighted to show that the repetition of the distinct element is noticeable." width="100%"/>|<img src="../img/05_Roblox_tutorial/TileableTextures-NoElement.jpg" alt="A tileable rock texture with no distinct elements to show that this technique makes the repetition of elements not noticeable." width="100%"/>|
+|---|---|
 
 [서브스턴스 디자이너](https://www.adobe.com/products/substance3d-designer)나 [블렌더](https://www.blender.org/)와 같은 타사 모델링 도구에서 자체 타일 가능한 텍스처를 디자인하기로 결정한 경우 다음 사항을 염두에 두세요:
 
@@ -4264,26 +4268,29 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
  요소보다 더 구별되지 않도록 균일한 가시적 분포를 만듭니다.
 - 타일 가능한 텍스처가 기술적으로 이음매가 없더라도, 이미지 전체를 검토하여 텍스처의 반복이 눈에 띄지 않도록 합니다.
 
-이 마지막 포인트는 완전히 제거하기는 거의 불가능하지만, 스튜디오 재료를 유기적으로 타일링하거나 반복을 효과적으로 숨기기 위해 추가 데칼 오버레이를 추가할 수 있습니다. 이러한 기술에 대한 자세한 내용은 [사용자 정의 재료 생성](../environmental-art/assemble-an-asset-library.md#creating-custom-materials) 및 [모듈형 환경 조립 - 가시적 반복 감소](../../tutorials/3D-art/assembling-modular-environments.md#reducing-visible-repetition)를 참조하세요.
+이 마지막 포인트는 완전히 제거하기는 거의 불가능하지만, 스튜디오 재료를 유기적으로 타일링하거나 반복을 효과적으로 숨기기 위해 추가 데칼 오버레이를 추가할 수 있습니다. 이러한 기술에 대한 자세한 내용은 [사용자 정의 재료 생성] 및 [모듈형 환경 조립 - 가시적 반복 감소]를 참조하세요.
 
 ##### 트림 시트
 
 **트림 시트**는 X **또는** Y 축 중 하나에서 타일링할 수 있는 텍스처로, 추가 텍스처를 가져오지 않고도 경험에 시각적 복잡성을 크게 추가할 수 있어 메모리에 부정적인 영향을 미치지 않습니다. 트림 시트의 각 행 또는 열은 고유한 시각적 외관을 가지고 있어 UV 데이터를 메시로 매핑할 때 다양한 표면 처리를 선택할 수 있습니다. 예를 들어, 다음 두 이미지에서 문틀과 천장 자산은 동일한 트림 시트의 다른 레이어를 사용하여 공간에 세부 작업을 추가합니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/TrimSheets-Doorway.jpg" alt="An doorway with trim sheet textures applied." width="100%"/>
   </figure>
   <figure>
     <img src="../img/05_Roblox_tutorial/TrimSheets-Ceiling.jpg" alt="A group of ceiling tiles with trim sheet textures applied." width="100%"/>
   </figure>
-</GridContainer>
+</GridContainer> -->
 
-트림 시트의 가장 기본적인 규칙은 단일 객체에만 적용할 수 있는 맥락적 세부 사항을 피하는 것입니다. 이는 트림 시트가 세계의 여러 유형의 객체에 사용될 수 있어야 하며, 매우 구체적인 세부 사항은 3D 공간에서 반복될 때 사용자에게 눈에 띄기 때문입니다. 예를 들어, [듀발 쇼케이스의 미스터리](../../resources/the-mystery-of-duvall-drive/materializing-the-world.md#surface-appearance-and-trim-maps)의 다음 이미지에서, 좌측 가구 세트의 트림 시트는 우측 가구 세트의 트림 시트보다 더 많은 얼룩 세부 사항을 포함합니다. 추가 얼룩 세부 사항이 반복되면서 눈에 띄는 차이를 확인할 수 있습니다.
+|<img src="../img/05_Roblox_tutorial/TrimSheets-Doorway.jpg" alt="An doorway with trim sheet textures applied." width="100%"/>|<img src="../img/05_Roblox_tutorial/TrimSheets-Ceiling.jpg" alt="A group of ceiling tiles with trim sheet textures applied." width="100%"/>|
+|---|---|
+
+트림 시트의 가장 기본적인 규칙은 단일 객체에만 적용할 수 있는 맥락적 세부 사항을 피하는 것입니다. 이는 트림 시트가 세계의 여러 유형의 객체에 사용될 수 있어야 하며, 매우 구체적인 세부 사항은 3D 공간에서 반복될 때 사용자에게 눈에 띄기 때문입니다. 예를 들어, [듀발 쇼케이스의 미스터리]의 다음 이미지에서, 좌측 가구 세트의 트림 시트는 우측 가구 세트의 트림 시트보다 더 많은 얼룩 세부 사항을 포함합니다. 추가 얼룩 세부 사항이 반복되면서 눈에 띄는 차이를 확인할 수 있습니다.
 
 <img src="../img/05_Roblox_tutorial/furniture-set-stain.png" alt="The same furniture set has different trim sheets applied. The furniture set on the left with more distict stain elements has noticeable repetition." width="100%"/>
 
-이 기본 규칙을 따르며, 최종 샘플 레이저 태그 환경에서는 모듈형 키트와 소품에 시각적 흥미와 일관성을 더하기 위해 여섯 개의 간단한 세부 작업 행을 포함하는 다음 트림 시트 텍스처 맵을 사용합니다. 이 <a href="../img/05_Roblox_tutorial/TrimSheetTextureMaps.zip" download>트림 시트</a>를 UV 언랩핑 프로세스에서 사용할 수 있으며, 자산 라이브러리를 조립할 때 `Class.SurfaceAppearance` 객체에서 텍스처 맵을 활용할 수 있습니다. 각 텍스처 맵이 메시에 제공하는 정보에 대한 자세한 내용은 [PBR 텍스처 - 텍스처 맵](../../art/modeling/surface-appearance.md#texture-maps)을 참조하세요.
+이 기본 규칙을 따르며, 최종 샘플 레이저 태그 환경에서는 모듈형 키트와 소품에 시각적 흥미와 일관성을 더하기 위해 여섯 개의 간단한 세부 작업 행을 포함하는 다음 트림 시트 텍스처 맵을 사용합니다. 이 <a href="../img/05_Roblox_tutorial/TrimSheetTextureMaps.zip" download>트림 시트</a>를 UV 언랩핑 프로세스에서 사용할 수 있으며, 자산 라이브러리를 조립할 때 `Class.SurfaceAppearance` 객체에서 텍스처 맵을 활용할 수 있습니다. 각 텍스처 맵이 메시에 제공하는 정보에 대한 자세한 내용은 [PBR 텍스처 - 텍스처 맵]을 참조하세요.
 
 <Alert severity="info">
     이 트림 시트 파일은 타사 모델링 도구에서 UV 언랩핑 프로세스에만 유용합니다. UV 언랩핑 프로세스를 완료하지 않고 텍스처 맵을 `Class.SurfaceAppearance` 객체에 업로드하려고 하면, 스튜디오에서 텍스처 자체에 매핑할 데이터를 찾을 수 없습니다.
@@ -4291,7 +4298,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 <img src="../img/05_Roblox_tutorial/Trimsheet.png" alt="The sample laser tag experience's trim sheet." width="50%"/>
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/TrimSheets-Albedo.png" alt="The sample laser tag experience's trim sheet's albedo texture map." width="100%"/>
     <figcaption>Albedo</figcaption>
@@ -4300,9 +4307,13 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/TrimSheets-Normal.png" alt="The sample laser tag experience's trim sheet's normal texture map." width="100%"/>
     <figcaption>Normal</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
 
-<GridContainer numColumns="2">
+|Albedo|Normal|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/TrimSheets-Albedo.png" alt="The sample laser tag experience's trim sheet's albedo texture map." width="100%"/>|<img src="../img/05_Roblox_tutorial/TrimSheets-Normal.png" alt="The sample laser tag experience's trim sheet's normal texture map." width="100%"/>|
+
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/TrimSheets-Roughness.png" alt="The sample laser tag experience's trim sheet's roughness texture map." width="100%"/>
     <figcaption>Roughness</figcaption>
@@ -4311,7 +4322,11 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/TrimSheets-Metalness.png" alt="The sample laser tag experience's trim sheet's metalness texture map." width="100%"/>
     <figcaption>Metalness</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|Roughness|Metalness|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/TrimSheets-Roughness.png" alt="The sample laser tag experience's trim sheet's roughness texture map." width="100%"/>|<img src="../img/05_Roblox_tutorial/TrimSheets-Metalness.png" alt="The sample laser tag experience's trim sheet's metalness texture map." width="100%"/>|
 
 [서브스턴스 디자이너](https://www.adobe.com/products/substance3d-designer), [블렌더](https://www.blender.org/) 또는 [ZBrush](https://www.maxon.net/en/zbrush)와 같은 타사 모델링 도구에서 자체 트림 시트를 디자인하기로 결정한 경우 다음 사항을 염두에 두세요:
 
@@ -4411,14 +4426,17 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 6. 파일 브라우저에서 해당 타일 가능한 텍스처에 대한 **Albedo** 텍스처 맵 `.png` 파일을 선택한 다음 **열기** 버튼을 클릭합니다. 파일 브라우저가 닫히고 새 색상 맵이 자산 ID와 함께 표시됩니다.
 7. **Metalness**, **Normal** 및 **Roughness** 텍스처 맵에 대해 이 과정을 반복합니다. 사용자 정의 재료가 텍스처 맵을 반영하도록 업데이트됩니다.
 
-   <GridContainer numColumns="2">
+<!--    <GridContainer numColumns="2">
      <figure>
        <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CustomMaterials-7a.jpg" alt="All texture maps for the Moss_Lumpy_A material." width="85%"/>
      </figure>
      <figure>
        <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CustomMaterials-7b.jpg" alt=" sphere part with the Moss_Lumpy_A material applied." width="100%"/>
      </figure>
-   </GridContainer>
+   </GridContainer> -->
+
+   |<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CustomMaterials-7a.jpg" alt="All texture maps for the Moss_Lumpy_A material." width="85%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CustomMaterials-7b.jpg" alt=" sphere part with the Moss_Lumpy_A material applied." width="100%"/>|
+   |---|---|
 
 8. **Overrides** 섹션에서 **Set as Override** 토글을 활성화하여 지형에 지면을 적용할 때 스튜디오에서 이 사용자 정의 재료를 사용하도록 합니다.
 
@@ -4543,7 +4561,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 그림자는 3D 기하학적 깊이를 가진 객체에 사실감을 더할 수 있으므로, 이 속성을 비활성화할 위치를 결정할 때 객체가 환경에 큰 시각적 개선을 제공하는 위치와 사용자가 그림자의 누락을 눈치챌 수 있는 위치를 고려합니다. 예를 들어, 복잡한 그림자는 사용자가 보게 될 야외 공간에서 몰입감을 제공할 수 있지만, 사용자가 상호작용하지 않는 천장에서 살짝 보이는 식물에는 필요하지 않습니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CastShadow-Enabled.jpg" alt="Foliage casting shadows." width="100%"/>
     <figcaption>`Class.BasePart.CastShadow` = 활성화</figcaption>
@@ -4552,13 +4570,17 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CastShadow-Disabled.jpg" alt="Foliage not casting shadows." width="100%"/>
     <figcaption>`Class.BasePart.CastShadow` = 비활성화</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|`Class.BasePart.CastShadow` = 활성화|`Class.BasePart.CastShadow` = 비활성화|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CastShadow-Enabled.jpg" alt="Foliage casting shadows." width="100%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CastShadow-Disabled.jpg" alt="Foliage not casting shadows." width="100%"/>|
 
 ##### 양면 렌더링
 
 `Class.MeshPart.DoubleSided` 속성은 메시의 두 면 또는 다각형을 모두 렌더링할지 여부를 결정합니다. 이 속성을 평면 `Class.MeshPart`(예: 나뭇잎, 머리카락 또는 천 카드)에 대해 활성화하면, Roblox 엔진이 메시의 두 면 또는 다각형을 렌더링하여 사용자가 객체를 어떤 각도에서 보더라도 객체의 전체성을 볼 수 있도록 합니다. 예를 들어, 다음 나뭇잎은 단일 면 평면 메시로, 이 속성을 활성화하면 카메라를 향한 모든 나뭇잎이 사용자에게 표시됩니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/DoubleSided-Enabled.png" alt="A tree with all planar meshes facing the camera." width="100%"/>
     <figcaption>`Class.MeshPart.DoubleSided` = 활성화</figcaption>
@@ -4567,7 +4589,12 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/DoubleSided-Disabled.png" alt="A tree with less leaves because all planar meshes facing away from the camera are disabled." width="100%"/>
     <figcaption>`Class.MeshPart.DoubleSided` = 비활성화</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|`Class.MeshPart.DoubleSided` = 활성화|`Class.MeshPart.DoubleSided` = 비활성화|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/DoubleSided-Enabled.png" alt="A tree with all planar meshes facing the camera." width="100%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/DoubleSided-Disabled.png" alt="A tree with less leaves because all planar meshes facing away from the camera are disabled." width="100%"/>|
+
 
 이 속성은 환경에 사실감을 더하는 데 유용하지만, 성능에 영향을 미칠 수 있습니다. 엔진이 객체의 폴리곤을 두 번 렌더링해야 하기 때문입니다: 한 번은 사용자의 카메라를 향한 방향을 위해, 다른 한 번은 사용자의 카메라를 향하지 않은 메시를 위해. 성능에 미치는 영향을 줄이기 위해 최종 샘플 레이저 태그 환경에서는 이 속성을 나뭇잎에 대해서만 활성화합니다. 이는 3D 공간에서 사실감을 위해 시각적으로 강한 영향을 미칩니다.
 
@@ -4575,7 +4602,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 `Class.MeshPart.CollisionFidelity` 속성은 메시 또는 유니온의 물리적 히트박스가 시각적 표현과 얼마나 가까운지를 결정합니다. 기본적으로 이 설정은 메시의 기하학적 모양과 거의 일치하는 히트박스를 렌더링합니다. 예를 들어, 다음 이미지의 성 메시는 기본 히트박스가 메시의 기하학적 모양과 거의 일치합니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-MeshPart.jpg" alt="A grey castle mesh." width="100%"/>
     <figcaption>원본 메시</figcaption>
@@ -4584,11 +4611,15 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Default.jpg" alt="The same castle mesh with a colorful hitbox that shows where users can collide with the castle." width="100%"/>
     <figcaption>기본값</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|원본 메시|기본값|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-MeshPart.jpg" alt="A grey castle mesh." width="100%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Default.jpg" alt="The same castle mesh with a colorful hitbox that shows where users can collide with the castle." width="100%"/>|
 
 이 속성을 다른 값으로 설정하여 메시의 히트박스 정밀도를 줄일 수 있습니다. 예를 들어, 이 속성을 **Hull**로 설정하면 Roblox 엔진이 메시의 히트박스 정점을 크게 줄이고, 이 속성을 **Box**로 설정하면 엔진이 메시의 히트박스를 큐브로 줄입니다. 또한 메시의 히트박스 정밀도를 높이고 싶다면, 이 속성을 **PreciseConvexDecomposition**으로 설정하여 히트박스의 정점 수를 늘릴 수 있습니다.
 
-<GridContainer numColumns="3">
+<!-- <GridContainer numColumns="3">
   <figure>
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Box.jpg" alt="The same castle mesh with cube hitbox that shows where users can collide with the castle." width="100%"/>
     <figcaption>박스</figcaption>
@@ -4601,7 +4632,11 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Precise.jpg" alt="The same castle mesh with a colorful hitbox that shows where users can collide with the castle. This version shows more colorful faces than the default hitbox." width="100%"/>
     <figcaption>PreciseConvexDecomposition</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|Box|Hull|PreciseConvexDecomposition|
+|---|---|---|
+|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Hull.jpg" alt="The same castle mesh with a cylindrical hitbox that shows where users can collide with the castle." width="100%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Precise.jpg" alt="The same castle mesh with a colorful hitbox that shows where users can collide with the castle. This version shows more colorful faces than the default hitbox." width="100%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Precise.jpg" alt="The same castle mesh with a colorful hitbox that shows where users can collide with the castle. This version shows more colorful faces than the default hitbox." width="100%"/>|
 
 `Class.BasePart.CastShadow`와 유사하게, 엔진이 렌더링해야 하는 정점이 많을수록 성능에 영향을 미칩니다. 따라서 사용자가 각 메시와 어떻게 상호작용할지를 고려하여 메시의 히트박스 정점을 줄일 수 있는지 여부를 신중히 생각해야 합니다. 히트박스가 정밀할 필요가 없는 경우, 이 속성을 **Box** 또는 **Hull**로 설정합니다.
 
@@ -4609,7 +4644,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 를 제거하면서도 히트박스의 목적을 유지할 수 있습니다.
 
-<GridContainer numColumns="3">
+<!-- <GridContainer numColumns="3">
   <figure>
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-WallMesh.jpg" alt="A wall model that provides a rise in elevation." width="100%"/>
     <figcaption>원본 메시</figcaption>
@@ -4622,11 +4657,15 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-Box.jpg" alt="The same wall model with a colorful hitbox for the trim, but only a box hitbox for the wall mesh." width="100%"/>
     <figcaption>박스</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|원본 메시|기본값|박스|
+|---|---|---|
+|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-WallMesh.jpg" alt="A wall model that provides a rise in elevation." width="100%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-Default.jpg" alt="The same wall model with a colorful hitbox that shows where users can collide with the wall." width="100%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-Box.jpg" alt="The same wall model with a colorful hitbox for the trim, but only a box hitbox for the wall mesh." width="100%"/>|
 
 이 결정을 내릴 때 기본값을 변경하는 것이 사용자가 환경을 탐색하는 데 부정적인 영향을 미칠 수 있는지 신중히 고려해야 합니다. 예를 들어, 벽 모델의 트림 메시에 대해 이 속성을 **Box**로 설정하면 사용자가 벽 근처에서 점프할 때 히트박스와 충돌할 수 있습니다. 대신, 이 메시를 **Hull**로 설정하여 정점 수를 줄이면서도 히트박스를 메시의 기하학적 모양에 가깝게 유지합니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-BoxTop.jpg" alt="A wall model with a box hitbox for the top trip. Because the box sticks out, users can unintentionally collide with the top trim." width="100%"/>
     <figcaption>박스</figcaption>
@@ -4635,7 +4674,11 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-Hull.jpg" alt="The same wall model with a hull hitbox for the top trip. Because hull hitbox conforms much closer to the top of the model, allowing users to avoid colliding with the trim." width="100%"/>
     <figcaption>Hull</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|Box|Hull|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-BoxTop.jpg" alt="A wall model with a box hitbox for the top trip. Because the box sticks out, users can unintentionally collide with the top trim." width="100%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-Hull.jpg" alt="The same wall model with a hull hitbox for the top trip. Because hull hitbox conforms much closer to the top of the model, allowing users to avoid colliding with the trim." width="100%"/>|
 
 히트박스가 메시의 모양에 정확히 맞아야 하는 경우, 특히 사용자가 해당 모양과 충돌하는 방식을 정확하게 제어해야 할 때, 히트박스가 메시의 모양에 정확히 맞아야 할 때가 있습니다. 예를 들어, 최종 샘플 레이저 태그 환경에서는 사용자가 전투 포켓에 들어가거나 나갈 수 있도록 문 자체와 충돌하지 않도록 해야 합니다.
 
@@ -5188,14 +5231,17 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 또한, 이 섹션의 기술은 샘플 에셋 라이브러리의 소품을 왼쪽 및 오른쪽 전투 포켓에 적용하여 환경에 캐릭터를 추가하고 사용자가 없더라도 그 자체로 생명을 갖고 있는 것처럼 보이는 신빙성을 제공합니다. 이 과정을 **세트 드레싱**이라고도 하며, 사용자에게 그들이 방문하는 세계에 대한 직접적 및 간접적인 정보를 제공합니다. 예를 들어, 이 섹션의 표지판 및 식물 소품은 [연마된 에셋 개발](../environmental-art/develop-polished-assets.md)에서 샘플 아트 스타일을 강화하고, 사용자가 첨단 기술 환경에 있지만 여전히 유기 생명을 우선시하는 장소에 있음을 알립니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-Intro2.jpg" width="100%"/>
   </figure>
   <figure>
     <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-Intro3.jpg" width="100%"/>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|<img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-Intro2.jpg" width="100%"/>|<img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-Intro3.jpg" width="100%"/>|
+|---|---|
 
 <Tabs>
   <TabItem key = "1" label="자신만의 만들기">
@@ -6909,14 +6955,17 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 고체 모델링 도구를 사용하는 방법을 알게 되었으므로, 다양한 외부, 재료, 식물 종류 및 트림 조각을 사용하여 다양한 유형의 화분을 실험해 볼 수 있습니다. 예를 들어, 최종 샘플 레이저 태그 환경 내의 다른 변형 화분은 'L' 모양을 만들거나, **블록** 부품과 흰색 트림을 함께 레이어링하여 맵의 중앙에서 더 높은 덮개를 제공합니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Construct Your World/Planters-9.jpg" width="100%"/>
   </figure>
   <figure>
     <img src="../img/05_Roblox_tutorial/Construct Your World/Planters-10.jpg" width="100%"/>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|<img src="../img/05_Roblox_tutorial/Construct Your World/Planters-9.jpg" width="100%"/>|<img src="../img/05_Roblox_tutorial/Construct Your World/Planters-10.jpg" width="100%"/>|
+|---|---|
 
 <img src="../img/05_Roblox_tutorial/Construct Your World/Planters-11.jpg" width="100%"/>
 
@@ -8544,6 +8593,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
   </figure>
 </GridContainer>
 
+|동적 구름 없이|기본 동적 구름과 함께|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-Intro1.jpg" width="100%"/>|<img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-Intro2.jpg" width="100%"/>|
+
 <Tabs>
   <TabItem key="1" label="직접 만들기">
 
@@ -8554,9 +8607,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    1. **지형(Terrain)** 객체 위에 마우스를 올리고 **⊕** 버튼을 클릭합니다. 컨텍스트 메뉴가 표시됩니다.
    1. 컨텍스트 메뉴에서 **구름(Clouds)** 객체를 삽입합니다.
 
-      <img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-1.jpg" width="40%"/
-
->
+      <img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-1.jpg" width="40%"/>
 
 2. **구름(Clouds)** 객체를 선택한 후 **속성(Properties)** 창에서,
    1. **덮개(Cover)**를 **0**(구름 없음)에서 **1**(전체 구름 덮개) 사이의 값으로 설정합니다.
@@ -8911,7 +8962,7 @@ Roblox 엔진이 대부분의 최적화 작업을 처리하지만, [Microprofile
 
 물리 및 렌더링 매개변수를 수정할 때, 개발 프로세스의 끝 부분에서 모든 매개변수를 검토하여 미적 목표와 게임 플레이 요구 사항을 유지하면서 최적화할 수 있는 매개변수를 확인하는 것이 유용합니다. 예를 들어, 게임 플레이 영역의 가장자리에 있는 초목에 대해 `Class.BasePart.CastShadow` 속성을 비활성화하여 사용자의 게임 플레이나 시각적 경험에 방해되지 않으면서 성능을 절약할 수 있습니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Optimize Your Experience/ReviewingParameters-Disabled.jpg" alt="An outdoor view of the sample laser tag experience that casts shadows." width="100%"/>
     <figcaption>`Class.BasePart.CastShadow` = 비활성화됨</figcaption>
@@ -8920,7 +8971,11 @@ Roblox 엔진이 대부분의 최적화 작업을 처리하지만, [Microprofile
     <img src="../img/05_Roblox_tutorial/Optimize Your Experience/ReviewingParameters-Enabled.jpg" alt="An outdoor view of the sample laser tag experience that doesn't cast shadows. There is almost no difference in this view, but it improves performance." width="100%"/>
     <figcaption>`Class.BasePart.CastShadow` = 활성화됨</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|`CastShadow` = 비활성화됨|`CastShadow` = 활성화됨|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Optimize Your Experience/ReviewingParameters-Disabled.jpg" alt="An outdoor view of the sample laser tag experience that casts shadows." width="100%"/>|<img src="../img/05_Roblox_tutorial/Optimize Your Experience/ReviewingParameters-Enabled.jpg" alt="An outdoor view of the sample laser tag experience that doesn't cast shadows. There is almost no difference in this view, but it improves performance." width="100%"/>|
 
 #### 비본질적 콘텐츠 제거
 
@@ -8963,14 +9018,17 @@ Roblox 엔진이 대부분의 최적화 작업을 처리하지만, [Microprofile
 
 예를 들어, 샘플 환경의 화분을 고려해 보십시오. 엔진은 카메라에 가장 가까운 식물에서부터 야외 공간에 가장 가까운 식물까지의 잎 사이의 투명 영역을 레이어로 렌더링해야 하며, 이는 수십만 개의 오버드로우 픽셀에 해당합니다. 이러한 영향을 완화하기 위해, 환경 내 모든 반투명 객체의 레이아웃을 검토하고 특히 화면의 큰 영역에서 너무 많은 레이어가 겹치는 부분이 없도록 하는 것이 중요합니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Optimize Your Experience/LayeredTransparencies-Left.jpg" alt="A Rthro avatar facing a planter with multiple plants with transparency between the leaves." width="100%"/>
   </figure>
   <figure>
     <img src="../img/05_Roblox_tutorial/Optimize Your Experience/LayeredTransparencies-Right.jpg" alt="A side view of the Rthro avatar facing a planter with multiple plants with transparency between the leaves, and example layers of overdrawn pixels are highlighted to show where there is overdrawn in the environment." width="100%"/>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|<img src="../img/05_Roblox_tutorial/Optimize Your Experience/LayeredTransparencies-Left.jpg" alt="A Rthro avatar facing a planter with multiple plants with transparency between the leaves." width="100%"/>|<img src="../img/05_Roblox_tutorial/Optimize Your Experience/LayeredTransparencies-Right.jpg" alt="A side view of the Rthro avatar facing a planter with multiple plants with transparency between the leaves, and example layers of overdrawn pixels are highlighted to show where there is overdrawn in the environment." width="100%"/>|
+|---|---|
 
 모든 콘텐츠를 검토하여 모든 장치에서 최적화되었는지 확인하면, 이제 경험을 게시할 준비가 된 것입니다!
 
@@ -9131,7 +9189,7 @@ end
 
 사용자 정의 포스 필드는 새로운 `Class.ParticleEmitter`가 아닌 GUI이므로 `ForceFieldClientVisuals` 스크립트는 각 플레이어의 1인칭 시각에만 영향을 미치며, 다른 플레이어를 볼 때는 3인칭 시각에 기본 Roblox 외관이 유지됩니다. 포스 필드를 수정하는 방법에 대한 자세한 내용은 `Class.ForceField.Visible`을 참조하십시오.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Spawning and Respawning/tutorial-gs-hex.png" alt="First-person force field visuals include a futuristic hexagonal grid on the perimeter of the screen." width="100%"/>
     <figcaption>1인칭 포스 필드 시각 효과</figcaption>
@@ -9140,7 +9198,12 @@ end
     <img src="../img/05_Roblox_tutorial/Spawning and Respawning/tutorial-gs-field.png" alt="Third-person force field visuals include a blue sparkling orb around the player spawning into the experience." width="100%"/>
     <figcaption>3인칭 포스 필드 시각 효과</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|1인칭 포스 필드 시각 효과|3인칭 포스 필드 시각 효과|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Spawning and Respawning/tutorial-gs-hex.png" alt="First-person force field visuals include a futuristic hexagonal grid on the perimeter of the screen." width="100%"/>|<img src="../img/05_Roblox_tutorial/Spawning and Respawning/tutorial-gs-field.png" alt="Third-person force field visuals include a blue sparkling orb around the player spawning into the experience." width="100%"/>|
+
 
 포스 필드는 플레이어가 스폰 및 리스폰하는 동안 적 플레이어로부터 피해를 입지 않도록 충분한 시간을 제공하지만, 결국 레이저 태그 메인 게임 플레이를 위해 사라져야 합니다. 포스 필드 제거를 처리하는 스크립트는 **ReplicatedStorage** > **scheduleDestroyForceField**에 있으며, 세 가지 고유한 조건을 확인합니다:
 
@@ -9251,7 +9314,7 @@ end
 
 이 동작을 테스트하려면 <kbd>Esc</kbd> 키를 누르고, **설정** 탭으로 이동한 다음 **캐릭터 리셋** 버튼을 클릭할 수 있습니다. 리스폰 화면을 트리거하면 이동하거나, 카메라를 회전하거나, 블래스터를 쏠 수 없다는 것을 알 수 있습니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Spawning and Respawning/Reset-Character-Button.png" alt="Roblox's settings menu with the Reset Character button highlighted." width="80%"/>
     <figcaption>캐릭터 리셋 버튼</figcaption>
@@ -9260,7 +9323,12 @@ end
     <img src="../img/05_Roblox_tutorial/Spawning and Respawning/tutorial-gs-tagged-out.png" alt="The respawn screen displays as a player respawns back into the match." width="100%"/>
     <figcaption>리스폰 화면</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|캐릭터 리셋 버튼|리스폰 화면|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Spawning and Respawning/Reset-Character-Button.png" alt="Roblox's settings menu with the Reset Character button highlighted." width="80%"/>|<img src="../img/05_Roblox_tutorial/Spawning and Respawning/tutorial-gs-tagged-out.png" alt="The respawn screen displays as a player respawns back into the match." width="100%"/>|
+
 
 이 스크립트는 실제로 캐릭터를 리스폰하지 않고, 캐릭터의 동작을 중지시키고, 서버가 캐릭터를 리스폰하고 있다는 시각적 피드백을 제공합니다. 예를 들어, **ServerScriptService** > **SetupHumanoid** > **setupHumanoidAsync** > **onHumanoidDied**를 확인하면, 스크립트는 `PlayerState`를 `TaggedOut`로 설정하고, 시각적 표시기를 추가합니다. 실제 리스폰 로직은 Roblox의 내장 동작입니다.
 
