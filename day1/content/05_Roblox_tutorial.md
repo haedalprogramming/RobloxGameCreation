@@ -2143,6 +2143,7 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 두 플랫폼 유형 모두 `MeshPart` 객체입니다.
 
+<!--
 <GridContainer numColumns="2">
   <figure>
     <img width="100%" img src="../img/05_Roblox_tutorial/Sea-Stacks.jpg.webp" alt="A comparison of a single sea stack next to multiple sea stacks that are stacked on top of each other." />
@@ -2151,6 +2152,11 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
     <img width="100%" img src="../img/05_Roblox_tutorial/Completed-Sea-Stack.jpg.webp" alt="A demonstration of a SeaStackCaveMesh stacked on top of a PlatformB on top of a SeaStackMesh." />
   </figure>
 </GridContainer>
+-->
+
+|A comparison of a single sea stack next to multiple sea stacks that are stacked on top of each other.|A demonstration of a SeaStackCaveMesh stacked on top of a PlatformB on top of a SeaStackMesh.|
+|---|---|
+|<img width="100%" img src="../img/05_Roblox_tutorial/Sea-Stacks.jpg.webp" alt="A comparison of a single sea stack next to multiple sea stacks that are stacked on top of each other." />|<img width="100%" img src="../img/05_Roblox_tutorial/Completed-Sea-Stack.jpg.webp" alt="A demonstration of a SeaStackCaveMesh stacked on top of a PlatformB on top of a SeaStackMesh." />|
 
 <Tabs>
   <TabItem key = "1" label="Apply Your Own Sea Stacks">
@@ -4122,14 +4128,18 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 예를 들어, 다음 사용자가 "빨간색" 팀에 속해 있을 때, 빨간색 바닥 위를 걷고 노란색 벽이 오른쪽에 있으면, 사용자는 내부 주요 레인에 있으며 자신의 스폰 존을 향해 이동하고 있음을 알 수 있습니다. 반대로, 파란색 바닥 위를 걷고 노란색 벽이 왼쪽에 있으면, 사용자는 내부 레인에 있으며 적 팀의 스폰 존을 향해 이동하고 있음을 알 수 있습니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Placeholder-Left.jpg" alt="A Rthro avatar standing on a red floor with a yellow wall to their right. This color configuration informs the user that they're in the interior primary lane and moving toward the red spawn zone." width="100%"/>
   </figure>
   <figure>
     <img src="../img/05_Roblox_tutorial/Placeholder-Right.jpg" alt="A Rthro avatar standing on a blue floor with a yellow wall to their left. This color configuration informs the user that they're in the interior primary lane and moving toward the blue spawn zone." width="100%"/>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|<img src="../img/05_Roblox_tutorial/Placeholder-Left.jpg" alt="A Rthro avatar standing on a red floor with a yellow wall to their right. This color configuration informs the user that they're in the interior primary lane and moving toward the red spawn zone." width="100%"/>|<img src="../img/05_Roblox_tutorial/Placeholder-Right.jpg" alt="A Rthro avatar standing on a blue floor with a yellow wall to their left. This color configuration informs the user that they're in the interior primary lane and moving toward the blue spawn zone." width="100%"/>|
+|---|---|
+
 
 플레이스홀더 재료를 적용하려면:
 
