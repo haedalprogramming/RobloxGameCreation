@@ -342,8 +342,10 @@ Roblox Studio에서는 Lua 코드의 줄이 스크립트에 저장됩니다. 이
 #### 스크립트 만들기
 스크립트는 일반적으로 스크립트를 보관하기 위해 만들어진 특별한 폴더인 ServerScriptService에서 생성됩니다.
 
-1. Explorer에서 ServerScriptService 위에 마우스를 올리면 + 버튼이 나타납니다.<br>![](../img/04_Lua_programmimg_basic/hover-over-serverscriptservice_400x400.png.webp)
-2. + 버튼을 클릭하고 Script를 선택합니다. 새로운 스크립트가 생성되고 스크립트 편집기가 열립니다.
+1. Explorer에서 ServerScriptService 위에 마우스를 올리면 `+` 버튼이 나타납니다.<br>
+   <!-- ![](../img/04_Lua_programmimg_basic/hover-over-serverscriptservice_400x400.png.webp) -->
+   <image src="../img/04_Lua_programmimg_basic/hover-over-serverscriptservice_400x400.png.webp" width=50%>
+2. `+` 버튼을 클릭하고 Script를 선택합니다. 새로운 스크립트가 생성되고 스크립트 편집기가 열립니다.
 3. 스크립트를 마우스 오른쪽 버튼으로 클릭하고 이름 바꾸기를 선택합니다. 스크립트 이름을 PracticeScript로 변경합니다. 스크립트에 이름을 지정하면 여러분과 팀원들이 각 스크립트의 역할을 기억하는 데 도움이 됩니다.
 
 #### Hello World
@@ -490,7 +492,9 @@ print("I like " .. firstAnimal .. " and " .. secondAnimal)
 속성 창은 객체의 속성에 대해 배울 수 있는 도구입니다. 이를 사용하여 파트의 속성을 확인해 보십시오.
 
 1. 파트를 선택하십시오.
-2. 오른쪽 아래의 속성 창에서 색상, 크기, 재질 및 투명도와 같은 변경 가능한 다양한 속성을 확인하십시오. 또한, 이 창 내에서 스크립트를 통해 대부분의 속성을 변경할 수 있습니다.<br>![](../img/04_Lua_programmimg_basic/part-properties_400.png.webp)
+2. 오른쪽 아래의 속성 창에서 색상, 크기, 재질 및 투명도와 같은 변경 가능한 다양한 속성을 확인하십시오. 또한, 이 창 내에서 스크립트를 통해 대부분의 속성을 변경할 수 있습니다.<br>
+   <!-- ![](../img/04_Lua_programmimg_basic/part-properties_400.png.webp) -->
+   <image src="../img/04_Lua_programmimg_basic/part-properties_400.png.webp" width=50%>
 3. 속성 창이 보이지 않으면 뷰 탭으로 이동하여 속성 버튼을 클릭하십시오.
 
 #### 스크립트에 주석 추가하기
@@ -509,7 +513,8 @@ print("I like " .. firstAnimal .. " and " .. secondAnimal)
 #### 파트 위치 찾기
 
 파트를 변경하려면 파트의 위치를 설명할 수 있어야 합니다. Explorer는 위치를 참조하는 데 탁월한 도구입니다. 이 경우 PracticePart는 Workspace 아래에 있습니다.
-![](../img/04_Lua_programmimg_basic/practice-part_400.png.webp)
+<!-- ![](../img/04_Lua_programmimg_basic/practice-part_400.png.webp) -->
+<image src="../img/04_Lua_programmimg_basic/practice-part_400.png.webp" width=50%>
 
 이제 파트의 위치를 알고 있으므로, 파트의 위치를 스크립트가 이해할 수 있는 형식으로 번역해야 합니다.
 
@@ -582,7 +587,8 @@ ServerScriptService에서 스크립트를 실행하는 대신, 파트에 스크�
 부모와 자식 관계를 설명하기 위해, 색상이 변하는 단일 파트로 시작한 다음 여러 파트에 스크립트를 복제할 것입니다.
 
 새 파트를 만들고 이름을 변경하십시오. 이 레슨에서는 ColorPart를 사용합니다.
-![](../img/04_Lua_programmimg_basic/color-changer_400x216.png.webp)
+<!-- ![](../img/04_Lua_programmimg_basic/color-changer_400x216.png.webp) -->
+<image src="../img/04_Lua_programmimg_basic/color-changer_400x216.png.webp" width=50%>
 
 파트를 마우스 오른쪽 버튼으로 클릭하고 Insert Object > New Script를 선택하십시오. 스크립트 이름을 ColorChanger로 변경하십시오.
 
@@ -599,7 +605,10 @@ colorPart.Color = Color3.fromRGB(50, 240, 255)
 #### 부모와 자식 관계
 
 부모는 스크립트나 파트와 같은 객체가 그 아래에 붙어 있는 모든 것을 의미합니다. 부모 아래에 있는 모든 것은 자식입니다. 아래 예에서, ColorPart는 부모이고, ColorChanger는 자식입니다.
-![](../img/04_Lua_programmimg_basic/color-changer_400x216.png.webp)
+
+<!-- ![](../img/04_Lua_programmimg_basic/color-changer_400x216.png.webp) -->
+
+<image src="../img/04_Lua_programmimg_basic/color-changer_400x216.png.webp" width=50%>
 
 현재 스크립트로는 ColorPart라는 단일 파트의 색상만 변경할 수 있습니다. 어떤 파트의 색상이든 변경하려면 스크립트의 부모 객체에서 작동하도록 코드를 설계할 수 있습니다. 코드 script.Parent는 계층 구조를 따라 올라가 스크립트가 붙어 있는 객체를 찾습니다.
 
@@ -623,7 +632,7 @@ colorPart.Color = Color3.fromRGB(50, 240, 255)
 
 게임을 실행하여 모든 파트의 색상이 변경되는지 확인하십시오.
 
-<video src="../img/04_Lua_programmimg_basic/scriptParent_finalExample_web.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/scriptParent_finalExample_web.mp4" width="100%" controls></video>
 
 #### 요약
 
@@ -866,7 +875,7 @@ trap.Touched:Connect(onTouch)
 
 다시 테스트하고 파트를 터치했을 때 어떤 일이 발생하는지 확인하십시오. 아바타의 발이나 팔이 사라질 것입니다. 파트가 아바타의 머리나 목에 닿으면 완전히 파괴될 수도 있습니다.
 
-<video src="../img/04_Lua_programmimg_basic/parameters-and-events_trap.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/parameters-and-events_trap.mp4" width="100%" controls></video>
 
 #### 요약
 
@@ -1283,7 +1292,7 @@ end
 
 플레이어의 체력을 감소시키는 함정은 재미있는 게임 플레이 요소이며, 조건문을 사용하여 코딩할 수 있습니다. 조건문을 사용하여 플레이어가 파트를 터치하면 체력을 0으로 설정하는 파트를 만들어 보세요.
 
-<video src="../img/04_Lua_programmimg_basic/trap-exampleFinal.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/trap-exampleFinal.mp4" width="100%" controls></video>
 
 #### 함정 설정하기
 
@@ -1912,7 +1921,7 @@ end
 
 이 프로젝트에서는 조건문을 사용하여 파트를 터치했을 때 파트의 색상에 따라 리더보드에 점수를 부여하거나 차감하는 파트를 만듭니다. 파트가 파란색이면 플레이어에게 약간의 점수를 줍니다. 파트가 초록색이면 많은 점수를 줍니다. 마지막으로 파트가 빨간색이면 점수를 차감합니다.
 
-<video src="../img/04_Lua_programmimg_basic/coding3_colorPointBlockFinalizedExample.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/coding3_colorPointBlockFinalizedExample.mp4" width="100%" controls></video>
 
 #### 프로젝트 설정하기
 
@@ -2201,13 +2210,13 @@ pointPart:Destroy()
 
 플레이테스트를 통해 각 색상이 예상대로 점수를 부여하는지 확인합니다. 세 가지 조건을 모두 테스트하세요.
 
-<video src="../img/04_Lua_programmimg_basic/colorPoint_showPointChange_web.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/colorPoint_showPointChange_web.mp4" width="100%" controls></video>
 
 #### 플레이어 피드백 제공
 
 PointPart는 작동하지만, 플레이어가 리더보드를 보고 있지 않으면 변화를 눈치채지 못할 수 있습니다. 이를 해결하기 위해 PointPart가 파괴될 때 파티클을 생성합니다.
 
-<video src="../img/04_Lua_programmimg_basic/colorPoint_showParticles_web.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/colorPoint_showParticles_web.mp4" width="100%" controls></video>
 
 1. 파티클 효과는 터치 시 파트의 색상과 동일한 색상이 됩니다. 색상이 변수에 저장되었기 때문에 쉽게 재사용할 수 있습니다.
 2. `givePoints()`의 하단에 새로운 ParticleEmitter 인스턴스를 만듭니다. 인스턴스 이름이 정확히 표시된 대로 입력되었는지 확인합니다.
@@ -2362,7 +2371,7 @@ end
 
 컴퓨터 과학에서 반복문은 특정 조건이 충족될 때까지 명령 세트를 반복하는 코딩 패턴입니다. 이를 연습하기 위해 색상이 무한히 변경되는 파트를 코딩합니다. 이후의 레슨에서는 반복을 멈추는 방법을 배울 것입니다.
 
-<video src="../img/04_Lua_programmimg_basic/loops-and-parts-finishedPart.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/loops-and-parts-finishedPart.mp4" width="100%" controls></video>
 
 #### 파트 및 스크립트 설정
 
@@ -2492,7 +2501,7 @@ end
 
 코드를 테스트하고 색상이 변경되는지 확인합니다.
 
-<video src="../img/04_Lua_programmimg_basic/loops-and-parts-finishedPart.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/loops-and-parts-finishedPart.mp4" width="100%" controls></video>
 
 #### 문제 해결 참고 사항
 
@@ -2671,15 +2680,19 @@ end
 For 루프를 연습하기 위해, 서서히 밝아졌다가 어두워지는 램프를 만들 것입니다. 이 스크립트는 프로젝트의 다른 조명, 예를 들어 가로등이나 빛나는 크리스탈에도 적용할 수 있습니다.
 
 
-<video src="../img/04_Lua_programmimg_basic/glowing-light-finished.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/glowing-light-finished.mp4" width="100%" controls></video>
 
 #### 파트 및 스크립트 설정
 
 램프는 라이트와 스크립트가 첨부된 파트입니다.
 
-1. 빛을 더 쉽게 볼 수 있도록 게임 시간을 밤으로 변경합니다. Explorer > Lighting > ClockTime을 0으로 변경합니다.<br>![](../img/04_Lua_programmimg_basic/glowing-lights-setClockTime.png.webp)
+1. 빛을 더 쉽게 볼 수 있도록 게임 시간을 밤으로 변경합니다. Explorer > Lighting > ClockTime을 0으로 변경합니다.<br>
+   <!-- ![](../img/04_Lua_programmimg_basic/glowing-lights-setClockTime.png.webp) -->
+   <image src="../img/04_Lua_programmimg_basic/glowing-lights-setClockTime.png.webp" width=50%>
 2. Lamp라는 새 파트 또는 모델을 만듭니다.<br>![](../img/04_Lua_programmimg_basic/glowing-lights-lightPart.jpg.webp)
-3. Lamp를 선택하고, PointLight 또는 SpotLight와 같은 라이트를 추가합니다. 라이트의 밝기 속성을 사용하여 빛나는 램프를 만듭니다.<br>![](../img/04_Lua_programmimg_basic/florLoop_lightAdded.png.webp)
+3. Lamp를 선택하고, PointLight 또는 SpotLight와 같은 라이트를 추가합니다. 라이트의 밝기 속성을 사용하여 빛나는 램프를 만듭니다.<br>
+   <!-- ![](../img/04_Lua_programmimg_basic/florLoop_lightAdded.png.webp) -->
+   <image src="../img/04_Lua_programmimg_basic/florLoop_lightAdded.png.webp" width=50%>
 4. Lamp에 GlowScript라는 새 스크립트를 추가합니다. 스크립트에서 램프 파트와 포인트 라이트를 저장할 변수를 만듭니다.
 
     ```lua
@@ -2740,7 +2753,7 @@ end
 
 게임을 실행하여 매초 라이트가 밝아지는 것을 확인합니다.
 
-<video src="../img/04_Lua_programmimg_basic/glowing-light-increase.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/glowing-light-increase.mp4" width="100%" controls></video>
 
 프로젝트의 조명에 따라 밝기 변수를 조정하거나 환경 조명을 변경해야 할 수 있습니다.
 
@@ -2764,7 +2777,7 @@ end
 
 게임을 실행하여 라이트가 밝아졌다가 어두워지는 것을 확인합니다.
 
-<video src="../img/04_Lua_programmimg_basic/glowing-light-singleLoop.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/glowing-light-singleLoop.mp4" width="100%" controls></video>
 
 #### 빛을 반복하기
 
@@ -2796,7 +2809,7 @@ end
 
 게임을 실행하여 라이트가 계속 밝아졌다가 어두워지는 것을 확인합니다.
 
-<video src="../img/04_Lua_programmimg_basic/glowing-light-finished.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/glowing-light-finished.mp4" width="100%" controls></video>
 
 #### 완성된 라이트 스크립트
 
@@ -2834,7 +2847,7 @@ end
 
 이 프로젝트는 반복문을 실용적인 방식으로 사용하는 또 다른 예입니다. 이 다리는 플레이어가 버튼을 터치하면 일정 시간 동안 걸을 수 있게 되고, 시간이 지나면 다리가 사라집니다. 타이머를 만들고 플레이어에게 남은 시간을 보여주기 위해 for 루프를 사용할 것입니다.
 
-<video src="../img/04_Lua_programmimg_basic/timedBridgePresentation.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/timedBridgePresentation.mp4" width="100%" controls></video>
 
 #### 프로젝트 설정
 
@@ -2859,7 +2872,9 @@ end
 
 다리를 건널 때 플레이어는 다리가 사라지기 전 남은 시간을 볼 필요가 있습니다. 이미지나 텍스트를 표시하는 한 가지 방법은 Surface GUI라는 객체를 파트에 추가하는 것입니다. Surface GUI는 게임 내 표지판, 사용자 정의 체력 바 및 인벤토리 시스템을 만드는 데도 사용할 수 있습니다. 이 튜토리얼에서는 이를 빠르게 다루지만, 자세한 내용은 튜토리얼 섹션에서 확인할 수 있습니다.
 
-1. TimerDisplay를 선택하고 SurfaceGui를 추가합니다. 그런 다음, Surface Gui에 TextLabel을 추가합니다.<br>![](../img/04_Lua_programmimg_basic/forLoopBridge_addTextLabel.png.webp)
+1. TimerDisplay를 선택하고 SurfaceGui를 추가합니다. 그런 다음, Surface Gui에 TextLabel을 추가합니다.<br>
+   <!-- ![](../img/04_Lua_programmimg_basic/forLoopBridge_addTextLabel.png.webp) -->
+   <image src="../img/04_Lua_programmimg_basic/forLoopBridge_addTextLabel.png.webp" width=50%>
 2. Surface GUI를 선택합니다. 속성에서 다음 변경 사항을 수행합니다:
    - Face를 변경하여 플레이어가 바라보는 타이머의 앞면에 텍스트 라벨이 보이도록 합니다.
 3. TextLabel을 선택합니다. 속성에서 다음 변경 사항을 수행합니다:
@@ -3003,13 +3018,13 @@ end
 
 게임을 실행합니다. 버튼을 터치하면 다리가 나타나고 타이머가 시작되어 완료됩니다.
 
-<video src="../img/04_Lua_programmimg_basic/forLoopBridge-finishedCountdown.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/forLoopBridge-finishedCountdown.mp4" width="100%" controls></video>
 
 #### 다리 재시작 방지
 
 버튼 위를 움직이면 타이머가 계속 재시작됩니다. 
 
-<video src="../img/04_Lua_programmimg_basic/forLoop_outputError.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/forLoop_outputError.mp4" width="100%" controls></video>
 
 이는 버튼을 터치할 때마다 for 루프가 호출되어 처음부터 다시 시작되기 때문입니다. 타이머가 계속 재시작되지 않도록 하려면, boolean이라는 변수 유형을 추가하여 startTimer()가 다시 호출될 수 있는지 여부를 제어합니다.
 
@@ -3074,7 +3089,7 @@ timerText.Text = ""
 timerActive = false
 ```
 
-<video src="../img/04_Lua_programmimg_basic/timedBridgePresentation.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/timedBridgePresentation.mp4" width="100%" controls></video>
 
 #### 완료된 타이머 다리 스크립트
 
@@ -3191,7 +3206,7 @@ end
 
 각 반복문은 자체 코드 세트를 가지므로 다른 작업을 담당할 수 있습니다. 중첩 반복문은 객체가 생성되는 위치를 변경하여 비디오와 같은 타워를 생성할 수 있습니다. 너비, 길이 및 높이에 따라 큐브가 생성되는 위치를 제어하는 세 개의 반복문이 있습니다.
 
-<video src="../img/04_Lua_programmimg_basic/LoopingTower2_Compressed.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/LoopingTower2_Compressed.mp4" width="100%" controls></video>
 
 #### 큐브 생성 스크립트 코딩
 
@@ -3399,7 +3414,7 @@ end
 2. 객체를 ServerStorage에 배치합니다.
 3. 중첩 반복문 예제에서 PartMaker를 수정하여 파트 대신 객체를 사용합니다.
 
-<video src="../img/04_Lua_programmimg_basic/CupCakeBloopers_Compressed.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/CupCakeBloopers_Compressed.mp4" width="100%" controls></video>
 
 컵케이크를 사용하는 코드 솔루션이 포함되어 있습니다.
 
@@ -3494,7 +3509,7 @@ local myArray = {"item1", "item2", 10, workspace.Part, myVariable}
 
 배열을 탐구하기 위해, 클릭 시 다른 대사를 보여주는 NPC(비 플레이어 캐릭터)를 작업합니다.
 
-<video src="../img/04_Lua_programmimg_basic/introArrays_projectTotal_optimized.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/introArrays_projectTotal_optimized.mp4" width="100%" controls></video>
 
 이 프로젝트에서는 부분적인 스크립트와 프롬프트 감지기를 포함한 미리 만든 NPC 모델을 사용하지만 대사가 없습니다.
 
@@ -3607,7 +3622,7 @@ end
 
 플레이테스트하고 NPC를 클릭하여 배열의 각 대사 문자열을 확인합니다.
 
-<video src="../img/04_Lua_programmimg_basic/introArray_showDialogIndexes_optimized.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/introArray_showDialogIndexes_optimized.mp4" width="100%" controls></video>
 
 스크립트가 배열의 끝에 도달하면 Output 창에 오류가 발생하는 것을 알 수 있습니다.
 
@@ -3655,7 +3670,7 @@ end
 
 플레이하고 대사가 순환하고 재시작되는 것을 확인합니다.
 
-<video src="../img/04_Lua_programmimg_basic/introArrays_showFullLoopIndexes_optimized.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/introArrays_showFullLoopIndexes_optimized.mp4" width="100%" controls></video>
 
 #### 요약
 
@@ -3725,7 +3740,7 @@ end
 
 루프를 통해 배열을 탐색하려면 파트를 배열에 넣고 하나씩 사라지게 하는 다리 경로를 만드세요.
 
-<video src="../img/04_Lua_programmimg_basic/disappearingHero_16_9web.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/disappearingHero_16_9web.mp4" width="100%" controls></video>
 
 #### 배열을 통한 루프
 프로젝트를 위해 사라지게 할 세 개의 파트를 찾거나 만듭니다. 모든 파트는 앵커되어 있어야 합니다.
@@ -3795,7 +3810,7 @@ end
 
 시간이 지남에 따라 경로의 파트가 사라지는지 확인합니다.
 
-<video src="../img/04_Lua_programmimg_basic/showPathDisappearFirst_web.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/showPathDisappearFirst_web.mp4" width="100%" controls></video>
 
 ##### 문제 해결 팁
 만약 다리가 사라지지 않는다면, 다음의 가능한 문제를 확인하세요:
@@ -3835,7 +3850,7 @@ end
 
 프로젝트를 테스트하여 모든 파트가 사라진 후 다시 나타나는지 확인합니다.
 
-<video src="../img/04_Lua_programmimg_basic/showPathDisappearIndexed_web.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/showPathDisappearIndexed_web.mp4" width="100%" controls></video>
 
 #### while 루프로 반복
 파트가 사라졌다가 나타나지만, 한 번만 실행됩니다. 코드를 계속 반복하려면 모든 코드를 while 루프 안에 중첩합니다.
@@ -3866,7 +3881,7 @@ end
 
 모든 파트가 사라진 후 다시 나타나는지 확인합니다.
 
-<video src="../img/04_Lua_programmimg_basic/showPathDisappearIndexed_web.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/showPathDisappearIndexed_web.mp4" width="100%" controls></video>
 
 ##### 완성된 스크립트
 ```lua
@@ -4641,7 +4656,10 @@ Coding Algorithms | 알고리즘은 결과를 결정하는 일련의 단계들�
 서버 사이드 스크립트에서 사용될 때는 ServerScriptService에, 클라이언트 사이드 로컬 스크립트(GUI 상호작용 등)에서 사용될 때는 ReplicatedStorage에 모듈 스크립트를 배치하는 것이 일반적입니다.
 
 ServerStorage에 모듈 스크립트를 생성합니다.
-![](../img/04_Lua_programmimg_basic/create-module-script.png.webp)
+
+<!-- ![](../img/04_Lua_programmimg_basic/create-module-script.png.webp) -->
+
+<image src="../img/04_Lua_programmimg_basic/create-module-script.png.webp" width=50%>
 
 ##### 모듈 스크립트의 구조
 모든 모듈 스크립트는 아래 코드로 시작됩니다:
@@ -4788,7 +4806,7 @@ Roblox에서 모듈 스크립트는 코드를 조직하고 재사용하는 방�
 ![](../img/04_Lua_programmimg_basic/creating-modules-hero.jpeg.webp)
 모듈 스크립트에 대한 지식을 적용하기 위해 플레이어가 열쇠를 주워 보물 상자를 열 수 있게 하는 모듈 스크립트를 만듭니다.
 
-<video src="../img/04_Lua_programmimg_basic/final-example.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/final-example.mp4" width="100%" controls></video>
 
 #### 프로젝트 설정
 이 프로젝트는 리더보드와 열쇠 및 보물 상자를 위한 스크립트가 포함된 시작 맵을 포함합니다.
@@ -4904,7 +4922,7 @@ end
 
 프로젝트를 실행하고 키를 터치하면 키가 삭제되는지 확인합니다.
 
-<video src="../img/04_Lua_programmimg_basic/get-first-key.mp4" width="320" height="240" controls></video>
+<video src="../img/04_Lua_programmimg_basic/get-first-key.mp4" width="100%" controls></video>
 
 ##### 문제 해결 팁
 - 문제: "Infinite yield possible"이라는 오류 메시지가 표시됨.
