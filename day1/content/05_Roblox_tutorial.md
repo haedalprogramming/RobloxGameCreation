@@ -4215,7 +4215,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 타일 가능한 텍스처의 가장 기본적인 규칙은 **이음매가 없어야 한다**는 것입니다. 그렇지 않으면 텍스처가 표면에서 시작되고 끝나는 지점이 사용자에게 눈에 띄어 경험에 대한 몰입감을 깨뜨릴 수 있습니다. 따라서 타일 가능한 텍스처는 실제 세계에서 이음매가 없는 잔디나 돌과 같은 자연 재료에 잘 어울립니다. 실제로 샘플 레이저 태그 경험에서는 야외 공간을 나타내기 위해 다음 네 가지 유기적인 타일 가능한 텍스처를 사용하며, 이 텍스처를 이 튜토리얼의 [월드 빌딩](../environmental-art/construct-your-world.md) 섹션에서 사용할 수 있습니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/TileableTextures-Moss.png" alt="A sphere part with a tileable moss material applied." width="100%"/>
     <figcaption>Moss</figcaption>
@@ -4224,9 +4224,13 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/TileableTextures-MossFlowers.png" alt="A sphere part with a tileable moss with flowers material applied." width="100%"/>
     <figcaption>MossFlowers</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
 
-<GridContainer numColumns="2">
+|Moss|MossFlowers|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/TileableTextures-Moss.png" alt="A sphere part with a tileable moss material applied." width="100%"/>|<img src="../img/05_Roblox_tutorial/TileableTextures-MossFlowers.png" alt="A sphere part with a tileable moss with flowers material applied." width="100%"/>|
+
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/TileableTextures-MossStones.png" alt="A sphere part with a tileable moss with stones material applied." width="100%"/>
     <figcaption>MossStones</figcaption>
@@ -4235,7 +4239,11 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/TileableTextures-Stones.png" alt="A sphere part with a tileable stones material applied." width="100%"/>
     <figcaption>Stones</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|MossStones|Stones|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/TileableTextures-MossStones.png" alt="A sphere part with a tileable moss with stones material applied." width="100%"/>|<img src="../img/05_Roblox_tutorial/TileableTextures-Stones.png" alt="A sphere part with a tileable stones material applied." width="100%"/>|
 
 이 모든 샘플 타일 가능한 텍스처가 이끼, 꽃 및 돌 요소의 균일한 분포를 가지고 있음을 주목하세요. 만약 큰 돌이나 꽃 패치와 같은 눈에 띄는 요소를 포함하면 사용자는 텍스처가 반복되고 있음을 인식하게 됩니다. 예를 들어, 다음 두 이미지에서 첫 번째 이미지는 눈에 띄는 흙 패치가 있어 텍스처의 반복을 눈에 띄게 합니다. 두 번째 이미지는 이 패치를 훨씬 작게 만들어 텍스처의 요소를 균형 있게 만들어 반복을 덜 눈에 띄게 합니다.
 
