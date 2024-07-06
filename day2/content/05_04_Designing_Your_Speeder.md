@@ -13,7 +13,7 @@
 
 이제 driftspeeder를 조종해봤으니, 직접 설계해볼 차례입니다. speeder는 세 단계로 제작됩니다:
 
-<GridContainer numColumns="3">
+<!-- <GridContainer numColumns="3">
   <figure>
     <img src="../img/05_04_Designing_Your_Speeder/speeder-progress-1.jpeg.webp" />
     <figcaption>1: 본체</figcaption>
@@ -26,13 +26,17 @@
     <img src="../img/05_04_Designing_Your_Speeder/speeder-progress-3.jpeg.webp" />
     <figcaption>3: 장식</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|1: 본체|2: 날개|3: 장식|
+|---|---|---|
+|<img src="../img/05_04_Designing_Your_Speeder/speeder-progress-1.jpeg.webp" />|<img src="../img/05_04_Designing_Your_Speeder/speeder-progress-2.jpeg.webp" />|<img src="../img/05_04_Designing_Your_Speeder/speeder-progress-3.jpeg.webp" />|
 
 ## 부품 구하기
 
 고철장은 세 섹션으로 나누어져 있으며, 각 단계마다 필요한 부품을 구할 수 있습니다. 이 부품들을 결합하고, 회전시키고, 크기를 조정하여 수천 가지의 독특한 디자인을 만들 수 있습니다.
 
-<GridContainer numColumns="3">
+<!-- <GridContainer numColumns="3">
   <figure>
     <img src="../img/05_04_Designing_Your_Speeder/starting-bodies.jpeg.webp" />
     <figcaption>1: 시작 본체</figcaption>
@@ -45,14 +49,18 @@
     <img src="../img/05_04_Designing_Your_Speeder/decorative-parts.jpeg.webp" />
     <figcaption>3: 장식 부품</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|1: 시작 본체|2: 날개 세트|3: 장식 부품|
+|---|---|---|
+|<img src="../img/05_04_Designing_Your_Speeder/starting-bodies.jpeg.webp" />|<img src="../img/05_04_Designing_Your_Speeder/wing-sets.jpeg.webp" />|<img src="../img/05_04_Designing_Your_Speeder/decorative-parts.jpeg.webp" />|
 
 ## 제작 준비하기
 
 부품을 원하는 위치로 이동시키려면 먼저 **충돌**과 **이동 스냅**을 끄세요. 충돌을 끄면 객체가 서로를 통과할 수 있습니다. 스냅을 끄면 객체를 자유롭게 이동시킬 수 있습니다.
 
 1. **Model** 탭에서 **Collisions**를 끕니다. 충돌이 꺼지면 버튼이 회색으로 강조되지 않습니다.
-   <GridContainer numColumns="2">
+   <!--    <GridContainer numColumns="2">
      <figure>
        <img src="../img/05_04_Designing_Your_Speeder/collisions-on.png.webp" />
        <figcaption>소품 사용 시 스냅 끄기</figcaption>
@@ -61,7 +69,11 @@
        <img src="../img/05_04_Designing_Your_Speeder/collisions-off.png.webp" />
        <figcaption>건물 및 도로용 스냅 켜기</figcaption>
      </figure>
-   </GridContainer>
+   </GridContainer> -->
+
+    |소품 사용 시 스냅 끄기|건물 및 도로용 스냅 켜기|
+    |---|---|
+    |<img src="../img/05_04_Designing_Your_Speeder/collisions-on.png.webp" />|<img src="../img/05_04_Designing_Your_Speeder/collisions-off.png.webp" />|
 
 2. Collisions 근처에서 **Move** 스냅이 **꺼져** 있는지 확인하세요.
    <img src="../img/05_04_Designing_Your_Speeder/turn-move-snap-off.png.webp" width="100%" />

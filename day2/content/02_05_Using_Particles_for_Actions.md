@@ -38,7 +38,7 @@
    </Alert>
 
 2. **Burst** 입자의 속성에서 **Texture**를 찾습니다. 아래 제공된 텍스처 ID 중 하나를 복사하여 텍스처 필드에 붙여넣고 <kbd>Enter</kbd>를 누릅니다.
-   <GridContainer numColumns="3">
+  <!--    <GridContainer numColumns="3">
      <figure>
        <img src="../img/02_05_Using_Particles_for_Actions/potion.png.webp" />
        <figcaption>6772766862</figcaption>
@@ -71,7 +71,11 @@
        <img src="../img/02_05_Using_Particles_for_Actions/gem.png.webp" />
        <figcaption>6772766413</figcaption>
      </figure>
-   </GridContainer>
+   </GridContainer> -->
+   |<figure><img src="../img/02_05_Using_Particles_for_Actions/potion.png.webp" /><figcaption>6772766862</figcaption>     </figure>|<figure><img src="../img/02_05_Using_Particles_for_Actions/energy.png.webp" /><figcaption>6772766551</figcaption>     </figure>|<figure><img src="../img/02_05_Using_Particles_for_Actions/heart.png.webp" /><figcaption>5857851618</figcaption>     </figure>|
+   |---|---|---|
+   |<figure><img src="../img/02_05_Using_Particles_for_Actions/paw.png.webp" /><figcaption>6803084085</figcaption>     </figure>|<figure><img src="../img/02_05_Using_Particles_for_Actions/star.png.webp" /><figcaption>6772783963</figcaption>     </figure>|<figure><img src="../img/02_05_Using_Particles_for_Actions/leaf.png.webp" /><figcaption>6703369286</figcaption>     </figure>|
+   |<figure><img src="../img/02_05_Using_Particles_for_Actions/ticket.png.webp" /><figcaption>6749057157</figcaption>     </figure>|<figure><img src="../img/02_05_Using_Particles_for_Actions/gem.png.webp" /><figcaption>6772766413</figcaption>     </figure>| |
 
    티켓 텍스처를 사용하면 아래와 같이 보일 것입니다.
 
@@ -117,27 +121,27 @@ ParticleEmitter는 **SpreadAngle** 속성에 의해 제어되는 두 평면을 �
    </thead>
    <tbody>
    <tr>
-   <td>**LightEmission**</td>
+   <td>LightEmission</td>
    <td>0.4</td>
    <td>희미한 빛을 추가합니다. 최대 값은 1입니다.</td>
    </tr>
    <tr>
-   <td>**Drag**</td>
+   <td>Drag</td>
    <td>8</td>
    <td>더 많은 드래그는 입자가 빠르게 속도를 잃게 만듭니다.</td>
    </tr>
    <tr>
-   <td>**Lifetime**</td>
+   <td>Lifetime</td>
    <td>0.6, 1</td>
    <td>입자가 0.6초에서 1초 동안 존재하게 합니다.</td>
    </tr>
    <tr>
-   <td>**Rate**</td>
+   <td>Rate</td>
    <td>50</td>
    <td>초당 방출되는 입자의 수입니다.</td>
    </tr>
    <tr>
-   <td>**Speed**</td>
+   <td>Speed</td>
    <td>40</td>
    <td>입자가 처음 방출될 때의 속도입니다.</td>
    </tr>

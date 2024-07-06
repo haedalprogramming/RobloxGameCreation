@@ -30,7 +30,7 @@
 
 3. 아래 옵션 중에서 폭발에 사용할 텍스처를 찾아 해당 **번호**를 **복사**합니다. 폭발 텍스처는 마법 폭발과 동일하거나 다를 수 있습니다.
 
-   <GridContainer numColumns="3">
+<!--    <GridContainer numColumns="3">
      <figure>
        <img src="../img/01_10_Making_an_Explosion/star-1.png.webp" />
        <figcaption>5860841663</figcaption>
@@ -79,13 +79,18 @@
        <img src="../img/01_10_Making_an_Explosion/star-3.png.webp" />
        <figcaption>5860841737</figcaption>
      </figure>
-   </GridContainer>
+   </GridContainer> -->
+   |<figure><img src="../img/01_10_Making_an_Explosion/star-1.png.webp" /><figcaption>5860841663</figcaption></figure>|<figure><img src="../img/01_10_Making_an_Explosion/swirl.png.webp" /><figcaption>5857851812</figcaption></figure>|<figure><img src="../img/01_10_Making_an_Explosion/heart.png.webp" /><figcaption>5857851618</figcaption></figure>|
+   |---|---|---|
+   |<figure><img src="../img/01_10_Making_an_Explosion/circle.png.webp" /><figcaption>6711256324</figcaption></figure>|<figure><img src="../img/01_10_Making_an_Explosion/smoke.png.webp" /><figcaption>5833235272</figcaption></figure>|<figure><img src="../img/01_10_Making_an_Explosion/star-2.png.webp" /><figcaption>6772783963</figcaption></figure>|
+   |<figure><img src="../img/01_10_Making_an_Explosion/spark.png.webp" /><figcaption>5833323391</figcaption></figure>|<figure><img src="../img/01_10_Making_an_Explosion/circle-2.png.webp" /><figcaption>5857892330</figcaption></figure>|<figure><img src="../img/01_10_Making_an_Explosion/scratch.png.webp" /><figcaption>5857892405</figcaption></figure>|
+   |<figure><img src="../img/01_10_Making_an_Explosion/trace.png.webp" /><figcaption>5857931724</figcaption></figure>|<figure><img src="../img/01_10_Making_an_Explosion/triangle.png.webp" /><figcaption>5857851618</figcaption></figure>|<figure><img src="../img/01_10_Making_an_Explosion/star-3.png.webp" /><figcaption>5860841737</figcaption></figure>|
 
-4. **Texture**를 찾아 이전 단계에서 복사한 번호 ID를 붙여넣습니다. 예시 사진에서는 별 텍스처를 사용하고 있습니다.
+1. **Texture**를 찾아 이전 단계에서 복사한 번호 ID를 붙여넣습니다. 예시 사진에서는 별 텍스처를 사용하고 있습니다.
 
    <img src="../img/01_10_Making_an_Explosion/explode-texture.png.webp" />
 
-5. 새로운 색상의 텍스처를 보려면 **Play**를 눌러 확인합니다. 그런 다음 Play It 섹션으로 이동하여 새로운 게임을 시작합니다.
+2. 새로운 색상의 텍스처를 보려면 **Play**를 눌러 확인합니다. 그런 다음 Play It 섹션으로 이동하여 새로운 게임을 시작합니다.
 
    <video controls src="../img/01_10_Making_an_Explosion/explosion-color-texture.mp4"></video>
 

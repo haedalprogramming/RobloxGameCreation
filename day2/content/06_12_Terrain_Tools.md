@@ -10,7 +10,7 @@
 
 ---
 
-<img src="../img/06_12_Terrain_Tools/cc2019_bannerTerrain.jpg" width="100%" />
+<img src="../img/06_12_Terrain_Tools/cc2019_bannerTerrain.jpg.webp" width="100%" />
 
 **지형 편집기**는 자연 지형을 조각하는 데 사용됩니다. 먼저 섬의 모양을 만들고, 그 다음으로 산과 풍경 페인팅과 같은 세부 사항을 다룰 것입니다.
 

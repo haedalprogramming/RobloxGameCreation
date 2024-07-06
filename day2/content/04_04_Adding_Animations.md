@@ -32,7 +32,7 @@
 
    파트가 애니메이션을 재생할 위치에 적절하게 배치되었는지 확인합니다. 예를 들어, 레벨의 끝이나 플레이어가 수집할 객체 근처에 배치합니다.
 
-   <GridContainer numColumns="2">
+   <!-- <GridContainer numColumns="2">
      <figure>
        <img src="../img/04_04_Adding_Animations/bipi_t2_touchedPartExamples_obby.jpg.webp" />
        <figcaption>예시 승리 파트</figcaption>
@@ -41,7 +41,11 @@
        <img src="../img/04_04_Adding_Animations/bipi_t2_touchedPartExamples_treasure.jpg.webp" />
        <figcaption>예시 상호작용 파트</figcaption>
      </figure>
-   </GridContainer>
+   </GridContainer> -->
+
+   |예시 승리 파트|예시 상호작용 파트|
+   |---|---|
+   |<img src="../img/04_04_Adding_Animations/bipi_t2_touchedPartExamples_obby.jpg.webp" />|<img src="../img/04_04_Adding_Animations/bipi_t2_touchedPartExamples_treasure.jpg.webp" />|
 
 3. StarterPlayer > StarterCharacterScripts에 TouchPartRegister라는 이름의 LocalScript를 만듭니다. 그런 다음 아래 코드를 복사하여 붙여넣습니다.
 

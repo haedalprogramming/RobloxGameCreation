@@ -10,7 +10,7 @@
 ---
 애니메이션의 첫 번째 포즈를 만드는 것부터 시작하세요. 이 튜토리얼에서는 수영 애니메이션을 보여주지만, 여러분의 애니메이션은 상상하는 대로 만들 수 있습니다. 만들고자 하는 애니메이션에 따라 첫 번째 포즈는 매우 다를 수 있습니다.
 
-<GridContainer numColumns="3">
+<!-- <GridContainer numColumns="3">
   <figure>
     <img src="../img/03_06_Create_the_First_Pose/example-swim.jpeg.webp" />
     <figcaption>수영</figcaption>
@@ -23,7 +23,12 @@
     <img src="../img/03_06_Create_the_First_Pose/example-dance.jpeg.webp" />
     <figcaption>춤추기</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|수영|쭈그리기|춤추기|
+|:---:|:---:|:---:|
+|<img src="../img/03_06_Create_the_First_Pose/example-swim.jpeg.webp" />|<img src="../img/03_06_Create_the_First_Pose/example-crouch.jpeg.webp" />|<img src="../img/03_06_Create_the_First_Pose/example-dance.jpeg.webp" />|
+
 
 ## 피규어 포즈 만들기
 

@@ -8,8 +8,7 @@
 
 ---
 스크랩야드에는 선택할 수 있는 여섯 가지 다른 본체가 있습니다. 각 본체는 다른 부품들과 결합하여 완전히 다른 모습을 만들 수 있습니다.
-<GridContainer numColumns="3">
-
+<!-- <GridContainer numColumns="3">
   <figure>
     <img src="../img/05_05_Moving_the_Body/show-body-variations-1.jpeg.webp" />
     <figcaption>기본 본체</figcaption>
@@ -22,7 +21,11 @@
     <img src="../img/05_05_Moving_the_Body/show-body-variations-3.jpeg.webp" />
     <figcaption>가능한 디자인</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|기본 본체|가능한 디자인|가능한 디자인|
+|---|---|---|
+|<img src="../img/05_05_Moving_the_Body/show-body-variations-1.jpeg.webp" />|<img src="../img/05_05_Moving_the_Body/show-body-variations-2.jpeg.webp" />|<img src="../img/05_05_Moving_the_Body/show-body-variations-3.jpeg.webp" />|
 
 1. **Home** 탭에서 **Move** 도구를 선택합니다.
    <img src="../img/05_05_Moving_the_Body/move-tool.png.webp" width="100%" />

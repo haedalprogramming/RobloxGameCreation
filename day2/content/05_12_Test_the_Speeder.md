@@ -33,7 +33,7 @@
 
 - 게임 내 코드는 Body 파트가 모델 내에 그룹화된 스피더만 로드합니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_12_Test_the_Speeder/explorer-correct.png.webp" />
     <figcaption>추가 모델 없음</figcaption>
@@ -43,6 +43,11 @@
     <figcaption>추가 모델이 문제를 일으킴</figcaption>
   </figure>
 </GridContainer>
+ -->
+
+|추가 모델 없음|추가 모델이 문제를 일으킴|
+|---|---|
+|<img src="../img/05_12_Test_the_Speeder/explorer-correct.png.webp" />|<img src="../img/05_12_Test_the_Speeder/explorer-wrong.png.webp" />|
 
 ---
 ## 출처

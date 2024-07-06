@@ -11,7 +11,7 @@
 
 플레이어들에게 정사각형 맵은 자연스럽지 않고 흥미롭지 않습니다. 맵을 완성하기 위해서는 지형 도구를 사용하여 맵의 가장자리를 실제 섬처럼 보이도록 커스터마이징할 것입니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/06_11_Island_Terrain/showIslandExamples_600x600.jpg.webp" />
     <figcaption>전</figcaption>
@@ -20,7 +20,11 @@
     <img src="../img/06_11_Island_Terrain/islandTerrainAdded_600x600.jpg.webp" />
     <figcaption>후</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|전|후|
+|---|---|
+|<img src="../img/06_11_Island_Terrain/showIslandExamples_600x600.jpg.webp" />|<img src="../img/06_11_Island_Terrain/islandTerrainAdded_600x600.jpg.webp" />|
 
 ## 지형 편집기 열기
 

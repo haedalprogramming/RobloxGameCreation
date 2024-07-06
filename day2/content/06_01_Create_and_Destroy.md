@@ -19,7 +19,7 @@
 
 ### 세 가지 레슨, 세 가지 보상
 
-<GridContainer numColumns="3">
+<!-- <GridContainer numColumns="3">
   <figure>
     <img src="../img/06_01_Create_and_Destroy/lessonThumbnail_1_360x360.jpg.webp" />
     <figcaption>1: 시작하기</figcaption>
@@ -32,7 +32,11 @@
     <img src="../img/06_01_Create_and_Destroy/lessonThumbnail_3_360x360.jpg.webp" />
     <figcaption>3: 마무리 및 게시</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|1: 시작하기|2: 빌드 및 테스트|3: 마무리 및 게시|
+|:---:|:---:|:---:|
+|<img src="../img/06_01_Create_and_Destroy/lessonThumbnail_1_360x360.jpg.webp" />|<img src="../img/06_01_Create_and_Destroy/lessonThumbnail_2_360x360.jpg.webp" />|<img src="../img/06_01_Create_and_Destroy/lessonThumbnail_3_360x360.jpg.webp" />|
 
 각 레슨이 끝난 후, Roblox에서 퀴즈를 플레이하여 가상 보상을 받을 기회를 얻을 수 있습니다.
 
