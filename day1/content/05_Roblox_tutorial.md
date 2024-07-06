@@ -279,7 +279,7 @@ Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, S
     2. 크기를 1800, 5, 1800으로 설정하여 경험의 지평선까지 물이 채워지도록 합니다.
 3. 재료 설정 섹션에서 도구를 다음 설정으로 구성합니다:
    <!-- ![](../img/05_Roblox_tutorial/Terrain-Editor-Fill-Settings.png.webp) -->
-   <image src="../img/05_Roblox_tutorial/Terrain-Editor-Fill-Settings.png.webp" width=50%>
+   <image src="../img/05_Roblox_tutorial/Terrain-Editor-Fill-Settings.png.webp" width=50%><br/>
     - 재료 모드를 대체로 설정합니다.
     - 원본 재료를 공기로 설정합니다.
     - 대상 재료를 물로 설정합니다.
@@ -1677,7 +1677,7 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 또한, `Lighting.ColorShift_Top` 속성은 태양이나 달을 향한 표면에서 반사되는 빛의 색상을 제어합니다. 기본적으로 이 세 가지 속성은 세계 전체에 어두운 회색 톤을 생성하도록 설정되어 있지만, 최종 샘플의 해양 환경을 보완하기 위해 이 속성을 조정하여 주변 및 반사 조명이 전통적인 해양 팔레트의 미묘한 **파란색-회색** 톤을 갖도록 만들 수 있습니다.
 
 <div><b>샘플 Island Jump 경험의 기본 및 사용자 지정 주변 조명 비교</b></div>
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img width="100%" img src="../img/05_Roblox_tutorial/Default-Color.jpg.webp" alt="The sample Island Jump experience with default ambient lighting visuals." />
     <figcaption>기본 속성</figcaption>
@@ -1686,7 +1686,11 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
     <img width="100%" img src="../img/05_Roblox_tutorial/Custom-Color.jpg.webp" alt="The sample Island Jump experience with custom ambient lighting visuals." />
     <figcaption>사용자 지정 속성</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|기본 속성|사용자 지정 속성|
+|---|---|
+|<img width="100%" img src="../img/05_Roblox_tutorial/Default-Color.jpg.webp" alt="The sample Island Jump experience with default ambient lighting visuals." />|<img width="100%" img src="../img/05_Roblox_tutorial/Custom-Color.jpg.webp" alt="The sample Island Jump experience with custom ambient lighting visuals." />|
 
 환경에서 주변 조명의 색상을 조정하려면:
 
@@ -1701,7 +1705,7 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 샘플 **Island Jump - Final** 경험의 `Lighting` 서비스 속성에 맞추는 두 번째 단계는 환경에서 그림자를 경화하는 것입니다. 이는 플레이어가 경험의 야외와 덮개가 있는 영역을 탐색할 때 더 극적인 효과를 만듭니다.
 
 <div><b>샘플 Island Jump 경험의 기본 및 사용자 지정 그림자 비교</b></div>
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img width="100%" img src="../img/05_Roblox_tutorial/Default-Shadows.jpg.webp" alt="The sample Island Jump experience with default shadow visuals that produce fuzzy shadows." />
     <figcaption>기본 그림자</figcaption>
@@ -1710,7 +1714,12 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
     <img width="100%" img src="../img/05_Roblox_tutorial/Custom-Shadows.jpg.webp" alt="The sample Island Jump experience with custom shadow visuals that produce sharp shadows."/>
     <figcaption>사용자 지정 그림자</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|기본 그림자|사용자 지정 그림자|
+|---|---|
+|<img width="100%" img src="../img/05_Roblox_tutorial/Default-Shadows.jpg.webp" alt="The sample Island Jump experience with default shadow visuals that produce fuzzy shadows." />|<img width="100%" img src="../img/05_Roblox_tutorial/Custom-Shadows.jpg.webp" alt="The sample Island Jump experience with custom shadow visuals that produce sharp shadows."/>|
+
 
 환경에서 그림자를 경화하려면:
 
@@ -1724,7 +1733,7 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 미래 조명 시스템은 글로벌 조명과 로컬 조명이 함께 작동하여 더 현실적이고 몰입감 있는 시각 효과를 제공합니다. 예를 들어, ShadowMap 조명 시스템에서는 빛나는 플레어에서 그림자가 전혀 생성되지 않지만, 미래 조명 시스템 기술에서는 바다 스택 플랫폼의 둘레에서 미묘한 그림자를 생성합니다. 이 효과는 환경 내에 더 많은 광원이 있을수록 더 두드러집니다.
 
 <div><b>ShadowMap 조명 시스템과 Future 조명 시스템 비교</b></div>
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img width="100%" img src="../img/05_Roblox_tutorial/ShadowMap-System.jpg.webp" alt="The sample Island Jump experience with the ShadowMap lighting system." />
     <figcaption>ShadowMap 조명 시스템</figcaption>
@@ -1733,7 +1742,11 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
     <img width="100%" img src="../img/05_Roblox_tutorial/Future-System.jpg.webp" alt="The sample Island Jump experience with the Future lighting system that produces more prominent lighting from the flare."/>
     <figcaption>Future 조명 시스템</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|ShadowMap 조명 시스템|Future 조명 시스템|
+|---|---|
+|<img width="100%" img src="../img/05_Roblox_tutorial/ShadowMap-System.jpg.webp" alt="The sample Island Jump experience with the ShadowMap lighting system." />|<img width="100%" img src="../img/05_Roblox_tutorial/Future-System.jpg.webp" alt="The sample Island Jump experience with the Future lighting system that produces more prominent lighting from the flare."/>|
 
 미래 조명 시스템을 활성화하려면:
 
@@ -1755,10 +1768,8 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 태양의 기본 위치는 하늘 높이 있으며, 실제 세계에서 정오에 해당하는 위치입니다. 그러나 더 두드러진 그림자와 방향성을 생성하려면 태양을 바다 스택 플랫폼 오른쪽으로 이동할 수 있습니다.
 
 <div><b>기본 및 사용자 지정 태양 위치 비교</b></div>
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
-
-
     <img width="100%" img src="../img/05_Roblox_tutorial/Default-SunPosition.jpg.webp" alt="The sample Island Jump experience with the default sun position high in the sky."/>
     <figcaption>기본 태양 위치</figcaption>
   </figure>
@@ -1766,7 +1777,11 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
     <img width="100%" img src="../img/05_Roblox_tutorial/Custom-SunPosition.jpg.webp" alt="The sample Island Jump experience with a custom sun position approaching the horizon." />
     <figcaption>사용자 지정 태양 위치</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|기본 태양 위치|사용자 지정 태양 위치|
+|---|---|
+|<img width="100%" img src="../img/05_Roblox_tutorial/Default-SunPosition.jpg.webp" alt="The sample Island Jump experience with the default sun position high in the sky."/>|<img width="100%" img src="../img/05_Roblox_tutorial/Custom-SunPosition.jpg.webp" alt="The sample Island Jump experience with a custom sun position approaching the horizon." />|
 
 태양 위치를 변경하려면:
 
@@ -1790,7 +1805,7 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 샘플 **Island Jump - Final** 경험의 `Atmosphere` 속성에 맞추는 첫 번째 단계는 공기 입자 밀도를 증가시키는 것입니다. `Atmosphere.Density` 속성은 환경의 공기 중에 존재하는 입자의 양을 제어합니다. 이 속성을 증가시키면 추가된 입자가 플레이어의 배경 물체 시야를 방해합니다. 이는 특히 물 지형의 경계를 숨기는 데 유용합니다.
 
 <div><b>기본 및 사용자 지정 공기 입자 밀도 비교</b></div>
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img width="100%" img src="../img/05_Roblox_tutorial/Custom-SunPosition.jpg.webp" alt="The sample Island Jump experience with the default air particle density that produces a clear background." />
     <figcaption>기본 공기 입자 밀도</figcaption>
@@ -1799,7 +1814,11 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
     <img width="100%" img src="../img/05_Roblox_tutorial/Custom-AirParticleDensity.jpg.webp" alt="The sample Island Jump experience with custom air particle density that produces a hazy background." />
     <figcaption>사용자 지정 공기 입자 밀도</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|기본 공기 입자 밀도|사용자 지정 공기 입자 밀도|
+|---|---|
+|<img width="100%" img src="../img/05_Roblox_tutorial/Custom-SunPosition.jpg.webp" alt="The sample Island Jump experience with the default air particle density that produces a clear background." />|<img width="100%" img src="../img/05_Roblox_tutorial/Custom-AirParticleDensity.jpg.webp" alt="The sample Island Jump experience with custom air particle density that produces a hazy background." />|
 
 환경에서 공기 입자 밀도를 증가시키려면:
 
@@ -1813,7 +1832,7 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 샘플 경험은 이 속성을 0으로 설정하여 플레이어가 수평선을 볼 수 없도록 할 수 있었지만, 튜토리얼의 다음 섹션에서는 경험의 경계 근처에 산 객체를 추가하여 보이도록 할 필요가 있습니다. 또한, 기본 값을 감소시키되 0으로 설정하지 않으면, 먼 곳에 안개가 끼기 시작하는 것을 모방하여 더 현실적인 환경을 만듭니다.
 
 <div><b>기본 및 사용자 지정 Offset 값 비교</b></div>
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img width="100%" img src="../img/05_Roblox_tutorial/Custom-AirParticleDensity.jpg.webp" alt="The sample Island Jump experience with default Offset values that keep the background visible." />
     <figcaption>기본 `Atmosphere.Offset` 속성</figcaption>
@@ -1822,7 +1841,11 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
     <img width="100%" img src="../img/05_Roblox_tutorial/Custom-Offset.jpg.webp" alt="The sample Island Jump experience with custom Offset values that hide the edges of the background."/>
     <figcaption>사용자 지정 `Atmosphere.Offset` 속성</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|기본 `Atmosphere.Offset` 속성|사용자 지정 `Atmosphere.Offset` 속성|
+|---|---|
+|<img width="100%" img src="../img/05_Roblox_tutorial/Custom-AirParticleDensity.jpg.webp" alt="The sample Island Jump experience with default Offset values that keep the background visible." />|<img width="100%" img src="../img/05_Roblox_tutorial/Custom-Offset.jpg.webp" alt="The sample Island Jump experience with custom Offset values that hide the edges of the background."/>|
 
 환경에서 먼 물체를 블렌딩하려면:
 
