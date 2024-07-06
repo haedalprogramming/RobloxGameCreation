@@ -1854,14 +1854,18 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 이제 경험의 글로벌 조명이 사용자 지정 속성으로 설정되었으므로, 튜토리얼의 다음 섹션에서는 회색 상자 레이아웃을 고품질의 정교한 자산으로 교체하는 방법을 배웁니다.
 
-<Tabs>
+<!-- <Tabs>
   <TabItem label="사용자 지정 전">
     <img src="../img/05_Roblox_tutorial/Lighting-Pre-Customization.jpg.webp" alt="The sample Island Jump experience's lighting visuals before the customization from this page." />
   </TabItem>
   <TabItem label="사용자 지정 시각 효과">
     <img src="../img/05_Roblox_tutorial/Lighting-Post-Customization.jpg.webp" alt="The sample Island Jump experience's lighting visuals after the customization from this page." />
   </TabItem>
-</Tabs>
+</Tabs> -->
+
+|사용자 지정 전|사용자 지정 시각 효과|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Lighting-Pre-Customization.jpg.webp" alt="The sample Island Jump experience's lighting visuals before the customization from this page." />|<img src="../img/05_Roblox_tutorial/Lighting-Post-Customization.jpg.webp" alt="The sample Island Jump experience's lighting visuals after the customization from this page." />|
 
 #### Apply Polished Assets
 
@@ -1954,16 +1958,18 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 이제 새로운 자산을 포함할 조직 구조를 갖추었으므로, 자산 라이브러리를 회색 상자 기하학에 적용하기 시작할 수 있습니다. 두 교육 경로 중 하나를 따르면서, 예제 이미지는 자리 표시 자산을 반투명하게 만들어 단계별 진행 상황을 볼 수 있습니다.
 
-<Tabs>
+<!-- <Tabs>
   <TabItem key = "1" label="Graybox Version">
     <img src="../img/05_Roblox_tutorial/Pre-Polished-Assets.jpg.webp" alt="A version of the sample Island Jump experience's placeholder greybox geometry." width="800" height="450" />
   </TabItem>
   <TabItem key = "2" label="Polished Assets">
     <img src="../img/05_Roblox_tutorial/Final-Polished-Assets.jpg.webp" alt="A version of the sample Island Jump experience with polished geometry." width="800" height="450" />
   </TabItem>
-</Tabs
+</Tabs> -->
 
->
+|Graybox Version|Polished Assets|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Pre-Polished-Assets.jpg.webp" alt="A version of the sample Island Jump experience's placeholder greybox geometry." width="100%"  />|<img src="../img/05_Roblox_tutorial/Final-Polished-Assets.jpg.webp" alt="A version of the sample Island Jump experience with polished geometry." width="100%" />|
 
 ###### Platforms
 
@@ -1976,8 +1982,10 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 <img src="../img/05_Roblox_tutorial/Platform-Types.jpg.webp" alt="Platform A and Platform B are side-by-side, and highlighted with their platform type." width="80%" />
 
-<Tabs>
-  <TabItem key = "1" label="Apply Your Own Platforms">
+<!-- <Tabs>
+  <TabItem key = "1" label="Apply Your Own Platforms"> -->
+
+**Apply Your Own Platforms**
 
 플랫폼에 자산 라이브러리를 적용하려면:
 
@@ -1993,8 +2001,10 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
    <img src="../img/05_Roblox_tutorial/Platforms-5.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+  <!-- </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) 경험 내 바다 스택 플랫폼을 정확히 재현하려면:
 
@@ -2131,8 +2141,8 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
    <img src="../img/05_Roblox_tutorial/Platforms-5.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### Sea Stacks
 
@@ -2158,8 +2168,10 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 |---|---|
 |<img width="100%" img src="../img/05_Roblox_tutorial/Sea-Stacks.jpg.webp" alt="A comparison of a single sea stack next to multiple sea stacks that are stacked on top of each other." />|<img width="100%" img src="../img/05_Roblox_tutorial/Completed-Sea-Stack.jpg.webp" alt="A demonstration of a SeaStackCaveMesh stacked on top of a PlatformB on top of a SeaStackMesh." />|
 
-<Tabs>
-  <TabItem key = "1" label="Apply Your Own Sea Stacks">
+<!-- <Tabs>
+  <TabItem key = "1" label="Apply Your Own Sea Stacks"> -->
+
+**Apply Your Own Sea Stacks**
 
 바다 스택에 자산 라이브러리를 적용하려면:
 
@@ -2175,8 +2187,10 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 5. 자리 표시 회색 상자 바다 스택 플랫폼을 삭제합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+<!--   </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) 경험 내 바다 스택을 정확히 재현하려면:
 
@@ -2337,9 +2351,7 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
    <img src="../img/05_Roblox_tutorial/SeaStacks-8.jpg.webp" alt="A side view of the sample laser tag experience with level 4c sea stacks visible with the polished assets." width="80%" />
 
-9. 다음
-
- **SeaStackMesh** 자산을 **Level_4d** 모델에 추가하고 구성합니다:
+9. 다음 **SeaStackMesh** 자산을 **Level_4d** 모델에 추가하고 구성합니다:
 
    <table>
    <thead>
@@ -2721,8 +2733,8 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 19. 자리 표시 회색 상자 바다 스택 플랫폼을 삭제합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### Coins
 
@@ -2732,8 +2744,10 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 <img src="../img/05_Roblox_tutorial/Final-Coin.jpg.webp" alt="A close up view of a shiny gold coin with a Roblox icon in the middle. The coin floats over a grassy path of island." width="80%" />
 
-<Tabs>
-  <TabItem key = "1" label="Apply Your Own Coins">
+<!-- <Tabs>
+  <TabItem key = "1" label="Apply Your Own Coins"> -->
+
+**Apply Your Own Coins**
 
 동전에 자산 라이브러리를 적용하려면:
 
@@ -2748,8 +2762,10 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 1. 자리 표시 동전을 삭제합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+<!--   </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) 경험 내 동전을 정확히 재현하려면:
 
@@ -2907,8 +2923,8 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 5. 자리 표시 동전을 삭제합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### Mountains
 
@@ -2916,8 +2932,10 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 <img src="../img/05_Roblox_tutorial/Mountain-Meshes-Stacked.jpg.webp" alt="Several mountain meshes with different scales and rotation values overlap each other's edges to look like a mountain range. Each mesh has a light blue outline." width="80%" />
 
-<Tabs>
-  <TabItem key = "1" label="Apply Your Own Mountains">
+<!-- <Tabs>
+  <TabItem key = "1" label="Apply Your Own Mountains"> -->
+
+**Apply Your Own Mountains**
 
 산에 자산 라이브러리를 적용하려면:
 
@@ -2930,8 +2948,10 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
    <img src="../img/05_Roblox_tutorial/Mountains-Final.jpg.webp" alt="A view of the polished sea stacks, platform, and coins, with a mountain range in the background." width="80%" />
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+<!--   </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) 경험 내 산을 정확히 재현하려면:
 
@@ -3032,8 +3052,8 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
    <img src="../img/05_Roblox_tutorial/Mountains-Final.jpg.webp" alt="A view of the polished sea stacks, platform, and coins, with a mountain range in the background." width="80%" />
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### Playtest
 
@@ -3149,8 +3169,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 또한, 고도의 상승은 물리적 및 감정적인 상승감을 제공하여 높은 지형에 있는 사용자가 전장을 조감하여 다음 이동 경로를 더 잘 파악할 수 있게 합니다. 이동할 준비가 되면, 고도의 하강은 물리적 및 감정적인 하강감을 제공하여 사용자가 적의 시야를 피하면서 빠르게 목표를 달성하도록 압박합니다.
 
-<Tabs>
-  <TabItem key = "1" label="Create Your Own">
+<!-- <Tabs>
+  <TabItem key = "1" label="Create Your Own"> -->
+
+**Create Your Own**
 
 자신만의 바닥 지오메트리를 생성하려면:
 
@@ -3179,8 +3201,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 모든 파트를 고정합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+<!--   </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) 장소 파일 내에서 바닥 지오메트리를 정확히 재현하려면:
 
@@ -3325,8 +3349,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 모든 바닥 파트를 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 주변 벽 지오메트리
 
@@ -3336,8 +3360,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 <img src="../img/05_Roblox_tutorial/Perimeter-Intro.jpg" alt="A top-down view of the final greybox environment with the perimeter wall geometry highlighted in yellow." width="100%"/>
 
-<Tabs>
-  <TabItem key = "1" label="Create Your Own">
+<!-- <Tabs>
+  <TabItem key = "1" label="Create Your Own"> -->
+
+**Create Your Own**
 
 자신만의 주변 벽 지오메트리를 생성하려면:
 
@@ -3347,8 +3373,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 파트를 고정합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+<!--   </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) 장소 파일 내에서 주변 벽 지오메트리를 정확히 재현하려면:
 
@@ -3421,9 +3449,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    </thead>
    <tbody>
    <tr>
-   <td>
-
-왼쪽 벽</td>
+   <td>왼쪽 벽</td>
    <td>`20, 20, 40`</td>
    <td>`-34, 15, 320`</td>
    </tr>
@@ -3475,8 +3501,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 주변 벽 파트를 모두 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 스폰 존 지오메트리
 
@@ -3490,8 +3516,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 <img src="../img/05_Roblox_tutorial/SpawnZone-Intro.jpg" alt="A top-down view of the final greybox environment with the spawn zone wall geometry highlighted in yellow." width="100%"/>
 
-<Tabs>
-  <TabItem key = "1" label="Create Your Own">
+<!-- <Tabs>
+  <TabItem key = "1" label="Create Your Own"> -->
+
+**Create Your Own**
 
 자신만의 스폰 존 지오메트리를 생성하려면:
 
@@ -3501,8 +3529,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 파트를 고정합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+<!--   </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) 장소 파일 내에서 스폰 존 지오메트리를 정확히 재현하려면:
 
@@ -3587,9 +3617,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    <tr>
    <td>오른쪽 스폰 상단 벽</td>
    <td>`10, 15, 5`</td>
-   <td
-
->`-105, 12.5, 22.5`</td>
+   <td>`-105, 12.5, 22.5`</td>
    </tr>
    <tr>
    <td>오른쪽 스폰, 상단 문</td>
@@ -3618,8 +3646,9 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 스폰 존 파트를 모두 고정합니다.
 
-  </TabItem>
+<!--   </TabItem>
 </Tabs>
+ -->
 
 ##### 전투 포켓 지오메트리
 
@@ -3632,9 +3661,11 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 경험을 위해 만드는 전투 포켓 지오메트리를 시각화하는 데 도움이 되도록 다음 이미지를 참고하세요. 노란색으로 표시되어 있습니다.
 
 <img src="../img/05_Roblox_tutorial/CombatPockets-Intro2.jpg" alt="A top-down view of the final greybox environment with the combat pocket geometry highlighted in yellow." width="100%"/>
-
+<!-- 
 <Tabs>
   <TabItem key = "1" label="Create Your Own">
+ -->
+**Create Your Own**
 
 자신만의 전투 포켓 지오메트리를 생성하려면:
 
@@ -3656,8 +3687,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 파트를 고정합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+<!--   </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) 장소 파일 내에서 전투 포켓 지오메트리를 정확히 재현하려면:
 
@@ -3725,9 +3758,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    <tr>
    <td>하단 벽</td>
    <td>`10, 15, 35`</td>
-   <td>`-50, 12.5, 252.5
-
-`</td>
+   <td>`-50, 12.5, 252.5`</td>
    </tr>
    </tbody>
    </table>
@@ -3926,8 +3957,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 전투 포켓 파트를 모두 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 외부 지오메트리
 
@@ -3937,8 +3968,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 <img src="../img/05_Roblox_tutorial/Exterior-Intro.jpg" alt="A top-down view of the final greybox environment with the exterior geometry highlighted in yellow." width="100%"/>
 
-<Tabs>
-  <TabItem key = "1" label="Create Your Own">
+<!-- <Tabs>
+  <TabItem key = "1" label="Create Your Own"> -->
+
+**Create Your Own**
 
 자신만의 외부 지오메트리를 생성하려면:
 
@@ -3948,8 +3981,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 파트를 고정합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+<!--   </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) 장소 파일 내에서 외부 지오메트리를 정확히 재현하려면:
 
@@ -4096,9 +4131,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    <tr>
    <td>중앙 장애물</td>
    <td>`20, 10, 10`</td>
-   <td
-
->`-35, 10, 160`</td>
+   <td>`-35, 10, 160`</td>
    </tr>
    <tr>
    <td>하단 장애물</td>
@@ -4112,8 +4145,9 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 타워 파트를 모두 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!-- </TabItem>
+</Tabs> 
+-->
 
 #### 플레이스홀더 재료 적용
 
@@ -4756,8 +4790,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 이 기술은 원래 그레이박스 기하학을 대체하고 변환하지만, 수평 이동 외에도 경험 전반에 걸쳐 시야 및 교전 거리를 제어하는 ​​피크와 계곡을 만드는 원래 디자인 의도를 존중합니다. 즉, 사용자는 모든 물리적 및 감정적 상승 및 하강 감각을 유지하면서도 3D 공간에서 자신의 위치를 파악할 수 있는 이점을 갖게 됩니다.
 
-<Tabs>
-  <TabItem key = "1" label="자신만의 만들기">
+<!-- <Tabs>
+  <TabItem key = "1" label="자신만의 만들기"> -->
+
+**자신만의 만들기**
 
 자신만의 에셋 라이브러리를 바닥에 적용하려면:
 
@@ -4788,8 +4824,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이러한 바닥 부품을 모두 고정합니다.
 
-  </TabItem>
+<!-- </TabItem>
   <TabItem key = "2" label="샘플 재구성">
+ -->
+**샘플 재현 하기**
 
 샘플 [환경 예술 - 구성](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 파일 내에서 바닥을 정확히 재구성하려면:
 
@@ -4805,9 +4843,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    </thead>
    <tbody>
    <tr>
-   <td>왼
-
-쪽 상단 영역</td>
+   <td>왼쪽 상단 영역</td>
    <td>`57.5, 6, 142`</td>
    <td>`-123.75, 2, 281`</td>
    </tr>
@@ -4989,8 +5025,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 8. 이러한 부품과 모듈형 에셋을 모두 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 스폰 존
 
@@ -5000,8 +5036,11 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 최종 샘플 레이저 태그 환경은 이 디자인의 의도를 유지하면서 색상 테마를 추가합니다: 맵의 왼쪽에 모이는 팀은 **파스텔 블루그린** 색상을, 맵의 오른쪽에 모이는 팀은 **카네이션 핑크** 색상을 사용합니다. 이 튜토리얼의 이 섹션에서는 각 팀의 스폰 존 근처 지역을 구분하기 위해 동일한 색상 테마를 계속 사용할 것입니다.
 
-<Tabs>
+<!-- <Tabs>
   <TabItem key = "1" label="자신만의 만들기">
+ -->
+
+**자신만의 만들기**
 
 자신만의 에셋 라이브러리를 스폰 존에 적용하려면:
 
@@ -5019,8 +5058,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이러한 스폰 존 에셋을 모두 고정합니다.
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key = "2" label="샘플 재구성">
+ -->
+**샘플 재구성**
 
 샘플 [환경 예술 - 구성](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 장소 파일 내에서 스폰 존을 정확히 재구성하려면:
 
@@ -5182,9 +5223,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    </tr>
    <tr>
    <td>WallLarge</td>
-   <td>`-45, 5
-
-, 15`</td>
+   <td>`-45, 5, 15`</td>
    <td>`0, 180, 0`</td>
    </tr>
    <tr>
@@ -5218,8 +5257,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 5. 이러한 모듈형 에셋을 모두 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 전투 포켓
 
@@ -5243,8 +5282,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 |<img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-Intro2.jpg" width="100%"/>|<img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-Intro3.jpg" width="100%"/>|
 |---|---|
 
-<Tabs>
-  <TabItem key = "1" label="자신만의 만들기">
+<!-- <Tabs>
+  <TabItem key = "1" label="자신만의 만들기"> -->
 
 자신만의 에셋 라이브러리를 전투 포켓에 적용하려면:
 
@@ -5266,8 +5305,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이러한 전투 포켓 에셋을 모두 고정합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="샘플 재구성">
+<!--   </TabItem>
+  <TabItem key = "2" label="샘플 재구성"> -->
 
 샘플 [환경 예술 - 구성](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 장소 파일 내에서 전투 포켓을 정확히 재구성하려면:
 
@@ -5975,9 +6014,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     </tr>
     <tr>
     <td>WallCornerOuter</td>
-    <td>`-45, 5, 
-
-95`</td>
+    <td>`-45, 5, 95`</td>
     <td>`0, 0, 0`</td>
     </tr>
     <tr>
@@ -6134,8 +6171,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 17. 이러한 소품 및 모듈형 에셋을 모두 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 외곽 복도
 
@@ -6153,8 +6190,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 <img src="../img/05_Roblox_tutorial/Construct Your World/Perimeter-Intro2.jpg" width="100%"/>
 
-<Tabs>
-  <TabItem key = "1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key = "1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 외곽 복도에 에셋 라이브러리를 적용하려면:
 
@@ -6181,8 +6220,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 모든 외곽 복도 에셋을 고정합니다.
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key = "2" label="샘플 재현">
+ -->
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 외곽 복도를 정확히 재현하려면:
 
@@ -6295,9 +6336,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    <tr>
    <td>WallRiseB</td>
    <td>`-110, 5, 210`</td>
-   <td>`0, 
-
-0, 0`</td>
+   <td>`0, 0, 0`</td>
    </tr>
    <tr>
    <td>WallCornerOuter</td>
@@ -6534,8 +6573,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 7. 이 모든 소품 및 모듈형 에셋을 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 문
 
@@ -6543,8 +6582,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 이 때문에 여러 변형을 플레이 테스트하여 다양한 플레이 스타일을 실험하는 것이 좋습니다. 실제로, 전투 포켓에 한쪽에서만 사용자가 열 수 있는 문 에셋을 배치하거나 아예 열리지 않도록 실험할 수도 있습니다.
 
-<Tabs>
-  <TabItem key = "1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key = "1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 문에 에셋 라이브러리를 적용하려면:
 
@@ -6554,8 +6595,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. **(선택 사항)** 이 모든 문 에셋을 고정합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="샘플 재현">
+<!--   </TabItem>
+  <TabItem key = "2" label="샘플 재현"> -->
+
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 문을 정확히 재현하려면:
 
@@ -6605,8 +6648,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 <img src="../img/05_Roblox_tutorial/Construct Your World/Doors-2.jpg" width="100%"/>
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 외부 에셋
 
@@ -6618,8 +6661,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 야외 공간을 위한 첫 번째 외부 에셋은 외부 주요 차선과 교차하는 중간 전투 포켓 바로 바깥에 있는 두 개의 타워입니다. 이 섹션의 기술은 시각적으로 미적인 객체를 생성할 뿐만 아니라, 사용자에게 환경에서의 규모를 제공하는 객체를 생성합니다. 지금까지 다른 모든 객체는 사용자 캐릭터와 거의 같은 크기였지만 이 타워는 **사용자 캐릭터보다 훨씬 큽니다**, 이는 건축물 또는 건물이 위치한 전체 섬의 배경 스토리에 대한 흥미를 불러일으킬 수 있습니다.
 
-<Tabs>
-  <TabItem key = "1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key = "1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 타워에 에셋 라이브러리를 적용하려면:
 
@@ -6637,8 +6682,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 모든 파트를 고정합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="샘플 재현">
+<!--   </TabItem>
+  <TabItem key = "2" label="샘플 재현"> -->
+
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 타워를 정확히 재현하려면:
 
@@ -6699,9 +6746,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    </tbody>
    </table>
 
-   <img src="../img/05_Roblox_tutorial/Construct Your World/Towers-1
-
-.jpg" width="100%"/>
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Towers-1.jpg" width="100%"/>
 
 2. 모든 것을 모델로 그룹화한 다음 모델을 복제합니다.
 3. 복제된 타워를 **CFrame.Position**으로 **-30.572, 57.93, 133.5**에 이동합니다.
@@ -6710,15 +6755,17 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 4. 이 두 모델을 모두 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### 기둥
 
 야외 공간에 변환할 수 있는 두 번째 외부 에셋은 이 튜토리얼에서 나중에 만들 오버행 피스를 지탱하는 두 개의 기둥입니다. 타워와 마찬가지로 이 섹션의 기술은 시각적으로 미적인 객체를 생성할 뿐만 아니라, 사용자에게 전체 환경에서 자신이 있는 위치에 대한 추가적인 시각적 단서를 제공합니다. 예를 들어, 각 기둥에는 파스텔 블루-그린 또는 카네이션 핑크 디테일이 있어 사용자가 자신 또는 적의 스폰 존에 가장 가까운 곳에 있는지를 알 수 있습니다.
 
-<Tabs>
-  <TabItem key = "1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key = "1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 1. **블록** 및 **쐐기** 부품을 사용하여 건물의 지붕을 지탱할 기둥을 만듭니다.
 
@@ -6736,8 +6783,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 모든 부품을 고정합니다.
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key = "2" label="샘플 재현">
+ -->
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 기둥을 정확히 재현하려면:
 
@@ -6844,12 +6893,12 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 6. 이 두 모델을 모두 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### 화분
 
-야외 공간에 변환할 수 있는 마지막 외부 에셋은 외부 주요 차선을 따라 전체적으로 확장된 여덟 개의 화분입니다. [고체 모델링](../../parts/solid-modeling.md) 작업을 사용하여 부품을 결합하고 분리하여 각 화분의 베이스를 형성한 다음, 다양한 재료, 식물, 또는 트림 에셋 구성을 적용하여 각 화분이 3D 공간에서 독특하게 느껴지도록 할 수 있습니다.
+야외 공간에 변환할 수 있는 마지막 외부 에셋은 외부 주요 차선을 따라 전체적으로 확장된 여덟 개의 화분입니다. [고체 모델링] 작업을 사용하여 부품을 결합하고 분리하여 각 화분의 베이스를 형성한 다음, 다양한 재료, 식물, 또는 트림 에셋 구성을 적용하여 각 화분이 3D 공간에서 독특하게 느껴지도록 할 수 있습니다.
 
 가장 왼쪽에 있는 화분에 에셋 라이브러리를 적용하려면:
 
@@ -6894,9 +6943,9 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 6. 연합을 선택한 다음 **속성** 창에서,
 
    1. **색상**을 **181, 173, 156**으로 설정합니다.
-   1. **재료**를 **콘크리트**로 설정합니다.
-   1. **MaterialVariant**를 **Concrete_Board_Formed_A**로 설정합니다.
-   1. **UsePartColor**를 활성화합니다.
+   2. **재료**를 **콘크리트**로 설정합니다.
+   3. **MaterialVariant**를 **Concrete_Board_Formed_A**로 설정합니다.
+   4. **UsePartColor**를 활성화합니다.
 
    <img src="../img/05_Roblox_tutorial/Construct Your World/Planters-6.jpg" width="100%"/>
 
@@ -6981,8 +7030,9 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 지붕의 첫 번째 최상위 층은 천창 기하학입니다. 이 층의 목적은 내부 전투 구역에 외부 조명을 제공하는 것입니다.
 
-<Tabs>
-  <TabItem key = "1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key = "1" label="직접 만들기"> -->
+**직접 만들기**
 
 자신의 에셋 라이브러리를 천창에 적용하려면:
 
@@ -7006,8 +7056,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 모든 천창 에셋을 고정합니다.
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key = "2" label="샘플 재현">
+ -->
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 천창을 정확히 재현하려면:
 
@@ -7217,9 +7269,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    </tr>
    <tr>
    <td>SkylightCornerInner</td>
-   <td>`-120
-
-, 20, 80`</td>
+   <td>`-120, 20, 80`</td>
    <td>`0, 90, 0`</td>
    </tr>
    <tr>
@@ -7372,15 +7422,17 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 <img src="../img/05_Roblox_tutorial/Construct Your World/Skylight-8.jpg" width="100%"/>
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### 천장
 
 지붕의 두 번째 층은 사용자가 건물 내부를 탐색할 때 뷰의 상단에 보이는 천장 기하학입니다. 이 층의 목적은 각 벽 자산의 상단 장식 트림 사이의 열린 영역을 채우는 것입니다.
 
-<Tabs>
-  <TabItem key = "1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key = "1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 자신의 에셋 라이브러리를 지붕의 천장에 적용하려면:
 
@@ -7391,8 +7443,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 1. 이러한 부품을 선택한 다음 **속성** 창에서 **색상**, **재질** 및/또는 **재질 변형**을 설정하여 환경의 다른 표면과 시각적으로 구별되는 처리를 적용합니다. 이것은 플레이어가 카메라를 빠르게 이동할 때 자신을 방향지을 수 있도록 도와줍니다.
 1. 이러한 모든 천장 에셋을 고정합니다.
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key = "2" label="샘플 재현">
+ -->
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 천장을 정확히 재현하려면:
 
@@ -7540,15 +7594,17 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 4. 이 모든 부품을 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### 상단 지붕
 
 지붕의 세 번째 층은 상단 지붕 기하학입니다. 이 층의 목적은 사용자가 야외 공간에서 건물을 볼 때 볼 수 있는 가장 바깥쪽 지붕 영역에 볼륨을 추가하는 것입니다. 또한 천창에 깊이를 더해 건물이 내부와 외부에서 더 완성된 모습으로 보이게 합니다.
 
-<Tabs>
-  <TabItem key = "1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key = "1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 지붕의 상단에 자신의 에셋 라이브러리를 적용하려면:
 
@@ -7556,16 +7612,16 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
    <img src="../img/05_Roblox_tutorial/Construct Your World/TopRoof-3.jpg" width="100%"/>
 
-1. 이러한 부품을 선택한 다음 **속성** 창에서 **색상**, **재질** 및/또는 **재질 변형**을 설정하여 환경의 아트 스타일에 맞는 시각적 처리를 적용합니다
-
-.
+1. 이러한 부품을 선택한 다음 **속성** 창에서 **색상**, **재질** 및/또는 **재질 변형**을 설정하여 환경의 아트 스타일에 맞는 시각적 처리를 적용합니다.
 
    <img src="../img/05_Roblox_tutorial/Construct Your World/TopRoof-4.jpg" width="100%"/>
 
 1. 이 모든 상단 지붕 에셋을 고정합니다.
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key = "2" label="샘플 재현">
+ -->
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 지붕의 상단을 정확히 재현하려면:
 
@@ -7785,15 +7841,17 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 10. 이 모든 부품을 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### 오버행
 
 지붕의 네 번째 층은 건물이 구조적으로 견고하게 유지되도록 기둥 자산이 지탱하는 오버행 기하학입니다. 이 층의 목적은 외부 주요 차선을 탐색하는 사용자에게 미관상으로 보기 좋은 차양 공간을 제공하는 것입니다.
 
-<Tabs>
-  <TabItem key="1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key="1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 지붕의 오버행에 자신의 자산 라이브러리를 적용하려면:
 
@@ -7804,8 +7862,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 1. 이러한 부품을 선택한 다음 **속성** 창에서 **색상**, **재질**, 및/또는 **재질 변형**을 설정하여 경험의 아트 스타일에 따라 시각적 처리를 적용합니다.
 1. 이 모든 오버행 부품을 고정합니다.
 
-  </TabItem>
-  <TabItem key="2" label="샘플 재현">
+<!--   </TabItem>
+  <TabItem key="2" label="샘플 재현"> -->
+
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 오버행을 정확히 재현하려면:
 
@@ -7978,9 +8038,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    <td>`2, 11, 21`</td>
    <td>`-18.5, 25.5, 42`</td>
    <td>`0, -90, 180`</td>
-   <td>`255, 
-
-255, 255`</td>
+   <td>`255, 255, 255`</td>
    <td>`콘크리트`</td>
    <td>`Concrete_Board_Formed_A`</td>
    </tr>
@@ -7991,15 +8049,17 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 5. 이 모든 부품을 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### 트림
 
 지붕의 마지막 층은 지붕 주변을 둘러싸는 트림 기하학입니다. 이 층의 목적은 외부 공간에서 방을 바라보는 사용자에게 이전 각 층 간의 시각적 일관성을 제공하는 것입니다.
 
-<Tabs>
-  <TabItem key="1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key="1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 지붕의 트림에 자신의 자산 라이브러리를 적용하려면:
 
@@ -8010,8 +8070,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 1. 이러한 부품을 선택한 다음 **속성** 창에서 **색상**, **재질**, 및/또는 **재질 변형**을 설정하여 경험의 아트 스타일에 따라 시각적 처리를 적용합니다.
 1. 이 모든 오버행 부품을 고정합니다.
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key="2" label="샘플 재현">
+ -->
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 트림을 정확히 재현하려면:
 
@@ -8188,9 +8250,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    </tr>
    <tr>
    <td>ExtTrimALong</td>
-   <td
-
->`-8, 31, 35`</td>
+   <td>`-8, 31, 35`</td>
    <td>`0, 90, 0`</td>
    </tr>
    <tr>
@@ -8315,8 +8375,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 6. 이 모든 트림 자산을 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 #### 불필요한 기하학 삭제
 
@@ -8342,8 +8402,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     지형 조각은 예술의 한 형태이며, 브러시 스트로크와 미세한 재료 수정을 정확히 재현하는 것은 어렵습니다. 자신의 경험에 맞는 지형을 만든다면, 샘플 레이저 태그 환경과 다르게 보이고 느껴지는 것은 정상적이고 기대되는 일입니다.
 </Alert>
 
-<Tabs>
-  <TabItem key="1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key="1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 야외 지역에 자신의 지형을 적용하려면:
 
@@ -8377,8 +8439,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
    <img src="../img/05_Roblox_tutorial/Construct Your World/Terrain-10.jpg" width="100%"/>
 
-  </TabItem>
-  <TabItem key="2" label="샘플 재현">
+<!--   </TabItem>
+  <TabItem key="2" label="샘플 재현"> -->
+
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 지형을 재현하려면:
 
@@ -8443,8 +8507,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
     <img src="../img/05_Roblox_tutorial/Construct Your World/Terrain-10.jpg" width="100%"/>
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 #### 플레이 가능한 영역 포함
 
@@ -8452,8 +8516,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 이 섹션의 값은 최종 샘플 레이저 태그 환경의 지형에 크게 의존합니다. 사용자 경험의 맞춤 지형에 따라 장벽에 틈이 없는지 플레이 테스트를 통해 확인하는 것이 좋습니다.
 
-<Tabs>
-  <TabItem key="1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key="1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 경험에서 플레이 가능한 영역을 포함하려면:
 
@@ -8466,8 +8532,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    1. **CanCollide**를 비활성화합니다.
    1. **Anchored**를 활성화합니다.
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key="2" label="샘플 재현">
+ -->
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 플레이 가능한 영역을 정확히 재현하려면:
 
@@ -8567,8 +8635,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    1. **CanCollide**를 비활성화합니다.
    1. **Anchored**를 활성화합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 #### 특수 효과 구성
 
@@ -8597,8 +8665,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 |---|---|
 |<img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-Intro1.jpg" width="100%"/>|<img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-Intro2.jpg" width="100%"/>|
 
-<Tabs>
-  <TabItem key="1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key="1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 배경에 동적 구름을 추가하고 구성하려면:
 
@@ -8616,8 +8686,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
    <img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-2.jpg" width="100%"/>
 
-  </TabItem>
-  <TabItem key="2" label="샘플 재현">
+<!--   </TabItem>
+  <TabItem key="2" label="샘플 재현"> -->
+
+**샘플 재현**
 
 배경에 동적 구름을 추가하고 구성하려면:
 
@@ -8635,8 +8707,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
    <img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-2.jpg" width="100%"/>
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 전경 구름
 
@@ -8743,8 +8815,10 @@ Studio는 모든 경험에 대해 `Enum.Technology.ShadowMap` 조명 시스템�
 
 예를 들어, `Enum.Technology.Future` 조명 시스템은 사용자가 실내 또는 실외 공간에 있는지 자동으로 감지한 다음 적절한 조명 모델을 활성화합니다. 이는 사용자가 전투 포켓을 탐색할 때 바닥과 천장에서 반사를 반영할 수 있어 더 풍부한 시각적 경험을 제공합니다.
 
-<Tabs>
-  <TabItem key="1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key="1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 전역 조명을 구성하려면:
 
@@ -8760,8 +8834,10 @@ Studio는 모든 경험에 대해 `Enum.Technology.ShadowMap` 조명 시스템�
 
    <img src="../img/05_Roblox_tutorial/Construct Your World/GlobalLighting-4.jpg" width="100%"/>
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key="2" label="샘플 재현">
+ -->
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 전역 조명 구성을 정확히 재현하려면:
 
@@ -8797,8 +8873,8 @@ Studio는 모든 경험에 대해 `Enum.Technology.ShadowMap` 조명 시스템�
 
    <img src="../img/05_Roblox_tutorial/Construct Your World/GlobalLighting-4.jpg" width="100%"/>
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 로컬 조명
 
@@ -8814,8 +8890,10 @@ Intro.jpg" width="100%"/>
     조명 소스를 적용하는 것은 예술 형태이며, 경험의 필요를 충족하는 조명 구성을 찾는 데 시간이 걸립니다. 최종 샘플 레이저 태그 환경과 다르게 보이고 느껴지는 것은 정상적이고 예상되는 것입니다.
 </Alert>
 
-<Tabs>
-  <TabItem key="1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key="1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 자신만의 로컬 조명을 구성하려면:
 
@@ -8869,8 +8947,10 @@ Intro.jpg" width="100%"/>
 
    1. **(선택 사항)** 자신의 자산 라이브러리에서 빛나는 조명기구를 건물의 내부 및 외부에 추가하고 고정합니다.
 
-  </TabItem>
-  <TabItem key="2" label="샘플 재현">
+<!--   </TabItem>
+  <TabItem key="2" label="샘플 재현"> -->
+
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 로컬 조명 구성을 정확히 재현하려면:
 
@@ -8936,8 +9016,8 @@ Intro.jpg" width="100%"/>
 
 4. **(선택 사항)** 샘플 [Environment Art Asset Library](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library)를 사용하여 건물 내부 및 외부에 조명기구를 추가하고 고정합니다. 예를 들어, 최종 샘플 레이저 태그 환경에서는 **LightFixtureTall**, **LightFixtureShort**, **TouchScreenA**, **Roblox Sign** 조명기구를 사용하여 환경을 완성합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 <img src="../img/05_Roblox_tutorial/Construct Your World/LocalLighting-4.jpg" width="100%"/>
 
