@@ -18,7 +18,7 @@
         - [플랫폼 추가하기](#플랫폼-추가하기)
         - [조직 구조 만들기](#조직-구조-만들기)
         - [파트 삽입](#파트-삽입)
-        - [파트 정렬](#파트-정렬)
+        - [부품 정렬](#부품-정렬)
         - [속이 빈 터널 만들기](#속이-빈-터널-만들기)
         - [플레이테스트](#플레이테스트-1)
     - [Chapter 2 - Script the Gameplay](#chapter-2---script-the-gameplay)
@@ -231,12 +231,13 @@ Baseplate 템플릿으로 프로젝트를 만들려면:
 
 1. 메뉴 바에서 홈 탭으로 이동한 다음 Terrain Editor 버튼을 클릭합니다. Terrain Editor 창이 표시됩니다.<br>![](../img/05_Roblox_tutorial/Home-Tab-Terrain-Editor.png.webp)
 2. Terrain Editor 창에서 Edit 탭을 클릭한 다음 Draw 버튼을 클릭합니다.<br>![](../img/05_Roblox_tutorial/Edit-Tab-Draw.png.webp)
-3. 브러쉬 설정 및 재료 설정 섹션에서 다음을 제외한 모든 기본 설정을 유지합니다:<br>![](../img/05_Roblox_tutorial/Terrain-Editor-Draw-Settings.png.webp)
+3. 브러쉬 설정 및 재료 설정 섹션에서 다음을 제외한 모든 기본 설정을 유지합니다:<br>
+    <!-- ![](../img/05_Roblox_tutorial/Terrain-Editor-Draw-Settings.png.webp) -->
+    <image src="../img/05_Roblox_tutorial/Terrain-Editor-Draw-Settings.png.webp" width=50%><br/>
     - 기본 크기를 32로 설정합니다.
     - 재료를 모래로 설정합니다.
 4. 뷰포트에서 스폰 위치 근처를 클릭합니다. 모래 재료의 구체가 표시됩니다.
-
-<video src="../img/05_Roblox_tutorial/Terrain-Adding-First-Sphere.mp4" width="320" height="240" controls></video>
+  <video src="../img/05_Roblox_tutorial/Terrain-Adding-First-Sphere.mp4" width="100%" controls></video>
 
 구체가 보이지 않으면 카메라를 줌 아웃하여 스폰 위치가 작아질 때까지 시도하십시오.
 
@@ -247,18 +248,22 @@ Baseplate 템플릿으로 프로젝트를 만들려면:
 섬 모양을 만들려면:
 
 1. Terrain Editor 창에서 Flatten 버튼을 클릭합니다.<br>![](../img/05_Roblox_tutorial/Edit-Tab-Flatten.png.webp)
-2. 브러쉬 설정 섹션에서 다음을 제외한 모든 기본 설정을 유지합니다:<br>![](../img/05_Roblox_tutorial/Terrain-Editor-Flatten-Settings.png.webp)
+2. 브러쉬 설정 섹션에서 다음을 제외한 모든 기본 설정을 유지합니다:<br>
+   <!-- ![](../img/05_Roblox_tutorial/Terrain-Editor-Flatten-Settings.png.webp) -->
+   <image src="../img/05_Roblox_tutorial/Terrain-Editor-Flatten-Settings.png.webp" width=50%><br/>
     - 기본 크기를 18로 설정합니다.
     - 고정 평면을 활성화합니다. 새로운 설정이 표시됩니다.
     - 평면 위치를 0으로 설정합니다.
 3. 뷰포트에서 마우스를 클릭하고 드래그하여 구체의 상단이 완전히 평평해질 때까지 이동합니다.
-<video src="../img/05_Roblox_tutorial/Terrain-Flattening-Sphere.mp4" width="320" height="240" controls></video>
+  <video src="../img/05_Roblox_tutorial/Terrain-Flattening-Sphere.mp4" width="100%" controls></video>
 
-4. 다시 Terrain Editor 창으로 이동하여 Sculpt 버튼을 클릭합니다.<br>![](../img/05_Roblox_tutorial/Edit-Tab-Sculpt.png.webp)
-5. 브러쉬 설정 및 재료 설정 섹션에서 재료를 모래로 설정하고 다른 모든 기본 설정을 유지합니다.<br>![](../img/05_Roblox_tutorial/Terrain-Editor-Sculpt-Settings.png.webp)
-6. 뷰포트에서 마우스를 클릭하고 드래그하여 섬의 가장자리와 물 아래 라인을 따라 이동하여 섬이 보다 자연스럽게 보이도록 합니다.
+1. 다시 Terrain Editor 창으로 이동하여 Sculpt 버튼을 클릭합니다.<br>![](../img/05_Roblox_tutorial/Edit-Tab-Sculpt.png.webp)
+2. 브러쉬 설정 및 재료 설정 섹션에서 재료를 모래로 설정하고 다른 모든 기본 설정을 유지합니다.<br>
+   <!-- ![](../img/05_Roblox_tutorial/Terrain-Editor-Sculpt-Settings.png.webp) -->
+   <image src=../img/05_Roblox_tutorial/Terrain-Editor-Sculpt-Settings.png.webp width=50%>
+3. 뷰포트에서 마우스를 클릭하고 드래그하여 섬의 가장자리와 물 아래 라인을 따라 이동하여 섬이 보다 자연스럽게 보이도록 합니다.
 
-<video src="../img/05_Roblox_tutorial/Terrain-Sculpting-Edges.mp4" width="320" height="240" controls></video>
+  <video src="../img/05_Roblox_tutorial/Terrain-Sculpting-Edges.mp4" width="100%" controls></video>
 
 Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, Sculpt 도구는 기존 지형을 성장시키거나 침식시키기만 합니다.
 
@@ -272,12 +277,14 @@ Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, S
 2. 선택 설정 섹션에서,
     1. 위치를 0, -15, 0으로 설정하여 섬 상단 아래에 물이 채워지도록 합니다.
     2. 크기를 1800, 5, 1800으로 설정하여 경험의 지평선까지 물이 채워지도록 합니다.
-3. 재료 설정 섹션에서 도구를 다음 설정으로 구성합니다:<br>![](../img/05_Roblox_tutorial/Terrain-Editor-Fill-Settings.png.webp)
+3. 재료 설정 섹션에서 도구를 다음 설정으로 구성합니다:
+   <!-- ![](../img/05_Roblox_tutorial/Terrain-Editor-Fill-Settings.png.webp) -->
+   <image src="../img/05_Roblox_tutorial/Terrain-Editor-Fill-Settings.png.webp" width=50%>
     - 재료 모드를 대체로 설정합니다.
     - 원본 재료를 공기로 설정합니다.
     - 대상 재료를 물로 설정합니다.
 4. 적용 버튼을 클릭합니다. 섬 주변에 물이 생성됩니다.
-<video src="../img/05_Roblox_tutorial/Terrain-Filling-Water.mp4" width="320" height="240" controls></video>
+  <video src="../img/05_Roblox_tutorial/Terrain-Filling-Water.mp4" width="100%" controls></video>
 
 ##### 재료 적용
 
@@ -286,11 +293,12 @@ Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, S
 섬에 재료를 적용하려면:
 1. Terrain Editor에서 Paint 버튼을 클릭합니다.<br>![](../img/05_Roblox_tutorial/Edit-Tab-Paint.png.webp)
 2. 브러쉬 설정 및 재료 설정 섹션에서 다음을 제외한 모든 기본 설정을 유지합니다:
-    <br>![](../img/05_Roblox_tutorial/Terrain-Editor-Paint-Settings.png.webp)
+    <!-- <br>![](../img/05_Roblox_tutorial/Terrain-Editor-Paint-Settings.png.webp) -->
+    <image src="../img/05_Roblox_tutorial/Terrain-Editor-Paint-Settings.png.webp" width=50%><br/>
     - 재료 모드를 페인트로 설정합니다.
     - 재료를 잎이 많은 풀로 설정합니다.
 3. 뷰포트에서 섬의 중간을 클릭하고 드래그하여 잎이 많은 풀 재료를 적용합니다.
-<video src="../img/05_Roblox_tutorial/Terrain-Painting-Grass.mp4" width="320" height="240" controls></video>
+  <video src="../img/05_Roblox_tutorial/Terrain-Painting-Grass.mp4" width="100%" controls></video>
 
 4. 다시 Terrain Editor 창으로 이동하여 브러쉬 설정 및 재료 설정 섹션에서
     - 기본 크기를 3으로 설정합니다.
@@ -298,9 +306,9 @@ Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, S
 5. 뷰포트에서 섬 가장자리를 따라 드래그하여 풀잎을 적용하고, 섬의 중간에 스폰 위치와 초기 플랫폼을 위한 공간을 남깁니다.
 6. Explorer 창에서 SpawnLocation 객체를 선택합니다.
 7. 홈 탭에서 이동 도구를 선택합니다.
-8. 뷰포트에서 스폰 위치를 섬 가장자리 쪽으로 이동하여 첫 번째 플랫폼을 위한 공간을 만듭니다. 샘플 Island Jump - Building .rbxl 파일은 위치를 -127, -3, 9로 사용합니다.
+8. 뷰포트에서 스폰 위치를 섬 가장자리 쪽으로 이동하여 첫 번째 플랫폼을 위한 공간을 만듭니다. 샘플 [`Island Jump - Building .rbxl`](https://www.roblox.com/games/14239096301/Island-Jump-Building) 파일은 위치를 -127, -3, 9로 사용합니다.
 
-<video src="../img/05_Roblox_tutorial/create-an-environment-with-terrain-spawn.mp4" width="320" height="240" controls></video>
+  <video src="../img/05_Roblox_tutorial/create-an-environment-with-terrain-spawn.mp4" width="100%" controls></video>
 
 재료 오버라이드를 사용하여 사용자 정의 텍스처 자산을 제공하여 기본 지형 텍스처를 대체하는 완전히 사용자 정의된 재료 외관을 만들 수 있습니다.
 
@@ -314,7 +322,7 @@ Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, S
 
 스폰 시 캐릭터가 예상과 다른 방향을 향하고 있다면, 예를 들어 섬의 중앙이 아닌 바다를 향하고 있다면 SpawnLocation 객체를 회전시키고 다시 플레이테스트하여 캐릭터가 적절한 방향으로 스폰될 때까지 과정을 반복합니다.
 
-<video src="../img/05_Roblox_tutorial/create-an-environment-with-terrain-walking.mp4" width="320" height="240" controls></video>
+<video src="../img/05_Roblox_tutorial/create-an-environment-with-terrain-walking.mp4" width="100%" controls></video>
 
 다음 튜토리얼 섹션에서는 플레이어가 가장 높은 플랫폼에 도달할 수 있는 플레이 가능한 영역을 만드는 방법을 배웁니다.
 
@@ -345,11 +353,15 @@ Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, S
 
 샘플 Island Jump 경험의 그레이박스와 최종 지오메트리 비교
 
-![](../img/05_Roblox_tutorial/Add-Platforms-Greybox.jpg.webp)
+<!-- ![](../img/05_Roblox_tutorial/Add-Platforms-Greybox.jpg.webp)
 샘플 Island Jump 경험의 그레이박스 지오메트리.
 
 ![](../img/05_Roblox_tutorial/Add-Platforms-Final.jpg.webp)
-샘플 Island Jump 경험의 최종 지오메트리.
+샘플 Island Jump 경험의 최종 지오메트리. -->
+
+|샘플 Island Jump 경험의 그레이박스 지오메트리.|샘플 Island Jump 경험의 최종 지오메트리.|
+|---|---|
+|![](../img/05_Roblox_tutorial/Add-Platforms-Greybox.jpg.webp)|![](../img/05_Roblox_tutorial/Add-Platforms-Final.jpg.webp)|
 
 ##### 조직 구조 만들기
 3D 공간에 자리 표시자 파트를 삽입하기 전에, Workspace의 자산에 대한 조직 구조를 만드는 것이 중요합니다. 이 과정은 특히 관리해야 할 자산이 많은 경험을 만드는 과정에서 Workspace가 조직되고 쉽게 스캔되도록 보장합니다.
@@ -368,15 +380,19 @@ Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, S
     이름이 올바르게 철자가 맞고 대소문자가 올바른지 확인합니다. Roblox에서 작성한 스크립트는 대소문자를 구분하며, 나중에 이 폴더에 접근하기 위해 하나의 스크립트를 작성할 것입니다.
 4. World 폴더 위로 마우스를 올리고 ⊕ 아이콘을 클릭합니다.
 5. 컨텍스트 메뉴에서 Model을 삽입합니다.<br>![](../img/05_Roblox_tutorial/Explorer-Add-Model.png.webp)<br>Explorer 창에서 World 폴더의 플러스 아이콘과 Model 객체가 강조 표시된 모습.
-6. 모델 이름을 Blockout_Parts로 변경합니다.<br>![](../img/05_Roblox_tutorial/Explorer-Model-Renamed.png.webp)<br>Explorer 창에서 World 폴더 아래에 있는 새 Blockout_Parts 모델이 강조 표시된 모습.
+6. 모델 이름을 Blockout_Parts로 변경합니다.
+   <!-- <br>![](../img/05_Roblox_tutorial/Explorer-Model-Renamed.png.webp)<br>Explorer 창에서 World 폴더 아래에 있는 새 Blockout_Parts 모델이 강조 표시된 모습. -->
+   <br><image src="../img/05_Roblox_tutorial/Explorer-Model-Renamed.png.webp" width=50%><br>Explorer 창에서 World 폴더 아래에 있는 새 Blockout_Parts 모델이 강조 표시된 모습.
 
 ##### 파트 삽입
 
-```
-다음 지침에서는 두 가지 다른 교육 경로를 제공합니다. 고유한 환경에 파트를 삽입하거나 샘플 Island Jump - Building 내의 그레이박스 환경을 정확하게 재현할 수 있습니다.
-```
+
+>다음 지침에서는 두 가지 다른 교육 경로를 제공합니다. 고유한 환경에 파트를 삽입하거나 샘플 Island Jump - Building 내의 그레이박스 환경을 정확하게 재현할 수 있습니다.
+
 
 이제 자산을 포함할 조직 구조가 마련되었으므로, 3D 공간에 해상 암초 플랫폼을 나타내는 파트를 삽입할 수 있습니다.
+
+**Create your own**
 
 첫 번째 플랫폼을 위한 실린더 파트를 삽입하려면:
 1. 메뉴 바에서 홈 탭을 선택합니다.
@@ -387,60 +403,276 @@ Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, S
 6. Explorer 창에서 Block_Out 모델을 선택합니다.
 7. 홈 탭에서 편집 섹션으로 이동하여 앵커 아이콘을 클릭합니다. 이는 경험이 시작될 때 물리 시스템이 파트를 이동시키지 않도록 보장합니다.<br>![](../img/05_Roblox_tutorial/Home-Tab-Anchor.png.webp)
 
-##### 파트 정렬
-해상 암초 플랫폼을 삽입할 때 샘플 Island Jump - Building 경험 값을 사용한 경우 이 단계를 건너뛸 수 있습니다.
+**Recreate The Sample**
 
-섬 외부에 더 많은 해상 암초 자리 표시자 파트를 추가할 때, 이러한 파트의 높이 차이를 서로 다른 위치 대신 다양한 크기를 사용하여 관리하는 것이 더 쉽습니다. 이를 통해 각 플랫폼의 기반을 정렬하여 모든 수직 크기 차이가 다른 높이로 반영되도록 하고, 같은 크기의 파트는 동일한 수준에 있도록 할 수 있습니다.
+샘플 [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building) 경험에서 해식 기둥 플랫폼을 정확히 재현하려면 다음 단계를 따르세요:
 
-`Align Tool`은 특정 축에 따라 최소, 중앙 또는 최대 가장자리에 파트를 정렬합니다. 이 경험의 목적을 위해 Y 축에서 아래 가장자리를 정렬하여 모든 파트가 물에 부분적으로 잠기도록 해야 합니다.
+1. 메뉴 바에서 **Home** 탭을 선택합니다.
+1. **Insert** 섹션에서 **Part** 드롭다운 화살표를 클릭한 후 **Cylinder**를 선택합니다. 뷰포트에 실린더 파트가 표시됩니다.
 
-파트를 정렬하려면:
-1. Explorer 창에서 모든 플랫폼을 선택합니다.
-2. 메뉴 바에서 모델 탭으로 이동한 다음 Align Tool을 클릭합니다. Align Tool 창이 표시됩니다.<br>![](../img/05_Roblox_tutorial/Model-Tab-Align-Tool.png.webp)
-3. Align Tool 창에서,
-    1. 모드를 Min으로 설정합니다.
-    2. 정렬 대상을 World, Y로 설정합니다.
-    3. Relative To를 Selection Bounds로 유지합니다.
-4. Align 버튼을 클릭합니다. 모든 파트가 가장 낮은 Y Part.Position 값을 가진 파트에 따라 Y 축에서 정렬됩니다.
-![](../img/05_Roblox_tutorial/Platforms-Aligned-Underwater.jpg.webp)
-모든 플랫폼이 아래 가장자리를 정렬합니다.
+   <img src="../img/05_Roblox_tutorial/Home-Tab-Part-Menu-Cylinder.png" alt="Studio의 Home 탭에서 Part 도구의 드롭다운 화살표와 Cylinder 객체가 강조 표시됨" width="716" />
+
+1. **Explorer** 창에서 새 **Part**를 클릭하고 **Blockout_Parts** 모델로 드래그합니다. 파트는 모델의 자식이 됩니다.
+
+   <img src="../img/05_Roblox_tutorial/New-Part-As-Child-Of-Model.png" alt="Studio의 Explorer 창에서 Blockout_Parts 모델 객체 아래에 새 Part가 강조 표시됨" width="320" />
+
+1. **Properties** 창에서,
+   
+   1. **Name**을 **Level_1**로 설정하여 정리합니다.
+   1. **Size**를 **12, 131, 131**로 설정하여 큰 플랫폼을 만듭니다.
+   1. **CFrame.Position**을 **-23, -4, 9**로 설정하여 플랫폼 상단이 섬 표면에서 짧은 점프 거리에 있도록 합니다.
+   1. **CFrame.Orientation**을 **0, 0, 90**으로 설정하여 실린더의 평평한 면이 하늘을 향하게 합니다.
+
+   <img src="../img/05_Roblox_tutorial/First-Platform.jpg" alt="물로 둘러싸인 섬에서 부분적으로 돌출된 큰 실린더 객체" width="80%" />
+
+1. 이 과정을 사용하여 나머지 해식 기둥 플랫폼에 대해 다음 값을 사용하여 추가 및 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>이름</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Level_2</td>
+   <td>`20, 81, 81`</td>
+   <td>`-8, 0, 24`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_3a</td>
+   <td>`40, 44, 44`</td>
+   <td>`42, 10, 9`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_3b</td>
+   <td>`40, 34, 34`</td>
+   <td>`87, 10, 4`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_3c</td>
+   <td>`40, 44, 44`</td>
+   <td>`97, 10, 49`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_4a</td>
+   <td>`75, 39, 39`</td>
+   <td>`112, 27.5, 46.5`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_4b</td>
+   <td>`75, 65, 65`</td>
+   <td>`137, 27.5, 69`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_4c</td>
+   <td>`75, 60, 60`</td>
+   <td>`159.5, 27.5, 91.5`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_4d</td>
+   <td>`75, 30, 30`</td>
+   <td>`207, 27.5, 106.5`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_4e</td>
+   <td>`75, 61, 61`</td>
+   <td>`250, 27.5, 74`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_5a</td>
+   <td>`130, 60, 60`</td>
+   <td>`268, 55, 50`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_5b</td>
+   <td>`130, 25, 25`</td>
+   <td>`256, 55, 2.5`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_5c</td>
+   <td>`130, 25, 25`</td>
+   <td>`276, 55, -17.5`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_5d</td>
+   <td>`130, 54, 54`</td>
+   <td>`322, 55, -21`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_6a</td>
+   <td>`211, 79, 79`</td>
+   <td>`367, 94.5, -41`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_6b</td>
+   <td>`211, 24, 24`</td>
+   <td>`387, 94.5, 11.5`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_6c</td>
+   <td>`211, 44, 44`</td>
+   <td>`397, 94.5, 51.5`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_7</td>
+   <td>`321, 61, 61`</td>
+   <td>`407, 149.5, 79`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Final-Platforms.jpg" alt="물로 둘러싸인 섬에서 부분적으로 돌출된 많은 큰 실린더 객체" width="80%" />
+
+1. **Explorer** 창에서 **Block_Out** 모델을 선택합니다.
+1. **Home** 탭에서 **Edit** 섹션으로 이동하여 **Anchor** 아이콘을 클릭합니다. 이렇게 하면 경험이 시작될 때 물리 시스템이 부품을 이동시키지 않도록 합니다.
+
+   <img src="../img/05_Roblox_tutorial/Home-Tab-Anchor.png" alt="Studio의 Home 탭에서 Anchor 도구가 강조 표시됨" width="800" />
+
+##### 부품 정렬
+
+<Alert severity="info">
+   샘플 **Island Jump - Building** 경험에서 해식 기둥 플랫폼을 삽입할 때 사용한 값을 사용했다면 이 단계를 건너뛸 수 있습니다.
+</Alert>
+
+섬 밖에 더 많은 해식 기둥 플레이스홀더 부품을 추가할 때, 이 부품들의 크기를 다양하게 사용하여 서로 다른 높이 차이를 조절하면 레벨 간의 높이 차이를 관리하기가 더 쉽습니다. 이렇게 하면 각 플랫폼의 기본 부분을 정렬하여 모든 수직 크기 차이가 높이 차이로 반영되며, 동일한 크기의 부품은 동일한 높이에 위치하게 할 수 있습니다.
+
+`Align Tool`은 특정 축에 따라 부품을 최소, 중심, 또는 최대 가장자리에 정렬합니다. 이 경험의 목적을 위해서는 **Y** 축에서 **하단** 가장자리를 정렬하여 모든 부품이 물에 부분적으로 잠기도록 해야 합니다.
+
+부품을 정렬하려면:
+
+1. **Explorer** 창에서 모든 플랫폼을 선택합니다.
+2. 메뉴 바에서 **Model** 탭으로 이동한 다음 `Align Tool`을 클릭합니다. **Align Tool** 창이 표시됩니다.
+
+   <img src="../img/05_Roblox_tutorial/Model-Tab-Align-Tool.png" width="660" alt="Align 도구가 강조 표시된 Studio의 Model 탭" />
+
+3. **Align Tool** 창에서,
+
+   1. **Mode**를 **Min**으로 설정합니다.
+   2. **Align In**을 **World**, **Y**로 설정합니다.
+   3. **Relative To**를 **Selection Bounds**로 유지합니다.
+
+4. **Align** 버튼을 클릭합니다. 모든 부품이 Y 축에 따라 가장 낮은 Y `Class.Part.Position` 값을 가진 부품에 맞추어 정렬됩니다.
+   <figure>
+     <img src="../img/05_Roblox_tutorial/Platforms-Aligned-Underwater.jpg" alt="하단 가장자리가 정렬된 많은 실린더의 수중 보기" />
+     <figcaption>모든 플랫폼이 하단 가장자리를 기준으로 정렬됨</figcaption>
+   </figure>
 
 ##### 속이 빈 터널 만들기
 
-플레이 가능한 영역을 차단하는 데 파트를 그대로 사용하는 것 외에도 고체 모델링 작업을 적용하여 파트를 독특한 방식으로 결합하여 속이 빈 터널과 같은 더 복잡한 모양을 만들 수 있습니다. 이 기술은 플레이어가 환경과 상호 작용하는 방식에 시각적 흥미와 변화를 제공합니다.
+플레이 가능한 영역을 차단하기 위해 부품을 그대로 사용하는 것 외에도 부품을 독특한 방식으로 결합하여 더 복잡한 모양을 형성하는 솔리드 모델링 작업을 적용할 수 있습니다. 예를 들어, 해식 기둥 중 하나에 속이 빈 터널을 만들 수 있습니다. 이 기술은 시각적 흥미를 제공하고 플레이어가 환경과 상호작용하는 방식을 다양화합니다.
 
-고체 모델링 도구에는 네 가지가 있습니다:
+네 가지 솔리드 모델링 도구가 있습니다:
 
- - Union – 두 개 이상의 파트를 결합하여 하나의 고체 유니언을 만듭니다.
- - Intersect – 겹치는 파트를 하나의 고체 교차로 교차합니다.
- - Negate – 파트를 제거하여 구멍과 함몰부를 만드는 데 유용합니다.
- - Separate – 유니언이나 교차를 개별 파트로 다시 분리합니다.
+- **Union** – 두 개 이상의 부품을 하나의 고체 유니온으로 결합합니다.
+- **Intersect** – 겹치는 부품을 하나의 고체 교차점으로 만듭니다.
+- **Negate** – 부품을 부정하여 구멍과 요철을 만듭니다.
+- **Separate** – 유니온 또는 교차점을 개별 부품으로 분리합니다.
 
-속이 빈 터널을 만드는 목적을 위해 Union과 Negate 도구만 사용하면 됩니다. 모든 도구에 대한 전체 분석은 고체 모델링을 참조하십시오.
+속이 빈 터널을 만들기 위해서는 **Union** 및 **Negate** 도구만 사용하면 됩니다. 모든 도구에 대한 전체 설명은 `Solid Modeling`을 참조하세요.
 
-![](../img/05_Roblox_tutorial/Model-Tab-Solid-Modeling.png.webp)
-모델 탭에서 고체 모델링 도구가 강조 표시된 모습.
+<img src="../img/05_Roblox_tutorial/Model-Tab-Solid-Modeling.png" alt="솔리드 모델링 도구가 강조 표시된 Studio의 Model 탭" width="732" />
 
 속이 빈 터널을 만들려면:
-1. 해상 암초 플랫폼 위에 실린더 파트를 삽입하고 위치를 지정합니다. 샘플 Island Jump - Building 경험은 다음 값으로 Level_4b 플랫폼 위에 이 파트를 위치시킵니다:<br>
-    | 이름 |	크기 |	CFrame.Position |	CFrame.Orientation |
-    |---|---|---|---|
-    |Tunnel |	24, 65, 69	| 137, 77, 69	| 0, 0, 90 |
-2. 실린더 파트 안에 속이 빈 부분을 나타내는 블록 파트를 삽입하고 위치를 지정하여 플레이어가 통과할 수 있을 정도로 높고 적절한 너비를 가집니다. 샘플 Island Jump - Building 경험은 다음 값으로 이전 실린더 안에 이 파트를 위치시킵니다:<br>
-    | 이름 |	크기 |	CFrame.Position |	CFrame.Orientation |
-    |---|---|---|---|
-    |Hollow_Part |	24.5, 72, 22	| 134.5, 77, 71	| 0, 135, 90 |
-    <br>![](../img/05_Roblox_tutorial/HollowTunnel-Start.jpg.webp)
-3. Explorer 창에서 블록 파트를 선택합니다.
-4. 모델 탭에서 고체 모델링 섹션으로 이동한 다음 Negate 버튼을 클릭합니다. 파트가 반투명해집니다.<br>![](../img/05_Roblox_tutorial/HollowTunnel-Negate.jpg.webp)
-5. Explorer 창에서 반투명 파트와 실린더 터널 파트를 모두 선택합니다.
-6. 모델 탭에서 고체 모델링 섹션으로 돌아가서 Union 버튼을 클릭합니다. 반투명 파트가 겹치는 터널 실린더에서 잘립니다.<br>![](../img/05_Roblox_tutorial/HollowTunnel-Union.jpg.webp)
-7. 새 유니언의 이름을 높이 수준과 위치를 반영하도록 Level_4b_Union과 같이 변경합니다.
-8. 새 유니언 아래에 해상 암초 플랫폼을 복제하고 터널 위에 위치시킵니다. 샘플 Island Jump - Building 경험은 다음 값으로 유니언 위에 복제된 Level_4b 플랫폼을 위치시킵니다:<br>
-    | 이름 |	크기 |	CFrame.Position |	CFrame.Orientation |
-    |---|---|---|---|
-    |Level_4b_Top |	74, 65, 69	| 137, 126, 69	| 0, 0, 90 |
-    <br>![](../img/05_Roblox_tutorial/HollowTunnel-Final.jpg.webp)
+
+1. 해식 기둥 플랫폼 중 하나 위에 **실린더** 부품을 삽입하고 위치를 조정합니다. 샘플 [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building) 경험에서는 이 부품을 **Level_4b** 플랫폼 위에 다음 값으로 배치합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>이름</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Tunnel</td>
+   <td>`24, 65, 69`</td>
+   <td>`137, 77, 69`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   </tbody>
+   </table>
+
+2. 터널의 속을 나타내는 **블록** 부품을 삽입하고 위치를 조정합니다. 이 부품은 실린더 부품만큼 높아야 하며, 플레이어가 통과할 수 있을 정도의 폭을 가져야 합니다. 샘플 **Island Jump - Building** 경험에서는 이전 실린더 내부에 다음 값으로 배치합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>이름</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Hollow_Part</td>
+   <td>`24.5, 72, 22`</td>
+   <td>`134.5, 77, 71`</td>
+   <td>`0, 135, 90`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/HollowTunnel-Start.jpg" alt="회색 실린더에서 돌출된 회색 블록의 근접 보기" width="740" />
+
+3. **Explorer** 창에서 블록 부품을 선택합니다.
+4. **Model** 탭에서 **Solid Modeling** 섹션으로 이동한 다음 **Negate** 버튼을 클릭합니다. 부품이 반투명해집니다.
+
+   <img src="../img/05_Roblox_tutorial/HollowTunnel-Negate.jpg" alt="반투명한 분홍색 블록이 회색 실린더에서 돌출된 근접 보기" width="740" />
+
+5. **Explorer** 창에서 반투명 부품과 실린더 터널 부품을 모두 선택합니다.
+6. **Model** 탭으로 돌아가 **Solid Modeling** 섹션으로 이동한 다음 **Union** 버튼을 클릭합니다. 반투명 부품이 중첩된 터널 실린더에서 잘려 나갑니다.
+
+   <img src="../img/05_Roblox_tutorial/HollowTunnel-Union.jpg" alt="터널을 통해 열린 회색 실린더의 근접 보기. 터널에는 지붕이 없음." width="740" />
+
+7. 새 유니온의 이름을 높이와 위치를 반영하는 이름으로 변경합니다, 예를 들어 **Level_4b_Union**으로 합니다.
+8. 새 유니온 아래에 있는 해식 기둥 플랫폼을 복제하고, 이를 터널 위에 배치합니다. 샘플 **Island Jump - Building** 경험에서는 복제된 **Level_4b** 플랫폼을 다음 값으로 유니온 위에 배치합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>이름</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Level_4b_Top</td>
+   <td>`74, 65, 69`</td>
+   <td>`137, 126, 69`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/HollowTunnel-Final.jpg" alt="실린더 터널을 통한 터널의 근접 보기" width="740" />
+
 
 ##### 플레이테스트
 
@@ -460,7 +692,7 @@ Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, S
 5. JumpPower를 0으로 설정합니다. 이는 캐릭터가 점프할 수 없도록 하여 게임플레이를 스크립트한 후 플레이어의 시작 상태와 동일하게 만듭니다.<br>![](../img/05_Roblox_tutorial/Humanoid-Jump-Settings.png.webp)<br>속성 창이 보이지 않으면 보기 탭을 열고 표시 섹션에서 속성이 선택되어 있는지 확인하십시오.
 6. 새 수준에 도달하면 JumpPower를 30의 배수로 설정하여 점프 업그레이드를 시뮬레이션합니다.
 
-<video src="../img/05_Roblox_tutorial/playable-area-walk.mp4" width="320" height="240" controls></video>
+<video src="../img/05_Roblox_tutorial/playable-area-walk.mp4" width="100%" controls></video>
 
 튜토리얼의 다음 섹션에서는 경험의 전체 게임플레이를 스크립트하는 방법을 배우게 됩니다.
 
@@ -605,7 +837,7 @@ end
 
 출력 창이 보이지 않으면 보기 탭으로 이동한 다음 출력이 선택되어 있는지 확인하십시오.
 
-<video src="../img/05_Roblox_tutorial/script-game-behavior-coin-collection.mp4" width="320" height="240" controls></video>
+<video src="../img/05_Roblox_tutorial/script-game-behavior-coin-collection.mp4" width="100%" controls></video>
 
 #### Record and Display Player Data
 
@@ -897,7 +1129,7 @@ end
 1. 메뉴 바에서 재생 버튼을 클릭합니다. Studio가 플레이테스트 모드로 전환됩니다.<br>![](../img/05_Roblox_tutorial/Quick-Access-Toolbar-Play.png.webp)
 2. 캐릭터를 이동하여 코인에 닿게 합니다. 스크립트가 제대로 작동하면 리더보드 UI가 표시되고 코인을 더 많이 수집할수록 코인 수가 증가합니다.
 
-<video src="../img/05_Roblox_tutorial/record-and-display-player-data-example.mp4" width="320" height="240" controls></video>
+<video src="../img/05_Roblox_tutorial/record-and-display-player-data-example.mp4" width="100%" controls></video>
 
 #### Create Player Hazards
 
@@ -996,7 +1228,7 @@ Players.PlayerRemoving:Connect(onPlayerRemoved)
 게임을 테스트하려면:
 1. 메뉴 바에서 Play 버튼을 클릭합니다. Studio가 플레이 테스트 모드로 전환됩니다.<br>![](../img/05_Roblox_tutorial/Quick-Access-Toolbar-Play.png.webp)
 2. 캐릭터를 이동하여 코인을 몇 개 수집한 다음 물로 뛰어드세요. 스크립트가 올바르게 작동하면 캐릭터가 죽고 리더보드의 코인 수가 0으로 초기화됩니다.
-<video src="../img/05_Roblox_tutorial/player-hazards-example.mp4" width="320" height="240" controls></video>
+<video src="../img/05_Roblox_tutorial/player-hazards-example.mp4" width="100%" controls></video>
 
 #### Script an Upgrade Button
 
@@ -1224,7 +1456,7 @@ jumpPurchaseGui.Parent = playerGui
 
 1. 메뉴 바에서 Play 버튼을 클릭합니다. Studio가 플레이 테스트 모드로 전환됩니다.<br>![](../img/05_Roblox_tutorial/Quick-Access-Toolbar-Play.png.webp)
 2. 스크립트가 올바르게 작동하면 점프 파워를 구매하는 버튼이 화면에 나타납니다. 코인을 수집하기 전에 버튼을 클릭하여 추가 점프 파워가 부여되지 않는지 확인한 다음, 코인을 몇 개 수집하고 다시 클릭하여 업그레이드가 작동하는지 확인하세요.
-<video src="../img/05_Roblox_tutorial/script-an-upgrade-button-example.mp4" width="320" height="240" controls></video>
+<video src="../img/05_Roblox_tutorial/script-an-upgrade-button-example.mp4" width="100%" controls></video>
 
 이제 코드가 완성되었으므로, 코인의 양과 위치를 통해 게임의 균형을 맞춰보세요. 게임이 너무 느리게 느껴지면 더 많은 코인을 추가하고, 너무 빠르고 쉽게 느껴지면 코인을 줄이고 도전적인 장소에 배치하세요.
 
