@@ -82,4 +82,4 @@
  - [Characters](https://create.roblox.com/docs/ko-kr/characters)
 
 ---
-## [다음](./02_)
+## [다음](./07_Users_and_Players.md)
