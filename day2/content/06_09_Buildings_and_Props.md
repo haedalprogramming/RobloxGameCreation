@@ -26,7 +26,7 @@
 
 자동차와 같은 일부 소품은 원하는 대로 스냅되지 않을 수 있습니다. 자유롭게 이동하려면 **Model** 탭으로 이동하여 **Move** 옆의 상자를 체크 해제하여 스냅을 끄세요. 소품 배치가 완료되면 스냅 기능을 다시 켜는 것을 잊지 마세요.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/06_09_Buildings_and_Props/showMoveSnapInactive.png.webp" />
     <figcaption>소품 사용할 때 스냅 끄기</figcaption>
@@ -35,7 +35,11 @@
     <img src="../img/06_09_Buildings_and_Props/showMoveSnapActive.png.webp" />
     <figcaption>건물 및 도로에 스냅 켜기</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|소품 사용할 때 스냅 끄기|건물 및 도로에 스냅 켜기|
+|---|---|
+|<img src="../img/06_09_Buildings_and_Props/showMoveSnapInactive.png.webp" />|<img src="../img/06_09_Buildings_and_Props/showMoveSnapActive.png.webp" />|
 
 ---
 ## 출처

@@ -21,7 +21,7 @@ Roblox 스토리 게임에서는 단어가 사라지고 플레이어가 빈칸�
 
 레슨을 완료한 후에는 Roblox에서 퀴즈 게임을 플레이하여 상품을 획득할 기회를 얻습니다. 상품을 획득한 후 다음 레슨을 계속 진행하세요.
 
-<GridContainer numColumns="3">
+<!-- <GridContainer numColumns="3">
   <figure>
     <img src="../img/07_01_Story_Games_Project/wcc_lessonThumbnail_1.png.webp" />
     <figcaption>1: 변수 생성하기</figcaption>
@@ -34,7 +34,11 @@ Roblox 스토리 게임에서는 단어가 사라지고 플레이어가 빈칸�
     <img src="../img/07_01_Story_Games_Project/wcc_lessonThumbnail_3.png.webp" />
     <figcaption>3: 이야기하기</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|1: 변수 생성하기|2: 플레이어의 답변 받기|3: 이야기하기|
+|---|---|---|
+|<img src="../img/07_01_Story_Games_Project/wcc_lessonThumbnail_1.png.webp" />|<img src="../img/07_01_Story_Games_Project/wcc_lessonThumbnail_2.png.webp" />|<img src="../img/07_01_Story_Games_Project/wcc_lessonThumbnail_3.png.webp" />|
 
 레슨을 완료한 후에는 Roblox에서 퀴즈 게임을 플레이하여 상품을 획득할 기회를 얻습니다. 상품을 획득한 후 다음 레슨을 계속 진행하세요.
 

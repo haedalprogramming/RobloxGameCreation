@@ -20,7 +20,7 @@
 - **소품 배치**: 도시를 시각적으로 더 흥미롭게 만듭니다.
 - **지형 페인팅**: 산, 강, 언덕 등을 추가합니다.
 
-<GridContainer numColumns="3">
+<!-- <GridContainer numColumns="3">
   <figure>
     <img src="../img/06_06_Build_One_Half/buildingExamples_large.jpg.webp" />
     <figcaption>건물</figcaption>
@@ -33,7 +33,11 @@
     <img src="../img/06_06_Build_One_Half/show-terrain-360px.jpg.webp" />
     <figcaption>지형</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|건물|소품|지형|
+|---|---|---|
+|<img src="../img/06_06_Build_One_Half/buildingExamples_large.jpg.webp" />|<img src="../img/06_06_Build_One_Half/buildingExamples_props.jpg.webp" />|<img src="../img/06_06_Build_One_Half/show-terrain-360px.jpg.webp" />|
 
 ## 충돌 비활성화
 
@@ -41,7 +45,7 @@
 
 1. **홈** 탭에서 **충돌 비활성화**를 선택합니다. 비활성화되면 회색으로 표시되지 않습니다.
 
-   <GridContainer numColumns="2">
+   <!-- <GridContainer numColumns="2">
      <figure>
        <img src="../img/06_06_Build_One_Half/collisionsOn.png.webp" />
        <figcaption>충돌 활성화</figcaption>
@@ -50,7 +54,11 @@
        <img src="../img/06_06_Build_One_Half/collisionsOff.png.webp" />
        <figcaption>충돌 비활성화</figcaption>
      </figure>
-   </GridContainer>
+   </GridContainer> -->
+
+   |충돌 활성화|충돌 비활성화|
+   |---|---|
+   |<img src="../img/06_06_Build_One_Half/collisionsOn.png.webp" />|<img src="../img/06_06_Build_One_Half/collisionsOff.png.webp" />|
 
 2. 건물이 올바르게 이동하고 스냅되도록 **모델** 탭에서 **스냅 설정**이 **4 스터드**로 설정되어 있는지 확인합니다.
 

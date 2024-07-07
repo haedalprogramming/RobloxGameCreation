@@ -20,7 +20,7 @@
 
 자신의 애니메이션을 생각할 때 이를 주요 포즈 세트로 나누는 것을 상상해보세요. 이 예제에서는 이러한 포즈로 축하 점프를 만드는 방법을 안내하겠습니다. 자신의 애니메이션에는 더 많거나 적은 포즈가 있을 수 있습니다.
 
-<GridContainer numColumns="3">
+<!-- <GridContainer numColumns="3">
   <figure>
     <img src="../img/04_03_Designing_Poses/ccs2020_t2_jumpAnimationStills_01.jpg.webp" />
     <figcaption>기본 자세</figcaption>
@@ -33,7 +33,11 @@
     <img src="../img/04_03_Designing_Poses/ccs2020_t2_jumpAnimationStills_3.jpg.webp" />
     <figcaption>도약</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|기본 자세|몸을 움츠리기|도약|
+|---|---|---|
+|<img src="../img/04_03_Designing_Poses/ccs2020_t2_jumpAnimationStills_01.jpg.webp" />|<img src="../img/04_03_Designing_Poses/ccs2020_t2_jumpAnimationStills_2.jpg.webp" />|<img src="../img/04_03_Designing_Poses/ccs2020_t2_jumpAnimationStills_3.jpg.webp" />|
 
 애니메이션 과정은 아바타의 부품을 이동하고 회전하여 주요 포즈를 만드는 것입니다. 애니메이션이 실행될 때, Studio는 포즈를 부드러운 동작으로 연결합니다.
 
@@ -156,7 +160,7 @@
 
 1. 키프레임을 클릭합니다. 전체 포즈나 개별 부품을 선택할 수 있습니다.
 
-   <GridContainer numColumns="2">
+   <!-- <GridContainer numColumns="2">
      <figure>
        <img src="../img/04_03_Designing_Poses/ccs2020_t2_selectKeyframeExamples_single.png.webp" />
        <figcaption>개별 부품 선택</figcaption>
@@ -165,7 +169,11 @@
        <img src="../img/04_03_Designing_Poses/ccs2020_t2_selectKeyframeExamples_selectAll.png.webp" />
        <figcaption>전체 포즈 선택</figcaption>
      </figure>
-   </GridContainer>
+   </GridContainer> -->
+
+   |개별 부품 선택|전체 포즈 선택|
+   |---|---|
+   |<img src="../img/04_03_Designing_Poses/ccs2020_t2_selectKeyframeExamples_single.png.webp" />|<img src="../img/04_03_Designing_Poses/ccs2020_t2_selectKeyframeExamples_selectAll.png.webp" />|
 
 2. 키프레임을 왼쪽이나 오른쪽으로 끌어 새 위치에 놓습니다. 아래 비디오에서 애니메이션을 이동하면 어떻게 더 "생기 있는" 느낌이 드는지 확인하세요.
 

@@ -5,10 +5,10 @@
  - 게임 만들기 실습을 통한 기능 익히기
 
 ## 목차
-  - [Project](./content/01_project.md)
-  - [Assets](./content/02_assets.md)
-  - [3D Workspace](./content/03_3D_workspace.md)
-  - [Scripting](./content/04_Scripting.md)
+  - [Project](./content/01_00_project.md)
+  - [Assets](./content/02_00_assets.md)
+  - [3D Workspace](./content/03_00_3D_workspace.md)
+  - [Scripting](./content/04_00_Scripting.md)
   - [Enviroment](./content/05_Lighting_and_Effects.md)
   - [Characters](./content/06_Characters.md)
   - [Players](./content/07_Users_and_Players.md)

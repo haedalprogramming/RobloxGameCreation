@@ -28,10 +28,10 @@
    - [Story Games](./day2/content/07_01_Story_Games_Project.md)
 
  - 3일차 : 로블록스 엔진 기능 & Creating an Adventure Game & Battle Royale
-    - [Project](./day3/content/01_project.md)
-    - [Assets](./day3/content/02_assets.md)
-    - [3D Workspace](./day3/content/03_3D_workspace.md)
-    - [Scripting](./day3/content/04_Scripting.md)
+    - [Project](./day3/content/01_00_project.md)
+    - [Assets](./day3/content/02_00_assets.md)
+    - [3D Workspace](./day3/content/03_00_3D_workspace.md)
+    - [Scripting](./day3/content/04_00_Scripting.md)
     - [Enviroment](./day3/content/05_Lighting_and_Effects.md)
     - [Characters](./day3/content/06_Characters.md)
     - [Players](./day3/content/07_Users_and_Players.md)

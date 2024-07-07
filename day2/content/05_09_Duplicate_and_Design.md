@@ -27,11 +27,15 @@
 
 부품을 사용하는 방법을 알게 되었으니 원하는 만큼 날개를 추가하여 멋진 디자인을 만들어 보세요. 다음 디자인을 참고로 사용하세요:
 
-<GridContainer numColumns="3">
+<!-- <GridContainer numColumns="3">
   <img src="../img/05_09_Duplicate_and_Design/wing-variations-1.jpeg.webp" />
   <img src="../img/05_09_Duplicate_and_Design/wing-variations-2.jpeg.webp" />
   <img src="../img/05_09_Duplicate_and_Design/wing-variations-3.jpeg.webp" />
-</GridContainer>
+</GridContainer> -->
+
+|<img src="../img/05_09_Duplicate_and_Design/wing-variations-1.jpeg.webp" />|<img src="../img/05_09_Duplicate_and_Design/wing-variations-2.jpeg.webp" />|<img src="../img/05_09_Duplicate_and_Design/wing-variations-3.jpeg.webp" />|
+|---|---|---|
+
 
 ## 장식 추가
 
@@ -41,10 +45,13 @@
 
 아래는 장식이 추가된 두 가지 다른 스피더입니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <img src="../img/05_09_Duplicate_and_Design/decorated-version-1.jpeg.webp" />
   <img src="../img/05_09_Duplicate_and_Design/decorated-version-2.jpeg.webp" />
-</GridContainer>
+</GridContainer> -->
+
+|<img src="../img/05_09_Duplicate_and_Design/decorated-version-1.jpeg.webp" />|<img src="../img/05_09_Duplicate_and_Design/decorated-version-2.jpeg.webp" />|
+|---|---|
 
 <figure>
   <img src="../img/05_09_Duplicate_and_Design/wing-extension.jpeg.webp" width="100%" />

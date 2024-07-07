@@ -19,4 +19,4 @@
 [Second Challenge](https://create.roblox.com/docs/ko-kr/education/build-it-play-it-story-games/second-challenge)
 
 ---
-## [다음](07_0)
+## [다음](07_09_Coding_the_Story.md)

@@ -14,7 +14,6 @@
     - [파워업](#파워업)
     - [더 많은 아레나 추가](#더-많은-아레나-추가)
   - [출처](#출처)
-  - [다음](#다음)
 
 ---
 
@@ -142,5 +141,3 @@ return MapManager
 ## 출처
  - [Finishing the Project](https://create.roblox.com/docs/ko-kr/education/battle-royale-series/finishing-the-project)
 
----
-## [다음]()

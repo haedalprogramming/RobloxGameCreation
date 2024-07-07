@@ -18,7 +18,7 @@
         - [플랫폼 추가하기](#플랫폼-추가하기)
         - [조직 구조 만들기](#조직-구조-만들기)
         - [파트 삽입](#파트-삽입)
-        - [파트 정렬](#파트-정렬)
+        - [부품 정렬](#부품-정렬)
         - [속이 빈 터널 만들기](#속이-빈-터널-만들기)
         - [플레이테스트](#플레이테스트-1)
     - [Chapter 2 - Script the Gameplay](#chapter-2---script-the-gameplay)
@@ -231,12 +231,13 @@ Baseplate 템플릿으로 프로젝트를 만들려면:
 
 1. 메뉴 바에서 홈 탭으로 이동한 다음 Terrain Editor 버튼을 클릭합니다. Terrain Editor 창이 표시됩니다.<br>![](../img/05_Roblox_tutorial/Home-Tab-Terrain-Editor.png.webp)
 2. Terrain Editor 창에서 Edit 탭을 클릭한 다음 Draw 버튼을 클릭합니다.<br>![](../img/05_Roblox_tutorial/Edit-Tab-Draw.png.webp)
-3. 브러쉬 설정 및 재료 설정 섹션에서 다음을 제외한 모든 기본 설정을 유지합니다:<br>![](../img/05_Roblox_tutorial/Terrain-Editor-Draw-Settings.png.webp)
+3. 브러쉬 설정 및 재료 설정 섹션에서 다음을 제외한 모든 기본 설정을 유지합니다:<br>
+    <!-- ![](../img/05_Roblox_tutorial/Terrain-Editor-Draw-Settings.png.webp) -->
+    <image src="../img/05_Roblox_tutorial/Terrain-Editor-Draw-Settings.png.webp" width=50%><br/>
     - 기본 크기를 32로 설정합니다.
     - 재료를 모래로 설정합니다.
 4. 뷰포트에서 스폰 위치 근처를 클릭합니다. 모래 재료의 구체가 표시됩니다.
-
-<video src="../img/05_Roblox_tutorial/Terrain-Adding-First-Sphere.mp4" width="320" height="240" controls></video>
+  <video src="../img/05_Roblox_tutorial/Terrain-Adding-First-Sphere.mp4" width="100%" controls></video>
 
 구체가 보이지 않으면 카메라를 줌 아웃하여 스폰 위치가 작아질 때까지 시도하십시오.
 
@@ -247,18 +248,22 @@ Baseplate 템플릿으로 프로젝트를 만들려면:
 섬 모양을 만들려면:
 
 1. Terrain Editor 창에서 Flatten 버튼을 클릭합니다.<br>![](../img/05_Roblox_tutorial/Edit-Tab-Flatten.png.webp)
-2. 브러쉬 설정 섹션에서 다음을 제외한 모든 기본 설정을 유지합니다:<br>![](../img/05_Roblox_tutorial/Terrain-Editor-Flatten-Settings.png.webp)
+2. 브러쉬 설정 섹션에서 다음을 제외한 모든 기본 설정을 유지합니다:<br>
+   <!-- ![](../img/05_Roblox_tutorial/Terrain-Editor-Flatten-Settings.png.webp) -->
+   <image src="../img/05_Roblox_tutorial/Terrain-Editor-Flatten-Settings.png.webp" width=50%><br/>
     - 기본 크기를 18로 설정합니다.
     - 고정 평면을 활성화합니다. 새로운 설정이 표시됩니다.
     - 평면 위치를 0으로 설정합니다.
 3. 뷰포트에서 마우스를 클릭하고 드래그하여 구체의 상단이 완전히 평평해질 때까지 이동합니다.
-<video src="../img/05_Roblox_tutorial/Terrain-Flattening-Sphere.mp4" width="320" height="240" controls></video>
+  <video src="../img/05_Roblox_tutorial/Terrain-Flattening-Sphere.mp4" width="100%" controls></video>
 
-4. 다시 Terrain Editor 창으로 이동하여 Sculpt 버튼을 클릭합니다.<br>![](../img/05_Roblox_tutorial/Edit-Tab-Sculpt.png.webp)
-5. 브러쉬 설정 및 재료 설정 섹션에서 재료를 모래로 설정하고 다른 모든 기본 설정을 유지합니다.<br>![](../img/05_Roblox_tutorial/Terrain-Editor-Sculpt-Settings.png.webp)
-6. 뷰포트에서 마우스를 클릭하고 드래그하여 섬의 가장자리와 물 아래 라인을 따라 이동하여 섬이 보다 자연스럽게 보이도록 합니다.
+1. 다시 Terrain Editor 창으로 이동하여 Sculpt 버튼을 클릭합니다.<br>![](../img/05_Roblox_tutorial/Edit-Tab-Sculpt.png.webp)
+2. 브러쉬 설정 및 재료 설정 섹션에서 재료를 모래로 설정하고 다른 모든 기본 설정을 유지합니다.<br>
+   <!-- ![](../img/05_Roblox_tutorial/Terrain-Editor-Sculpt-Settings.png.webp) -->
+   <image src=../img/05_Roblox_tutorial/Terrain-Editor-Sculpt-Settings.png.webp width=50%>
+3. 뷰포트에서 마우스를 클릭하고 드래그하여 섬의 가장자리와 물 아래 라인을 따라 이동하여 섬이 보다 자연스럽게 보이도록 합니다.
 
-<video src="../img/05_Roblox_tutorial/Terrain-Sculpting-Edges.mp4" width="320" height="240" controls></video>
+  <video src="../img/05_Roblox_tutorial/Terrain-Sculpting-Edges.mp4" width="100%" controls></video>
 
 Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, Sculpt 도구는 기존 지형을 성장시키거나 침식시키기만 합니다.
 
@@ -272,12 +277,14 @@ Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, S
 2. 선택 설정 섹션에서,
     1. 위치를 0, -15, 0으로 설정하여 섬 상단 아래에 물이 채워지도록 합니다.
     2. 크기를 1800, 5, 1800으로 설정하여 경험의 지평선까지 물이 채워지도록 합니다.
-3. 재료 설정 섹션에서 도구를 다음 설정으로 구성합니다:<br>![](../img/05_Roblox_tutorial/Terrain-Editor-Fill-Settings.png.webp)
+3. 재료 설정 섹션에서 도구를 다음 설정으로 구성합니다:
+   <!-- ![](../img/05_Roblox_tutorial/Terrain-Editor-Fill-Settings.png.webp) -->
+   <image src="../img/05_Roblox_tutorial/Terrain-Editor-Fill-Settings.png.webp" width=50%><br/>
     - 재료 모드를 대체로 설정합니다.
     - 원본 재료를 공기로 설정합니다.
     - 대상 재료를 물로 설정합니다.
 4. 적용 버튼을 클릭합니다. 섬 주변에 물이 생성됩니다.
-<video src="../img/05_Roblox_tutorial/Terrain-Filling-Water.mp4" width="320" height="240" controls></video>
+  <video src="../img/05_Roblox_tutorial/Terrain-Filling-Water.mp4" width="100%" controls></video>
 
 ##### 재료 적용
 
@@ -286,11 +293,12 @@ Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, S
 섬에 재료를 적용하려면:
 1. Terrain Editor에서 Paint 버튼을 클릭합니다.<br>![](../img/05_Roblox_tutorial/Edit-Tab-Paint.png.webp)
 2. 브러쉬 설정 및 재료 설정 섹션에서 다음을 제외한 모든 기본 설정을 유지합니다:
-    <br>![](../img/05_Roblox_tutorial/Terrain-Editor-Paint-Settings.png.webp)
+    <!-- <br>![](../img/05_Roblox_tutorial/Terrain-Editor-Paint-Settings.png.webp) -->
+    <image src="../img/05_Roblox_tutorial/Terrain-Editor-Paint-Settings.png.webp" width=50%><br/>
     - 재료 모드를 페인트로 설정합니다.
     - 재료를 잎이 많은 풀로 설정합니다.
 3. 뷰포트에서 섬의 중간을 클릭하고 드래그하여 잎이 많은 풀 재료를 적용합니다.
-<video src="../img/05_Roblox_tutorial/Terrain-Painting-Grass.mp4" width="320" height="240" controls></video>
+  <video src="../img/05_Roblox_tutorial/Terrain-Painting-Grass.mp4" width="100%" controls></video>
 
 4. 다시 Terrain Editor 창으로 이동하여 브러쉬 설정 및 재료 설정 섹션에서
     - 기본 크기를 3으로 설정합니다.
@@ -298,9 +306,9 @@ Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, S
 5. 뷰포트에서 섬 가장자리를 따라 드래그하여 풀잎을 적용하고, 섬의 중간에 스폰 위치와 초기 플랫폼을 위한 공간을 남깁니다.
 6. Explorer 창에서 SpawnLocation 객체를 선택합니다.
 7. 홈 탭에서 이동 도구를 선택합니다.
-8. 뷰포트에서 스폰 위치를 섬 가장자리 쪽으로 이동하여 첫 번째 플랫폼을 위한 공간을 만듭니다. 샘플 Island Jump - Building .rbxl 파일은 위치를 -127, -3, 9로 사용합니다.
+8. 뷰포트에서 스폰 위치를 섬 가장자리 쪽으로 이동하여 첫 번째 플랫폼을 위한 공간을 만듭니다. 샘플 [`Island Jump - Building .rbxl`](https://www.roblox.com/games/14239096301/Island-Jump-Building) 파일은 위치를 -127, -3, 9로 사용합니다.
 
-<video src="../img/05_Roblox_tutorial/create-an-environment-with-terrain-spawn.mp4" width="320" height="240" controls></video>
+  <video src="../img/05_Roblox_tutorial/create-an-environment-with-terrain-spawn.mp4" width="100%" controls></video>
 
 재료 오버라이드를 사용하여 사용자 정의 텍스처 자산을 제공하여 기본 지형 텍스처를 대체하는 완전히 사용자 정의된 재료 외관을 만들 수 있습니다.
 
@@ -314,7 +322,7 @@ Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, S
 
 스폰 시 캐릭터가 예상과 다른 방향을 향하고 있다면, 예를 들어 섬의 중앙이 아닌 바다를 향하고 있다면 SpawnLocation 객체를 회전시키고 다시 플레이테스트하여 캐릭터가 적절한 방향으로 스폰될 때까지 과정을 반복합니다.
 
-<video src="../img/05_Roblox_tutorial/create-an-environment-with-terrain-walking.mp4" width="320" height="240" controls></video>
+<video src="../img/05_Roblox_tutorial/create-an-environment-with-terrain-walking.mp4" width="100%" controls></video>
 
 다음 튜토리얼 섹션에서는 플레이어가 가장 높은 플랫폼에 도달할 수 있는 플레이 가능한 영역을 만드는 방법을 배웁니다.
 
@@ -345,11 +353,15 @@ Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, S
 
 샘플 Island Jump 경험의 그레이박스와 최종 지오메트리 비교
 
-![](../img/05_Roblox_tutorial/Add-Platforms-Greybox.jpg.webp)
+<!-- ![](../img/05_Roblox_tutorial/Add-Platforms-Greybox.jpg.webp)
 샘플 Island Jump 경험의 그레이박스 지오메트리.
 
 ![](../img/05_Roblox_tutorial/Add-Platforms-Final.jpg.webp)
-샘플 Island Jump 경험의 최종 지오메트리.
+샘플 Island Jump 경험의 최종 지오메트리. -->
+
+|샘플 Island Jump 경험의 그레이박스 지오메트리.|샘플 Island Jump 경험의 최종 지오메트리.|
+|---|---|
+|![](../img/05_Roblox_tutorial/Add-Platforms-Greybox.jpg.webp)|![](../img/05_Roblox_tutorial/Add-Platforms-Final.jpg.webp)|
 
 ##### 조직 구조 만들기
 3D 공간에 자리 표시자 파트를 삽입하기 전에, Workspace의 자산에 대한 조직 구조를 만드는 것이 중요합니다. 이 과정은 특히 관리해야 할 자산이 많은 경험을 만드는 과정에서 Workspace가 조직되고 쉽게 스캔되도록 보장합니다.
@@ -368,15 +380,19 @@ Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, S
     이름이 올바르게 철자가 맞고 대소문자가 올바른지 확인합니다. Roblox에서 작성한 스크립트는 대소문자를 구분하며, 나중에 이 폴더에 접근하기 위해 하나의 스크립트를 작성할 것입니다.
 4. World 폴더 위로 마우스를 올리고 ⊕ 아이콘을 클릭합니다.
 5. 컨텍스트 메뉴에서 Model을 삽입합니다.<br>![](../img/05_Roblox_tutorial/Explorer-Add-Model.png.webp)<br>Explorer 창에서 World 폴더의 플러스 아이콘과 Model 객체가 강조 표시된 모습.
-6. 모델 이름을 Blockout_Parts로 변경합니다.<br>![](../img/05_Roblox_tutorial/Explorer-Model-Renamed.png.webp)<br>Explorer 창에서 World 폴더 아래에 있는 새 Blockout_Parts 모델이 강조 표시된 모습.
+6. 모델 이름을 Blockout_Parts로 변경합니다.
+   <!-- <br>![](../img/05_Roblox_tutorial/Explorer-Model-Renamed.png.webp)<br>Explorer 창에서 World 폴더 아래에 있는 새 Blockout_Parts 모델이 강조 표시된 모습. -->
+   <br><image src="../img/05_Roblox_tutorial/Explorer-Model-Renamed.png.webp" width=50%><br>Explorer 창에서 World 폴더 아래에 있는 새 Blockout_Parts 모델이 강조 표시된 모습.
 
 ##### 파트 삽입
 
-```
-다음 지침에서는 두 가지 다른 교육 경로를 제공합니다. 고유한 환경에 파트를 삽입하거나 샘플 Island Jump - Building 내의 그레이박스 환경을 정확하게 재현할 수 있습니다.
-```
+
+>다음 지침에서는 두 가지 다른 교육 경로를 제공합니다. 고유한 환경에 파트를 삽입하거나 샘플 Island Jump - Building 내의 그레이박스 환경을 정확하게 재현할 수 있습니다.
+
 
 이제 자산을 포함할 조직 구조가 마련되었으므로, 3D 공간에 해상 암초 플랫폼을 나타내는 파트를 삽입할 수 있습니다.
+
+**Create your own**
 
 첫 번째 플랫폼을 위한 실린더 파트를 삽입하려면:
 1. 메뉴 바에서 홈 탭을 선택합니다.
@@ -387,60 +403,276 @@ Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, S
 6. Explorer 창에서 Block_Out 모델을 선택합니다.
 7. 홈 탭에서 편집 섹션으로 이동하여 앵커 아이콘을 클릭합니다. 이는 경험이 시작될 때 물리 시스템이 파트를 이동시키지 않도록 보장합니다.<br>![](../img/05_Roblox_tutorial/Home-Tab-Anchor.png.webp)
 
-##### 파트 정렬
-해상 암초 플랫폼을 삽입할 때 샘플 Island Jump - Building 경험 값을 사용한 경우 이 단계를 건너뛸 수 있습니다.
+**Recreate The Sample**
 
-섬 외부에 더 많은 해상 암초 자리 표시자 파트를 추가할 때, 이러한 파트의 높이 차이를 서로 다른 위치 대신 다양한 크기를 사용하여 관리하는 것이 더 쉽습니다. 이를 통해 각 플랫폼의 기반을 정렬하여 모든 수직 크기 차이가 다른 높이로 반영되도록 하고, 같은 크기의 파트는 동일한 수준에 있도록 할 수 있습니다.
+샘플 [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building) 경험에서 해식 기둥 플랫폼을 정확히 재현하려면 다음 단계를 따르세요:
 
-`Align Tool`은 특정 축에 따라 최소, 중앙 또는 최대 가장자리에 파트를 정렬합니다. 이 경험의 목적을 위해 Y 축에서 아래 가장자리를 정렬하여 모든 파트가 물에 부분적으로 잠기도록 해야 합니다.
+1. 메뉴 바에서 **Home** 탭을 선택합니다.
+1. **Insert** 섹션에서 **Part** 드롭다운 화살표를 클릭한 후 **Cylinder**를 선택합니다. 뷰포트에 실린더 파트가 표시됩니다.
 
-파트를 정렬하려면:
-1. Explorer 창에서 모든 플랫폼을 선택합니다.
-2. 메뉴 바에서 모델 탭으로 이동한 다음 Align Tool을 클릭합니다. Align Tool 창이 표시됩니다.<br>![](../img/05_Roblox_tutorial/Model-Tab-Align-Tool.png.webp)
-3. Align Tool 창에서,
-    1. 모드를 Min으로 설정합니다.
-    2. 정렬 대상을 World, Y로 설정합니다.
-    3. Relative To를 Selection Bounds로 유지합니다.
-4. Align 버튼을 클릭합니다. 모든 파트가 가장 낮은 Y Part.Position 값을 가진 파트에 따라 Y 축에서 정렬됩니다.
-![](../img/05_Roblox_tutorial/Platforms-Aligned-Underwater.jpg.webp)
-모든 플랫폼이 아래 가장자리를 정렬합니다.
+   <img src="../img/05_Roblox_tutorial/Home-Tab-Part-Menu-Cylinder.png" alt="Studio의 Home 탭에서 Part 도구의 드롭다운 화살표와 Cylinder 객체가 강조 표시됨" width="716" />
+
+1. **Explorer** 창에서 새 **Part**를 클릭하고 **Blockout_Parts** 모델로 드래그합니다. 파트는 모델의 자식이 됩니다.
+
+   <img src="../img/05_Roblox_tutorial/New-Part-As-Child-Of-Model.png" alt="Studio의 Explorer 창에서 Blockout_Parts 모델 객체 아래에 새 Part가 강조 표시됨" width="320" />
+
+1. **Properties** 창에서,
+   
+   1. **Name**을 **Level_1**로 설정하여 정리합니다.
+   1. **Size**를 **12, 131, 131**로 설정하여 큰 플랫폼을 만듭니다.
+   1. **CFrame.Position**을 **-23, -4, 9**로 설정하여 플랫폼 상단이 섬 표면에서 짧은 점프 거리에 있도록 합니다.
+   1. **CFrame.Orientation**을 **0, 0, 90**으로 설정하여 실린더의 평평한 면이 하늘을 향하게 합니다.
+
+   <img src="../img/05_Roblox_tutorial/First-Platform.jpg" alt="물로 둘러싸인 섬에서 부분적으로 돌출된 큰 실린더 객체" width="80%" />
+
+1. 이 과정을 사용하여 나머지 해식 기둥 플랫폼에 대해 다음 값을 사용하여 추가 및 구성합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>이름</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Level_2</td>
+   <td>`20, 81, 81`</td>
+   <td>`-8, 0, 24`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_3a</td>
+   <td>`40, 44, 44`</td>
+   <td>`42, 10, 9`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_3b</td>
+   <td>`40, 34, 34`</td>
+   <td>`87, 10, 4`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_3c</td>
+   <td>`40, 44, 44`</td>
+   <td>`97, 10, 49`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_4a</td>
+   <td>`75, 39, 39`</td>
+   <td>`112, 27.5, 46.5`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_4b</td>
+   <td>`75, 65, 65`</td>
+   <td>`137, 27.5, 69`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_4c</td>
+   <td>`75, 60, 60`</td>
+   <td>`159.5, 27.5, 91.5`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_4d</td>
+   <td>`75, 30, 30`</td>
+   <td>`207, 27.5, 106.5`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_4e</td>
+   <td>`75, 61, 61`</td>
+   <td>`250, 27.5, 74`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_5a</td>
+   <td>`130, 60, 60`</td>
+   <td>`268, 55, 50`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_5b</td>
+   <td>`130, 25, 25`</td>
+   <td>`256, 55, 2.5`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_5c</td>
+   <td>`130, 25, 25`</td>
+   <td>`276, 55, -17.5`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_5d</td>
+   <td>`130, 54, 54`</td>
+   <td>`322, 55, -21`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_6a</td>
+   <td>`211, 79, 79`</td>
+   <td>`367, 94.5, -41`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_6b</td>
+   <td>`211, 24, 24`</td>
+   <td>`387, 94.5, 11.5`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_6c</td>
+   <td>`211, 44, 44`</td>
+   <td>`397, 94.5, 51.5`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   <tr>
+   <td>Level_7</td>
+   <td>`321, 61, 61`</td>
+   <td>`407, 149.5, 79`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/Final-Platforms.jpg" alt="물로 둘러싸인 섬에서 부분적으로 돌출된 많은 큰 실린더 객체" width="80%" />
+
+1. **Explorer** 창에서 **Block_Out** 모델을 선택합니다.
+1. **Home** 탭에서 **Edit** 섹션으로 이동하여 **Anchor** 아이콘을 클릭합니다. 이렇게 하면 경험이 시작될 때 물리 시스템이 부품을 이동시키지 않도록 합니다.
+
+   <img src="../img/05_Roblox_tutorial/Home-Tab-Anchor.png" alt="Studio의 Home 탭에서 Anchor 도구가 강조 표시됨" width="800" />
+
+##### 부품 정렬
+
+<Alert severity="info">
+   샘플 **Island Jump - Building** 경험에서 해식 기둥 플랫폼을 삽입할 때 사용한 값을 사용했다면 이 단계를 건너뛸 수 있습니다.
+</Alert>
+
+섬 밖에 더 많은 해식 기둥 플레이스홀더 부품을 추가할 때, 이 부품들의 크기를 다양하게 사용하여 서로 다른 높이 차이를 조절하면 레벨 간의 높이 차이를 관리하기가 더 쉽습니다. 이렇게 하면 각 플랫폼의 기본 부분을 정렬하여 모든 수직 크기 차이가 높이 차이로 반영되며, 동일한 크기의 부품은 동일한 높이에 위치하게 할 수 있습니다.
+
+`Align Tool`은 특정 축에 따라 부품을 최소, 중심, 또는 최대 가장자리에 정렬합니다. 이 경험의 목적을 위해서는 **Y** 축에서 **하단** 가장자리를 정렬하여 모든 부품이 물에 부분적으로 잠기도록 해야 합니다.
+
+부품을 정렬하려면:
+
+1. **Explorer** 창에서 모든 플랫폼을 선택합니다.
+2. 메뉴 바에서 **Model** 탭으로 이동한 다음 `Align Tool`을 클릭합니다. **Align Tool** 창이 표시됩니다.
+
+   <img src="../img/05_Roblox_tutorial/Model-Tab-Align-Tool.png" width="660" alt="Align 도구가 강조 표시된 Studio의 Model 탭" />
+
+3. **Align Tool** 창에서,
+
+   1. **Mode**를 **Min**으로 설정합니다.
+   2. **Align In**을 **World**, **Y**로 설정합니다.
+   3. **Relative To**를 **Selection Bounds**로 유지합니다.
+
+4. **Align** 버튼을 클릭합니다. 모든 부품이 Y 축에 따라 가장 낮은 Y `Class.Part.Position` 값을 가진 부품에 맞추어 정렬됩니다.
+   <figure>
+     <img src="../img/05_Roblox_tutorial/Platforms-Aligned-Underwater.jpg" alt="하단 가장자리가 정렬된 많은 실린더의 수중 보기" />
+     <figcaption>모든 플랫폼이 하단 가장자리를 기준으로 정렬됨</figcaption>
+   </figure>
 
 ##### 속이 빈 터널 만들기
 
-플레이 가능한 영역을 차단하는 데 파트를 그대로 사용하는 것 외에도 고체 모델링 작업을 적용하여 파트를 독특한 방식으로 결합하여 속이 빈 터널과 같은 더 복잡한 모양을 만들 수 있습니다. 이 기술은 플레이어가 환경과 상호 작용하는 방식에 시각적 흥미와 변화를 제공합니다.
+플레이 가능한 영역을 차단하기 위해 부품을 그대로 사용하는 것 외에도 부품을 독특한 방식으로 결합하여 더 복잡한 모양을 형성하는 솔리드 모델링 작업을 적용할 수 있습니다. 예를 들어, 해식 기둥 중 하나에 속이 빈 터널을 만들 수 있습니다. 이 기술은 시각적 흥미를 제공하고 플레이어가 환경과 상호작용하는 방식을 다양화합니다.
 
-고체 모델링 도구에는 네 가지가 있습니다:
+네 가지 솔리드 모델링 도구가 있습니다:
 
- - Union – 두 개 이상의 파트를 결합하여 하나의 고체 유니언을 만듭니다.
- - Intersect – 겹치는 파트를 하나의 고체 교차로 교차합니다.
- - Negate – 파트를 제거하여 구멍과 함몰부를 만드는 데 유용합니다.
- - Separate – 유니언이나 교차를 개별 파트로 다시 분리합니다.
+- **Union** – 두 개 이상의 부품을 하나의 고체 유니온으로 결합합니다.
+- **Intersect** – 겹치는 부품을 하나의 고체 교차점으로 만듭니다.
+- **Negate** – 부품을 부정하여 구멍과 요철을 만듭니다.
+- **Separate** – 유니온 또는 교차점을 개별 부품으로 분리합니다.
 
-속이 빈 터널을 만드는 목적을 위해 Union과 Negate 도구만 사용하면 됩니다. 모든 도구에 대한 전체 분석은 고체 모델링을 참조하십시오.
+속이 빈 터널을 만들기 위해서는 **Union** 및 **Negate** 도구만 사용하면 됩니다. 모든 도구에 대한 전체 설명은 `Solid Modeling`을 참조하세요.
 
-![](../img/05_Roblox_tutorial/Model-Tab-Solid-Modeling.png.webp)
-모델 탭에서 고체 모델링 도구가 강조 표시된 모습.
+<img src="../img/05_Roblox_tutorial/Model-Tab-Solid-Modeling.png" alt="솔리드 모델링 도구가 강조 표시된 Studio의 Model 탭" width="732" />
 
 속이 빈 터널을 만들려면:
-1. 해상 암초 플랫폼 위에 실린더 파트를 삽입하고 위치를 지정합니다. 샘플 Island Jump - Building 경험은 다음 값으로 Level_4b 플랫폼 위에 이 파트를 위치시킵니다:<br>
-    | 이름 |	크기 |	CFrame.Position |	CFrame.Orientation |
-    |---|---|---|---|
-    |Tunnel |	24, 65, 69	| 137, 77, 69	| 0, 0, 90 |
-2. 실린더 파트 안에 속이 빈 부분을 나타내는 블록 파트를 삽입하고 위치를 지정하여 플레이어가 통과할 수 있을 정도로 높고 적절한 너비를 가집니다. 샘플 Island Jump - Building 경험은 다음 값으로 이전 실린더 안에 이 파트를 위치시킵니다:<br>
-    | 이름 |	크기 |	CFrame.Position |	CFrame.Orientation |
-    |---|---|---|---|
-    |Hollow_Part |	24.5, 72, 22	| 134.5, 77, 71	| 0, 135, 90 |
-    <br>![](../img/05_Roblox_tutorial/HollowTunnel-Start.jpg.webp)
-3. Explorer 창에서 블록 파트를 선택합니다.
-4. 모델 탭에서 고체 모델링 섹션으로 이동한 다음 Negate 버튼을 클릭합니다. 파트가 반투명해집니다.<br>![](../img/05_Roblox_tutorial/HollowTunnel-Negate.jpg.webp)
-5. Explorer 창에서 반투명 파트와 실린더 터널 파트를 모두 선택합니다.
-6. 모델 탭에서 고체 모델링 섹션으로 돌아가서 Union 버튼을 클릭합니다. 반투명 파트가 겹치는 터널 실린더에서 잘립니다.<br>![](../img/05_Roblox_tutorial/HollowTunnel-Union.jpg.webp)
-7. 새 유니언의 이름을 높이 수준과 위치를 반영하도록 Level_4b_Union과 같이 변경합니다.
-8. 새 유니언 아래에 해상 암초 플랫폼을 복제하고 터널 위에 위치시킵니다. 샘플 Island Jump - Building 경험은 다음 값으로 유니언 위에 복제된 Level_4b 플랫폼을 위치시킵니다:<br>
-    | 이름 |	크기 |	CFrame.Position |	CFrame.Orientation |
-    |---|---|---|---|
-    |Level_4b_Top |	74, 65, 69	| 137, 126, 69	| 0, 0, 90 |
-    <br>![](../img/05_Roblox_tutorial/HollowTunnel-Final.jpg.webp)
+
+1. 해식 기둥 플랫폼 중 하나 위에 **실린더** 부품을 삽입하고 위치를 조정합니다. 샘플 [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building) 경험에서는 이 부품을 **Level_4b** 플랫폼 위에 다음 값으로 배치합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>이름</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Tunnel</td>
+   <td>`24, 65, 69`</td>
+   <td>`137, 77, 69`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   </tbody>
+   </table>
+
+2. 터널의 속을 나타내는 **블록** 부품을 삽입하고 위치를 조정합니다. 이 부품은 실린더 부품만큼 높아야 하며, 플레이어가 통과할 수 있을 정도의 폭을 가져야 합니다. 샘플 **Island Jump - Building** 경험에서는 이전 실린더 내부에 다음 값으로 배치합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>이름</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Hollow_Part</td>
+   <td>`24.5, 72, 22`</td>
+   <td>`134.5, 77, 71`</td>
+   <td>`0, 135, 90`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/HollowTunnel-Start.jpg" alt="회색 실린더에서 돌출된 회색 블록의 근접 보기" width="740" />
+
+3. **Explorer** 창에서 블록 부품을 선택합니다.
+4. **Model** 탭에서 **Solid Modeling** 섹션으로 이동한 다음 **Negate** 버튼을 클릭합니다. 부품이 반투명해집니다.
+
+   <img src="../img/05_Roblox_tutorial/HollowTunnel-Negate.jpg" alt="반투명한 분홍색 블록이 회색 실린더에서 돌출된 근접 보기" width="740" />
+
+5. **Explorer** 창에서 반투명 부품과 실린더 터널 부품을 모두 선택합니다.
+6. **Model** 탭으로 돌아가 **Solid Modeling** 섹션으로 이동한 다음 **Union** 버튼을 클릭합니다. 반투명 부품이 중첩된 터널 실린더에서 잘려 나갑니다.
+
+   <img src="../img/05_Roblox_tutorial/HollowTunnel-Union.jpg" alt="터널을 통해 열린 회색 실린더의 근접 보기. 터널에는 지붕이 없음." width="740" />
+
+7. 새 유니온의 이름을 높이와 위치를 반영하는 이름으로 변경합니다, 예를 들어 **Level_4b_Union**으로 합니다.
+8. 새 유니온 아래에 있는 해식 기둥 플랫폼을 복제하고, 이를 터널 위에 배치합니다. 샘플 **Island Jump - Building** 경험에서는 복제된 **Level_4b** 플랫폼을 다음 값으로 유니온 위에 배치합니다:
+
+   <table>
+   <thead>
+   <tr>
+   <th>이름</th>
+   <th>크기</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Level_4b_Top</td>
+   <td>`74, 65, 69`</td>
+   <td>`137, 126, 69`</td>
+   <td>`0, 0, 90`</td>
+   </tr>
+   </tbody>
+   </table>
+
+   <img src="../img/05_Roblox_tutorial/HollowTunnel-Final.jpg" alt="실린더 터널을 통한 터널의 근접 보기" width="740" />
+
 
 ##### 플레이테스트
 
@@ -460,7 +692,7 @@ Draw 도구는 브러쉬 위치에 따라 재료를 추가하거나 빼지만, S
 5. JumpPower를 0으로 설정합니다. 이는 캐릭터가 점프할 수 없도록 하여 게임플레이를 스크립트한 후 플레이어의 시작 상태와 동일하게 만듭니다.<br>![](../img/05_Roblox_tutorial/Humanoid-Jump-Settings.png.webp)<br>속성 창이 보이지 않으면 보기 탭을 열고 표시 섹션에서 속성이 선택되어 있는지 확인하십시오.
 6. 새 수준에 도달하면 JumpPower를 30의 배수로 설정하여 점프 업그레이드를 시뮬레이션합니다.
 
-<video src="../img/05_Roblox_tutorial/playable-area-walk.mp4" width="320" height="240" controls></video>
+<video src="../img/05_Roblox_tutorial/playable-area-walk.mp4" width="100%" controls></video>
 
 튜토리얼의 다음 섹션에서는 경험의 전체 게임플레이를 스크립트하는 방법을 배우게 됩니다.
 
@@ -605,7 +837,7 @@ end
 
 출력 창이 보이지 않으면 보기 탭으로 이동한 다음 출력이 선택되어 있는지 확인하십시오.
 
-<video src="../img/05_Roblox_tutorial/script-game-behavior-coin-collection.mp4" width="320" height="240" controls></video>
+<video src="../img/05_Roblox_tutorial/script-game-behavior-coin-collection.mp4" width="100%" controls></video>
 
 #### Record and Display Player Data
 
@@ -897,7 +1129,7 @@ end
 1. 메뉴 바에서 재생 버튼을 클릭합니다. Studio가 플레이테스트 모드로 전환됩니다.<br>![](../img/05_Roblox_tutorial/Quick-Access-Toolbar-Play.png.webp)
 2. 캐릭터를 이동하여 코인에 닿게 합니다. 스크립트가 제대로 작동하면 리더보드 UI가 표시되고 코인을 더 많이 수집할수록 코인 수가 증가합니다.
 
-<video src="../img/05_Roblox_tutorial/record-and-display-player-data-example.mp4" width="320" height="240" controls></video>
+<video src="../img/05_Roblox_tutorial/record-and-display-player-data-example.mp4" width="100%" controls></video>
 
 #### Create Player Hazards
 
@@ -996,7 +1228,7 @@ Players.PlayerRemoving:Connect(onPlayerRemoved)
 게임을 테스트하려면:
 1. 메뉴 바에서 Play 버튼을 클릭합니다. Studio가 플레이 테스트 모드로 전환됩니다.<br>![](../img/05_Roblox_tutorial/Quick-Access-Toolbar-Play.png.webp)
 2. 캐릭터를 이동하여 코인을 몇 개 수집한 다음 물로 뛰어드세요. 스크립트가 올바르게 작동하면 캐릭터가 죽고 리더보드의 코인 수가 0으로 초기화됩니다.
-<video src="../img/05_Roblox_tutorial/player-hazards-example.mp4" width="320" height="240" controls></video>
+<video src="../img/05_Roblox_tutorial/player-hazards-example.mp4" width="100%" controls></video>
 
 #### Script an Upgrade Button
 
@@ -1224,7 +1456,7 @@ jumpPurchaseGui.Parent = playerGui
 
 1. 메뉴 바에서 Play 버튼을 클릭합니다. Studio가 플레이 테스트 모드로 전환됩니다.<br>![](../img/05_Roblox_tutorial/Quick-Access-Toolbar-Play.png.webp)
 2. 스크립트가 올바르게 작동하면 점프 파워를 구매하는 버튼이 화면에 나타납니다. 코인을 수집하기 전에 버튼을 클릭하여 추가 점프 파워가 부여되지 않는지 확인한 다음, 코인을 몇 개 수집하고 다시 클릭하여 업그레이드가 작동하는지 확인하세요.
-<video src="../img/05_Roblox_tutorial/script-an-upgrade-button-example.mp4" width="320" height="240" controls></video>
+<video src="../img/05_Roblox_tutorial/script-an-upgrade-button-example.mp4" width="100%" controls></video>
 
 이제 코드가 완성되었으므로, 코인의 양과 위치를 통해 게임의 균형을 맞춰보세요. 게임이 너무 느리게 느껴지면 더 많은 코인을 추가하고, 너무 빠르고 쉽게 느껴지면 코인을 줄이고 도전적인 장소에 배치하세요.
 
@@ -1445,7 +1677,7 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 또한, `Lighting.ColorShift_Top` 속성은 태양이나 달을 향한 표면에서 반사되는 빛의 색상을 제어합니다. 기본적으로 이 세 가지 속성은 세계 전체에 어두운 회색 톤을 생성하도록 설정되어 있지만, 최종 샘플의 해양 환경을 보완하기 위해 이 속성을 조정하여 주변 및 반사 조명이 전통적인 해양 팔레트의 미묘한 **파란색-회색** 톤을 갖도록 만들 수 있습니다.
 
 <div><b>샘플 Island Jump 경험의 기본 및 사용자 지정 주변 조명 비교</b></div>
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img width="100%" img src="../img/05_Roblox_tutorial/Default-Color.jpg.webp" alt="The sample Island Jump experience with default ambient lighting visuals." />
     <figcaption>기본 속성</figcaption>
@@ -1454,7 +1686,11 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
     <img width="100%" img src="../img/05_Roblox_tutorial/Custom-Color.jpg.webp" alt="The sample Island Jump experience with custom ambient lighting visuals." />
     <figcaption>사용자 지정 속성</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|기본 속성|사용자 지정 속성|
+|---|---|
+|<img width="100%" img src="../img/05_Roblox_tutorial/Default-Color.jpg.webp" alt="The sample Island Jump experience with default ambient lighting visuals." />|<img width="100%" img src="../img/05_Roblox_tutorial/Custom-Color.jpg.webp" alt="The sample Island Jump experience with custom ambient lighting visuals." />|
 
 환경에서 주변 조명의 색상을 조정하려면:
 
@@ -1469,7 +1705,7 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 샘플 **Island Jump - Final** 경험의 `Lighting` 서비스 속성에 맞추는 두 번째 단계는 환경에서 그림자를 경화하는 것입니다. 이는 플레이어가 경험의 야외와 덮개가 있는 영역을 탐색할 때 더 극적인 효과를 만듭니다.
 
 <div><b>샘플 Island Jump 경험의 기본 및 사용자 지정 그림자 비교</b></div>
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img width="100%" img src="../img/05_Roblox_tutorial/Default-Shadows.jpg.webp" alt="The sample Island Jump experience with default shadow visuals that produce fuzzy shadows." />
     <figcaption>기본 그림자</figcaption>
@@ -1478,7 +1714,12 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
     <img width="100%" img src="../img/05_Roblox_tutorial/Custom-Shadows.jpg.webp" alt="The sample Island Jump experience with custom shadow visuals that produce sharp shadows."/>
     <figcaption>사용자 지정 그림자</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|기본 그림자|사용자 지정 그림자|
+|---|---|
+|<img width="100%" img src="../img/05_Roblox_tutorial/Default-Shadows.jpg.webp" alt="The sample Island Jump experience with default shadow visuals that produce fuzzy shadows." />|<img width="100%" img src="../img/05_Roblox_tutorial/Custom-Shadows.jpg.webp" alt="The sample Island Jump experience with custom shadow visuals that produce sharp shadows."/>|
+
 
 환경에서 그림자를 경화하려면:
 
@@ -1492,7 +1733,7 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 미래 조명 시스템은 글로벌 조명과 로컬 조명이 함께 작동하여 더 현실적이고 몰입감 있는 시각 효과를 제공합니다. 예를 들어, ShadowMap 조명 시스템에서는 빛나는 플레어에서 그림자가 전혀 생성되지 않지만, 미래 조명 시스템 기술에서는 바다 스택 플랫폼의 둘레에서 미묘한 그림자를 생성합니다. 이 효과는 환경 내에 더 많은 광원이 있을수록 더 두드러집니다.
 
 <div><b>ShadowMap 조명 시스템과 Future 조명 시스템 비교</b></div>
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img width="100%" img src="../img/05_Roblox_tutorial/ShadowMap-System.jpg.webp" alt="The sample Island Jump experience with the ShadowMap lighting system." />
     <figcaption>ShadowMap 조명 시스템</figcaption>
@@ -1501,7 +1742,11 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
     <img width="100%" img src="../img/05_Roblox_tutorial/Future-System.jpg.webp" alt="The sample Island Jump experience with the Future lighting system that produces more prominent lighting from the flare."/>
     <figcaption>Future 조명 시스템</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|ShadowMap 조명 시스템|Future 조명 시스템|
+|---|---|
+|<img width="100%" img src="../img/05_Roblox_tutorial/ShadowMap-System.jpg.webp" alt="The sample Island Jump experience with the ShadowMap lighting system." />|<img width="100%" img src="../img/05_Roblox_tutorial/Future-System.jpg.webp" alt="The sample Island Jump experience with the Future lighting system that produces more prominent lighting from the flare."/>|
 
 미래 조명 시스템을 활성화하려면:
 
@@ -1523,10 +1768,8 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 태양의 기본 위치는 하늘 높이 있으며, 실제 세계에서 정오에 해당하는 위치입니다. 그러나 더 두드러진 그림자와 방향성을 생성하려면 태양을 바다 스택 플랫폼 오른쪽으로 이동할 수 있습니다.
 
 <div><b>기본 및 사용자 지정 태양 위치 비교</b></div>
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
-
-
     <img width="100%" img src="../img/05_Roblox_tutorial/Default-SunPosition.jpg.webp" alt="The sample Island Jump experience with the default sun position high in the sky."/>
     <figcaption>기본 태양 위치</figcaption>
   </figure>
@@ -1534,7 +1777,11 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
     <img width="100%" img src="../img/05_Roblox_tutorial/Custom-SunPosition.jpg.webp" alt="The sample Island Jump experience with a custom sun position approaching the horizon." />
     <figcaption>사용자 지정 태양 위치</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|기본 태양 위치|사용자 지정 태양 위치|
+|---|---|
+|<img width="100%" img src="../img/05_Roblox_tutorial/Default-SunPosition.jpg.webp" alt="The sample Island Jump experience with the default sun position high in the sky."/>|<img width="100%" img src="../img/05_Roblox_tutorial/Custom-SunPosition.jpg.webp" alt="The sample Island Jump experience with a custom sun position approaching the horizon." />|
 
 태양 위치를 변경하려면:
 
@@ -1558,7 +1805,7 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 샘플 **Island Jump - Final** 경험의 `Atmosphere` 속성에 맞추는 첫 번째 단계는 공기 입자 밀도를 증가시키는 것입니다. `Atmosphere.Density` 속성은 환경의 공기 중에 존재하는 입자의 양을 제어합니다. 이 속성을 증가시키면 추가된 입자가 플레이어의 배경 물체 시야를 방해합니다. 이는 특히 물 지형의 경계를 숨기는 데 유용합니다.
 
 <div><b>기본 및 사용자 지정 공기 입자 밀도 비교</b></div>
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img width="100%" img src="../img/05_Roblox_tutorial/Custom-SunPosition.jpg.webp" alt="The sample Island Jump experience with the default air particle density that produces a clear background." />
     <figcaption>기본 공기 입자 밀도</figcaption>
@@ -1567,7 +1814,11 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
     <img width="100%" img src="../img/05_Roblox_tutorial/Custom-AirParticleDensity.jpg.webp" alt="The sample Island Jump experience with custom air particle density that produces a hazy background." />
     <figcaption>사용자 지정 공기 입자 밀도</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|기본 공기 입자 밀도|사용자 지정 공기 입자 밀도|
+|---|---|
+|<img width="100%" img src="../img/05_Roblox_tutorial/Custom-SunPosition.jpg.webp" alt="The sample Island Jump experience with the default air particle density that produces a clear background." />|<img width="100%" img src="../img/05_Roblox_tutorial/Custom-AirParticleDensity.jpg.webp" alt="The sample Island Jump experience with custom air particle density that produces a hazy background." />|
 
 환경에서 공기 입자 밀도를 증가시키려면:
 
@@ -1581,7 +1832,7 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 샘플 경험은 이 속성을 0으로 설정하여 플레이어가 수평선을 볼 수 없도록 할 수 있었지만, 튜토리얼의 다음 섹션에서는 경험의 경계 근처에 산 객체를 추가하여 보이도록 할 필요가 있습니다. 또한, 기본 값을 감소시키되 0으로 설정하지 않으면, 먼 곳에 안개가 끼기 시작하는 것을 모방하여 더 현실적인 환경을 만듭니다.
 
 <div><b>기본 및 사용자 지정 Offset 값 비교</b></div>
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img width="100%" img src="../img/05_Roblox_tutorial/Custom-AirParticleDensity.jpg.webp" alt="The sample Island Jump experience with default Offset values that keep the background visible." />
     <figcaption>기본 `Atmosphere.Offset` 속성</figcaption>
@@ -1590,7 +1841,11 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
     <img width="100%" img src="../img/05_Roblox_tutorial/Custom-Offset.jpg.webp" alt="The sample Island Jump experience with custom Offset values that hide the edges of the background."/>
     <figcaption>사용자 지정 `Atmosphere.Offset` 속성</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|기본 `Atmosphere.Offset` 속성|사용자 지정 `Atmosphere.Offset` 속성|
+|---|---|
+|<img width="100%" img src="../img/05_Roblox_tutorial/Custom-AirParticleDensity.jpg.webp" alt="The sample Island Jump experience with default Offset values that keep the background visible." />|<img width="100%" img src="../img/05_Roblox_tutorial/Custom-Offset.jpg.webp" alt="The sample Island Jump experience with custom Offset values that hide the edges of the background."/>|
 
 환경에서 먼 물체를 블렌딩하려면:
 
@@ -1599,14 +1854,18 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 이제 경험의 글로벌 조명이 사용자 지정 속성으로 설정되었으므로, 튜토리얼의 다음 섹션에서는 회색 상자 레이아웃을 고품질의 정교한 자산으로 교체하는 방법을 배웁니다.
 
-<Tabs>
+<!-- <Tabs>
   <TabItem label="사용자 지정 전">
     <img src="../img/05_Roblox_tutorial/Lighting-Pre-Customization.jpg.webp" alt="The sample Island Jump experience's lighting visuals before the customization from this page." />
   </TabItem>
   <TabItem label="사용자 지정 시각 효과">
     <img src="../img/05_Roblox_tutorial/Lighting-Post-Customization.jpg.webp" alt="The sample Island Jump experience's lighting visuals after the customization from this page." />
   </TabItem>
-</Tabs>
+</Tabs> -->
+
+|사용자 지정 전|사용자 지정 시각 효과|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Lighting-Pre-Customization.jpg.webp" alt="The sample Island Jump experience's lighting visuals before the customization from this page." />|<img src="../img/05_Roblox_tutorial/Lighting-Post-Customization.jpg.webp" alt="The sample Island Jump experience's lighting visuals after the customization from this page." />|
 
 #### Apply Polished Assets
 
@@ -1620,7 +1879,7 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 자산 라이브러리는 쉽게 액세스하고 재사용할 수 있도록 경험의 중앙 위치에 배치할 수 있는 자산 모음입니다. Creator Store에서 사용할 자산 라이브러리에는 여섯 개의 3D 자산, 두 개의 사용자 정의 `MaterialVariant` 재료 및 [기본 시각 효과 만들기]에서 최종 입자 효과가 포함됩니다. 여섯 개의 메쉬는 다음과 같습니다:
 
-<GridContainer numColumns="3">
+<!-- <GridContainer numColumns="3">
   <figure>
     <img src="../img/05_Roblox_tutorial/Platform-A-Model.jpg.webp" alt="A mesh that's a grassy, circular platform with concrete surrounding its edges." />
     <figcaption>PlatformA</figcaption>
@@ -1645,7 +1904,12 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
     <img src="../img/05_Roblox_tutorial/Mountain-Mesh.jpg.webp" alt="A mesh that's a large snowy mountain." />
     <figcaption>MountainMesh</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|<figure><img src="../img/05_Roblox_tutorial/Platform-A-Model.jpg.webp" width="100%"/>  <figcaption>PlatformA</figcaption></figure>|<figure><img src="../img/05_Roblox_tutorial/Platform-B-Model.jpg.webp" width="100%"/><figcaption>PlatformB</figcaption></figure>|<figure><img src="../img/05_Roblox_tutorial/Coin-Mesh.jpg.webp" width="100%" /><figcaption>Coin</figcaption></figure>|
+|---|---|---|
+|<figure><img src="../img/05_Roblox_tutorial/Sea-Stack-Mesh.jpg.webp" width=100% /><figcaption>SeaStackMesh</figcaption></figure>|<figure><img src="../img/05_Roblox_tutorial/Sea-Stack-Cave-Mesh.jpg.webp" width=100% /><figcaption>SeaStackCaveMesh</figcaption>|</figure><figure><img src="../img/05_Roblox_tutorial/Mountain-Mesh.jpg.webp" width=100% /><figcaption>MountainMesh</figcaption></figure>|
+
 
 이 3D 자산 각각은 단일 `MeshPart` 객체 또는 여러 `MeshPart` 객체를 저장하는 `Model` 객체이며, 사용자 정의 재료 또는 현실적인 음영과 조명을 표현할 수 있는 물리 기반 렌더링(PBR) 텍스처를 사용합니다. 이 과정에 대한 자세한 내용은 [재료 - 사용자 정의 재료] 및 [PBR 텍스처]를 참조하세요.
 
@@ -1694,16 +1958,18 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 이제 새로운 자산을 포함할 조직 구조를 갖추었으므로, 자산 라이브러리를 회색 상자 기하학에 적용하기 시작할 수 있습니다. 두 교육 경로 중 하나를 따르면서, 예제 이미지는 자리 표시 자산을 반투명하게 만들어 단계별 진행 상황을 볼 수 있습니다.
 
-<Tabs>
+<!-- <Tabs>
   <TabItem key = "1" label="Graybox Version">
     <img src="../img/05_Roblox_tutorial/Pre-Polished-Assets.jpg.webp" alt="A version of the sample Island Jump experience's placeholder greybox geometry." width="800" height="450" />
   </TabItem>
   <TabItem key = "2" label="Polished Assets">
     <img src="../img/05_Roblox_tutorial/Final-Polished-Assets.jpg.webp" alt="A version of the sample Island Jump experience with polished geometry." width="800" height="450" />
   </TabItem>
-</Tabs
+</Tabs> -->
 
->
+|Graybox Version|Polished Assets|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Pre-Polished-Assets.jpg.webp" alt="A version of the sample Island Jump experience's placeholder greybox geometry." width="100%"  />|<img src="../img/05_Roblox_tutorial/Final-Polished-Assets.jpg.webp" alt="A version of the sample Island Jump experience with polished geometry." width="100%" />|
 
 ###### Platforms
 
@@ -1716,8 +1982,10 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 <img src="../img/05_Roblox_tutorial/Platform-Types.jpg.webp" alt="Platform A and Platform B are side-by-side, and highlighted with their platform type." width="80%" />
 
-<Tabs>
-  <TabItem key = "1" label="Apply Your Own Platforms">
+<!-- <Tabs>
+  <TabItem key = "1" label="Apply Your Own Platforms"> -->
+
+**Apply Your Own Platforms**
 
 플랫폼에 자산 라이브러리를 적용하려면:
 
@@ -1733,8 +2001,10 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
    <img src="../img/05_Roblox_tutorial/Platforms-5.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+  <!-- </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) 경험 내 바다 스택 플랫폼을 정확히 재현하려면:
 
@@ -1871,8 +2141,8 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
    <img src="../img/05_Roblox_tutorial/Platforms-5.jpg.webp" alt="A view of the sample laser tag experience with all of the platforms visible with the polished assets. Other greybox sea stacks are transluscent in the distance." width="80%" />
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### Sea Stacks
 
@@ -1883,6 +2153,7 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 두 플랫폼 유형 모두 `MeshPart` 객체입니다.
 
+<!--
 <GridContainer numColumns="2">
   <figure>
     <img width="100%" img src="../img/05_Roblox_tutorial/Sea-Stacks.jpg.webp" alt="A comparison of a single sea stack next to multiple sea stacks that are stacked on top of each other." />
@@ -1891,9 +2162,16 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
     <img width="100%" img src="../img/05_Roblox_tutorial/Completed-Sea-Stack.jpg.webp" alt="A demonstration of a SeaStackCaveMesh stacked on top of a PlatformB on top of a SeaStackMesh." />
   </figure>
 </GridContainer>
+-->
 
-<Tabs>
-  <TabItem key = "1" label="Apply Your Own Sea Stacks">
+|A comparison of a single sea stack next to multiple sea stacks that are stacked on top of each other.|A demonstration of a SeaStackCaveMesh stacked on top of a PlatformB on top of a SeaStackMesh.|
+|---|---|
+|<img width="100%" img src="../img/05_Roblox_tutorial/Sea-Stacks.jpg.webp" alt="A comparison of a single sea stack next to multiple sea stacks that are stacked on top of each other." />|<img width="100%" img src="../img/05_Roblox_tutorial/Completed-Sea-Stack.jpg.webp" alt="A demonstration of a SeaStackCaveMesh stacked on top of a PlatformB on top of a SeaStackMesh." />|
+
+<!-- <Tabs>
+  <TabItem key = "1" label="Apply Your Own Sea Stacks"> -->
+
+**Apply Your Own Sea Stacks**
 
 바다 스택에 자산 라이브러리를 적용하려면:
 
@@ -1909,8 +2187,10 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 5. 자리 표시 회색 상자 바다 스택 플랫폼을 삭제합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+<!--   </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) 경험 내 바다 스택을 정확히 재현하려면:
 
@@ -2071,9 +2351,7 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
    <img src="../img/05_Roblox_tutorial/SeaStacks-8.jpg.webp" alt="A side view of the sample laser tag experience with level 4c sea stacks visible with the polished assets." width="80%" />
 
-9. 다음
-
- **SeaStackMesh** 자산을 **Level_4d** 모델에 추가하고 구성합니다:
+9. 다음 **SeaStackMesh** 자산을 **Level_4d** 모델에 추가하고 구성합니다:
 
    <table>
    <thead>
@@ -2455,8 +2733,8 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 19. 자리 표시 회색 상자 바다 스택 플랫폼을 삭제합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### Coins
 
@@ -2466,8 +2744,10 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 <img src="../img/05_Roblox_tutorial/Final-Coin.jpg.webp" alt="A close up view of a shiny gold coin with a Roblox icon in the middle. The coin floats over a grassy path of island." width="80%" />
 
-<Tabs>
-  <TabItem key = "1" label="Apply Your Own Coins">
+<!-- <Tabs>
+  <TabItem key = "1" label="Apply Your Own Coins"> -->
+
+**Apply Your Own Coins**
 
 동전에 자산 라이브러리를 적용하려면:
 
@@ -2482,8 +2762,10 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 1. 자리 표시 동전을 삭제합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+<!--   </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) 경험 내 동전을 정확히 재현하려면:
 
@@ -2641,8 +2923,8 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 5. 자리 표시 동전을 삭제합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### Mountains
 
@@ -2650,8 +2932,10 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
 <img src="../img/05_Roblox_tutorial/Mountain-Meshes-Stacked.jpg.webp" alt="Several mountain meshes with different scales and rotation values overlap each other's edges to look like a mountain range. Each mesh has a light blue outline." width="80%" />
 
-<Tabs>
-  <TabItem key = "1" label="Apply Your Own Mountains">
+<!-- <Tabs>
+  <TabItem key = "1" label="Apply Your Own Mountains"> -->
+
+**Apply Your Own Mountains**
 
 산에 자산 라이브러리를 적용하려면:
 
@@ -2664,8 +2948,10 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
    <img src="../img/05_Roblox_tutorial/Mountains-Final.jpg.webp" alt="A view of the polished sea stacks, platform, and coins, with a mountain range in the background." width="80%" />
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+<!--   </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) 경험 내 산을 정확히 재현하려면:
 
@@ -2766,8 +3052,8 @@ Studio의 기본 조명 설정에 몇 가지 수정만으로 이 튜토리얼 �
 
    <img src="../img/05_Roblox_tutorial/Mountains-Final.jpg.webp" alt="A view of the polished sea stacks, platform, and coins, with a mountain range in the background." width="80%" />
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### Playtest
 
@@ -2883,8 +3169,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 또한, 고도의 상승은 물리적 및 감정적인 상승감을 제공하여 높은 지형에 있는 사용자가 전장을 조감하여 다음 이동 경로를 더 잘 파악할 수 있게 합니다. 이동할 준비가 되면, 고도의 하강은 물리적 및 감정적인 하강감을 제공하여 사용자가 적의 시야를 피하면서 빠르게 목표를 달성하도록 압박합니다.
 
-<Tabs>
-  <TabItem key = "1" label="Create Your Own">
+<!-- <Tabs>
+  <TabItem key = "1" label="Create Your Own"> -->
+
+**Create Your Own**
 
 자신만의 바닥 지오메트리를 생성하려면:
 
@@ -2913,8 +3201,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 모든 파트를 고정합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+<!--   </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) 장소 파일 내에서 바닥 지오메트리를 정확히 재현하려면:
 
@@ -3059,8 +3349,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 모든 바닥 파트를 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 주변 벽 지오메트리
 
@@ -3070,8 +3360,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 <img src="../img/05_Roblox_tutorial/Perimeter-Intro.jpg" alt="A top-down view of the final greybox environment with the perimeter wall geometry highlighted in yellow." width="100%"/>
 
-<Tabs>
-  <TabItem key = "1" label="Create Your Own">
+<!-- <Tabs>
+  <TabItem key = "1" label="Create Your Own"> -->
+
+**Create Your Own**
 
 자신만의 주변 벽 지오메트리를 생성하려면:
 
@@ -3081,8 +3373,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 파트를 고정합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+<!--   </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) 장소 파일 내에서 주변 벽 지오메트리를 정확히 재현하려면:
 
@@ -3155,9 +3449,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    </thead>
    <tbody>
    <tr>
-   <td>
-
-왼쪽 벽</td>
+   <td>왼쪽 벽</td>
    <td>`20, 20, 40`</td>
    <td>`-34, 15, 320`</td>
    </tr>
@@ -3209,8 +3501,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 주변 벽 파트를 모두 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 스폰 존 지오메트리
 
@@ -3224,8 +3516,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 <img src="../img/05_Roblox_tutorial/SpawnZone-Intro.jpg" alt="A top-down view of the final greybox environment with the spawn zone wall geometry highlighted in yellow." width="100%"/>
 
-<Tabs>
-  <TabItem key = "1" label="Create Your Own">
+<!-- <Tabs>
+  <TabItem key = "1" label="Create Your Own"> -->
+
+**Create Your Own**
 
 자신만의 스폰 존 지오메트리를 생성하려면:
 
@@ -3235,8 +3529,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 파트를 고정합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+<!--   </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) 장소 파일 내에서 스폰 존 지오메트리를 정확히 재현하려면:
 
@@ -3321,9 +3617,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    <tr>
    <td>오른쪽 스폰 상단 벽</td>
    <td>`10, 15, 5`</td>
-   <td
-
->`-105, 12.5, 22.5`</td>
+   <td>`-105, 12.5, 22.5`</td>
    </tr>
    <tr>
    <td>오른쪽 스폰, 상단 문</td>
@@ -3352,8 +3646,9 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 스폰 존 파트를 모두 고정합니다.
 
-  </TabItem>
+<!--   </TabItem>
 </Tabs>
+ -->
 
 ##### 전투 포켓 지오메트리
 
@@ -3366,9 +3661,11 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 경험을 위해 만드는 전투 포켓 지오메트리를 시각화하는 데 도움이 되도록 다음 이미지를 참고하세요. 노란색으로 표시되어 있습니다.
 
 <img src="../img/05_Roblox_tutorial/CombatPockets-Intro2.jpg" alt="A top-down view of the final greybox environment with the combat pocket geometry highlighted in yellow." width="100%"/>
-
+<!-- 
 <Tabs>
   <TabItem key = "1" label="Create Your Own">
+ -->
+**Create Your Own**
 
 자신만의 전투 포켓 지오메트리를 생성하려면:
 
@@ -3390,8 +3687,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 파트를 고정합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+<!--   </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) 장소 파일 내에서 전투 포켓 지오메트리를 정확히 재현하려면:
 
@@ -3459,9 +3758,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    <tr>
    <td>하단 벽</td>
    <td>`10, 15, 35`</td>
-   <td>`-50, 12.5, 252.5
-
-`</td>
+   <td>`-50, 12.5, 252.5`</td>
    </tr>
    </tbody>
    </table>
@@ -3660,8 +3957,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 전투 포켓 파트를 모두 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 외부 지오메트리
 
@@ -3671,8 +3968,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 <img src="../img/05_Roblox_tutorial/Exterior-Intro.jpg" alt="A top-down view of the final greybox environment with the exterior geometry highlighted in yellow." width="100%"/>
 
-<Tabs>
-  <TabItem key = "1" label="Create Your Own">
+<!-- <Tabs>
+  <TabItem key = "1" label="Create Your Own"> -->
+
+**Create Your Own**
 
 자신만의 외부 지오메트리를 생성하려면:
 
@@ -3682,8 +3981,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 파트를 고정합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+<!--   </TabItem>
+  <TabItem key = "2" label="Recreate the Sample"> -->
+
+**Recreate the Sample**
 
 샘플 [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) 장소 파일 내에서 외부 지오메트리를 정확히 재현하려면:
 
@@ -3830,9 +4131,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    <tr>
    <td>중앙 장애물</td>
    <td>`20, 10, 10`</td>
-   <td
-
->`-35, 10, 160`</td>
+   <td>`-35, 10, 160`</td>
    </tr>
    <tr>
    <td>하단 장애물</td>
@@ -3846,8 +4145,9 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 타워 파트를 모두 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!-- </TabItem>
+</Tabs> 
+-->
 
 #### 플레이스홀더 재료 적용
 
@@ -3862,14 +4162,18 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 예를 들어, 다음 사용자가 "빨간색" 팀에 속해 있을 때, 빨간색 바닥 위를 걷고 노란색 벽이 오른쪽에 있으면, 사용자는 내부 주요 레인에 있으며 자신의 스폰 존을 향해 이동하고 있음을 알 수 있습니다. 반대로, 파란색 바닥 위를 걷고 노란색 벽이 왼쪽에 있으면, 사용자는 내부 레인에 있으며 적 팀의 스폰 존을 향해 이동하고 있음을 알 수 있습니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Placeholder-Left.jpg" alt="A Rthro avatar standing on a red floor with a yellow wall to their right. This color configuration informs the user that they're in the interior primary lane and moving toward the red spawn zone." width="100%"/>
   </figure>
   <figure>
     <img src="../img/05_Roblox_tutorial/Placeholder-Right.jpg" alt="A Rthro avatar standing on a blue floor with a yellow wall to their left. This color configuration informs the user that they're in the interior primary lane and moving toward the blue spawn zone." width="100%"/>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|<img src="../img/05_Roblox_tutorial/Placeholder-Left.jpg" alt="A Rthro avatar standing on a red floor with a yellow wall to their right. This color configuration informs the user that they're in the interior primary lane and moving toward the red spawn zone." width="100%"/>|<img src="../img/05_Roblox_tutorial/Placeholder-Right.jpg" alt="A Rthro avatar standing on a blue floor with a yellow wall to their left. This color configuration informs the user that they're in the interior primary lane and moving toward the blue spawn zone." width="100%"/>|
+|---|---|
+
 
 플레이스홀더 재료를 적용하려면:
 
@@ -3945,7 +4249,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 타일 가능한 텍스처의 가장 기본적인 규칙은 **이음매가 없어야 한다**는 것입니다. 그렇지 않으면 텍스처가 표면에서 시작되고 끝나는 지점이 사용자에게 눈에 띄어 경험에 대한 몰입감을 깨뜨릴 수 있습니다. 따라서 타일 가능한 텍스처는 실제 세계에서 이음매가 없는 잔디나 돌과 같은 자연 재료에 잘 어울립니다. 실제로 샘플 레이저 태그 경험에서는 야외 공간을 나타내기 위해 다음 네 가지 유기적인 타일 가능한 텍스처를 사용하며, 이 텍스처를 이 튜토리얼의 [월드 빌딩](../environmental-art/construct-your-world.md) 섹션에서 사용할 수 있습니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/TileableTextures-Moss.png" alt="A sphere part with a tileable moss material applied." width="100%"/>
     <figcaption>Moss</figcaption>
@@ -3954,9 +4258,13 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/TileableTextures-MossFlowers.png" alt="A sphere part with a tileable moss with flowers material applied." width="100%"/>
     <figcaption>MossFlowers</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
 
-<GridContainer numColumns="2">
+|Moss|MossFlowers|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/TileableTextures-Moss.png" alt="A sphere part with a tileable moss material applied." width="100%"/>|<img src="../img/05_Roblox_tutorial/TileableTextures-MossFlowers.png" alt="A sphere part with a tileable moss with flowers material applied." width="100%"/>|
+
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/TileableTextures-MossStones.png" alt="A sphere part with a tileable moss with stones material applied." width="100%"/>
     <figcaption>MossStones</figcaption>
@@ -3965,11 +4273,15 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/TileableTextures-Stones.png" alt="A sphere part with a tileable stones material applied." width="100%"/>
     <figcaption>Stones</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|MossStones|Stones|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/TileableTextures-MossStones.png" alt="A sphere part with a tileable moss with stones material applied." width="100%"/>|<img src="../img/05_Roblox_tutorial/TileableTextures-Stones.png" alt="A sphere part with a tileable stones material applied." width="100%"/>|
 
 이 모든 샘플 타일 가능한 텍스처가 이끼, 꽃 및 돌 요소의 균일한 분포를 가지고 있음을 주목하세요. 만약 큰 돌이나 꽃 패치와 같은 눈에 띄는 요소를 포함하면 사용자는 텍스처가 반복되고 있음을 인식하게 됩니다. 예를 들어, 다음 두 이미지에서 첫 번째 이미지는 눈에 띄는 흙 패치가 있어 텍스처의 반복을 눈에 띄게 합니다. 두 번째 이미지는 이 패치를 훨씬 작게 만들어 텍스처의 요소를 균형 있게 만들어 반복을 덜 눈에 띄게 합니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/TileableTextures-WithElement.jpg" alt="A tileable rock texture with a distinct patch of rocks highlighted to show that the repetition of the distinct element is noticeable." width="100%"/>
   </figure>
@@ -3977,6 +4289,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/TileableTextures-NoElement.jpg" alt="A tileable rock texture with no distinct elements to show that this technique makes the repetition of elements not noticeable." width="100%"/>
   </figure>
 </GridContainer>
+ -->
+
+|<img src="../img/05_Roblox_tutorial/TileableTextures-WithElement.jpg" alt="A tileable rock texture with a distinct patch of rocks highlighted to show that the repetition of the distinct element is noticeable." width="100%"/>|<img src="../img/05_Roblox_tutorial/TileableTextures-NoElement.jpg" alt="A tileable rock texture with no distinct elements to show that this technique makes the repetition of elements not noticeable." width="100%"/>|
+|---|---|
 
 [서브스턴스 디자이너](https://www.adobe.com/products/substance3d-designer)나 [블렌더](https://www.blender.org/)와 같은 타사 모델링 도구에서 자체 타일 가능한 텍스처를 디자인하기로 결정한 경우 다음 사항을 염두에 두세요:
 
@@ -3986,26 +4302,29 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
  요소보다 더 구별되지 않도록 균일한 가시적 분포를 만듭니다.
 - 타일 가능한 텍스처가 기술적으로 이음매가 없더라도, 이미지 전체를 검토하여 텍스처의 반복이 눈에 띄지 않도록 합니다.
 
-이 마지막 포인트는 완전히 제거하기는 거의 불가능하지만, 스튜디오 재료를 유기적으로 타일링하거나 반복을 효과적으로 숨기기 위해 추가 데칼 오버레이를 추가할 수 있습니다. 이러한 기술에 대한 자세한 내용은 [사용자 정의 재료 생성](../environmental-art/assemble-an-asset-library.md#creating-custom-materials) 및 [모듈형 환경 조립 - 가시적 반복 감소](../../tutorials/3D-art/assembling-modular-environments.md#reducing-visible-repetition)를 참조하세요.
+이 마지막 포인트는 완전히 제거하기는 거의 불가능하지만, 스튜디오 재료를 유기적으로 타일링하거나 반복을 효과적으로 숨기기 위해 추가 데칼 오버레이를 추가할 수 있습니다. 이러한 기술에 대한 자세한 내용은 [사용자 정의 재료 생성] 및 [모듈형 환경 조립 - 가시적 반복 감소]를 참조하세요.
 
 ##### 트림 시트
 
 **트림 시트**는 X **또는** Y 축 중 하나에서 타일링할 수 있는 텍스처로, 추가 텍스처를 가져오지 않고도 경험에 시각적 복잡성을 크게 추가할 수 있어 메모리에 부정적인 영향을 미치지 않습니다. 트림 시트의 각 행 또는 열은 고유한 시각적 외관을 가지고 있어 UV 데이터를 메시로 매핑할 때 다양한 표면 처리를 선택할 수 있습니다. 예를 들어, 다음 두 이미지에서 문틀과 천장 자산은 동일한 트림 시트의 다른 레이어를 사용하여 공간에 세부 작업을 추가합니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/TrimSheets-Doorway.jpg" alt="An doorway with trim sheet textures applied." width="100%"/>
   </figure>
   <figure>
     <img src="../img/05_Roblox_tutorial/TrimSheets-Ceiling.jpg" alt="A group of ceiling tiles with trim sheet textures applied." width="100%"/>
   </figure>
-</GridContainer>
+</GridContainer> -->
 
-트림 시트의 가장 기본적인 규칙은 단일 객체에만 적용할 수 있는 맥락적 세부 사항을 피하는 것입니다. 이는 트림 시트가 세계의 여러 유형의 객체에 사용될 수 있어야 하며, 매우 구체적인 세부 사항은 3D 공간에서 반복될 때 사용자에게 눈에 띄기 때문입니다. 예를 들어, [듀발 쇼케이스의 미스터리](../../resources/the-mystery-of-duvall-drive/materializing-the-world.md#surface-appearance-and-trim-maps)의 다음 이미지에서, 좌측 가구 세트의 트림 시트는 우측 가구 세트의 트림 시트보다 더 많은 얼룩 세부 사항을 포함합니다. 추가 얼룩 세부 사항이 반복되면서 눈에 띄는 차이를 확인할 수 있습니다.
+|<img src="../img/05_Roblox_tutorial/TrimSheets-Doorway.jpg" alt="An doorway with trim sheet textures applied." width="100%"/>|<img src="../img/05_Roblox_tutorial/TrimSheets-Ceiling.jpg" alt="A group of ceiling tiles with trim sheet textures applied." width="100%"/>|
+|---|---|
+
+트림 시트의 가장 기본적인 규칙은 단일 객체에만 적용할 수 있는 맥락적 세부 사항을 피하는 것입니다. 이는 트림 시트가 세계의 여러 유형의 객체에 사용될 수 있어야 하며, 매우 구체적인 세부 사항은 3D 공간에서 반복될 때 사용자에게 눈에 띄기 때문입니다. 예를 들어, [듀발 쇼케이스의 미스터리]의 다음 이미지에서, 좌측 가구 세트의 트림 시트는 우측 가구 세트의 트림 시트보다 더 많은 얼룩 세부 사항을 포함합니다. 추가 얼룩 세부 사항이 반복되면서 눈에 띄는 차이를 확인할 수 있습니다.
 
 <img src="../img/05_Roblox_tutorial/furniture-set-stain.png" alt="The same furniture set has different trim sheets applied. The furniture set on the left with more distict stain elements has noticeable repetition." width="100%"/>
 
-이 기본 규칙을 따르며, 최종 샘플 레이저 태그 환경에서는 모듈형 키트와 소품에 시각적 흥미와 일관성을 더하기 위해 여섯 개의 간단한 세부 작업 행을 포함하는 다음 트림 시트 텍스처 맵을 사용합니다. 이 <a href="../img/05_Roblox_tutorial/TrimSheetTextureMaps.zip" download>트림 시트</a>를 UV 언랩핑 프로세스에서 사용할 수 있으며, 자산 라이브러리를 조립할 때 `Class.SurfaceAppearance` 객체에서 텍스처 맵을 활용할 수 있습니다. 각 텍스처 맵이 메시에 제공하는 정보에 대한 자세한 내용은 [PBR 텍스처 - 텍스처 맵](../../art/modeling/surface-appearance.md#texture-maps)을 참조하세요.
+이 기본 규칙을 따르며, 최종 샘플 레이저 태그 환경에서는 모듈형 키트와 소품에 시각적 흥미와 일관성을 더하기 위해 여섯 개의 간단한 세부 작업 행을 포함하는 다음 트림 시트 텍스처 맵을 사용합니다. 이 <a href="../img/05_Roblox_tutorial/TrimSheetTextureMaps.zip" download>트림 시트</a>를 UV 언랩핑 프로세스에서 사용할 수 있으며, 자산 라이브러리를 조립할 때 `Class.SurfaceAppearance` 객체에서 텍스처 맵을 활용할 수 있습니다. 각 텍스처 맵이 메시에 제공하는 정보에 대한 자세한 내용은 [PBR 텍스처 - 텍스처 맵]을 참조하세요.
 
 <Alert severity="info">
     이 트림 시트 파일은 타사 모델링 도구에서 UV 언랩핑 프로세스에만 유용합니다. UV 언랩핑 프로세스를 완료하지 않고 텍스처 맵을 `Class.SurfaceAppearance` 객체에 업로드하려고 하면, 스튜디오에서 텍스처 자체에 매핑할 데이터를 찾을 수 없습니다.
@@ -4013,7 +4332,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 <img src="../img/05_Roblox_tutorial/Trimsheet.png" alt="The sample laser tag experience's trim sheet." width="50%"/>
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/TrimSheets-Albedo.png" alt="The sample laser tag experience's trim sheet's albedo texture map." width="100%"/>
     <figcaption>Albedo</figcaption>
@@ -4022,9 +4341,13 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/TrimSheets-Normal.png" alt="The sample laser tag experience's trim sheet's normal texture map." width="100%"/>
     <figcaption>Normal</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
 
-<GridContainer numColumns="2">
+|Albedo|Normal|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/TrimSheets-Albedo.png" alt="The sample laser tag experience's trim sheet's albedo texture map." width="100%"/>|<img src="../img/05_Roblox_tutorial/TrimSheets-Normal.png" alt="The sample laser tag experience's trim sheet's normal texture map." width="100%"/>|
+
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/TrimSheets-Roughness.png" alt="The sample laser tag experience's trim sheet's roughness texture map." width="100%"/>
     <figcaption>Roughness</figcaption>
@@ -4033,7 +4356,11 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/TrimSheets-Metalness.png" alt="The sample laser tag experience's trim sheet's metalness texture map." width="100%"/>
     <figcaption>Metalness</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|Roughness|Metalness|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/TrimSheets-Roughness.png" alt="The sample laser tag experience's trim sheet's roughness texture map." width="100%"/>|<img src="../img/05_Roblox_tutorial/TrimSheets-Metalness.png" alt="The sample laser tag experience's trim sheet's metalness texture map." width="100%"/>|
 
 [서브스턴스 디자이너](https://www.adobe.com/products/substance3d-designer), [블렌더](https://www.blender.org/) 또는 [ZBrush](https://www.maxon.net/en/zbrush)와 같은 타사 모델링 도구에서 자체 트림 시트를 디자인하기로 결정한 경우 다음 사항을 염두에 두세요:
 
@@ -4133,14 +4460,17 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 6. 파일 브라우저에서 해당 타일 가능한 텍스처에 대한 **Albedo** 텍스처 맵 `.png` 파일을 선택한 다음 **열기** 버튼을 클릭합니다. 파일 브라우저가 닫히고 새 색상 맵이 자산 ID와 함께 표시됩니다.
 7. **Metalness**, **Normal** 및 **Roughness** 텍스처 맵에 대해 이 과정을 반복합니다. 사용자 정의 재료가 텍스처 맵을 반영하도록 업데이트됩니다.
 
-   <GridContainer numColumns="2">
+<!--    <GridContainer numColumns="2">
      <figure>
        <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CustomMaterials-7a.jpg" alt="All texture maps for the Moss_Lumpy_A material." width="85%"/>
      </figure>
      <figure>
        <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CustomMaterials-7b.jpg" alt=" sphere part with the Moss_Lumpy_A material applied." width="100%"/>
      </figure>
-   </GridContainer>
+   </GridContainer> -->
+
+   |<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CustomMaterials-7a.jpg" alt="All texture maps for the Moss_Lumpy_A material." width="85%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CustomMaterials-7b.jpg" alt=" sphere part with the Moss_Lumpy_A material applied." width="100%"/>|
+   |---|---|
 
 8. **Overrides** 섹션에서 **Set as Override** 토글을 활성화하여 지형에 지면을 적용할 때 스튜디오에서 이 사용자 정의 재료를 사용하도록 합니다.
 
@@ -4265,7 +4595,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 그림자는 3D 기하학적 깊이를 가진 객체에 사실감을 더할 수 있으므로, 이 속성을 비활성화할 위치를 결정할 때 객체가 환경에 큰 시각적 개선을 제공하는 위치와 사용자가 그림자의 누락을 눈치챌 수 있는 위치를 고려합니다. 예를 들어, 복잡한 그림자는 사용자가 보게 될 야외 공간에서 몰입감을 제공할 수 있지만, 사용자가 상호작용하지 않는 천장에서 살짝 보이는 식물에는 필요하지 않습니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CastShadow-Enabled.jpg" alt="Foliage casting shadows." width="100%"/>
     <figcaption>`Class.BasePart.CastShadow` = 활성화</figcaption>
@@ -4274,13 +4604,17 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CastShadow-Disabled.jpg" alt="Foliage not casting shadows." width="100%"/>
     <figcaption>`Class.BasePart.CastShadow` = 비활성화</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|`Class.BasePart.CastShadow` = 활성화|`Class.BasePart.CastShadow` = 비활성화|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CastShadow-Enabled.jpg" alt="Foliage casting shadows." width="100%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CastShadow-Disabled.jpg" alt="Foliage not casting shadows." width="100%"/>|
 
 ##### 양면 렌더링
 
 `Class.MeshPart.DoubleSided` 속성은 메시의 두 면 또는 다각형을 모두 렌더링할지 여부를 결정합니다. 이 속성을 평면 `Class.MeshPart`(예: 나뭇잎, 머리카락 또는 천 카드)에 대해 활성화하면, Roblox 엔진이 메시의 두 면 또는 다각형을 렌더링하여 사용자가 객체를 어떤 각도에서 보더라도 객체의 전체성을 볼 수 있도록 합니다. 예를 들어, 다음 나뭇잎은 단일 면 평면 메시로, 이 속성을 활성화하면 카메라를 향한 모든 나뭇잎이 사용자에게 표시됩니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/DoubleSided-Enabled.png" alt="A tree with all planar meshes facing the camera." width="100%"/>
     <figcaption>`Class.MeshPart.DoubleSided` = 활성화</figcaption>
@@ -4289,7 +4623,12 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/DoubleSided-Disabled.png" alt="A tree with less leaves because all planar meshes facing away from the camera are disabled." width="100%"/>
     <figcaption>`Class.MeshPart.DoubleSided` = 비활성화</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|`Class.MeshPart.DoubleSided` = 활성화|`Class.MeshPart.DoubleSided` = 비활성화|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/DoubleSided-Enabled.png" alt="A tree with all planar meshes facing the camera." width="100%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/DoubleSided-Disabled.png" alt="A tree with less leaves because all planar meshes facing away from the camera are disabled." width="100%"/>|
+
 
 이 속성은 환경에 사실감을 더하는 데 유용하지만, 성능에 영향을 미칠 수 있습니다. 엔진이 객체의 폴리곤을 두 번 렌더링해야 하기 때문입니다: 한 번은 사용자의 카메라를 향한 방향을 위해, 다른 한 번은 사용자의 카메라를 향하지 않은 메시를 위해. 성능에 미치는 영향을 줄이기 위해 최종 샘플 레이저 태그 환경에서는 이 속성을 나뭇잎에 대해서만 활성화합니다. 이는 3D 공간에서 사실감을 위해 시각적으로 강한 영향을 미칩니다.
 
@@ -4297,7 +4636,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 `Class.MeshPart.CollisionFidelity` 속성은 메시 또는 유니온의 물리적 히트박스가 시각적 표현과 얼마나 가까운지를 결정합니다. 기본적으로 이 설정은 메시의 기하학적 모양과 거의 일치하는 히트박스를 렌더링합니다. 예를 들어, 다음 이미지의 성 메시는 기본 히트박스가 메시의 기하학적 모양과 거의 일치합니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-MeshPart.jpg" alt="A grey castle mesh." width="100%"/>
     <figcaption>원본 메시</figcaption>
@@ -4306,11 +4645,15 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Default.jpg" alt="The same castle mesh with a colorful hitbox that shows where users can collide with the castle." width="100%"/>
     <figcaption>기본값</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|원본 메시|기본값|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-MeshPart.jpg" alt="A grey castle mesh." width="100%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Default.jpg" alt="The same castle mesh with a colorful hitbox that shows where users can collide with the castle." width="100%"/>|
 
 이 속성을 다른 값으로 설정하여 메시의 히트박스 정밀도를 줄일 수 있습니다. 예를 들어, 이 속성을 **Hull**로 설정하면 Roblox 엔진이 메시의 히트박스 정점을 크게 줄이고, 이 속성을 **Box**로 설정하면 엔진이 메시의 히트박스를 큐브로 줄입니다. 또한 메시의 히트박스 정밀도를 높이고 싶다면, 이 속성을 **PreciseConvexDecomposition**으로 설정하여 히트박스의 정점 수를 늘릴 수 있습니다.
 
-<GridContainer numColumns="3">
+<!-- <GridContainer numColumns="3">
   <figure>
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Box.jpg" alt="The same castle mesh with cube hitbox that shows where users can collide with the castle." width="100%"/>
     <figcaption>박스</figcaption>
@@ -4323,7 +4666,11 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Precise.jpg" alt="The same castle mesh with a colorful hitbox that shows where users can collide with the castle. This version shows more colorful faces than the default hitbox." width="100%"/>
     <figcaption>PreciseConvexDecomposition</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|Box|Hull|PreciseConvexDecomposition|
+|---|---|---|
+|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Hull.jpg" alt="The same castle mesh with a cylindrical hitbox that shows where users can collide with the castle." width="100%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Precise.jpg" alt="The same castle mesh with a colorful hitbox that shows where users can collide with the castle. This version shows more colorful faces than the default hitbox." width="100%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/Collision-Fidelity-Precise.jpg" alt="The same castle mesh with a colorful hitbox that shows where users can collide with the castle. This version shows more colorful faces than the default hitbox." width="100%"/>|
 
 `Class.BasePart.CastShadow`와 유사하게, 엔진이 렌더링해야 하는 정점이 많을수록 성능에 영향을 미칩니다. 따라서 사용자가 각 메시와 어떻게 상호작용할지를 고려하여 메시의 히트박스 정점을 줄일 수 있는지 여부를 신중히 생각해야 합니다. 히트박스가 정밀할 필요가 없는 경우, 이 속성을 **Box** 또는 **Hull**로 설정합니다.
 
@@ -4331,7 +4678,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 를 제거하면서도 히트박스의 목적을 유지할 수 있습니다.
 
-<GridContainer numColumns="3">
+<!-- <GridContainer numColumns="3">
   <figure>
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-WallMesh.jpg" alt="A wall model that provides a rise in elevation." width="100%"/>
     <figcaption>원본 메시</figcaption>
@@ -4344,11 +4691,15 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-Box.jpg" alt="The same wall model with a colorful hitbox for the trim, but only a box hitbox for the wall mesh." width="100%"/>
     <figcaption>박스</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|원본 메시|기본값|박스|
+|---|---|---|
+|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-WallMesh.jpg" alt="A wall model that provides a rise in elevation." width="100%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-Default.jpg" alt="The same wall model with a colorful hitbox that shows where users can collide with the wall." width="100%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-Box.jpg" alt="The same wall model with a colorful hitbox for the trim, but only a box hitbox for the wall mesh." width="100%"/>|
 
 이 결정을 내릴 때 기본값을 변경하는 것이 사용자가 환경을 탐색하는 데 부정적인 영향을 미칠 수 있는지 신중히 고려해야 합니다. 예를 들어, 벽 모델의 트림 메시에 대해 이 속성을 **Box**로 설정하면 사용자가 벽 근처에서 점프할 때 히트박스와 충돌할 수 있습니다. 대신, 이 메시를 **Hull**로 설정하여 정점 수를 줄이면서도 히트박스를 메시의 기하학적 모양에 가깝게 유지합니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-BoxTop.jpg" alt="A wall model with a box hitbox for the top trip. Because the box sticks out, users can unintentionally collide with the top trim." width="100%"/>
     <figcaption>박스</figcaption>
@@ -4357,7 +4708,11 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     <img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-Hull.jpg" alt="The same wall model with a hull hitbox for the top trip. Because hull hitbox conforms much closer to the top of the model, allowing users to avoid colliding with the trim." width="100%"/>
     <figcaption>Hull</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|Box|Hull|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-BoxTop.jpg" alt="A wall model with a box hitbox for the top trip. Because the box sticks out, users can unintentionally collide with the top trim." width="100%"/>|<img src="../img/05_Roblox_tutorial/Assemble an Asset Library/CollisionFidelity-Hull.jpg" alt="The same wall model with a hull hitbox for the top trip. Because hull hitbox conforms much closer to the top of the model, allowing users to avoid colliding with the trim." width="100%"/>|
 
 히트박스가 메시의 모양에 정확히 맞아야 하는 경우, 특히 사용자가 해당 모양과 충돌하는 방식을 정확하게 제어해야 할 때, 히트박스가 메시의 모양에 정확히 맞아야 할 때가 있습니다. 예를 들어, 최종 샘플 레이저 태그 환경에서는 사용자가 전투 포켓에 들어가거나 나갈 수 있도록 문 자체와 충돌하지 않도록 해야 합니다.
 
@@ -4435,8 +4790,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 이 기술은 원래 그레이박스 기하학을 대체하고 변환하지만, 수평 이동 외에도 경험 전반에 걸쳐 시야 및 교전 거리를 제어하는 ​​피크와 계곡을 만드는 원래 디자인 의도를 존중합니다. 즉, 사용자는 모든 물리적 및 감정적 상승 및 하강 감각을 유지하면서도 3D 공간에서 자신의 위치를 파악할 수 있는 이점을 갖게 됩니다.
 
-<Tabs>
-  <TabItem key = "1" label="자신만의 만들기">
+<!-- <Tabs>
+  <TabItem key = "1" label="자신만의 만들기"> -->
+
+**자신만의 만들기**
 
 자신만의 에셋 라이브러리를 바닥에 적용하려면:
 
@@ -4467,8 +4824,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이러한 바닥 부품을 모두 고정합니다.
 
-  </TabItem>
+<!-- </TabItem>
   <TabItem key = "2" label="샘플 재구성">
+ -->
+**샘플 재현 하기**
 
 샘플 [환경 예술 - 구성](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 파일 내에서 바닥을 정확히 재구성하려면:
 
@@ -4484,9 +4843,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    </thead>
    <tbody>
    <tr>
-   <td>왼
-
-쪽 상단 영역</td>
+   <td>왼쪽 상단 영역</td>
    <td>`57.5, 6, 142`</td>
    <td>`-123.75, 2, 281`</td>
    </tr>
@@ -4668,8 +5025,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 8. 이러한 부품과 모듈형 에셋을 모두 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 스폰 존
 
@@ -4679,8 +5036,11 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 최종 샘플 레이저 태그 환경은 이 디자인의 의도를 유지하면서 색상 테마를 추가합니다: 맵의 왼쪽에 모이는 팀은 **파스텔 블루그린** 색상을, 맵의 오른쪽에 모이는 팀은 **카네이션 핑크** 색상을 사용합니다. 이 튜토리얼의 이 섹션에서는 각 팀의 스폰 존 근처 지역을 구분하기 위해 동일한 색상 테마를 계속 사용할 것입니다.
 
-<Tabs>
+<!-- <Tabs>
   <TabItem key = "1" label="자신만의 만들기">
+ -->
+
+**자신만의 만들기**
 
 자신만의 에셋 라이브러리를 스폰 존에 적용하려면:
 
@@ -4698,8 +5058,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이러한 스폰 존 에셋을 모두 고정합니다.
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key = "2" label="샘플 재구성">
+ -->
+**샘플 재구성**
 
 샘플 [환경 예술 - 구성](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 장소 파일 내에서 스폰 존을 정확히 재구성하려면:
 
@@ -4861,9 +5223,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    </tr>
    <tr>
    <td>WallLarge</td>
-   <td>`-45, 5
-
-, 15`</td>
+   <td>`-45, 5, 15`</td>
    <td>`0, 180, 0`</td>
    </tr>
    <tr>
@@ -4897,8 +5257,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 5. 이러한 모듈형 에셋을 모두 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 전투 포켓
 
@@ -4910,17 +5270,20 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 또한, 이 섹션의 기술은 샘플 에셋 라이브러리의 소품을 왼쪽 및 오른쪽 전투 포켓에 적용하여 환경에 캐릭터를 추가하고 사용자가 없더라도 그 자체로 생명을 갖고 있는 것처럼 보이는 신빙성을 제공합니다. 이 과정을 **세트 드레싱**이라고도 하며, 사용자에게 그들이 방문하는 세계에 대한 직접적 및 간접적인 정보를 제공합니다. 예를 들어, 이 섹션의 표지판 및 식물 소품은 [연마된 에셋 개발](../environmental-art/develop-polished-assets.md)에서 샘플 아트 스타일을 강화하고, 사용자가 첨단 기술 환경에 있지만 여전히 유기 생명을 우선시하는 장소에 있음을 알립니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-Intro2.jpg" width="100%"/>
   </figure>
   <figure>
     <img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-Intro3.jpg" width="100%"/>
   </figure>
-</GridContainer>
+</GridContainer> -->
 
-<Tabs>
-  <TabItem key = "1" label="자신만의 만들기">
+|<img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-Intro2.jpg" width="100%"/>|<img src="../img/05_Roblox_tutorial/Construct Your World/CombatPockets-Intro3.jpg" width="100%"/>|
+|---|---|
+
+<!-- <Tabs>
+  <TabItem key = "1" label="자신만의 만들기"> -->
 
 자신만의 에셋 라이브러리를 전투 포켓에 적용하려면:
 
@@ -4942,8 +5305,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이러한 전투 포켓 에셋을 모두 고정합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="샘플 재구성">
+<!--   </TabItem>
+  <TabItem key = "2" label="샘플 재구성"> -->
 
 샘플 [환경 예술 - 구성](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 장소 파일 내에서 전투 포켓을 정확히 재구성하려면:
 
@@ -5651,9 +6014,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     </tr>
     <tr>
     <td>WallCornerOuter</td>
-    <td>`-45, 5, 
-
-95`</td>
+    <td>`-45, 5, 95`</td>
     <td>`0, 0, 0`</td>
     </tr>
     <tr>
@@ -5810,8 +6171,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 17. 이러한 소품 및 모듈형 에셋을 모두 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 외곽 복도
 
@@ -5829,8 +6190,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 <img src="../img/05_Roblox_tutorial/Construct Your World/Perimeter-Intro2.jpg" width="100%"/>
 
-<Tabs>
-  <TabItem key = "1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key = "1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 외곽 복도에 에셋 라이브러리를 적용하려면:
 
@@ -5857,8 +6220,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 모든 외곽 복도 에셋을 고정합니다.
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key = "2" label="샘플 재현">
+ -->
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 외곽 복도를 정확히 재현하려면:
 
@@ -5971,9 +6336,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    <tr>
    <td>WallRiseB</td>
    <td>`-110, 5, 210`</td>
-   <td>`0, 
-
-0, 0`</td>
+   <td>`0, 0, 0`</td>
    </tr>
    <tr>
    <td>WallCornerOuter</td>
@@ -6210,8 +6573,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 7. 이 모든 소품 및 모듈형 에셋을 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 문
 
@@ -6219,8 +6582,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 이 때문에 여러 변형을 플레이 테스트하여 다양한 플레이 스타일을 실험하는 것이 좋습니다. 실제로, 전투 포켓에 한쪽에서만 사용자가 열 수 있는 문 에셋을 배치하거나 아예 열리지 않도록 실험할 수도 있습니다.
 
-<Tabs>
-  <TabItem key = "1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key = "1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 문에 에셋 라이브러리를 적용하려면:
 
@@ -6230,8 +6595,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. **(선택 사항)** 이 모든 문 에셋을 고정합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="샘플 재현">
+<!--   </TabItem>
+  <TabItem key = "2" label="샘플 재현"> -->
+
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 문을 정확히 재현하려면:
 
@@ -6281,8 +6648,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 <img src="../img/05_Roblox_tutorial/Construct Your World/Doors-2.jpg" width="100%"/>
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 외부 에셋
 
@@ -6294,8 +6661,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 야외 공간을 위한 첫 번째 외부 에셋은 외부 주요 차선과 교차하는 중간 전투 포켓 바로 바깥에 있는 두 개의 타워입니다. 이 섹션의 기술은 시각적으로 미적인 객체를 생성할 뿐만 아니라, 사용자에게 환경에서의 규모를 제공하는 객체를 생성합니다. 지금까지 다른 모든 객체는 사용자 캐릭터와 거의 같은 크기였지만 이 타워는 **사용자 캐릭터보다 훨씬 큽니다**, 이는 건축물 또는 건물이 위치한 전체 섬의 배경 스토리에 대한 흥미를 불러일으킬 수 있습니다.
 
-<Tabs>
-  <TabItem key = "1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key = "1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 타워에 에셋 라이브러리를 적용하려면:
 
@@ -6313,8 +6682,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 모든 파트를 고정합니다.
 
-  </TabItem>
-  <TabItem key = "2" label="샘플 재현">
+<!--   </TabItem>
+  <TabItem key = "2" label="샘플 재현"> -->
+
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 타워를 정확히 재현하려면:
 
@@ -6375,9 +6746,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    </tbody>
    </table>
 
-   <img src="../img/05_Roblox_tutorial/Construct Your World/Towers-1
-
-.jpg" width="100%"/>
+   <img src="../img/05_Roblox_tutorial/Construct Your World/Towers-1.jpg" width="100%"/>
 
 2. 모든 것을 모델로 그룹화한 다음 모델을 복제합니다.
 3. 복제된 타워를 **CFrame.Position**으로 **-30.572, 57.93, 133.5**에 이동합니다.
@@ -6386,15 +6755,17 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 4. 이 두 모델을 모두 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### 기둥
 
 야외 공간에 변환할 수 있는 두 번째 외부 에셋은 이 튜토리얼에서 나중에 만들 오버행 피스를 지탱하는 두 개의 기둥입니다. 타워와 마찬가지로 이 섹션의 기술은 시각적으로 미적인 객체를 생성할 뿐만 아니라, 사용자에게 전체 환경에서 자신이 있는 위치에 대한 추가적인 시각적 단서를 제공합니다. 예를 들어, 각 기둥에는 파스텔 블루-그린 또는 카네이션 핑크 디테일이 있어 사용자가 자신 또는 적의 스폰 존에 가장 가까운 곳에 있는지를 알 수 있습니다.
 
-<Tabs>
-  <TabItem key = "1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key = "1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 1. **블록** 및 **쐐기** 부품을 사용하여 건물의 지붕을 지탱할 기둥을 만듭니다.
 
@@ -6412,8 +6783,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 모든 부품을 고정합니다.
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key = "2" label="샘플 재현">
+ -->
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 기둥을 정확히 재현하려면:
 
@@ -6520,12 +6893,12 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 6. 이 두 모델을 모두 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### 화분
 
-야외 공간에 변환할 수 있는 마지막 외부 에셋은 외부 주요 차선을 따라 전체적으로 확장된 여덟 개의 화분입니다. [고체 모델링](../../parts/solid-modeling.md) 작업을 사용하여 부품을 결합하고 분리하여 각 화분의 베이스를 형성한 다음, 다양한 재료, 식물, 또는 트림 에셋 구성을 적용하여 각 화분이 3D 공간에서 독특하게 느껴지도록 할 수 있습니다.
+야외 공간에 변환할 수 있는 마지막 외부 에셋은 외부 주요 차선을 따라 전체적으로 확장된 여덟 개의 화분입니다. [고체 모델링] 작업을 사용하여 부품을 결합하고 분리하여 각 화분의 베이스를 형성한 다음, 다양한 재료, 식물, 또는 트림 에셋 구성을 적용하여 각 화분이 3D 공간에서 독특하게 느껴지도록 할 수 있습니다.
 
 가장 왼쪽에 있는 화분에 에셋 라이브러리를 적용하려면:
 
@@ -6570,9 +6943,9 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 6. 연합을 선택한 다음 **속성** 창에서,
 
    1. **색상**을 **181, 173, 156**으로 설정합니다.
-   1. **재료**를 **콘크리트**로 설정합니다.
-   1. **MaterialVariant**를 **Concrete_Board_Formed_A**로 설정합니다.
-   1. **UsePartColor**를 활성화합니다.
+   2. **재료**를 **콘크리트**로 설정합니다.
+   3. **MaterialVariant**를 **Concrete_Board_Formed_A**로 설정합니다.
+   4. **UsePartColor**를 활성화합니다.
 
    <img src="../img/05_Roblox_tutorial/Construct Your World/Planters-6.jpg" width="100%"/>
 
@@ -6631,14 +7004,17 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 고체 모델링 도구를 사용하는 방법을 알게 되었으므로, 다양한 외부, 재료, 식물 종류 및 트림 조각을 사용하여 다양한 유형의 화분을 실험해 볼 수 있습니다. 예를 들어, 최종 샘플 레이저 태그 환경 내의 다른 변형 화분은 'L' 모양을 만들거나, **블록** 부품과 흰색 트림을 함께 레이어링하여 맵의 중앙에서 더 높은 덮개를 제공합니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Construct Your World/Planters-9.jpg" width="100%"/>
   </figure>
   <figure>
     <img src="../img/05_Roblox_tutorial/Construct Your World/Planters-10.jpg" width="100%"/>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|<img src="../img/05_Roblox_tutorial/Construct Your World/Planters-9.jpg" width="100%"/>|<img src="../img/05_Roblox_tutorial/Construct Your World/Planters-10.jpg" width="100%"/>|
+|---|---|
 
 <img src="../img/05_Roblox_tutorial/Construct Your World/Planters-11.jpg" width="100%"/>
 
@@ -6654,8 +7030,9 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 지붕의 첫 번째 최상위 층은 천창 기하학입니다. 이 층의 목적은 내부 전투 구역에 외부 조명을 제공하는 것입니다.
 
-<Tabs>
-  <TabItem key = "1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key = "1" label="직접 만들기"> -->
+**직접 만들기**
 
 자신의 에셋 라이브러리를 천창에 적용하려면:
 
@@ -6679,8 +7056,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 1. 이 모든 천창 에셋을 고정합니다.
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key = "2" label="샘플 재현">
+ -->
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 천창을 정확히 재현하려면:
 
@@ -6890,9 +7269,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    </tr>
    <tr>
    <td>SkylightCornerInner</td>
-   <td>`-120
-
-, 20, 80`</td>
+   <td>`-120, 20, 80`</td>
    <td>`0, 90, 0`</td>
    </tr>
    <tr>
@@ -7045,15 +7422,17 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 <img src="../img/05_Roblox_tutorial/Construct Your World/Skylight-8.jpg" width="100%"/>
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### 천장
 
 지붕의 두 번째 층은 사용자가 건물 내부를 탐색할 때 뷰의 상단에 보이는 천장 기하학입니다. 이 층의 목적은 각 벽 자산의 상단 장식 트림 사이의 열린 영역을 채우는 것입니다.
 
-<Tabs>
-  <TabItem key = "1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key = "1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 자신의 에셋 라이브러리를 지붕의 천장에 적용하려면:
 
@@ -7064,8 +7443,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 1. 이러한 부품을 선택한 다음 **속성** 창에서 **색상**, **재질** 및/또는 **재질 변형**을 설정하여 환경의 다른 표면과 시각적으로 구별되는 처리를 적용합니다. 이것은 플레이어가 카메라를 빠르게 이동할 때 자신을 방향지을 수 있도록 도와줍니다.
 1. 이러한 모든 천장 에셋을 고정합니다.
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key = "2" label="샘플 재현">
+ -->
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 천장을 정확히 재현하려면:
 
@@ -7213,15 +7594,17 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 4. 이 모든 부품을 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### 상단 지붕
 
 지붕의 세 번째 층은 상단 지붕 기하학입니다. 이 층의 목적은 사용자가 야외 공간에서 건물을 볼 때 볼 수 있는 가장 바깥쪽 지붕 영역에 볼륨을 추가하는 것입니다. 또한 천창에 깊이를 더해 건물이 내부와 외부에서 더 완성된 모습으로 보이게 합니다.
 
-<Tabs>
-  <TabItem key = "1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key = "1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 지붕의 상단에 자신의 에셋 라이브러리를 적용하려면:
 
@@ -7229,16 +7612,16 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
    <img src="../img/05_Roblox_tutorial/Construct Your World/TopRoof-3.jpg" width="100%"/>
 
-1. 이러한 부품을 선택한 다음 **속성** 창에서 **색상**, **재질** 및/또는 **재질 변형**을 설정하여 환경의 아트 스타일에 맞는 시각적 처리를 적용합니다
-
-.
+1. 이러한 부품을 선택한 다음 **속성** 창에서 **색상**, **재질** 및/또는 **재질 변형**을 설정하여 환경의 아트 스타일에 맞는 시각적 처리를 적용합니다.
 
    <img src="../img/05_Roblox_tutorial/Construct Your World/TopRoof-4.jpg" width="100%"/>
 
 1. 이 모든 상단 지붕 에셋을 고정합니다.
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key = "2" label="샘플 재현">
+ -->
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 지붕의 상단을 정확히 재현하려면:
 
@@ -7458,15 +7841,17 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 10. 이 모든 부품을 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### 오버행
 
 지붕의 네 번째 층은 건물이 구조적으로 견고하게 유지되도록 기둥 자산이 지탱하는 오버행 기하학입니다. 이 층의 목적은 외부 주요 차선을 탐색하는 사용자에게 미관상으로 보기 좋은 차양 공간을 제공하는 것입니다.
 
-<Tabs>
-  <TabItem key="1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key="1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 지붕의 오버행에 자신의 자산 라이브러리를 적용하려면:
 
@@ -7477,8 +7862,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 1. 이러한 부품을 선택한 다음 **속성** 창에서 **색상**, **재질**, 및/또는 **재질 변형**을 설정하여 경험의 아트 스타일에 따라 시각적 처리를 적용합니다.
 1. 이 모든 오버행 부품을 고정합니다.
 
-  </TabItem>
-  <TabItem key="2" label="샘플 재현">
+<!--   </TabItem>
+  <TabItem key="2" label="샘플 재현"> -->
+
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 오버행을 정확히 재현하려면:
 
@@ -7651,9 +8038,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    <td>`2, 11, 21`</td>
    <td>`-18.5, 25.5, 42`</td>
    <td>`0, -90, 180`</td>
-   <td>`255, 
-
-255, 255`</td>
+   <td>`255, 255, 255`</td>
    <td>`콘크리트`</td>
    <td>`Concrete_Board_Formed_A`</td>
    </tr>
@@ -7664,15 +8049,17 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 5. 이 모든 부품을 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ###### 트림
 
 지붕의 마지막 층은 지붕 주변을 둘러싸는 트림 기하학입니다. 이 층의 목적은 외부 공간에서 방을 바라보는 사용자에게 이전 각 층 간의 시각적 일관성을 제공하는 것입니다.
 
-<Tabs>
-  <TabItem key="1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key="1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 지붕의 트림에 자신의 자산 라이브러리를 적용하려면:
 
@@ -7683,8 +8070,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 1. 이러한 부품을 선택한 다음 **속성** 창에서 **색상**, **재질**, 및/또는 **재질 변형**을 설정하여 경험의 아트 스타일에 따라 시각적 처리를 적용합니다.
 1. 이 모든 오버행 부품을 고정합니다.
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key="2" label="샘플 재현">
+ -->
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 트림을 정확히 재현하려면:
 
@@ -7861,9 +8250,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    </tr>
    <tr>
    <td>ExtTrimALong</td>
-   <td
-
->`-8, 31, 35`</td>
+   <td>`-8, 31, 35`</td>
    <td>`0, 90, 0`</td>
    </tr>
    <tr>
@@ -7988,8 +8375,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 6. 이 모든 트림 자산을 고정합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 #### 불필요한 기하학 삭제
 
@@ -8015,8 +8402,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
     지형 조각은 예술의 한 형태이며, 브러시 스트로크와 미세한 재료 수정을 정확히 재현하는 것은 어렵습니다. 자신의 경험에 맞는 지형을 만든다면, 샘플 레이저 태그 환경과 다르게 보이고 느껴지는 것은 정상적이고 기대되는 일입니다.
 </Alert>
 
-<Tabs>
-  <TabItem key="1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key="1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 야외 지역에 자신의 지형을 적용하려면:
 
@@ -8050,8 +8439,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
    <img src="../img/05_Roblox_tutorial/Construct Your World/Terrain-10.jpg" width="100%"/>
 
-  </TabItem>
-  <TabItem key="2" label="샘플 재현">
+<!--   </TabItem>
+  <TabItem key="2" label="샘플 재현"> -->
+
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 지형을 재현하려면:
 
@@ -8116,8 +8507,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
     <img src="../img/05_Roblox_tutorial/Construct Your World/Terrain-10.jpg" width="100%"/>
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 #### 플레이 가능한 영역 포함
 
@@ -8125,8 +8516,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
 이 섹션의 값은 최종 샘플 레이저 태그 환경의 지형에 크게 의존합니다. 사용자 경험의 맞춤 지형에 따라 장벽에 틈이 없는지 플레이 테스트를 통해 확인하는 것이 좋습니다.
 
-<Tabs>
-  <TabItem key="1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key="1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 경험에서 플레이 가능한 영역을 포함하려면:
 
@@ -8139,8 +8532,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    1. **CanCollide**를 비활성화합니다.
    1. **Anchored**를 활성화합니다.
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key="2" label="샘플 재현">
+ -->
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 플레이 가능한 영역을 정확히 재현하려면:
 
@@ -8240,8 +8635,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    1. **CanCollide**를 비활성화합니다.
    1. **Anchored**를 활성화합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 #### 특수 효과 구성
 
@@ -8266,8 +8661,14 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
   </figure>
 </GridContainer>
 
-<Tabs>
-  <TabItem key="1" label="직접 만들기">
+|동적 구름 없이|기본 동적 구름과 함께|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-Intro1.jpg" width="100%"/>|<img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-Intro2.jpg" width="100%"/>|
+
+<!-- <Tabs>
+  <TabItem key="1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 배경에 동적 구름을 추가하고 구성하려면:
 
@@ -8276,9 +8677,7 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
    1. **지형(Terrain)** 객체 위에 마우스를 올리고 **⊕** 버튼을 클릭합니다. 컨텍스트 메뉴가 표시됩니다.
    1. 컨텍스트 메뉴에서 **구름(Clouds)** 객체를 삽입합니다.
 
-      <img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-1.jpg" width="40%"/
-
->
+      <img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-1.jpg" width="40%"/>
 
 2. **구름(Clouds)** 객체를 선택한 후 **속성(Properties)** 창에서,
    1. **덮개(Cover)**를 **0**(구름 없음)에서 **1**(전체 구름 덮개) 사이의 값으로 설정합니다.
@@ -8287,8 +8686,10 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
    <img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-2.jpg" width="100%"/>
 
-  </TabItem>
-  <TabItem key="2" label="샘플 재현">
+<!--   </TabItem>
+  <TabItem key="2" label="샘플 재현"> -->
+
+**샘플 재현**
 
 배경에 동적 구름을 추가하고 구성하려면:
 
@@ -8306,8 +8707,8 @@ Core Curriculum을 따르는 과정에 대한 질문, 우려 사항 또는 추�
 
    <img src="../img/05_Roblox_tutorial/Construct Your World/BackgroundClouds-2.jpg" width="100%"/>
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 전경 구름
 
@@ -8414,8 +8815,10 @@ Studio는 모든 경험에 대해 `Enum.Technology.ShadowMap` 조명 시스템�
 
 예를 들어, `Enum.Technology.Future` 조명 시스템은 사용자가 실내 또는 실외 공간에 있는지 자동으로 감지한 다음 적절한 조명 모델을 활성화합니다. 이는 사용자가 전투 포켓을 탐색할 때 바닥과 천장에서 반사를 반영할 수 있어 더 풍부한 시각적 경험을 제공합니다.
 
-<Tabs>
-  <TabItem key="1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key="1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 전역 조명을 구성하려면:
 
@@ -8431,8 +8834,10 @@ Studio는 모든 경험에 대해 `Enum.Technology.ShadowMap` 조명 시스템�
 
    <img src="../img/05_Roblox_tutorial/Construct Your World/GlobalLighting-4.jpg" width="100%"/>
 
-  </TabItem>
+<!--   </TabItem>
   <TabItem key="2" label="샘플 재현">
+ -->
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 전역 조명 구성을 정확히 재현하려면:
 
@@ -8468,8 +8873,8 @@ Studio는 모든 경험에 대해 `Enum.Technology.ShadowMap` 조명 시스템�
 
    <img src="../img/05_Roblox_tutorial/Construct Your World/GlobalLighting-4.jpg" width="100%"/>
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 ##### 로컬 조명
 
@@ -8485,8 +8890,10 @@ Intro.jpg" width="100%"/>
     조명 소스를 적용하는 것은 예술 형태이며, 경험의 필요를 충족하는 조명 구성을 찾는 데 시간이 걸립니다. 최종 샘플 레이저 태그 환경과 다르게 보이고 느껴지는 것은 정상적이고 예상되는 것입니다.
 </Alert>
 
-<Tabs>
-  <TabItem key="1" label="직접 만들기">
+<!-- <Tabs>
+  <TabItem key="1" label="직접 만들기"> -->
+
+**직접 만들기**
 
 자신만의 로컬 조명을 구성하려면:
 
@@ -8540,8 +8947,10 @@ Intro.jpg" width="100%"/>
 
    1. **(선택 사항)** 자신의 자산 라이브러리에서 빛나는 조명기구를 건물의 내부 및 외부에 추가하고 고정합니다.
 
-  </TabItem>
-  <TabItem key="2" label="샘플 재현">
+<!--   </TabItem>
+  <TabItem key="2" label="샘플 재현"> -->
+
+**샘플 재현**
 
 샘플 [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) 배치 파일 내에서 로컬 조명 구성을 정확히 재현하려면:
 
@@ -8607,8 +9016,8 @@ Intro.jpg" width="100%"/>
 
 4. **(선택 사항)** 샘플 [Environment Art Asset Library](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library)를 사용하여 건물 내부 및 외부에 조명기구를 추가하고 고정합니다. 예를 들어, 최종 샘플 레이저 태그 환경에서는 **LightFixtureTall**, **LightFixtureShort**, **TouchScreenA**, **Roblox Sign** 조명기구를 사용하여 환경을 완성합니다.
 
-  </TabItem>
-</Tabs>
+<!--   </TabItem>
+</Tabs> -->
 
 <img src="../img/05_Roblox_tutorial/Construct Your World/LocalLighting-4.jpg" width="100%"/>
 
@@ -8633,7 +9042,7 @@ Roblox 엔진이 대부분의 최적화 작업을 처리하지만, [Microprofile
 
 물리 및 렌더링 매개변수를 수정할 때, 개발 프로세스의 끝 부분에서 모든 매개변수를 검토하여 미적 목표와 게임 플레이 요구 사항을 유지하면서 최적화할 수 있는 매개변수를 확인하는 것이 유용합니다. 예를 들어, 게임 플레이 영역의 가장자리에 있는 초목에 대해 `Class.BasePart.CastShadow` 속성을 비활성화하여 사용자의 게임 플레이나 시각적 경험에 방해되지 않으면서 성능을 절약할 수 있습니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Optimize Your Experience/ReviewingParameters-Disabled.jpg" alt="An outdoor view of the sample laser tag experience that casts shadows." width="100%"/>
     <figcaption>`Class.BasePart.CastShadow` = 비활성화됨</figcaption>
@@ -8642,7 +9051,11 @@ Roblox 엔진이 대부분의 최적화 작업을 처리하지만, [Microprofile
     <img src="../img/05_Roblox_tutorial/Optimize Your Experience/ReviewingParameters-Enabled.jpg" alt="An outdoor view of the sample laser tag experience that doesn't cast shadows. There is almost no difference in this view, but it improves performance." width="100%"/>
     <figcaption>`Class.BasePart.CastShadow` = 활성화됨</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|`CastShadow` = 비활성화됨|`CastShadow` = 활성화됨|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Optimize Your Experience/ReviewingParameters-Disabled.jpg" alt="An outdoor view of the sample laser tag experience that casts shadows." width="100%"/>|<img src="../img/05_Roblox_tutorial/Optimize Your Experience/ReviewingParameters-Enabled.jpg" alt="An outdoor view of the sample laser tag experience that doesn't cast shadows. There is almost no difference in this view, but it improves performance." width="100%"/>|
 
 #### 비본질적 콘텐츠 제거
 
@@ -8685,14 +9098,17 @@ Roblox 엔진이 대부분의 최적화 작업을 처리하지만, [Microprofile
 
 예를 들어, 샘플 환경의 화분을 고려해 보십시오. 엔진은 카메라에 가장 가까운 식물에서부터 야외 공간에 가장 가까운 식물까지의 잎 사이의 투명 영역을 레이어로 렌더링해야 하며, 이는 수십만 개의 오버드로우 픽셀에 해당합니다. 이러한 영향을 완화하기 위해, 환경 내 모든 반투명 객체의 레이아웃을 검토하고 특히 화면의 큰 영역에서 너무 많은 레이어가 겹치는 부분이 없도록 하는 것이 중요합니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Optimize Your Experience/LayeredTransparencies-Left.jpg" alt="A Rthro avatar facing a planter with multiple plants with transparency between the leaves." width="100%"/>
   </figure>
   <figure>
     <img src="../img/05_Roblox_tutorial/Optimize Your Experience/LayeredTransparencies-Right.jpg" alt="A side view of the Rthro avatar facing a planter with multiple plants with transparency between the leaves, and example layers of overdrawn pixels are highlighted to show where there is overdrawn in the environment." width="100%"/>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|<img src="../img/05_Roblox_tutorial/Optimize Your Experience/LayeredTransparencies-Left.jpg" alt="A Rthro avatar facing a planter with multiple plants with transparency between the leaves." width="100%"/>|<img src="../img/05_Roblox_tutorial/Optimize Your Experience/LayeredTransparencies-Right.jpg" alt="A side view of the Rthro avatar facing a planter with multiple plants with transparency between the leaves, and example layers of overdrawn pixels are highlighted to show where there is overdrawn in the environment." width="100%"/>|
+|---|---|
 
 모든 콘텐츠를 검토하여 모든 장치에서 최적화되었는지 확인하면, 이제 경험을 게시할 준비가 된 것입니다!
 
@@ -8853,7 +9269,7 @@ end
 
 사용자 정의 포스 필드는 새로운 `Class.ParticleEmitter`가 아닌 GUI이므로 `ForceFieldClientVisuals` 스크립트는 각 플레이어의 1인칭 시각에만 영향을 미치며, 다른 플레이어를 볼 때는 3인칭 시각에 기본 Roblox 외관이 유지됩니다. 포스 필드를 수정하는 방법에 대한 자세한 내용은 `Class.ForceField.Visible`을 참조하십시오.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Spawning and Respawning/tutorial-gs-hex.png" alt="First-person force field visuals include a futuristic hexagonal grid on the perimeter of the screen." width="100%"/>
     <figcaption>1인칭 포스 필드 시각 효과</figcaption>
@@ -8862,7 +9278,12 @@ end
     <img src="../img/05_Roblox_tutorial/Spawning and Respawning/tutorial-gs-field.png" alt="Third-person force field visuals include a blue sparkling orb around the player spawning into the experience." width="100%"/>
     <figcaption>3인칭 포스 필드 시각 효과</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|1인칭 포스 필드 시각 효과|3인칭 포스 필드 시각 효과|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Spawning and Respawning/tutorial-gs-hex.png" alt="First-person force field visuals include a futuristic hexagonal grid on the perimeter of the screen." width="100%"/>|<img src="../img/05_Roblox_tutorial/Spawning and Respawning/tutorial-gs-field.png" alt="Third-person force field visuals include a blue sparkling orb around the player spawning into the experience." width="100%"/>|
+
 
 포스 필드는 플레이어가 스폰 및 리스폰하는 동안 적 플레이어로부터 피해를 입지 않도록 충분한 시간을 제공하지만, 결국 레이저 태그 메인 게임 플레이를 위해 사라져야 합니다. 포스 필드 제거를 처리하는 스크립트는 **ReplicatedStorage** > **scheduleDestroyForceField**에 있으며, 세 가지 고유한 조건을 확인합니다:
 
@@ -8973,7 +9394,7 @@ end
 
 이 동작을 테스트하려면 <kbd>Esc</kbd> 키를 누르고, **설정** 탭으로 이동한 다음 **캐릭터 리셋** 버튼을 클릭할 수 있습니다. 리스폰 화면을 트리거하면 이동하거나, 카메라를 회전하거나, 블래스터를 쏠 수 없다는 것을 알 수 있습니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/05_Roblox_tutorial/Spawning and Respawning/Reset-Character-Button.png" alt="Roblox's settings menu with the Reset Character button highlighted." width="80%"/>
     <figcaption>캐릭터 리셋 버튼</figcaption>
@@ -8982,7 +9403,12 @@ end
     <img src="../img/05_Roblox_tutorial/Spawning and Respawning/tutorial-gs-tagged-out.png" alt="The respawn screen displays as a player respawns back into the match." width="100%"/>
     <figcaption>리스폰 화면</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|캐릭터 리셋 버튼|리스폰 화면|
+|---|---|
+|<img src="../img/05_Roblox_tutorial/Spawning and Respawning/Reset-Character-Button.png" alt="Roblox's settings menu with the Reset Character button highlighted." width="80%"/>|<img src="../img/05_Roblox_tutorial/Spawning and Respawning/tutorial-gs-tagged-out.png" alt="The respawn screen displays as a player respawns back into the match." width="100%"/>|
+
 
 이 스크립트는 실제로 캐릭터를 리스폰하지 않고, 캐릭터의 동작을 중지시키고, 서버가 캐릭터를 리스폰하고 있다는 시각적 피드백을 제공합니다. 예를 들어, **ServerScriptService** > **SetupHumanoid** > **setupHumanoidAsync** > **onHumanoidDied**를 확인하면, 스크립트는 `PlayerState`를 `TaggedOut`로 설정하고, 시각적 표시기를 추가합니다. 실제 리스폰 로직은 Roblox의 내장 동작입니다.
 

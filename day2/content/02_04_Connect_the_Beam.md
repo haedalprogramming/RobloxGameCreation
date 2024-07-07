@@ -24,7 +24,7 @@
 
 기본적으로 빔은 항상 카메라를 향하지 않습니다. 이로 인해 플레이어가 다양한 각도에서 빔을 보지 못하는 상황이 발생할 수 있습니다. 이를 해결하려면 **FaceCamera**라는 속성을 켭니다.
 
-<GridContainer numColumns="2">
+<!-- <GridContainer numColumns="2">
   <figure>
     <img src="../img/02_04_Connect_the_Beam/face-camera-off.jpeg.webp" />
     <figcaption>FaceCamera 끔</figcaption>
@@ -33,7 +33,11 @@
     <img src="../img/02_04_Connect_the_Beam/face-camera-on.jpeg.webp" />
     <figcaption>FaceCamera 켬</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|FaceCamera 끔|FaceCamera 켬|
+|---|---|
+|<img src="../img/02_04_Connect_the_Beam/face-camera-off.jpeg.webp" />|<img src="../img/02_04_Connect_the_Beam/face-camera-on.jpeg.webp" />|
 
 1. 빔의 속성으로 이동하여 **FaceCamera**를 활성화하여 모든 위치에서 빔이 보이도록 만듭니다.
 

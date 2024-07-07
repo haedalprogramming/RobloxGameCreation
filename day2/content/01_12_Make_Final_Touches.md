@@ -44,7 +44,7 @@
 
 입자를 빛나게 하며 `0` (불투명)에서 `1` (빛남)까지 범위가 될 수 있습니다.
 
-<GridContainer numColumns="3">
+<!-- <GridContainer numColumns="3">
   <figure>
     <img src="../img/01_12_Make_Final_Touches/light-emission-0.jpeg.webp" />
     <figcaption>0</figcaption>
@@ -57,7 +57,11 @@
     <img src="../img/01_12_Make_Final_Touches/light-emission-1.0.jpeg.webp" />
     <figcaption>1.0</figcaption>
   </figure>
-</GridContainer>
+</GridContainer> -->
+
+|0|0.5|1|
+|---|---|---|
+|<img src="../img/01_12_Make_Final_Touches/light-emission-0.jpeg.webp" />|<img src="../img/01_12_Make_Final_Touches/light-emission-0.5.jpeg.webp" />|<img src="../img/01_12_Make_Final_Touches/light-emission-1.0.jpeg.webp" />|
 
 ### RotSpeed
 
