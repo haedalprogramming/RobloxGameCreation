@@ -23,4 +23,4 @@
  ## 출처
  - [Roblox engine guide](https://create.roblox.com/docs/ko-kr/get-started)
  - [Creating an Adventure Game](https://create.roblox.com/docs/ko-kr/education/adventure-game-series/landing)
- - [Creating an Adventure Game](https://create.roblox.com/docs/ko-kr/education/adventure-game-series/landing)
+ - [Battle Royale](https://create.roblox.com/docs/ko-kr/education/battle-royale-series/project-setup)

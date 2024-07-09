@@ -102,7 +102,7 @@
 
 ---
 ## 출처
- - [Creating an Adventure Game](https://create.roblox.com/docs/ko-kr/education/adventure-game-series/landing)
+ - [Creating a Battle Royale](https://create.roblox.com/docs/ko-kr/education/battle-royale-series/project-setup)
 
 ---
 ## [다음](./14_02_Battle_Royale.md)
