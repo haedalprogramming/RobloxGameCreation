@@ -9,7 +9,7 @@
   - [Assets](./content/02_00_assets.md)
   - [3D Workspace](./content/03_00_3D_workspace.md)
   - [Scripting](./content/04_00_Scripting.md)
-  - [Enviroment](./content/05_Lighting_and_Effects.md)
+  - [Enviroment](./content/05_00_Lighting_and_Effects.md)
   - [Characters](./content/06_Characters.md)
   - [Players](./content/07_Users_and_Players.md)
   - [Input](./content/08_Input_and_Camera.md)
