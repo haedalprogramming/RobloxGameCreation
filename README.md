@@ -44,40 +44,26 @@
     - [Creating a Battle Royale](./day3/content/14_01_Creating_a_Battle_Royale.md)
 
  - 4일차 : Avatar
-   - Blender 환경설정
-   - Familiarize yourself with Blender
-   - Setting up Roblox Studio
-   - Rigid Accessories
-   - Clothing
-   - Bodies
-   - Use Caces
-   - Publishing and selling
+   - [Avatar Overview](./day4/content/00_00_Rigid_Accessories.md)
+   - [Blender 환경설정](./day4/content/01_Blender_환경설정.md)
+   - [Blender Introduction](./day4/content/02_Blender_Introduction.md)
+   - [Rigid Accessories](./day4/content/03_00_Rigid_Accessories.md)
+   - [Clothing](./day4/content/04_00_Basic_Clothing_Creation.md)
+   - [Bodies](./day4/content/05_00_Creating_with_Templates.md)
 
- - 5일차 : 3D Art in Roblox
-   - Getting started
-   - Modeling
-   - Texturing
-   - Animation
-   - Enviroment and lighting
-   - Example Projects
-      - The Mystery of Duvall Drive
-      - Beyond the Dark
+ - 5일차 : Use Case Tutorials
+   - [Modeling](./day5/content/01_01_Creating_Neon_Signs.md)
+   - [Environments](./day5/content/02_01_Playing_Background_Music.md)
+   - [Effects](./day5/content/03_01_Creating_Lasers_Beams.md)
+   - [UI](./day5/content/04_01_Creating_Score_Bars.md)
+   - [Physics](./day5/content/05_01_Building_a_Hinged_Door.md)
 
- - 6일차 : 로블록스 엔진 & 아바타 배포
-    - Engin
-      - The Roblox User Base
-      - Discovery
-      - Publishing
-      - Promotion
-      - Monetization
-      - Localization
-      - Analytics
-      - Community
-    - Avatar
-      - Marketplace Overview
-      - Policies and Guidelines
-      - Uploading and Publishing
-      - Marketplace Fees and Commissions
+ - 6일차 : Use Case Tutorials & Improving Battle Royale Project
+  - Use Case Tutorials
+    - [Animation](./day6/content/01_01_Creating_an_Animation.md)
+    - [Scripting](./day6/content/02_01_Introduction_to_Scripting.md)
+    - [Input and Camera](./day6/content/03_01_Controlling_the_Users_Camera.md)
+  - [Improving Battle Royale Project](./day6/content/04_01_Improving_Improving_Battle_Royale_Project.md)
 
 # Reference
  - https://create.roblox.com/docs/ko-kr/tutorials
