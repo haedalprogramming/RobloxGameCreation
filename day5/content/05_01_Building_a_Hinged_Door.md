@@ -57,9 +57,9 @@ Roblox의 물리 시스템을 사용하면 **제약 조건**을 사용하여 문
       <source src="../img/05_01_Building_a_Hinged_Door/introToConstraints_showMoveAttachment.mp4" />
    </video>
 
-   <Alert severity="info">
+   
    부속품을 정확하게 정렬하는 것이 좋습니다. 부정확하게 정렬된 부속품은 문이 올바르게 회전하지 않게 할 수 있습니다. 정확한 위치를 위해 **Snap to Grid**를 사용하고 파트 크기에 맞는 증분을 설정하십시오. 또는 속성 창에서 부속품의 위치를 편집하십시오.
-   </Alert>
+   
 
 4. 동일한 방법으로 **DoorAttachment**를 이동합니다. 부속품이 서로 마주 보도록 표면에 위치해야 합니다.
 
@@ -76,13 +76,13 @@ Roblox의 물리 시스템을 사용하면 **제약 조건**을 사용하여 문
 
    ![alt](../img/05_01_Building_a_Hinged_Door/introToConstraints_showAttachmentAxis.jpg)
 
-   <Alert severity="info">
+   
    **DoorFrame** 객체에 따라 축이 다른 방향을 가리킬 수 있습니다. 위에 표시된 부속품에 추가된 경첩은 아래 동영상처럼 노란색 화살표를 중심으로 회전합니다.
 
    <video controls loop muted>
       <source src="../img/05_01_Building_a_Hinged_Door/introToConstraints_doorSwingingWrong.mp4" />
    </video>
-   </Alert>
+   
 
 2. 정확한 회전을 위해 **Model** → **Snap to Grid**에서 스냅을 켜고 **Rotate**를 체크합니다. 값을 `90`으로 설정합니다.
 

@@ -27,9 +27,9 @@ Blender에서 간단한 모델을 리깅하려면 다음 단계를 따르십시�
 - 메시의 어느 부분이 어느 뼈에 의해 제어되는지를 정의하기 위해 정점들을 특정 뼈에 [할당](#정점을-뼈에-할당)합니다.
 - 뼈가 메시 내에서 올바르게 위치하고 영향을 미치는지 확인하기 위해 리깅된 메시를 [테스트](#테스트)합니다.
 
-<Alert severity="info">
+
   이 가이드는 다운로드 가능한 [예제 로봇 모델](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/reference-files/shoebot-base-model.fbx)과 [Blender 버전 3.0](hhttps://www.blender.org/download/releases/3-0/)을 사용합니다. 다른 버전의 Blender를 사용하는 경우 UI 및 설정에 약간의 차이가 있을 수 있습니다.
-  </Alert>
+
 
 ## Blender 설정
 

@@ -24,9 +24,9 @@
 |---|---|
 |<img src="../img/05_04_Modeling_Best_Practices/Pre-Sculpting.png" />|<img src="../img/05_04_Modeling_Best_Practices/Post-Sculpting.png" />|
 
-<Alert severity = "error">
+
 템플릿을 편집할 때 **캐릭터 본체에 꼭짓점(버텍스)을 삭제하거나 추가하지 마세요**. 이는 캐릭터의 스키닝 및 얼굴 애니메이션 데이터가 변경되지 않고 완전히 기능할 수 있도록 보장합니다. 아바타 템플릿의 기본 구조를 손상시키지 않고 캐릭터 본체를 사용자 정의하는 방법에 대한 추가 정보는 `최고의 실습`을 참조하십시오.
-</Alert>
+
 
 ## 비파괴 모델링
 

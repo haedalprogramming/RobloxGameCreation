@@ -41,13 +41,13 @@
 
 6. 자산을 미리 보고 맞춘 후, **Generate MeshPart Accessory**를 선택하여 Accessory를 생성하고 탐색기에 추가합니다.
 
-<Alert severity = 'success'>
+
 성공적으로 맞추고 변환한 후, 3D 모델이 `Accessory`로 프로젝트에 나타납니다. 이 `Accessory`를 사용하여 다음 작업을 수행할 수 있습니다:
 
 - 액세서리를 [마켓플레이스에 업로드](https://create.roblox.com/docs/art/accessories/creating-rigid/publishing)합니다.
 - [HumanoidDescription](https://create.roblox.com/docs/characters/appearance#humanoiddescription)을 사용하여 현재 경험에서 캐릭터 모델에 장착하거나, 액세서리를 적절한 캐릭터 `Model` 객체 아래로 드래그 앤 드롭하여 사용합니다.
 - [Toolbox](https://create.roblox.com/docs/projects/assets/toolbox)에 액세서리를 저장하여 모든 경험에서 공유하거나 사용할 수 있습니다.
-</Alert>
+
 
 ---
 ## 출처

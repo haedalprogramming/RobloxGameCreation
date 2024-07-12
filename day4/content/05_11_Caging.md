@@ -8,13 +8,13 @@
 
 ---
 
-**케이징(Caging)**은 아바타 캐릭터의 [케이지 메시 구성 요소](https://create.roblox.com/docs/art/characters#cage-meshes)를 업데이트하는 과정입니다. 캐릭터가 레이어드 의류와 액세서리를 올바르게 착용할 수 있도록 하려면, 맞춤형 캐릭터에 적용한 조형 변경 사항에 맞게 기본 템플릿 케이지 메시 객체를 업데이트해야 합니다.
+케이징(Caging)은 아바타 캐릭터의 [케이지 메시 구성 요소](https://create.roblox.com/docs/art/characters#cage-meshes)를 업데이트하는 과정입니다. 캐릭터가 레이어드 의류와 액세서리를 올바르게 착용할 수 있도록 하려면, 맞춤형 캐릭터에 적용한 조형 변경 사항에 맞게 기본 템플릿 케이지 메시 객체를 업데이트해야 합니다.
 
 이 튜토리얼에서는 머리에만 모델링 변경 사항을 적용하므로, 아래의 케이징 지침은 **Head_OuterCage** 객체에만 적용됩니다. 캐릭터의 다른 부분에 기하학적 변경을 가한 경우, 해당 **\_OuterCage** 객체들도 조형 변경 사항에 맞게 조정해야 합니다.
 
-<Alert severity ='error'>
+
 제공된 케이지의 어떤 정점이나 면도 삭제하지 마십시오. 케이지를 파괴적으로 수정하면 가져오기 문제를 일으킬 수 있으며, 캐릭터 모델이 의류와 화장품을 장착하지 못하게 할 수 있습니다.
-</Alert>
+
 
 <!-- <GridContainer numColumns="2">
   <figure><img src="../img/05_11_Caging/Pre-Caging.png" />  <figcaption>조형된 머리에 맞지 않는 기본 머리 케이지 메시</figcaption></figure>
@@ -26,9 +26,9 @@
 |---|---|
 |<img src="../img/05_11_Caging/Pre-Caging.png" />|<img src="../img/05_11_Caging/Post-Caging.png" />|
 
-<Alert severity = 'info'>
+
 캐릭터 몸체 모양이 여러 부분에서 많은 변화를 포함하는 경우, [Blender 케이지 템플릿](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/reference-files/Body_Cage_Template.blend)을 사용하는 것이 더 효율적일 수 있습니다. 이 Blender 프로젝트 파일에는 전체 몸체 `std_cage_deformable` 메시가 포함되어 있어 각 부분별 케이지에 정점 변경을 동시에 자동으로 적용할 수 있습니다.
-</Alert>
+
 
 캐릭터의 케이징을 시작하려면:
 
@@ -62,13 +62,13 @@
 
 <img src="../img/05_11_Caging/Post-Caging.png" />
 
-<Alert severity = 'success'>
+
 비교 참조를 위해, [케이징이 완료된 이 튜토리얼 프로젝트 버전](https://prod.docsiteassets.roblox.com/assets/art/reference-files/checkpoint/3_Goblin-caged.blend)을 다운로드할 수 있습니다.
-</Alert>
+
 
 ---
 ## 출처
  - [Caging](https://create.roblox.com/docs/art/characters/creating/caging)
 
 ---
-## [다음]()
+## [다음](./05_12_Combining_Head_Geometry.md)

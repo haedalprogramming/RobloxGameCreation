@@ -12,9 +12,9 @@
 
 **텍스처링**은 모델의 표면 색상, 톤, 음영을 맞춤화하는 과정입니다. 맞춤형 메시와 모델은 텍스처 맵이라는 2D 이미지를 사용하여 다양한 표면 외관 요소를 3D 객체에 투영합니다. 이 튜토리얼에서는 블렌더의 텍스처 페인트 모드를 사용하여 셔츠에 전체 색상을 적용하고 작은 디자인을 추가합니다.
 
-<Alert severity ='warning'>
+
 이 튜토리얼은 반사율 및 표면 거칠기와 같은 현실 세계의 텍스처 속성을 재현할 수 있는 고급 텍스처인 [PBR 텍스처](https://create.roblox.com/docs/art/modeling/surface-appearance)를 다루지 않습니다. PBR 텍스처는 의류 항목에 창의성과 시각적 효과를 더해주는 데 권장되며 종종 Substance Painter와 같은 타사 응용 프로그램이 필요합니다.
-</Alert>
+
 
 <!-- <GridContainer numColumns="2">
   <figure>

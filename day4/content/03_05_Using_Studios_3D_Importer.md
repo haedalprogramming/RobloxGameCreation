@@ -43,9 +43,9 @@ Studio의 3D 가져오기 도구는 타사 3D 자산을 프로젝트에 빠르�
 
             <img src="../img/03_05_Using_Studios_3D_Importer/Surface-Appearance-Asset-Dropdown.png" />
 
-<Alert severity = 'success'>
+
 성공적으로 가져오기를 완료하면, 모델 객체가 적절한 텍스처가 적용된 `Model` 형태로 프로젝트에 나타납니다. 가져오기 설정 및 문제 해결에 대한 추가 정보는 [3D 가져오기 도구](https://create.roblox.com/docs/art/modeling/3d-importer)를 참조하세요.
-</Alert>
+
 
 ---
 ## 출처

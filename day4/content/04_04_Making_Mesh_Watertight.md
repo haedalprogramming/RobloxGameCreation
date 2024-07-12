@@ -37,7 +37,7 @@
 
    <video controls src="../img/04_04_Making_Mesh_Watertight/Modeling_08.mp4" width="100%"></video>
 
-<Alert severity = 'success'>
+
 튜토리얼의 모델링 섹션을 완료했습니다. 원하는 경우, 이 단계의 [참조 프로젝트](https://prod.docsiteassets.roblox.com/assets/art/reference-files/checkpoint/1_LongSleeve-Modeling-Complete.blend)를 다운로드하여 작업과 비교해보세요.
 
 의상을 만드는 다양한 기술이 있습니다. 다음 기술, 도구 및 프로세스를 실험하여 추가적인 독특한 자산을 만들어 보세요:
@@ -46,7 +46,6 @@
 - Blender의 [천 시뮬레이션](https://docs.blender.org/manual/en/latest/physics/cloth/examples.html#using-simulation-to-shape-sculpt-a-mesh) 및 기타 조각 도구.
 - Blender에서 의상을 만들기 위한 다양한 커뮤니티의 바느질 및 직물 기술.
 
-</Alert>
 
 ---
 ## 출처

@@ -74,7 +74,7 @@ Roblox에서 **서비스**는 다양한 유용한 기능을 수행하는 객체�
 
 ## 통계 폴더 만들기
 
-리더보드에 사용자의 포인트를 표시하려면 사용자의 `Player` 객체에 `"leaderstats"`라는 새 `Folder`를 만들고 그 안에 포인트를 넣기만 하면 됩니다. 새 객체는 `Datatype.Instance.new()` 함수를 통해 스크립트 내에서 만들 수 있습니다.
+리더보드에 사용자의 포인트를 표시하려면 사용자의 `Player` 객체에 `leaderstats`라는 새 `Folder`를 만들고 그 안에 포인트를 넣기만 하면 됩니다. 새 객체는 `Datatype.Instance.new()` 함수를 통해 스크립트 내에서 만들 수 있습니다.
 
 1. `Instance.new("Folder")`를 사용하여 새 `Folder` 객체를 만들고 결과를 `leaderstats`라는 새 변수에 저장합니다.
 
@@ -99,11 +99,11 @@ Roblox에서 **서비스**는 다양한 유용한 기능을 수행하는 객체�
    Players.PlayerAdded:Connect(onPlayerAdded)
    ```
 
-<Alert severity="warning">
 
-폴더의 이름을 정확히 **"leaderstats"**로 설정해야 작동합니다!
 
-</Alert>
+폴더의 이름을 정확히 "leaderstats"로 설정해야 작동합니다!
+
+
 
 ## 포인트 만들기
 

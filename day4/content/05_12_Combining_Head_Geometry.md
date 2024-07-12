@@ -16,9 +16,9 @@
 - 부착 지점 확인
 - 최종 기술 검사
 
-<Alert severity = 'error'>
+
 헤드 기하학을 결합하지 않고 [헤드 뼈를 제거](https://create.roblox.com/docs/art/characters/creating/removing-extra-bones)하지 않으면, 캐릭터가 예상된 R15 기하학 및 관절 계층 구조를 따르지 않게 되어 검증에 문제가 발생합니다.
-</Alert>
+
 
 ## 헤드 기하학 결합
 
@@ -37,9 +37,9 @@
 
    <img src="../img/05_12_Combining_Head_Geometry/Template-Face-Objects.png" />
 
-   <Alert severity = 'error'>
+   
    여러 헤드 객체를 선택할 때 **Head_Geo**가 노란색으로 강조 표시되어 다른 객체들이 이 객체에 병합된다는 것을 나타내야 합니다. 이는 헤드 메시에 저장된 사용자 정의 속성을 올바르게 유지합니다. Outliner에서 마지막으로 헤드를 선택하여 이를 달성할 수 있습니다.
-   </Alert>
+   
 
 2. Object 모드에서 Viewport를 오른쪽 클릭하고 **Join**을 선택합니다. 객체가 단일 **Head_Geo**로 결합됩니다.
    <video controls src="../img/05_12_Combining_Head_Geometry/Cleanup_01.mp4" width="100%"></video>

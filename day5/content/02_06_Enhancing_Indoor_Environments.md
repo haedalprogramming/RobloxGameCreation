@@ -99,7 +99,7 @@
 1. **탐색기** 창에서 **Lighting**을 선택합니다.
 1. **속성** 창에서 **Technology** 드롭다운을 클릭한 다음 **Future**를 선택합니다.
 
-   <img width="50%" img src="../../../assets/tutorials/enhancing-outdoor-environments/Technology-Property.jpg" alt="Future 기술 속성이 강조 표시된 속성 창의 클로즈업 뷰." />
+   <img width="50%" img src="../img/02_06_Enhancing_Indoor_Environments/Technology-Property.jpg" alt="Future 기술 속성이 강조 표시된 속성 창의 클로즈업 뷰." />
 
    <img width="80%" img src="../img/02_06_Enhancing_Indoor_Environments/Future-1.jpg" alt="Future 조명이 켜진 시작 오두막의 전체 뷰." />
 

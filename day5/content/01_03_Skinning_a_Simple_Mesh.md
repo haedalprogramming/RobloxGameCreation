@@ -37,9 +37,9 @@
 - 스켈레톤 리그를 메시 객체에 바인딩하기 위해 메시를 뼈대에 [종속](#뼈대-종속)시킵니다.
 - [웨이트 페인팅](#영향-페인팅)을 통해 메시의 어느 부분이 어느 뼈와 함께 움직일지 할당합니다.
 
-<Alert severity="info">
+
 이 가이드는 다운로드 가능한 [예제 나무 모델](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/MapleLeafTree.fbx)과 [Blender 버전 3.0](https://www.blender.org/download/releases/3-0/)을 사용합니다. 다른 버전의 Blender를 사용하는 경우 UI와 설정에 약간의 차이가 있을 수 있습니다.
-</Alert>
+
 
 ## Blender 설정
 

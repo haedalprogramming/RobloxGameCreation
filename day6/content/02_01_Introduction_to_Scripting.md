@@ -38,9 +38,9 @@ Roblox Studio 입문에서는 Roblox Studio에서 파트를 생성하고 조작�
 
    <img src="../img/02_01_Introduction_to_Scripting/anchoredProperty.png" width="320" />
 
-<Alert severity="info">
+
 파트의 Anchored 속성을 **true**로 설정하면 무슨 일이 있어도 제자리에 고정됩니다. 플랫폼이 앵커되지 않으면 떨어집니다.
-</Alert>
+
 
 ## 스크립트 삽입
 

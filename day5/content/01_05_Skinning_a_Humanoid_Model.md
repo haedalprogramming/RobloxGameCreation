@@ -27,9 +27,9 @@ Blender에서 휴머노이드 모델을 스킨닝하려면 다음 단계를 수�
 - [Blender 설정](#blender-설정)에서 뼈 시각화 설정과 자동 정규화를 통해 웨이트 페인팅 프로세스를 최적화합니다.
 - 휴머노이드 리그 아키텍처의 두 개 이상의 뼈 사이에서 정점의 영향을 균형 있게 조정하여 메시 객체의 정점을 [웨이트 페인팅](#웨이트-페인팅)합니다.
 
-<Alert severity="info">
+
 이 가이드는 [휴머노이드 모델 리깅](./01_04_Rigging_a_Humanoid_Model.md)에서 리깅된 휴머노이드 모델과 [Blender 버전 3.0](https://www.blender.org/download/releases/3-0/)을 사용합니다. 다른 버전의 Blender를 사용하는 경우 UI 및 설정에 약간의 차이가 있을 수 있습니다.
-</Alert>
+
 
 ## Blender 설정
 

@@ -93,4 +93,4 @@ Roblox에서 오디오는 `Sound` 객체를 사용하여 생성됩니다. 사운
  - [Playing Background Music](https://create.roblox.com/docs/tutorials/building/environments/playing-background-music)
 
 ---
-## [다음](./01)
+## [다음](./02_02_In_Game_Sounds.md)

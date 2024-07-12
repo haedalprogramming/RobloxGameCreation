@@ -22,9 +22,9 @@
 - 미래지향적인 레이저 빔의 시각적 특성을 모방하는 빔 커스터마이징
 - 플레이어의 캐릭터에 피해를 주는 충돌 상자 스크립팅
 
-<Alert severity="info">
+
    서드 파티 모델링 도구에서 자신의 자산을 만들고 자신의 디자인을 따라 할 수 있습니다. 스튜디오에서 사용할 모델을 내보내는 방법에 대한 정보는 [내보내기 요구 사항](https://create.roblox.com/docs/art/modeling/export-requirements)을 참조하십시오.
-</Alert>
+
 
 <video controls src="../img/03_01_Creating_Lasers_Beams/Script.mp4" width="90%"></video>
 
@@ -136,9 +136,9 @@
 
    <video controls src="../img/03_01_Creating_Lasers_Beams/Beam-3.mp4" width="80%"></video>
 
-<Alert severity="info">
+
    커스터마이징할 수 있는 모든 빔 속성에 대한 자세한 정보는 [빔](https://create.roblox.com/docs/effects/beams)을 참조하십시오.
-</Alert>
+
 
 ## 피해 행동 스크립트
 
@@ -180,9 +180,9 @@
 
       <img src="../img/03_01_Creating_Lasers_Beams/Quick-Access-Toolbar-Stop.png" width="716" />
 
-   <Alert severity="warning">
+   
       동작이 제대로 작동하지 않으면, 스크립트가 **LaserBeamBlaster**의 자식인지 확인하고, 충돌 상자가 `CollisionBox`로 명명되었는지 확인하십시오.
-   </Alert>
+   
 
 이제 위험한 레이저 빔 블래스터가 완성되었습니다! 이 튜토리얼의 기술을 사용하여 빔 특수 효과를 다양하게 커스터마이징할 수 있습니다. 예를 들어, 추가 빔 속성인 `CurveSize0`와 `CurveSize1`을 실험해 보고, 자신의 텍스처를 [가져오기](https://create.roblox.com/docs/production/creator-store)하여 빔을 다른 특수 효과와 결합할 수 있습니다. 예를 들어, [입자 방출기](https://create.roblox.com/docs/effects/particle-emitters)와 [광원](https://create.roblox.com/docs/effects/light-sources)과 같은 특수 효과를 빔과 결합할 수 있습니다. 창작을 즐기세요!
 

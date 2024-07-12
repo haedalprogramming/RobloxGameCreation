@@ -41,9 +41,9 @@
 
    ![alt](../img/02_02_In_Game_Sounds/ingameSounds-soundID.png)
 
-   <Alert severity="info">
+   
    사용자 지정 소리는 [에셋 관리자](https://create.roblox.com/docs/projects/assets/manager)를 사용하여 가져올 수 있습니다. 또한 Roblox와 커뮤니티가 업로드한 무료 소리는 [툴박스](https://create.roblox.com/docs/projects/assets/toolbox)를 통해 찾을 수 있습니다.
-   </Alert>
+   
 
 3. 게임이 시작될 때 연속 재생되도록 **Playing**과 **Looped**를 **on**으로 전환합니다.
 

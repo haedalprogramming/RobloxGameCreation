@@ -44,4 +44,4 @@
  - [Sculpting Detail](https://create.roblox.com/docs/art/accessories/creating/sculpting)
 
 ---
-## [다음]()
+## [다음](./04_04_Making_Mesh_Watertight.md)

@@ -77,11 +77,11 @@ PBR 텍스처는 액세서리에 필수는 아니지만, 추가하면 시각적 
 5. 뷰포트 보기 모드를 **Viewport Shading > Material Preview Mode**로 변경하여 텍스처를 테스트합니다.
    <video controls src="../img/03_02_Importing_PBR_Textures/Adding-PBR.mp4" width="100%"></video>
 
-<Alert severity = 'success'>
+
 튜토리얼의 텍스처링 섹션을 완료했습니다. 원할 경우, 이 단계의 프로젝트에 대한 [참조 샘플](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating-rigid/Rigid_Mask_Texturing-Completed.blend)을 다운로드하세요.
 
 자체 PBR 텍스처를 생성하는 경우, 다음 액세서리에 적용할 수 있는 다양한 PBR 소재 예제는 [Material References](https://create.roblox.com/docs/art/modeling/material-reference)를 참조하십시오.
-</Alert>
+
 
 ---
 ## 출처

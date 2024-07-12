@@ -55,9 +55,9 @@ Blender의 다른 조각 도구를 사용할 수 있지만 모델의 정점을 �
    - 정점이 밀집된 영역에서 엣지 라인과 간격 개선
      <video controls src="../img/05_06_Sculpting_the_Head/Sculpting_07.mp4" width="100%"></video>
 
-<Alert severity = 'success'>
+
 비교 참조를 위해 조각이 완료된 [이 튜토리얼 프로젝트 버전](https://prod.docsiteassets.roblox.com/assets/art/reference-files/checkpoint/1_Goblin-sculpted.blend)을 다운로드할 수 있습니다.
-</Alert>
+
 
 ---
 ## 출처

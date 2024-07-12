@@ -26,9 +26,9 @@
 - `PrismaticConstraint`를 사용하여 어셈블리를 단일 축으로 제한하고 3D 공간의 한 지점에 대해 일정한 선형 속도로 이동시키기
 - `ApplyImpulse` 메서드를 사용하여 초기 힘의 임펄스를 사용해 어셈블리를 이동시키고 시간이 지나면서 천천히 감속시키기
 
-<Alert severity="info">
+
    기본 부품이나 서드파티 모델링 도구의 메시를 사용하여 자신의 어셈블리를 만들고, 자신의 자산을 사용하여 따라해 볼 수 있습니다. 스튜디오에서 메시를 사용하는 방법에 대한 정보는 [내보내기 요구 사항](https://create.roblox.com/docs/art/modeling/export-requirements)을 참조하세요.
-</Alert>
+
 
 <video controls src="../img/05_03_Creating_Moving_Objects/Intro.mp4" alt="샘플 경험의 주요 게임 플레이 영역의 측면 뷰, 강 레인에서 떠다니는 통나무와 수련 잎, 밝은 파란색 점프 패드가 포함되어 있음" width="90%"></video>
 
@@ -167,9 +167,9 @@ Roblox Studio는 실제 물리적 행동을 실시간으로 모방하는 시뮬�
       5. **LineDirection**을 `-1, 0, 0`으로 설정하여 연꽃잎이 세계의 음의 X 축을 따라 이동하도록 합니다. 이 속성을 `1, 0, 0`으로 설정하면 연꽃잎이 세계의 양의 X 축을 따라 이동합니다.
       6. **LineVelocity**를 `15`로 설정하여 연꽃잎이 초당 15 스터드 이동하도록 합니다.
 
-   <Alert severity="info">
+   
       **RelativeTo**를 **Attachment**로 설정하면 제약이 부착물의 방향에 상대적으로 연꽃잎을 이동시킵니다. 그러나 연꽃잎이 물체와 충돌하면 부착물도 회전하여 새로운 방향으로 연꽃잎을 이동시킵니다.
-   </Alert>
+   
 
    <img width="80%" img src="../img/05_03_Creating_Moving_Objects/LV-3.jpg" alt="연꽃잎과 세계의 음의 X 축을 가리키는 제약 시각적 보조 화살표의 클로즈업 뷰" />
 
@@ -182,9 +182,7 @@ Roblox Studio는 실제 물리적 행동을 실시간으로 모방하는 시뮬�
 
    3. **실행**을 선택합니다. 스튜디오는 3D 공간에서 아바타 없이 현재 카메라 위치에서 경험을 시뮬레이션합니다.
 
-   <video controls src="../img/05_03_Creating_Moving_Objects/LV-4.mp4" width="80%" alt="연꽃잎이 강을 따라 화면 왼쪽에서 오른쪽으로
-
- 흐르는 모습"></video>
+   <video controls src="../img/05_03_Creating_Moving_Objects/LV-4.mp4" width="80%" alt="연꽃잎이 강을 따라 화면 왼쪽에서 오른쪽으로 흐르는 모습"></video>
 
 ### PrismaticConstraint 제약 사용
 

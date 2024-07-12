@@ -15,7 +15,7 @@
 
 캐릭터를 내보내려면:
 
-1. 상단 메뉴에서 **File** > **Export** > **FBX (.fbx)**를 클릭합니다. Blender 파일 브라우저 창이 나타납니다.
+1. 상단 메뉴에서 **File** > **Export** > FBX (.fbx)를 클릭합니다. Blender 파일 브라우저 창이 나타납니다.
 2. **Path Mode**를 **Copy**로 설정하고 **Embed Textures** 아이콘을 활성화합니다.
 3. Include 섹션에서 **Custom Properties**를 활성화합니다.
 4. Armature 섹션을 확장하고 **Add Leaf Bones**의 선택을 해제합니다.

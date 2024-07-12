@@ -28,9 +28,9 @@
 - 다양한 유형의 용암 점성을 모방하기 위해 칼데라에서 튀고 흐르는 용암을 설정합니다.
 - 플레이어의 주의를 끄는 불순물이 하늘로 상승하는 것을 모방하기 위해 연기 기둥을 설정합니다.
 
-<Alert severity='info'>
+
 서드파티 텍스처 생성 도구에서 자신의 텍스처를 생성하고 자신의 디자인과 함께 따라할 수 있습니다. Studio에서 사용하기 위한 텍스처를 가져오는 방법에 대한 자세한 내용은 [Asset Manager](https://create.roblox.com/docs/projects/assets/manager)를 참조하세요.
-</Alert>
+
 
 <!-- <GridContainer numColumns="2">
   <figure>
@@ -412,7 +412,7 @@ Studio는 이 기술에 사용할 수 있는 두 가지 고급 조명 소스를 
   </figure>
 </GridContainer> -->
 
-|<img src="../img/03_03_Creating_Volcanic/DenseSplash-Texture.jpg" alt="고밀도 분출 텍스처를 나타내는 2D 텍스처" width="60%"/>|<img src="../img/03_03_Creating_Volcanic/WebbySplash-Texture.jpg" alt="웹 분출 텍스처를 나타내는 2D 텍스처" width="60%"/>|
+|<img src="../img/03_03_Creating_Volcanic/DenseSplash-Texture.jpg" alt="고밀도 분출 텍스처를 나타내는 2D 텍스처" width="60%"/>|<img src="../img/03_03_Creating_Volcanic/WebbySplash-Texture.jpg.webp" alt="웹 분출 텍스처를 나타내는 2D 텍스처" width="60%"/>|
 |---|---|
 |Dense Splash Texture = rbxassetid:/17363669906|Webby Splash Texture = rbxassetid://17363668312|
 

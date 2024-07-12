@@ -28,9 +28,9 @@ Blender에서 휴머노이드 모델을 리깅하려면 다음 단계를 수행�
 - 단일 뼈대에 여러 메시를 [종속시켜](#뼈대-종속) 스켈레톤 리그를 결합합니다.
 - 각 메시 객체와 뼈대에 [완전한 영향 할당](#메시를-뼈에-할당)하여 영향을 할당합니다.
 
-<Alert severity="info">
+
 이 가이드에서는 다운로드 가능한 [리그 및 부착 템플릿 Blender 프로젝트](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/reference-files/Rig_and_Attachments_Template.blend), 참조용 [롤라 캐릭터 모델](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/reference-files/lola-base-model.fbx), 그리고 [Blender 버전 3.0](https://www.blender.org/download/releases/3-0/)을 사용합니다. 다른 버전의 Blender를 사용하는 경우 UI 및 설정에 약간의 차이가 있을 수 있습니다.
-</Alert>
+
 
 ## Blender 설정
 
@@ -112,7 +112,7 @@ X-Axis Mirror를 설정하려면:
 모델을 뼈대에 종속시키려면:
 
 1. **객체 모드**로 전환합니다.
-2. 아웃라이너에서 검색창에 **"geo"**를 입력하여 메시 객체를 필터링합니다.
+2. 아웃라이너에서 검색창에 "geo"를 입력하여 메시 객체를 필터링합니다.
 3. 아웃라이너에서 첫 번째 및 마지막 메시 객체를 클릭하고 <kbd>Shift</kbd>를 누른 상태로 모든 메시 객체를 선택합니다.
 4. 메시가 강조 표시된 상태에서 <kbd>Shift</kbd>를 누른 상태로 뷰포트 또는 아웃라이너에서 뼈대 객체를 클릭합니다.
 5. 뷰포트에서 마우스 오른쪽 버튼을 클릭하고 **종속** > **빈 그룹으로**를
@@ -125,9 +125,9 @@ X-Axis Mirror를 설정하려면:
 
 이제 뼈대를 메시 객체에 연결했으므로 개별 팔과 다리의 정점을 대응하는 뼈에 완전히 영향을 받도록 할당할 수 있습니다. 이 과정이 완료되면 모델은 스킨닝 준비가 됩니다. 메시에 여러 뼈 영향을 적용하는 방법은 [휴머노이드 모델 스킨닝](https://create.roblox.com/docs/art/modeling/skinning-a-humanoid-model)을 참조하세요.
 
-<Alert severity="warning">
+
 휴머노이드 리그의 **Root** 및 **HumanoidRootNode** 부모 뼈에는 어떠한 영향도 적용하지 않아야 합니다. 추가된 영향은 Studio로 가져올 때 삭제됩니다.
-</Alert>
+
 
 머리 메시에 완전한 영향을 할당하려면:
 

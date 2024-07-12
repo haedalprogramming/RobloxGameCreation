@@ -29,9 +29,9 @@
 
 <video controls src="../img/05_04_Creating_Spinning_Objects/Overview.mp4" width="90%"></video>
 
-<Alert severity="info">
+
    기본 파트나 타사 모델링 도구에서 만든 메시를 사용하여 자신만의 어셈블리를 만들 수 있으며, 자신의 자산을 사용하여 따라 할 수 있습니다. Studio에서 메시를 내보내는 방법에 대한 자세한 내용은 [내보내기 요구사항](https://create.roblox.com/docs/art/modeling/export-requirements)을 참조하세요.
-</Alert>
+
 
 ## 각운동과 물리적 힘
 

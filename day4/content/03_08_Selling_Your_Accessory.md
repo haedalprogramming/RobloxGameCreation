@@ -34,7 +34,7 @@
 
 <img src="../img/03_08_Selling_Your_Accessory/Marketplace-Listing.png" />
 
-<Alert severity='info'>
+
 추가 마켓플레이스 정책 및 관련 정보는 다음 리소스를 참조하세요:
 
 - [마켓플레이스 정책](https://create.roblox.com/docs/art/marketplace/marketplace-policy)
@@ -42,7 +42,7 @@
 - [지적 재산](https://create.roblox.com/docs/art/marketplace/intellectual-property)
 - [모더레이션](https://create.roblox.com/docs/art/marketplace/moderation)
 
-</Alert>
+
 
 ---
 ## 출처

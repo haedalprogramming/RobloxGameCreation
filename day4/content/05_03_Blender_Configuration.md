@@ -125,7 +125,7 @@ Blender 다운로드 템플릿을 사용하는 경우 이 섹션을 건너뛸 �
 
 또는 파일을 내보낼 때 스케일링을 수정할 수 있습니다:
 
-1. **파일** > **내보내기** > **FBX (.fbx)**로 이동합니다.
+1. **파일** > **내보내기** > FBX (.fbx)로 이동합니다.
 2. **변환** > **스케일**을 `.01`로 설정합니다.<br/>
    <img src="../img/05_03_Blender_Configuration/Blender-Export-Settings-2.png" width="320" />
 
@@ -144,9 +144,9 @@ Blender 다운로드 템플릿을 사용하는 경우 이 섹션을 건너뛸 �
 
    <img src="../img/05_03_Blender_Configuration/Timeline-Frames.png" width = "65%"/>
 
-<Alert severity = 'info'>
+
 프로젝트 설정을 변경한 후에는 **파일** > **기본값** > **시작 파일 저장**으로 이동하여 이를 기본 Blender 프로젝트 설정으로 저장할 수 있습니다.
-</Alert>
+
 
 ---
 ## 출처

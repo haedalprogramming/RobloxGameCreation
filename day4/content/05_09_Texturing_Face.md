@@ -50,9 +50,9 @@
 |---|---|---|
 |<img src="../img/05_09_Texturing_Face/Post-Texturing-A.png" />|<img src="../img/05_09_Texturing_Face/Post-Texturing-B.png" />|<img src="../img/05_09_Texturing_Face/Post-Texturing-C.png" />|
 
-<Alert severity = 'success'>
+
 비교를 위해, 텍스처링이 완료된 이 튜토리얼 프로젝트 버전을 [여기에서 다운로드](https://prod.docsiteassets.roblox.com/assets/art/reference-files/checkpoint/2_Goblin-textured.blend)할 수 있습니다.
-</Alert>
+
 
 ---
 ## 출처

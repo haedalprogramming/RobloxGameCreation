@@ -25,9 +25,9 @@
 - 표면 장력을 깨는 모세관 파를 모방하기 위한 거품 설정.
 - 충돌 지점에서 상승하고 위로 올라가는 안개 증기를 모방하여 플레이어가 어느 각도에서든 볼 수 있는 무지개를 만드는 방법.
 
-<Alert severity = 'info'>
+
    서드 파티 텍스처 제작 도구에서 자신의 텍스처를 만들고 자신의 디자인을 따라 할 수 있습니다. 스튜디오에서 사용할 텍스처를 가져오는 방법에 대한 정보는 [Asset Manager](https://create.roblox.com/docs/projects/assets/manager)를 참조하십시오.
-</Alert>
+
 
 <video controls src="../img/03_02_Creating_Waterfalls/Intro.mp4" width="90%"></video>
 
