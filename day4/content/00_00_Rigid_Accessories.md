@@ -14,8 +14,7 @@
 
 ---
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/tzPn6QvU8Bo" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br /><br />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tzPn6QvU8Bo?si=Kn3Rc1HoAUGbswbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 리짓 액세서리는 프로프, 무기, 모자 등 아바타 캐릭터에 착용할 수 있는 가장 기본적인 3D 화장품 아이템입니다. 캐릭터 몸 위에 늘어나고 맞춰지는 의상 액세서리와 달리, 리짓 액세서리는 아바타 캐릭터의 특정 지점에 부착되며 변형되거나 대상 위에 감싸지 않습니다.
 
