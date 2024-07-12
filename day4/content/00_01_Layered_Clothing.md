@@ -17,7 +17,7 @@
 
 ---
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/gXXukd6yOSs" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<a href="https://www.youtube-nocookie.com/embed/gXXukd6yOSs"><img src="../img/00_00_Rigid_Accessories/youtube.png"/></a>
 <br /><br />
 
 레이어드 의상 액세서리는 바지, 티셔츠, 재킷, 드레스 등 사용자 아바타에 착용할 수 있는 3D 화장품 아이템입니다. 캐릭터의 특정 지점에만 부착되는 [리짓 액세서리](./00_00_Rigid_Accessories.md)와 달리, 레이어드 의상은 모든 체형과 기존 의상에 맞춰 늘어나고 착용됩니다.
