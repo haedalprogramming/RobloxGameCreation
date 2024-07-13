@@ -24,7 +24,8 @@ Blender에서 자산을 올바르게 설정하면 Studio에서 가져오기 및 
 
    <img src="../img/03_01_Blender_Setup/Blender-Scale-1.png" />
 
-   <video controls src="../img/03_01_Blender_Setup/Scaling-FBX-Import.mp4" width="100%"></video>
+   <!-- <video controls src="../img/03_01_Blender_Setup/Scaling-FBX-Import.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating-rigid/Scaling-FBX-Import.mp4)
 
 5. 자산을 처음부터 조각하는 경우, 작업 공간에서 객체를 정렬합니다. 가져오는 경우, 조정이 필요하지 않을 수 있습니다.
    1. 자산이 **-Y 방향**을 향하고 있는지 확인합니다.
