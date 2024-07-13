@@ -16,7 +16,8 @@
 
 **엘리베이터**는 사용자가 경험의 한 부분에서 다른 부분으로 이동할 수 있도록 하는 플랫폼입니다. 이 장치는 사용자가 만든 세계에서 새로운 영역에 도달할 수 있도록 할 때 유용합니다. 이 가이드에서는 사용자가 근접 프롬프트와 상호 작용할 때 상하로 이동하는 엘리베이터를 빠르게 만드는 방법을 배울 수 있습니다.
 
-<video controls src="../img/05_05_Creating_Elevators/Overview.mp4" width="50%"></video>
+<!-- <video controls src="../img/05_05_Creating_Elevators/Overview.mp4" width="50%"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-elevators/Overview.mp4)
 
 이 엘리베이터를 만드는 방법에서는 다음 섹션을 따라 다음을 배우십시오:
 

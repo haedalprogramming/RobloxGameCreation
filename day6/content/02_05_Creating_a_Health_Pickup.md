@@ -19,9 +19,10 @@
 
 이 튜토리얼에서는 건강 회복 아이템을 생성하는 다른 패턴을 사용합니다. 여기서는 건강 회복 동작을 결정하는 스크립트의 단일 복사본만 사용하여 여러 건강 회복 아이템을 생성합니다. 아이템을 터치하면 플레이어의 체력을 회복하고, 약간 희미해지며, 짧은 시간 동안 비활성화됩니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
    <source src="../img/02_05_Creating_a_Health_Pickup/finalHealthPickup.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-a-health-pickup/finalHealthPickup.mp4)
 
 ## 설정하기
 
@@ -144,9 +145,10 @@ end
 
 플레이어가 치유되면 상단 오른쪽에 건강 바가 나타나고 사라질 것입니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
    <source src="../img/02_05_Creating_a_Health_Pickup/fullHealthPickupEffect.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-a-health-pickup/fullHealthPickupEffect.mp4)
 
 ## 픽업 쿨다운
 
@@ -235,9 +237,10 @@ end
 
 픽업의 투명도를 변경할 때 PointLight의 밝기를 줄여 플레이어에게 더 강력한 피드백을 제공해보세요.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
    <source src="../img/02_05_Creating_a_Health_Pickup/finalHealthPickupTest.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-a-health-pickup/finalHealthPickupTest.mp4)
 
 이 건강 회복 아이템을 자신의 프로젝트에 사용하거나 외형과 효과를 변경하여 플레이어에게 다른 종류의 파워업을 제공해보세요.
 

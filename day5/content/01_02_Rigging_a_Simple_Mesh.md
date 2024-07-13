@@ -52,7 +52,8 @@ Roblox Studio로 가져오기 위한 Blender 프로젝트를 설정할 때, Blen
 
 4. **단위** 섹션에서 **단위 스케일**을 **0.01**로 변경하고 **길이**를 **센티미터**로 변경합니다.
 
-   <video controls src="../img/01_02_Rigging_a_Simple_Mesh/1-setting-up-blender.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_02_Rigging_a_Simple_Mesh/1-setting-up-blender.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-simple/1-setting-up-blender.mp4)
 
 ### 모델 가져오기
 
@@ -79,7 +80,8 @@ Roblox Studio로 가져오기 위한 Blender 프로젝트를 설정할 때, Blen
 
 3. **뷰포트 표시** 섹션에서 **표시** 속성으로 이동한 다음 **앞에** 표시를 활성화합니다.
 
-   <video controls src="../img/01_02_Rigging_a_Simple_Mesh/2-adding-armature.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_02_Rigging_a_Simple_Mesh/2-adding-armature.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-simple/2-adding-armature.mp4)
 
 ### 뼈 추가 및 위치 조정
 
@@ -91,21 +93,26 @@ Roblox Studio로 가져오기 위한 Blender 프로젝트를 설정할 때, Blen
 2. 3D 뷰포트 상단에서 모드 드롭다운을 클릭한 다음 **편집 모드**로 전환합니다.
 3. 뷰포트에서 **추가** &rarr; **단일 뼈**를 클릭합니다. 이 단계를 두 번 수행합니다.
 
-   <video controls src="../img/01_02_Rigging_a_Simple_Mesh/3.1-positioning-bones.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_02_Rigging_a_Simple_Mesh/3.1-positioning-bones.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-simple/3.1-positioning-bones.mp4)
+
 
 4. 뷰포트 또는 아웃라이너에서 **새로 생성된 뼈**를 클릭하여 강조 표시합니다.
 5. <kbd>G</kbd>를 눌러 마우스를 사용하여 뼈를 **오른쪽 팔**로 이동시킵니다.
 6. 두 번째 뼈를 클릭하고 <kbd>G</kbd>를 눌러 뼈를 **왼쪽 팔**로 이동시킵니다.
-   <video controls src="../img/01_02_Rigging_a_Simple_Mesh/3.2-positioning-bones.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_02_Rigging_a_Simple_Mesh/3.2-positioning-bones.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-simple/3.2-positioning-bones.mp4)
 
 7. **오른쪽 뼈**의 상단을 클릭하여 끝부분이 강조 표시되도록 합니다. <kbd>G</kbd>를 눌러 뼈를 오른쪽으로 수평으로 이동 및 방향을 조정합니다.
 8. **왼쪽 뼈**의 상단을 클릭하여 끝부분이 강조 표시되도록 합니다. <kbd>G</kbd>를 눌러 뼈를 왼쪽으로 수평으로 이동 및 방향을 조정합니다.
 
-   <video controls src="../img/01_02_Rigging_a_Simple_Mesh/3.3-positioning-bones.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_02_Rigging_a_Simple_Mesh/3.3-positioning-bones.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-simple/3.3-positioning-bones.mp4)
 
 9. 아웃라이너에서 두 번 클릭하여 나중에 쉽게 참조할 수 있도록 뼈의 이름을 변경합니다.
 
-   <video controls src="../img/01_02_Rigging_a_Simple_Mesh/4-rename-bones.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_02_Rigging_a_Simple_Mesh/4-rename-bones.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-simple/4-rename-bones.mp4)
 
 ## 뼈대 종속
 
@@ -121,7 +128,8 @@ Roblox Studio로 가져오기 위한 Blender 프로젝트를 설정할 때, Blen
 4. **뷰포트**에서 메시 객체를 마우스 오른쪽 버튼으로 클릭합니다. 팝업 메뉴가 표시됩니다.
 5. **종속**을 선택한 다음 **자동 가중치로**를 선택합니다.
 
-   <video controls src="../img/01_02_Rigging_a_Simple_Mesh/5-parenting-armature.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_02_Rigging_a_Simple_Mesh/5-parenting-armature.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-simple/5-parenting-armature.mp4)
 
 ## 정점을 뼈에 할당
 
@@ -135,20 +143,23 @@ Roblox Studio로 가져오기 위한 Blender 프로젝트를 설정할 때, Blen
 2. 모드 드롭다운에서 **편집 모드**로 전환합니다.
 3. 뷰포트 오른쪽 상단에서 소재 미리보기 옵션을 사용하여 **X-Ray** 뷰로 전환합니다.
 
-   <video controls src="../img/01_02_Rigging_a_Simple_Mesh/6.1-assigning-vertices.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_02_Rigging_a_Simple_Mesh/6.1-assigning-vertices.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-simple/6.1-assigning-vertices.mp4)
 
 4. 오른쪽 뼈와 함께 이동할 정점을 드래그하여 선택합니다.
 5. **객체 속성 패널**로 이동합니다.
 6. **정점 그룹** 섹션에서 할당할 뼈의 이름을 선택하고 **할당**을 클릭합니다.
 7. **4-6단계**를 다른 뼈와 팔 정점에 대해 반복합니다.
 
-   <video controls src="../img/01_02_Rigging_a_Simple_Mesh/6.2-assigning-vertices.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_02_Rigging_a_Simple_Mesh/6.2-assigning-vertices.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-simple/6.2-assigning-vertices.mp4)
 
 8. 로봇 중앙의 나머지 정점을 드래그하여 선택합니다.
 9. **객체 속성 패널**로 이동합니다.
 10. 정점 그룹 섹션에서 **가운데 뼈**를 선택하고 **할당**을 클릭합니다.
 
-    <video controls src="../img/01_02_Rigging_a_Simple_Mesh/6.3-assigning-vertices.mp4" width="80%"></video>
+    <!-- <video controls src="../img/01_02_Rigging_a_Simple_Mesh/6.3-assigning-vertices.mp4" width="80%"></video> -->
+    [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-simple/6.3-assigning-vertices.mp4)
 
 ## 테스트
 
@@ -161,7 +172,8 @@ Roblox Studio로 가져오기 위한 Blender 프로젝트를 설정할 때, Blen
 3. <kbd>Shift</kbd>를 누른 상태에서 테스트할 뼈를 클릭하여 강조 표시한 다음 <kbd>R</kbd>을 눌러 회전을 테스트합니다.
 4. 현재 뼈의 선택을 취소하려면 <kbd>Alt</kbd><kbd>A</kbd> (<kbd>⌥</kbd><kbd>A</kbd>)를 누른 다음 다른 뼈를 다시 선택하고 테스트합니다.
 
-   <video controls src="../img/01_02_Rigging_a_Simple_Mesh/7-testing.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_02_Rigging_a_Simple_Mesh/7-testing.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-simple/7-testing.mp4)
 
 <Alert severity="info">
    선택한 뼈의 회전을 중립으로 재설정하려면 <kbd>Alt</kbd>+<kbd>R</kbd>을 누릅니다. 회전 중에 마우스의 스크롤 휠을 눌러 회전 축을 변경할 수도 있습니다.

@@ -2,17 +2,17 @@
 
 ## 목차
 - [Assembling Modular Environments](#assembling-modular-environments)
-	- [목차](#목차)
-	- [일관된 피벗 포인트 위치의 중요성](#일관된-피벗-포인트-위치의-중요성)
-	- [스냅 동작 구성](#스냅-동작-구성)
-	- [모듈식 자산 결합](#모듈식-자산-결합)
-	- [모듈식 자산 사용자 정의](#모듈식-자산-사용자-정의)
-		- [대체 사용자 정의 재료 사용](#대체-사용자-정의-재료-사용)
-		- [대체 SurfaceAppearance 객체 사용](#대체-surfaceappearance-객체-사용)
-		- [가시적 반복 줄이기](#가시적-반복-줄이기)
-		- [장식 소품 추가](#장식-소품-추가)
-	- [출처](#출처)
-	- [다음](#다음)
+  - [목차](#목차)
+  - [일관된 피벗 포인트 위치의 중요성](#일관된-피벗-포인트-위치의-중요성)
+  - [스냅 동작 구성](#스냅-동작-구성)
+  - [모듈식 자산 결합](#모듈식-자산-결합)
+  - [모듈식 자산 사용자 정의](#모듈식-자산-사용자-정의)
+    - [대체 사용자 정의 재료 사용](#대체-사용자-정의-재료-사용)
+    - [대체 SurfaceAppearance 객체 사용](#대체-surfaceappearance-객체-사용)
+    - [가시적 반복 줄이기](#가시적-반복-줄이기)
+    - [장식 소품 추가](#장식-소품-추가)
+  - [출처](#출처)
+  - [다음](#다음)
 
 ---
 
@@ -43,13 +43,15 @@ Studio의 모든 객체는 피벗 포인트의 위치에 따라 이동하고 회
 
 예를 들어, 다음 두 파트는 모두 크기 값이 [10, 10, 1]이고 기본 피벗 포인트 위치를 유지합니다. 노란색 파트를 X 축에서 5 스터드 단위로 이동하면 중심에서 가장자리로 이동하여 쉽게 파란색 파트의 양쪽에 맞추고 스냅할 수 있습니다.
 
-<video controls src="../img/02_04_Assembling_Modular_Environments/Pivot-Points-Aligned.mp4" width="60%"></video>
+<!-- <video controls src="../img/02_04_Assembling_Modular_Environments/Pivot-Points-Aligned.mp4" width="60%"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/assembling-modular-environments/Pivot-Points-Aligned.mp4)
 
 <img src="../img/02_04_Assembling_Modular_Environments/Pivot-Points-Aligned-Diagram.jpg" width="60%"/>
 
 그러나 노란색 파트를 회전시키고 X 축에서 5 스터드 단위로 계속 이동하면 파란색 파트의 양쪽에 맞추고 스냅할 수 없습니다. 이는 노란색 파트의 너비가 이제 1 스터드이기 때문에, 중심에서 5 스터드 이동하면 중심에서 0.5 스터드 + 세계 그리드에서 4.5 스터드 이동하여 파란색 파트의 양쪽에 0.5 스터드 중복이 발생하기 때문입니다.
 
-<video controls src="../img/02_04_Assembling_Modular_Environments/Pivot-Points-Misaligned.mp4" width="60%"></video>
+<!-- <video controls src="../img/02_04_Assembling_Modular_Environments/Pivot-Points-Misaligned.mp4" width="60%"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/assembling-modular-environments/Pivot-Points-Misaligned.mp4)
 
 <GridContainer numColumns="2">
   <figure>
@@ -129,7 +131,8 @@ Studio의 기본 설정은 객체를 스터드나 각도의 분수로 자유롭�
 
 1. 빌딩을 구성할 각 추가 메시에 대해 첫 번째 메시의 위치 좌표를 계속 붙여넣어 각 메시의 시작 피벗 위치가 동일하게 유지되도록 합니다.
 
-   <video controls src="../img/02_04_Assembling_Modular_Environments/Combining-Making-A-Building.mp4" width="50%"></video>
+   <!-- <video controls src="../img/02_04_Assembling_Modular_Environments/Combining-Making-A-Building.mp4" width="50%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/assembling-modular-environments/Combining-Making-A-Building.mp4)
 
 ## 모듈식 자산 사용자 정의
 

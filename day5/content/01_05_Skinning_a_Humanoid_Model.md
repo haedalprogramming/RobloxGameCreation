@@ -49,7 +49,8 @@ Blender에서 휴머노이드 모델을 스킨닝하려면 다음 단계를 수�
 1. 객체 모드에서 **armature**를 클릭합니다.
 2. **객체 데이터 속성**에서 **Display As** 값을 **Sticks**로 변경합니다.
 
-   <video controls src="../img/01_05_Skinning_a_Humanoid_Model/1-bone-visualizations.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_05_Skinning_a_Humanoid_Model/1-bone-visualizations.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/skinning-humanoid/1-bone-visualizations.mp4)
 
 ### 자동 정규화
 
@@ -68,13 +69,16 @@ Blender에서 휴머노이드 모델을 스킨닝하려면 다음 단계를 수�
   </figure>
 </GridContainer> -->
 
-|<video controls src="../img/01_05_Skinning_a_Humanoid_Model/autonormalize-example2.mp4"></video>|<video controls src="../img/01_05_Skinning_a_Humanoid_Model/autonormalize-example.mp4"></video>|
+<!-- |<video controls src="../img/01_05_Skinning_a_Humanoid_Model/autonormalize-example2.mp4"></video>|<video controls src="../img/01_05_Skinning_a_Humanoid_Model/autonormalize-example.mp4"></video>|
+|---|---|
+|자동 정규화가 없으면 이 완전히 영향을 받는 머리가 다른 뼈에도 영향을 받는지 테스트할 때까지 명확하지 않습니다.|자동 정규화를 사용하면 잘못된 뼈에 영향을 페인팅해도 기존 뼈의 영향을 제거합니다. 이렇게 하면 실수를 쉽게 발견하고 수정할 수 있습니다.| -->
+
+
+|[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/skinning-humanoid/autonormalize-example2.mp4)|[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/skinning-humanoid/autonormalize-example.mp4)|
 |---|---|
 |자동 정규화가 없으면 이 완전히 영향을 받는 머리가 다른 뼈에도 영향을 받는지 테스트할 때까지 명확하지 않습니다.|자동 정규화를 사용하면 잘못된 뼈에 영향을 페인팅해도 기존 뼈의 영향을 제거합니다. 이렇게 하면 실수를 쉽게 발견하고 수정할 수 있습니다.|
 
-<Alert severity="warning">
 Studio는 단일 정점에 4개 이상의 뼈가 영향을 미치는 것을 지원하지 않습니다. 이는 복잡한 리그에서 발생할 수 있거나 자동 정규화가 비활성화된 경우 발생할 수 있습니다.
-</Alert>
 
 자동 정규화를 활성화하려면:
 
@@ -84,7 +88,8 @@ Studio는 단일 정점에 4개 이상의 뼈가 영향을 미치는 것을 지�
 4. 뷰포트 오른쪽의 **도구** 탭을 확장합니다.
 5. **옵션**에서 **자동 정규화**를 활성화합니다.
 
-<video controls src="../img/01_05_Skinning_a_Humanoid_Model/2-auto-normalize.mp4" width="100%"></video>
+<!-- <video controls src="../img/01_05_Skinning_a_Humanoid_Model/2-auto-normalize.mp4" width="100%"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/skinning-humanoid/2-auto-normalize.mp4)
 
 ## 웨이트 페인팅
 
@@ -92,9 +97,9 @@ Studio는 단일 정점에 4개 이상의 뼈가 영향을 미치는 것을 지�
 
 이 가이드는 휴머노이드 모델의 머리와 팔 메시에 웨이트 페인팅하는 한 가지 과정을 다룹니다. 이러한 웨이트 페인팅 기술을 사용하여 모델의 나머지 부분도 웨이트 페인팅할 수 있습니다.
 
-<Alert severity="warning">
+
 휴머노이드 리그의 Root 또는 HumanoidRootNode 부모 뼈에 영향을 적용하지 마십시오. 추가된 영향은 Studio로 가져올 때 삭제됩니다.
-</Alert>
+
 
 ### 머리 메시 페인팅
 
@@ -106,18 +111,21 @@ Studio는 단일 정점에 4개 이상의 뼈가 영향을 미치는 것을 지�
 2. 모드 드롭다운에서 **웨이트 페인트** 모드로 전환합니다.
 3. <kbd>Shift</kbd>를 누른 상태에서 **상체 뼈**를 클릭합니다. 상체가 아직 머리 정점에 영향을 미치지 않았으므로 머리는 완전히 파란색이어야 합니다.
 
-   <video controls src="../img/01_05_Skinning_a_Humanoid_Model/3-select-head.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_05_Skinning_a_Humanoid_Model/3-select-head.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/skinning-humanoid/3-select-head.mp4)
 
-   <Alert severity="info">
+   
    일반적인 오류는 잘못된 뼈를 선택한 상태에서 웨이트를 적용하는 것입니다. 웨이트를 적용할 때 올바른 뼈를 <kbd>Shift</kbd> 선택 및 선택 해제하십시오. 현재 페인팅 중인 뼈의 이름은 뷰포트에 표시됩니다.
-   </Alert>
+   
 
 4. 뷰포트 오른쪽 상단에서 **도구** 메뉴를 열고 **브러시 강도**를 **1**로 설정합니다.
 5. 상체 뼈가 선택된 상태에서, 모델의 목선 부분에 **페인팅**합니다. 상체 메시를 임시로 **숨기기**하여 목 하단에 직접 접근할 수 있습니다.
-   <video controls src="../img/01_05_Skinning_a_Humanoid_Model/4-weight-paint-head.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_05_Skinning_a_Humanoid_Model/4-weight-paint-head.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/skinning-humanoid/4-weight-paint-head.mp4)
 
 6. 언제든지 <kbd>Shift</kbd>를 누른 상태에서 상체 뼈를 선택 해제하고 머리 뼈를 선택하여 적용된 영향을 확인합니다. <kbd>R</kbd>을 눌러 머리 뼈를 회전시키고 메시 객체가 머리와 상체 뼈 사이에서 어떻게 영향을 공유하는지 테스트합니다.
-   <video controls src="../img/01_05_Skinning_a_Humanoid_Model/5-test-head.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_05_Skinning_a_Humanoid_Model/5-test-head.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/skinning-humanoid/5-test-head.mp4)
 
 7. 추가 페인팅이 필요한 경우, <kbd>Shift</kbd>를 누른 상태에서 영향을 추가하거나 제거할 뼈를 선택하고 브러시 도구를 사용하여 적용합니다.
 
@@ -154,22 +162,25 @@ Studio는 단일 정점에 4개 이상의 뼈가 영향을 미치는 것을 지�
 1. 객체 모드에서 **armature**를 클릭하고 <kbd>Shift</kbd>를 누른 상태에서 오른손 **geometry**를 클릭합니다.
 2. 모드 드롭다운에서 **웨이트 페인트** 모드로 전환합니다. 이 모드에서 손 뼈를 선택한 상태에서 <kbd>R</kbd>을 눌러 손 메시 객체의 현재 회전을 테스트할 수 있습니다.
 
-   <video controls src="../img/01_05_Skinning_a_Humanoid_Model/6-select-hand-and-test.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_05_Skinning_a_Humanoid_Model/6-select-hand-and-test.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/skinning-humanoid/6-select-hand-and-test.mp4)
 
 3. 뷰포트 오른쪽 상단에서 **도구** 메뉴를 열고 **브러시 강도**를 **1**로 설정합니다.
 4. 하부 팔 뼈가 선택된 상태에서, 모델의 손목에 **페인팅**합니다. 하부 팔 메시를 임시로 **숨기기**하여 손목에 더 잘 접근할 수 있습니다.
 
-   <video controls src="../img/01_05_Skinning_a_Humanoid_Model/7-weight-paint-hand.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_05_Skinning_a_Humanoid_Model/7-weight-paint-hand.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/skinning-humanoid/7-weight-paint-hand.mp4)
 
 5. 웨이트 페인팅하는 동안 및 후에 뼈를 선택한 상태에서 <kbd>R</kbd>을 눌러 회전과 유연성을 테스트합니다.
 
-   <video controls src="../img/01_05_Skinning_a_Humanoid_Model/8-test-hand.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_05_Skinning_a_Humanoid_Model/8-test-hand.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/skinning-humanoid/8-test-hand.mp4)
 
-<Alert severity="info">
+
 손가락과 같은 추가 제어를 위해 추가 뼈를 추가하고 스킨할 수 있습니다.
 
 추가된 뼈 객체는 메시에 스킨되어 있지만 LowerTorso, LeftFoot, Right UpperArm과 같은 휴머노이드 뼈 객체 이름을 공유하지 않으면, 3D 모델링 소프트웨어에서 할당된 이름으로 Studio에 `Bone`으로 가져옵니다.
-</Alert>
+
 
 #### 하부 팔
 
@@ -182,13 +193,15 @@ Studio는 단일 정점에 4개 이상의 뼈가 영향을 미치는 것을 지�
 3. 모드 드롭다운에서 **웨이트 페인트** 모드로 전환합니다.
 4. <kbd>Shift</kbd>를 눌러 다른 뼈를 선택 해제하고 하부 팔 뼈만 남깁니다. 강조 표시된 하부 팔 뼈의 현재 회전을 <kbd>R</kbd>을 눌러 테스트할 수 있습니다.
 
-   <video controls src="../img/01_05_Skinning_a_Humanoid_Model/9-switch-to-lower-arm.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_05_Skinning_a_Humanoid_Model/9-switch-to-lower-arm.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/skinning-humanoid/9-switch-to-lower-arm.mp4)
 
 5. <kbd>Shift</kbd>를 눌러 상부 팔 뼈를 선택합니다.
 6. 상부 팔 뼈가 선택된 상태에서, 모델의 팔꿈치에 **페인팅**합니다. 상부 팔 메시를 임시로 **숨기기**하여 팔꿈치에 더 잘 접근할 수 있습니다.
 7. 웨이트 페인팅하는 동안 및 후에 하부 팔 뼈를 선택한 상태에서 <kbd>R</kbd>을 눌러 회전과 유연성을 테스트합니다.
 
-   <video controls src="../img/01_05_Skinning_a_Humanoid_Model/10-weight-paint-lower-arm.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_05_Skinning_a_Humanoid_Model/10-weight-paint-lower-arm.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/skinning-humanoid/10-weight-paint-lower-arm.mp4)
 
 #### 상부 팔
 
@@ -201,13 +214,15 @@ Studio는 단일 정점에 4개 이상의 뼈가 영향을 미치는 것을 지�
 3. 모드 드롭다운에서 **웨이트 페인트** 모드로 전환합니다.
 4. <kbd>Shift</kbd>를 눌러 다른 뼈를 선택 해제하고 상부 팔 뼈만 남깁니다. 강조 표시된 상부 팔 뼈의 현재 회전을 <kbd>R</kbd>을 눌러 테스트할 수 있습니다.
 
-   <video controls src="../img/01_05_Skinning_a_Humanoid_Model/11-switch-to-upper-arm.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_05_Skinning_a_Humanoid_Model/11-switch-to-upper-arm.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/skinning-humanoid/11-switch-to-upper-arm.mp4)
 
 5. <kbd>R</kbd>을 눌러 마우스를 드래그하여 상부 팔을 수평으로 회전시킵니다. 이렇게 하면 겨드랑이의 정점에 더 쉽게 접근할 수 있습니다.
 6. <kbd>Shift</kbd>를 눌러 상체 뼈를 선택합니다.
 7. 상체 뼈가 선택된 상태에서, 모델의 겨드랑이에 **페인팅**합니다. 상체 메시를 임시로 **숨기기**하여 팔꿈치에 더 잘 접근할 수 있습니다.
 8. 웨이트 페인팅하는 동안 및 후에 상부 팔 뼈를 선택한 상태에서 <kbd>R</kbd>을 눌러 회전과 유연성을 테스트합니다.
-   <video controls src="../img/01_05_Skinning_a_Humanoid_Model/12-weight-paint-upper-arm.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_05_Skinning_a_Humanoid_Model/12-weight-paint-upper-arm.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/skinning-humanoid/12-weight-paint-upper-arm.mp4)
 
 #### 어깨
 
@@ -220,14 +235,16 @@ Studio는 단일 정점에 4개 이상의 뼈가 영향을 미치는 것을 지�
 3. 모드 드롭다운에서 **웨이트 페인트** 모드로 전환합니다.
 4. <kbd>Shift</kbd>를 눌러 다른 뼈를 선택 해제하고 상부 팔 뼈만 남깁니다. 강조 표시된 상부 팔 뼈의 현재 회전을 <kbd>R</kbd>을 눌러 테스트할 수 있습니다.
 
-   <video controls src="../img/01_05_Skinning_a_Humanoid_Model/13-switch-to-upper-torso.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_05_Skinning_a_Humanoid_Model/13-switch-to-upper-torso.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/skinning-humanoid/13-switch-to-upper-torso.mp4)
 
 5. 뷰포트 오른쪽 상단에서 **도구** 메뉴를 열고 **브러시 강도**를 **.25**로 설정합니다. 테스트 결과에 따라 이 값을 조정할 수 있습니다.
 6. 상체 뼈가 선택된 상태에서, 모델의 어깨에 **페인팅**합니다.
 7. 웨이트 페인팅하는 동안 및 후에 상부 팔 뼈를 선택한 상태에서 <kbd>R</kbd>을 눌러 상체에 영향을 주는 회전과 유연성을 테스트합니다.
-   <video controls src="../img/01_05_Skinning_a_Humanoid_Model/14-weight-paint-upper-torso.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_05_Skinning_a_Humanoid_Model/14-weight-paint-upper-torso.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/skinning-humanoid/14-weight-paint-upper-torso.mp4)
 
-   <Alert severity = 'warning'>
+
    <GridContainer numColumns="2">
    <figure>
     <img src="../img/01_05_Skinning_a_Humanoid_Model/Candywrap-Example.png" width='100%'/>
@@ -236,13 +253,11 @@ Studio는 단일 정점에 4개 이상의 뼈가 영향을 미치는 것을 지�
    팔을 최대한 움직일 때, 어깨와 상체 사이에서 피부가 볼륨을 잃고 자연스럽게 변형되지 않는 캔디랩핑 효과가 발생할 수 있습니다. 이 효과는 많은 경우에 피할 수 없을 수 있습니다.
    </figure>
    </GridContainer>
-   </Alert>
 
 이러한 과정을 사용하여 모델의 나머지 사지를 웨이트 페인팅할 수 있습니다. 완료되면 Blender 내보내기 설정을 사용하여 스킨된 모델을 `.fbx`로 [내보낼](https://create.roblox.com/docs/art/modeling/export-requirements) 수 있습니다. 참조용으로, 완전히 스킨된 모델이 포함된 [Blender 프로젝트](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/reference-files/lola-skinned-s15.blend)를 다운로드할 수 있습니다.
 
-<Alert severity="warning">
+
 이 참조 모델은 아직 [내부 및 외부 케이지 메시 데이터](https://create.roblox.com/docs/art/characters/specifications#inner-and-outer-cages)가 없기 때문에, 이 모델은 레이어드 의류나 액세서리를 착용할 수 없습니다.
-</Alert>
 
 ---
 ## 출처

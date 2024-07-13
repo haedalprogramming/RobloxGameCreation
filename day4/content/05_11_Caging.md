@@ -35,10 +35,13 @@
 1. Layout 탭에서 시작하여, Outliner에서 **Head_OuterCage**와 **Head_Geo** 객체를 제외한 모든 항목을 숨깁니다.
 
    <img src="../img/05_11_Caging/Caging-Outer-Cage-Objects.png" />
-   <video controls src="../img/05_11_Caging/Caging_01.mp4" width="100%"></video>
+   <!-- <video controls src="../img/05_11_Caging/Caging_01.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Caging_01.mp4)
+   
 
 2. **Head_OuterCage**를 선택한 상태에서 **Object Properties** > **Viewport Display**로 이동하여 **Display As**를 **Wire**로 설정합니다. 완료 후 이 설정을 **Solid**로 다시 전환합니다.
-   <video controls src="../img/05_11_Caging/Caging_02.mp4" width="100%"></video>
+   <!-- <video controls src="../img/05_11_Caging/Caging_02.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Caging_02.mp4)
 3. **Head_OuterCage** 객체를 클릭하고 **Edit Mode**로 전환합니다.
 4. **X-Axis symmetry**와 **Topology Mirror**를 활성화하여 케이지에 대칭적으로 정점 변경을 수행합니다.
 
@@ -52,11 +55,13 @@
    3. 다른 선택 모드에서 <kbd>Shift</kbd>를 누른 상태로 여러 정점/모서리/면을 클릭하여 기하학을 선택하고 편집합니다.
    4. 정점을 잡고 Head_Geo 메시 안으로 이동시켜 메시가 교차하는 위치를 확인하고 케이지 메시가 머리 메시를 덮을 때까지 케이지 정점을 이동시켜 딱 맞는지 확인할 수 있습니다.
 
-      <video controls src="../img/05_11_Caging/Caging_03.mp4" width="100%"></video>
+      <!-- <video controls src="../img/05_11_Caging/Caging_03.mp4" width="100%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Caging_03.mp4)
 
    5. 정점에 대한 접근성과 가시성을 개선하기 위해 다른 메시 객체의 가시성을 전환합니다.
    6. 와이어프레임이 머리 메시 위에 딱 맞게 조정된 후, **Display As**를 다시 **Solid**로 설정하고 교차하는 정점을 확인하고 수정합니다.
-      <video controls src="../img/05_11_Caging/Caging_04.mp4" width="100%"></video>
+      <!-- <video controls src="../img/05_11_Caging/Caging_04.mp4" width="100%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Caging_04.mp4)
 
 최종 결과물은 헤드 메시의 기하학이 케이지의 솔리드 섹션을 통해 교차하지 않고 헤드 메시 위에 직접 위치한 케이지 메시를 특징으로 해야 합니다.
 

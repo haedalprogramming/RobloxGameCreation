@@ -25,9 +25,11 @@
    1. 외부 케이지는 항상 의상 메쉬를 덮어야 합니다.
    2. 외부 케이지는 정확한 레이어링을 보장하기 위해 의상 메쉬에 최대한 가까워야 합니다.
    3. 겨드랑이와 같은 작은 각진 부분에서는 **편집 모드**로 전환하여 케이지 메쉬의 정점이 밀집되지 않도록 개별 정점을 조정해야 할 수 있습니다.
-      <video controls src="../img/04_11_Modifying_Outer_Cage/Caging_02.mp4" width="100%"></video>
+      <!-- <video controls src="../img/04_11_Modifying_Outer_Cage/Caging_02.mp4" width="100%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating/Caging_02.mp4)
 7. 와이어프레임을 활성화한 상태에서 **편집 모드**로 추가 작업을 수행하여 외부 케이지의 정점이 가능한 한 가깝게 맞도록 합니다. 긴밀한 맞춤은 의상 아이템의 레이어링을 최대한 정확하게 보장합니다.
-   <video controls src="../img/04_11_Modifying_Outer_Cage/Caging_03.mp4" width="100%"></video>
+   <!-- <video controls src="../img/04_11_Modifying_Outer_Cage/Caging_03.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating/Caging_03.mp4)
 
 <Alert severity = 'success'>
 이 튜토리얼의 케이지 섹션을 완료했습니다.

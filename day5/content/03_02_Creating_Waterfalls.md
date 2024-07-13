@@ -29,7 +29,8 @@
    서드 파티 텍스처 제작 도구에서 자신의 텍스처를 만들고 자신의 디자인을 따라 할 수 있습니다. 스튜디오에서 사용할 텍스처를 가져오는 방법에 대한 정보는 [Asset Manager](https://create.roblox.com/docs/projects/assets/manager)를 참조하십시오.
 
 
-<video controls src="../img/03_02_Creating_Waterfalls/Intro.mp4" width="90%"></video>
+<!-- <video controls src="../img/03_02_Creating_Waterfalls/Intro.mp4" width="90%"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Intro.mp4)
 
 ## 참조 자료 분해
 
@@ -75,7 +76,13 @@
   </figure>
 </GridContainer> -->
 
-|<video controls src="../img/03_02_Creating_Waterfalls/Cascades-MainDrop.mp4" width="100%"></video>|<video controls src="../img/03_02_Creating_Waterfalls/Cascades-SecondDrop.mp4" width="100%"></video>|
+<!-- |<video controls src="../img/03_02_Creating_Waterfalls/Cascades-MainDrop.mp4" width="100%"></video>|<video controls src="../img/03_02_Creating_Waterfalls/Cascades-SecondDrop.mp4" width="100%"></video>|
+|---|---|
+|주요 낙하|두 번째 낙하|
+
+또한 폭포는 하강하면서 물이 분산되기 때문에 다양한 속도로 떨어지는 폭포 층을 자주 가지고 있습니다. 이 원리를 설명하기 위해 샘플은 다양한 속도와 길이로 `Beam` 객체를 사용하여 여러 개의 원활한 텍스처를 렌더링합니다. 이는 주요 낙하에 더 현실적인 낙하 행동을 제공할 뿐만 아니라 폭포가 깊이와 부피를 가진 것처럼 보이도록 착시를 만들어 내기 때문에 2D 이미지임에도 불구하고 현실감을 더해줍니다. -->
+
+|[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Cascades-MainDrop.mp4)|[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Cascades-SecondDrop.mp4)|
 |---|---|
 |주요 낙하|두 번째 낙하|
 
@@ -92,7 +99,11 @@
   </figure>
 </GridContainer> -->
 
-|<video controls src="../img/03_02_Creating_Waterfalls/Cascades-MainDrop.mp4" width="100%"></video>|<video controls src="../img/03_02_Creating_Waterfalls/Cascades-Unnatural.mp4" width="100%"></video>|
+<!-- |<video controls src="../img/03_02_Creating_Waterfalls/Cascades-MainDrop.mp4" width="100%"></video>|<video controls src="../img/03_02_Creating_Waterfalls/Cascades-Unnatural.mp4" width="100%"></video>|
+|---|---|
+|이 폭포는 물이 다양한 속도로 하강하고 분산되기 때문에 자연스럽게 보입니다.|이 폭포는 물이 같은 속도로 하강하고 분산되기 때문에 비자연스럽게 보입니다.| -->
+
+|[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Cascades-MainDrop.mp4)|[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Cascades-Unnatural.mp4)|
 |---|---|
 |이 폭포는 물이 다양한 속도로 하강하고 분산되기 때문에 자연스럽게 보입니다.|이 폭포는 물이 같은 속도로 하강하고 분산되기 때문에 비자연스럽게 보입니다.|
 
@@ -166,7 +177,8 @@
 
          1. 각 파트를 스케일하여 텍스처가 유출 수영장의 너비를 덮도록 합니다. 이제 유출이 모든 각도에서 절벽 가장자리로 흐르는 것처럼 보입니다.
 
-      <video controls src="../img/03_02_Creating_Waterfalls/Cascades-1H.mp4" width="90%"></video>
+      <!-- <video controls src="../img/03_02_Creating_Waterfalls/Cascades-1H.mp4" width="90%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Cascades-1H.mp4)
 
 1. 주요 낙하에서 빠르게 흐르는 폭포를 생성합니다.
    1. **탐색기** 창에서 **작업공간**에 **폴더**를 생성하여 모든 폭포 객체를 포함시키고, 폴더 이름을 **Cascades**로 변경합니다.
@@ -219,7 +231,8 @@
             <img src="../img/03_02_Creating_Waterfalls/Cascades-2G9.png" alt="" width="80%" />
          3. **ZOffset**를 `2`로 설정하여 텍스처를 절벽에서 약간 떨어지도록 합니다.
          4. **FaceCamera**를 활성화하여 플레이어가 물에서 멀리 떨어져도 폭포가 보이도록 합니다.
-      <video controls src="../img/03_02_Creating_Waterfalls/Cascades-2G11.mp4" width="90%"></video>
+      <!-- <video controls src="../img/03_02_Creating_Waterfalls/Cascades-2G11.mp4" width="90%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Cascades-2G11.mp4)
 
 1. 주요 낙하의 느리게 흐르는 폭포를 생성합니다.
    1. **FastDrop**을 복제한 후, 복제된 빔의 이름을 **SlowDrop**으로 변경합니다.
@@ -231,11 +244,13 @@
          3. **TextureSpeed**를 `1`로 설정하여 텍스처가 덜 빠르게 흐르도록 합니다.
          4. **ZOffset**를 `0`로 설정하여 텍스처가 절벽 가장자리에서 직접 흐르도록 합니다.
 
-      <video controls src="../img/03_02_Creating_Waterfalls/Cascades-3.mp4" width="90%"></video>
+      <!-- <video controls src="../img/03_02_Creating_Waterfalls/Cascades-3.mp4" width="90%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Cascades-3.mp4)
 
 2. **탐색기** 창에서 **Outflow** 폴더의 모든 블록 파트를 선택한 다음, **속성** 창에서 **Transparency**를 `1`로 설정하여 블록을 보이지 않게 만듭니다.
 
-      <video controls src="../img/03_02_Creating_Waterfalls/Cascades-Final.mp4" width="90%"></video>
+      <!-- <video controls src="../img/03_02_Creating_Waterfalls/Cascades-Final.mp4" width="90%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Cascades-Final.mp4)
 
 ## 물보라 설정
 
@@ -301,7 +316,8 @@
       1. **LightEmission**을 `0.5`로 설정하여 입자를 밝게 만듭니다.
       1. **LightInfluence**를 `0.1`으로 설정하여 환경 조명이 입자 색상에 미치는 영향을 크게 줄입니다.
 
-      <video controls src="../img/03_02_Creating_Waterfalls/Splashes-4.mp4" width="90%"></video>
+      <!-- <video controls src="../img/03_02_Creating_Waterfalls/Splashes-4.mp4" width="90%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Splashes-4.mp4)
 
 1. 주요 낙하의 폭포가 낙하 수영장에 충돌하는 지점에 물방울을 생성합니다.
    1. **SplashDense**를 복제한 후, 이름을 **SplashDroplets**로 변경합니다.
@@ -324,11 +340,13 @@
       3. **Lifetime**을 `0.15, 0.6`으로 설정하여 각 입자의 수명을 150~600 밀리초 사이로 무작위로 설정합니다.
       4. **Rate**를 `20`으로 설정하여 초당 20개의 입자를 방출합니다.
 
-      <video controls src="../img/03_02_Creating_Waterfalls/Splashes-5.mp4" width="90%"></video>
+      <!-- <video controls src="../img/03_02_Creating_Waterfalls/Splashes-5.mp4" width="90%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Splashes-5.mp4)
 
 2. **탐색기** 창에서 **Splashes** 폴더의 모든 블록 파트를 선택한 다음, **속성** 창에서 **Transparency**를 `1`로 설정하여 블록을 보이지 않게 만듭니다.
 
-      <video controls src="../img/03_02_Creating_Waterfalls/Splashes-Final.mp4" width="90%"></video>
+      <!-- <video controls src="../img/03_02_Creating_Waterfalls/Splashes-Final.mp4" width="90%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Splashes-Final.mp4)
 
 ## 백수 설정
 
@@ -391,7 +409,8 @@
       1. **LightEmission**을 `0.6`로 설정하여 입자를 밝게 만듭니다.
       1. **LightInfluence**를 `0.1`으로 설정하여 환경 조명이 입자 색상에 미치는 영향을 크게 줄입니다.
 
-      <video controls src="../img/03_02_Creating_Waterfalls/WW-4.mp4" width="90%"></video>
+      <!-- <video controls src="../img/03_02_Creating_Waterfalls/WW-4.mp4" width="90%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/WW-4.mp4)
 
 1. 주요 유출이 주변 바위에 충돌하는 지점의 더 소용돌이치는 백수를 생성합니다.
    1. **GentleWW**를 복제한 후, 이름을 **TurbulentWW**로 변경합니다.
@@ -415,11 +434,13 @@
       5. **Speed**를 `5, 6`로 설정하여 각 입자를 초당 5~6 스터드 사이로 무작위로 방출합니다.
       6. **Acceleration**을 `0, -15, 0`으로 설정하여 중력을 시뮬레이션하고 입자를 아래로 당깁니다.
 
-      <video controls src="../img/03_02_Creating_Waterfalls/WW-5.mp4" width="90%"></video>
+      <!-- <video controls src="../img/03_02_Creating_Waterfalls/WW-5.mp4" width="90%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/WW-5.mp4)
 
 2. **탐색기** 창에서 **WhiteWater** 폴더의 모든 블록 파트를 선택한 다음, **속성** 창에서 **Transparency**를 `1`로 설정하여 블록을 보이지 않게 만듭니다.
 
-      <video controls src="../img/03_02_Creating_Waterfalls/WW-5.mp4" width="90%"></video>
+      <!-- <video controls src="../img/03_02_Creating_Waterfalls/WW-5.mp4" width="90%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/WW-5.mp4)
 
 ## 거품 설정
 
@@ -470,11 +491,13 @@
    workspace.Foam.MainDropFoam.FoamRipples.Size = NumberSequence.new{NumberSequenceKeypoint.new(0,5,0), NumberSequenceKeypoint.new(1,20,5)}
    ```
 
-      <video controls src="../img/03_02_Creating_Waterfalls/Foam-2.mp4" width="90%"></video>
+      <!-- <video controls src="../img/03_02_Creating_Waterfalls/Foam-2.mp4" width="90%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Foam-2.mp4)
 
 1. **탐색기** 창에서 **Foam** 폴더의 모든 블록 파트를 선택한 다음, **속성** 창에서 **Transparency**를 `1`로 설정하여 블록을 보이지 않게 만듭니다.
 
-      <video controls src="../img/03_02_Creating_Waterfalls/Foam-Final.mp4" width="90%"></video>
+      <!-- <video controls src="../img/03_02_Creating_Waterfalls/Foam-Final.mp4" width="90%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Foam-Final.mp4)
 
 ## 안개 설정
 
@@ -541,7 +564,8 @@
       11. **Acceleration**을 `-10, -25, -10`으로 설정하여 낙하 수영장에서 퍼지는 물보라의 영향을 시뮬레이션합니다.
       12. **Drag**를 `1.5`로 설정하여 입자의 속도가 지수적으로 감소하도록 합니다.
 
-      <video controls src="../img/03_02_Creating_Waterfalls/Mist-2.mp4" width="90%"></video>
+      <!-- <video controls src="../img/03_02_Creating_Waterfalls/Mist-2.mp4" width="90%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Mist-2.mp4)
 
 2. 낙하 수영장에서 위쪽으로 퍼지는 안개를 생성합니다.
    1. **BaseMist**를 복제한 후, 이름을 **RiseMist**로 변경합니다.
@@ -559,7 +583,8 @@
    workspace.Mist.RiseMist.Mist.Size = NumberSequence.new{NumberSequenceKeypoint.new(0,20,1), NumberSequenceKeypoint.new(1,25,5)}
    ```
 
-      <video controls src="../img/03_02_Creating_Waterfalls/Mist-3.mp4" width="90%"></video>
+      <!-- <video controls src="../img/03_02_Creating_Waterfalls/Mist-3.mp4" width="90%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Mist-3.mp4)
 
 3. 무지개를 생성합니다.
    1. **Mist**에 **블록** 파트를 삽입한 후, 이름을 **RainbowPart**로 변경합니다.
@@ -586,11 +611,13 @@
       9. **LightEmission**을 `1`로 설정하여 입자를 배경 색상과 함께 렌더링합니다. 이 단계는 텍스처 자체의 검은 배경도 제거합니다.
       10. **LightInfluence**를 `0`으로 설정하여 환경 조명이 입자 색상에 미치는 영향을 방지합니다.
 
-      <video controls src="../img/03_02_Creating_Waterfalls/Mist-4.mp4" width="90%"></video>
+      <!-- <video controls src="../img/03_02_Creating_Waterfalls/Mist-4.mp4" width="90%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Mist-4.mp4)
 
 4. **탐색기** 창에서 **Mist** 폴더의 모든 블록 파트를 선택한 다음, **속성** 창에서 **Transparency**를 `1`로 설정하여 블록을 보이지 않게 만듭니다.
 
-      <video controls src="../img/03_02_Creating_Waterfalls/Mist-Final.mp4" width="90%"></video>
+      <!-- <video controls src="../img/03_02_Creating_Waterfalls/Mist-Final.mp4" width="90%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-waterfalls/Mist-Final.mp4)
 
 ---
 ## 출처

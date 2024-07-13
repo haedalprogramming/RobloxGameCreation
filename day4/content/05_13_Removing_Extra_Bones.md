@@ -26,7 +26,8 @@
    <img src="../img/05_13_Removing_Extra_Bones/Select-Bone-Objects.png" />
 5. Head 관절 아래에서 **shift** 키를 눌러 DynamicHead를 제외한 모든 헤드 자식 관절을 선택합니다.
 6. 추가 헤드 뼈를 선택한 상태에서 뷰포트에서 마우스 오른쪽 버튼을 클릭하고 **Delete Selected Bones**를 선택합니다.
-   <video controls src="../img/05_13_Removing_Extra_Bones/Cleanup_01-1.mp4" width="100%"></video>
+   <!-- <video controls src="../img/05_13_Removing_Extra_Bones/Cleanup_01-1.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Cleanup_01-1.mp4)
 
 ---
 ## 출처

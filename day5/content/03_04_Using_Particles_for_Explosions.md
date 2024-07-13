@@ -15,9 +15,10 @@
 
 이전에, 당신은 `화산에서 나오는 연기`와 같은 연속적으로 재생되는 입자와 작업했습니다. 입자는 또한 폭발과 같은 단일 분출에서도 사용할 수 있습니다. 이 튜토리얼에서는 입자의 분출을 통해 플레이어를 죽이는 함정을 만드는 방법을 보여줍니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/03_04_Using_Particles_for_Explosions/burstParticle_finalInContext.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/using-particles-for-explosions/burstParticle_finalInContext.mp4)
 
 ## 방출기 설정
 
@@ -89,9 +90,10 @@
 
 4. **Emit** 버튼을 눌러 방출기를 테스트합니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/03_04_Using_Particles_for_Explosions/burstParticle_testParticleEmit.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/using-particles-for-explosions/burstParticle_testParticleEmit.mp4)
 
 ## 색상 및 투명도
 
@@ -173,9 +175,10 @@
 
 2. 함정에 걸어 들어가서 스크립트를 테스트합니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/03_04_Using_Particles_for_Explosions/burstParticle_genericFinal.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/using-particles-for-explosions/burstParticle_genericFinal.mp4)
 
 이 튜토리얼의 예제를 약간만 변경하면 다양한 효과를 만들 수 있습니다. 일부 대안에는 수집 가능한 물체를 모으기 위한 반짝임 또는 투사체의 충격을 나타내기 위한 폭발이 포함됩니다.
 

@@ -37,7 +37,8 @@
    2. 작업 공간에서 **이동**, **크기 조정**, **회전** 도구를 사용하여 엄격한 액세서리의 위치를 조정합니다.
    3. 실수로 다른 것을 선택한 경우, AFT 패널로 다시 클릭하여 액세서리를 다시 선택하고 변환 도구를 사용하여 조정을 계속합니다.
 
-      <video controls src="../img/03_06_Using_the_Accessory_Fitting_Tool/Fitting-Mask.mp4" width="100%"></video>
+      <!-- <video controls src="../img/03_06_Using_the_Accessory_Fitting_Tool/Fitting-Mask.mp4" width="100%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating-rigid/Fitting-Mask.mp4)
 
 6. 자산을 미리 보고 맞춘 후, **Generate MeshPart Accessory**를 선택하여 Accessory를 생성하고 탐색기에 추가합니다.
 

@@ -67,7 +67,8 @@
 7. 원래 케이지의 이름을 각각 "LongSleeve_OuterCage" 및 "LongSleeve_InnerCage"로 변경합니다.
 8. 원래 \_OuterCage 및 \_InnerCage 객체를 **숨깁니다**. 이들은 나중에 케이지 단계에서 사용합니다.
 
-   <video controls src="../img/04_01_Modeling_Setup/Modeling_00.mp4" width="100%"></video>
+   <!-- <video controls src="../img/04_01_Modeling_Setup/Modeling_00.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating/Modeling_00.mp4)
 
 ## 추가 속성 제거
 
@@ -81,7 +82,8 @@
 
 2. **colorSet1**을 선택한 상태에서 **-** 버튼을 눌러 제거합니다.
 
-   <video controls src="../img/04_01_Modeling_Setup/Modeling_01.mp4" width="100%"></video>
+   <!-- <video controls src="../img/04_01_Modeling_Setup/Modeling_01.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating/Modeling_01.mp4)
 
 ---
 ## 출처

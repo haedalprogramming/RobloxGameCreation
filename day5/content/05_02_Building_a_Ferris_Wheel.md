@@ -14,9 +14,10 @@
 
 지난 강의에서는 `HingeConstraints`를 사용하여 문을 만드는 방법을 배웠습니다. Roblox의 많은 장치들은 더 복잡한 메커니즘을 만들기 위해 여러 제약 조건을 사용합니다. 특히 여러 제약 조건을 **구동**하도록 구성할 수 있습니다. 이는 스스로 움직이게 하는 것을 의미합니다. 이 튜토리얼에서는 `HingeConstraint`를 **모터**로 구동하여 대관람차를 만드는 방법을 보여줍니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/05_02_Building_a_Ferris_Wheel/ferrisWheel-inContext.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/building-a-ferris-wheel/ferrisWheel-inContext.mp4)
 
 ## 대관람차 설정
 
@@ -101,9 +102,10 @@
 
 4. **Play**를 선택하여 대관람차 회전 동작을 테스트하고 경험을 확인합니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/05_02_Building_a_Ferris_Wheel/ferrisWheel-finalExample.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/building-a-ferris-wheel/ferrisWheel-finalExample.mp4)
 
 대관람차 바퀴의 한쪽에만 모터가 필요하며, 양쪽에 모터가 필요하지 않음을 주목하세요. 장치로 빌드할 때는 가능한 적은 제약 조건을 사용해 보세요. 이는 장치가 안정적이고 신뢰할 수 있도록 보장합니다.
 

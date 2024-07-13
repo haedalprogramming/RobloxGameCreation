@@ -54,7 +54,8 @@ Roblox Studio는 알베도 텍스처 맵에 대해 **1024 x 1024** 해상도를 
 4. 텍스처 크기를 설정합니다:
    1. 세부 텍스처 작업을 위한 더 높은 해상도로 **2048** 또는 **4096**을 사용합니다.
    2. 기본 Roblox 지원 해상도로 **1024**를 사용합니다.
-      <video controls src="../img/05_07_Texturing_Setup/Texturing_09.mp4" width="100%"></video>
+      <!-- <video controls src="../img/05_07_Texturing_Setup/Texturing_09.mp4" width="100%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Texturing_09.mp4)
 
 ---
 ## 출처

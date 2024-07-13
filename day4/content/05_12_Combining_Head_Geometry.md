@@ -42,7 +42,8 @@
    
 
 2. Object 모드에서 Viewport를 오른쪽 클릭하고 **Join**을 선택합니다. 객체가 단일 **Head_Geo**로 결합됩니다.
-   <video controls src="../img/05_12_Combining_Head_Geometry/Cleanup_01.mp4" width="100%"></video>
+   <!-- <video controls src="../img/05_12_Combining_Head_Geometry/Cleanup_01.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Cleanup_01.mp4)
 
 ---
 ## 출처

@@ -14,7 +14,8 @@
 
 **깜박이는 조명**은 환경의 분위기를 조성하는 데 강력한 도구입니다. 예를 들어, 일정한 밝기의 조명이 있는 집은 따뜻하고 환영받는 느낌을 줄 수 있지만, 같은 집의 복도에 깜박이는 조명을 추가하면 으스스한 분위기를 조성하고 앞에 있을지도 모를 위험을 암시할 수 있습니다. 다양한 조명 소스를 전략적으로 모델링하고 스크립팅함으로써 환경 이야기의 깊이를 더할 수 있습니다.
 
-<video controls src="../img/02_03_Creating_Flickering_Lights/Overview.mp4" width="50%"></video>
+<!-- <video controls src="../img/02_03_Creating_Flickering_Lights/Overview.mp4" width="50%"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-flickering-lights/Overview.mp4)
 
 모든 3D 창작과 마찬가지로 특정 목표를 달성하는 여러 가지 방법이 있습니다. 이 가이드에서는 Studio에서 사용할 수 있는 도구와 방법만을 사용하여 몇 가지 기본 에셋으로 깜박이는 조명 애니메이션을 빠르게 만드는 방법을 배울 수 있습니다. 여기에는 자식 `MeshParts`를 포함하는 은행원의 램프 모델 `.rbxm` 파일이 포함되어 있으며, 이를 사용자 경험에 맞게 사용자 정의할 수 있습니다.
 
@@ -183,7 +184,8 @@ end)
 
 시간에 따른 이러한 속성의 변경은 아래의 깜박이는 효과를 가져옵니다.
 
-<video controls src="../img/02_03_Creating_Flickering_Lights/Scripting-Light-Flicker.mp4" width="80%"></video>
+<!-- <video controls src="../img/02_03_Creating_Flickering_Lights/Scripting-Light-Flicker.mp4" width="80%"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-flickering-lights/Scripting-Light-Flicker.mp4)
 
 ---
 ## 출처

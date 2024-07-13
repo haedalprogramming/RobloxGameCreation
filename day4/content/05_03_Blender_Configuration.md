@@ -95,10 +95,11 @@ Blender에서 캐릭터의 피부 톤을 미리 보려면:
 3. 노드 패널에서 **객체**가 선택되어 있는지 확인합니다.
 4. **Mix** 노드에 연결된 **PartColor** 노드를 찾습니다.
 5. 노드에서 색상과 값을 선택하여 참조 사용자 지정 피부 톤을 적용합니다.
-   <video
+   <!-- <video
    controls
    src="../img/05_03_Blender_Configuration/Color_Picker_01.mp4"
-   width="100%"></video>
+   width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Color_Picker_01.mp4)
 
 #### 내보내기 설정
 

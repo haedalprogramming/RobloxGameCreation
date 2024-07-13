@@ -28,12 +28,14 @@
    2. 색상 선택기에서 그림자에 중립적인 **어두운** 색조를 선택합니다.
 
 3. 캐릭터의 얼굴 특징, 예를 들어 콧구멍, 주름, 귀, 턱 등에 텍스처를 적용합니다. 텍스처 해상도가 다시 조정되면 페인팅된 텍스처가 표면과 부드럽게 블렌딩됩니다.
-   <video controls src="../img/05_09_Texturing_Face/Texturing_10.mp4" width="100%"></video>
+   <!-- <video controls src="../img/05_09_Texturing_Face/Texturing_10.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Texturing_10.mp4)
 
 4. 완료되면 텍스처 해상도를 다시 **1024 x 1024**로 조정합니다:
    1. 왼쪽 Paint 창에서 **Image** > **Resize**를 선택합니다.
    2. 텍스처 크기를 다시 **1024 x 1024**로 설정합니다.
-      <video controls src="../img/05_09_Texturing_Face/Texturing_11.mp4" width="100%"></video>
+      <!-- <video controls src="../img/05_09_Texturing_Face/Texturing_11.mp4" width="100%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Texturing_11.mp4)
 
 최종 결과물은 캐릭터의 특징을 돋보이게 하고 다양한 사용자 지정 피부 톤과 잘 어울리는 다양한 얼굴 텍스처를 포함해야 합니다. 주름, 흉터, 먼지/얼룩 등 피부에 기대할 수 있는 다양한 표면을 텍스처링하는 방법을 탐색해 보세요. 여러 피부 톤 사이에서 텍스처를 확인하여 다양한 피부 유형과 어울리는지 확인해야 합니다.
 

@@ -33,9 +33,10 @@
 
 기본적으로 Roblox 캐릭터는 달리기, 등반, 점프와 같은 일반 애니메이션을 포함합니다. 첫 번째 예제에서는 기본 달리기 애니메이션을 더 독특한 애니메이션으로 교체하는 스크립트를 작성합니다. 연습할 달리기 애니메이션이 없다면 제공된 예제 애니메이션을 사용할 수 있습니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/01_02_Scripting_Avatar_Animations/Using-Animations-FinalDefaultRunExample.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/scripting-avatar-animations/Using-Animations-FinalDefaultRunExample.mp4)
 
 ### 스크립트 설정
 
@@ -187,9 +188,10 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 4. 게임을 테스트하고 기본 달리기 애니메이션이 변경되었는지 확인합니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/01_02_Scripting_Avatar_Animations/Using-Animations-FinalDefaultRunExample.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/scripting-avatar-animations/Using-Animations-FinalDefaultRunExample.mp4)
 
 ## 애니메이션 재생
 
@@ -197,9 +199,10 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 다음 스크립트에서는 플레이어가 버튼을 누를 때마다 충격 애니메이션이 재생되며 애니메이션이 끝날 때까지 플레이어를 마비시킵니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/01_02_Scripting_Avatar_Animations/Using-Animations-FinalEventAnimation.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/scripting-avatar-animations/Using-Animations-FinalEventAnimation.mp4)
 
 ### 설정
 
@@ -350,9 +353,10 @@ proximityPrompt.Triggered:Connect(onShockTrigger)
 
 3. 게임을 테스트하여 부품에 다가가 <kbd>E</kbd>를 눌러 충격을 받습니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/01_02_Scripting_Avatar_Animations/Using-Animations-FinalEventAnimation.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/scripting-avatar-animations/Using-Animations-FinalEventAnimation.mp4)
 
 이 스크립트의 프레임워크는 다양한 게임 상황에 쉽게 적용할 수 있습니다. 예를 들어, 플레이어가 함정 부품을 터치할 때마다 특수 애니메이션을 재생하거나 팀이 게임 라운드를 이길 때마다 애니메이션을 재생해 보세요.
 

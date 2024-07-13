@@ -34,7 +34,8 @@
 7. 부착 지점을 선택합니다.
 8. **Edit** 모드로 전환합니다.
 9. Grab 도구를 사용하여 부착 지점을 y축을 따라 수직으로 위치시켜 머리에 약 절반 정도 매립되도록 합니다.
-   <video controls muted src="../img/05_14_Verifying_Attachment_Placement/Cleanup_02.mp4" width="100%"></video>
+   <!-- <video controls muted src="../img/05_14_Verifying_Attachment_Placement/Cleanup_02.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Cleanup_02.mp4)
 
 ---
 ## 출처

@@ -22,9 +22,10 @@
 
 이전 튜토리얼에서는 [사라지는 플랫폼](./02_03_Fading_Trap.md)과 [치명적인 용암](./02_02_Deadly_Lava.md)을 포함한 다양한 경험 기능을 만들었습니다. 이번 튜토리얼에서는 이러한 기능을 통합하여 사용자가 누가 가장 오래 살아남는지 경쟁할 수 있는 플레이 가능한 경험을 만듭니다. 사용자가 살아남는 매 순간마다 점수가 추가됩니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
 	<source src="../img/02_04_Scoring_Points/finishedScoringPointsSolo.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/scoring-points/finishedScoringPointsSolo.mp4)
 
 ## 설정하기
 
@@ -193,9 +194,10 @@ end
 
 경험을 테스트하면 리더보드에 플레이어의 점수가 매초 1씩 증가하는 것을 볼 수 있습니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
 	<source src="../img/02_04_Scoring_Points/leaderboardCounting.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/scoring-points/leaderboardCounting.mp4)
 
 ## 캐릭터 듣기
 

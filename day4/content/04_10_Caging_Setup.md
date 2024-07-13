@@ -44,7 +44,8 @@
 4. OuterCage 객체를 선택하고, 오브젝트 속성으로 이동하여 **와이어프레임**을 활성화합니다. 이는 메쉬를 쉽게 시각화하고 접근하는 데 도움이 됩니다.
    <img src="../img/04_10_Caging_Setup/Caging-Outer-Cage-Properties.png" />
 
-<video controls src="../img/04_10_Caging_Setup/Caging_01.mp4" width="100%"></video>
+<!-- <video controls src="../img/04_10_Caging_Setup/Caging_01.mp4" width="100%"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating/Caging_01.mp4)
 
 ---
 ## 출처

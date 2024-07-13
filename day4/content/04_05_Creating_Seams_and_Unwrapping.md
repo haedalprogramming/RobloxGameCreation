@@ -50,7 +50,8 @@
 3. <kbd>Alt</kbd> 키를 누른 상태에서 셔츠의 중앙 수직 가장자리를 클릭합니다. 감지된 가장자리가 강조 표시됩니다.
 4. 완전한 가장자리가 선택되면 **오른쪽 클릭**하고 **Make Seam**을 선택합니다. 모델의 심을 나타내기 위해 가장자리가 강조 표시됩니다.
 5. **3-4단계를 반복**하여 메시 전체에 연속적인 심을 만듭니다.
-   <video controls src="../img/04_05_Creating_Seams_and_Unwrapping/Texturing_01.mp4" width="100%"></video>
+   <!-- <video controls src="../img/04_05_Creating_Seams_and_Unwrapping/Texturing_01.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating/Texturing_01.mp4)
 
 ## UV 언래핑
 
@@ -68,7 +69,8 @@
 2. 뷰포트 상단에서 **UV** > **Unwrap**을 선택합니다.
 3. **Texture Paint** 모드로 전환하면, 객체를 선택했을 때 왼쪽 창에 UV가 표시됩니다.
 
-   <video controls src="../img/04_05_Creating_Seams_and_Unwrapping/Texturing_02.mp4" width="100%"></video>
+   <!-- <video controls src="../img/04_05_Creating_Seams_and_Unwrapping/Texturing_02.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating/Texturing_02.mp4)
 
 ---
 ## 출처

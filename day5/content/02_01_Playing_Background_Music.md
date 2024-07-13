@@ -14,9 +14,10 @@
 
 Roblox에서 오디오는 `Sound` 객체를 사용하여 생성됩니다. 사운드는 폭포 소리와 같이 위치 기반일 수도 있고 모든 플레이어에게 보편적일 수도 있습니다. 이 튜토리얼에서는 배경 음악을 재생하는 보편적인 사운드를 만드는 방법을 보여줍니다.
 
-<video controls>
+<!-- <video controls>
    <source src="../img/02_01_Playing_Background_Music/introToSound_bgMusic_web.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/playing-background-music/introToSound_bgMusic_web.mp4)
 
 ## 음악 재생하기
 

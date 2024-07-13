@@ -26,7 +26,8 @@
    서드 파티 모델링 도구에서 자신의 자산을 만들고 자신의 디자인을 따라 할 수 있습니다. 스튜디오에서 사용할 모델을 내보내는 방법에 대한 정보는 [내보내기 요구 사항](https://create.roblox.com/docs/art/modeling/export-requirements)을 참조하십시오.
 
 
-<video controls src="../img/03_01_Creating_Lasers_Beams/Script.mp4" width="90%"></video>
+<!-- <video controls src="../img/03_01_Creating_Lasers_Beams/Script.mp4" width="90%"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/laser-traps-with-beams/Script.mp4)
 
 ## 블래스터 자산 가져오기
 
@@ -134,7 +135,8 @@
       1. **TextureSpeed**를 `2`로 설정하여 레이저를 더 빠르게 애니메이션합니다.
       1. **FaceCamera**를 활성화하여 플레이어가 레이저를 보는 각도에 관계없이 레이저가 보이도록 합니다.
 
-   <video controls src="../img/03_01_Creating_Lasers_Beams/Beam-3.mp4" width="80%"></video>
+   <!-- <video controls src="../img/03_01_Creating_Lasers_Beams/Beam-3.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/laser-traps-with-beams/Beam-3.mp4)
 
 
    커스터마이징할 수 있는 모든 빔 속성에 대한 자세한 정보는 [빔](https://create.roblox.com/docs/effects/beams)을 참조하십시오.

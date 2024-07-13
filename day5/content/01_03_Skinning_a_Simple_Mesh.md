@@ -85,7 +85,8 @@ Blender에 모델을 가져오려면:
 
 1. 3D 뷰포트 상단에서 **추가** &rarr; **뼈대**를 선택합니다.
 
-   <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Adding-Armature.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Adding-Armature.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/Adding-Armature.mp4)
 
 2. 뼈대를 더 잘 시각화하기 위해, **속성 편집기**의 왼쪽 탐색에서 **뼈대 객체 속성**으로 이동합니다.
 
@@ -93,7 +94,8 @@ Blender에 모델을 가져오려면:
 
    <img src="../img/01_03_Skinning_a_Simple_Mesh/Bone-Visualization.png" width="451" />
 
-   <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Bone-In-Front.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Bone-In-Front.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/Bone-In-Front.mp4)
 
 ### 뼈 위치 조정
 
@@ -106,7 +108,8 @@ Blender에 모델을 가져오려면:
 3. **뼈의 상단**을 클릭하고 <kbd>G</kbd>를 누릅니다. 뼈의 상단이 커서와 함께 움직입니다.
 4. 이 뼈를 모델의 내부 중심에 맞추고 클릭하여 뼈의 위치를 설정합니다.
 
-   <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Position-First-Bone.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Position-First-Bone.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/Position-First-Bone.mp4)
 
 5. 마우스의 스크롤 휠을 눌러 메시 객체 주위로 카메라를 이동하여 뼈가 메시 객체 내에 중심에 있는지 다양한 뷰와 각도에서 확인합니다.
 
@@ -119,17 +122,20 @@ Blender에 모델을 가져오려면:
 1. **편집 모드**에서 뼈 끝부분을 클릭합니다.
 2. <kbd>E</kbd>를 누르고 마우스를 위로 드래그합니다. 이것은 원래 루트 뼈에서 추가 뼈를 확장합니다.
 
-   <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Extrude-Second-Bone.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Extrude-Second-Bone.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/Extrude-Second-Bone.mp4)
 
 3. 두 번째 뼈에 대해 이 과정을 반복합니다.
 
-   <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Extrude-Last-Bone.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Extrude-Last-Bone.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/Extrude-Last-Bone.mp4)
 
 4. 마우스의 스크롤 휠을 눌러 메시 객체 주위로 카메라를 이동하여 뼈가 메시 객체 내에 있는지 다양한 뷰와 각도에서 확인합니다. 필요에 따라 [뼈의 위치를 조정](#뼈-위치-조정)합니다.
 5. 아웃라이너에서 **뼈대** 객체를 확장합니다. 뼈대의 뼈 계층 구조가 표시됩니다.
 6. 아웃라이너에서 각 뼈의 이름을 두 번 클릭하여 **이름을 변경**합니다. 뼈 객체 이름은 Studio로 메시 객체를 가져올 때 동일하게 유지됩니다.
 
-   <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Renaming-Bones.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Renaming-Bones.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/Renaming-Bones.mp4)
 
 ## 뼈대 종속
 
@@ -145,7 +151,8 @@ Blender에 모델을 가져오려면:
 4. 뷰포트에서 **메시 객체**를 마우스 오른쪽 버튼으로 클릭합니다. 팝업 메뉴가 표시됩니다.
 5. **종속**을 선택한 다음 **자동 가중치**를 선택합니다.
 
-   <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Parenting-Armature.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Parenting-Armature.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/Parenting-Armature.mp4)
 
 ## 웨이트 페인팅
 
@@ -173,7 +180,8 @@ Blender의 **웨이트 페인트** 모드에서 **그리기**, **추가** 또는
 2. **속성 편집기**의 왼쪽 탐색에서 **객체 데이터 속성**으로 이동합니다.
 3. **표시 방식** 값을 **막대**로 변경합니다.
 
-   <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Stick-Visualization.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Stick-Visualization.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/Stick-Visualization.mp4)
 
 #### 자동 정규화
 
@@ -192,7 +200,8 @@ Blender의 **웨이트 페인트** 모드에서 **그리기**, **추가** 또는
 4. 뷰포트 오른쪽에서 **도구** 탭을 클릭합니다.
 5. **옵션** 섹션에서 **자동 정규화**를 활성화합니다.
 
-   <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Enabling-Autonormalize.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Enabling-Autonormalize.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/Enabling-Autonormalize.mp4)
 
 #### 투영 브러시
 
@@ -207,7 +216,8 @@ Blender의 **웨이트 페인트** 모드에서 **그리기**, **추가** 또는
 5. **고급** 섹션을 확장한 다음 **전면만** 옵션을 해제합니다.
 6. **폴오프** 섹션을 확장한 다음 **투영**을 선택합니다.
 
-   <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Setting-Projected-Brush.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Setting-Projected-Brush.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/Setting-Projected-Brush.mp4)
 
 ### 영향 페인팅
 
@@ -224,15 +234,15 @@ Blender의 **웨이트 페인트** 모드에서 **그리기**, **추가** 또는
 3. <kbd>Shift</kbd>를 누르고 하단 뼈를 클릭합니다.
 4. 브러시 도구를 사용하여 뼈의 밑동과 나무의 나머지 부분에 빨간색 영향을 페인팅합니다.
 
-   <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Paint-Bottom-Bone.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Paint-Bottom-Bone.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/Paint-Bottom-Bone.mp4)
 
-   <Alert severity="info">
    브러시의 반경을 도구 탭에서 조정하거나 <kbd>F</kbd>를 누른 상태에서 마우스를 드래그하여 크기를 변경할 수 있습니다.
-   </Alert>
 
 5. 뼈가 강조 표시된 상태에서 <kbd>R</kbd>을 눌러 회전을 테스트하여 뼈가 전체 모델에 영향을 주는지 확인합니다. 올바르게 영향을 받지 않는 정점을 페인팅하여 영향을 적용합니다.
 
-   <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Test-Bottom-Bone.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Test-Bottom-Bone.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/Test-Bottom-Bone.mp4)
 
 #### 중간 뼈
 
@@ -247,7 +257,8 @@ Blender의 **웨이트 페인트** 모드에서 **그리기**, **추가** 또는
 5. 중간 뼈에서 시작하여 나무의 중간 및 상단 부분을 페인팅합니다.
 6. <kbd>R</kbd>을 눌러 뼈를 회전시키고 다양한 각도에서 영향을 테스트합니다.
 
-   <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Paint-Middle-Bone.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Paint-Middle-Bone.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/Paint-Middle-Bone.mp4)
 
 #### 상단 뼈
 
@@ -264,11 +275,13 @@ Blender의 **웨이트 페인트** 모드에서 **그리기**, **추가** 또는
 5. 상단 뼈에서 시작하여 나무의 상단 부분을 페인팅합니다.
 6. <kbd>R</kbd>을 눌러 뼈를 회전시키고 다양한 각도에서 영향을 테스트합니다.
 
-   <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Paint-Top-Bone.mp4" width="80%"></video>
+   <!-- <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Paint-Top-Bone.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/Paint-Top-Bone.mp4)
 
 각 뼈를 웨이트 페인팅한 후, 이 나무의 각 부분은 하단, 중간 또는 상단 뼈에 의해 영향을 받게 됩니다. 하단 뼈는 나무의 밑동을 완전히 제어하고 중간 및 상단 뼈는 가지와 잎에 감소된 영향을 미칩니다.
 
-<video controls src="../img/01_03_Skinning_a_Simple_Mesh/Test-Bones.mp4" width="80%"></video>
+<!-- <video controls src="../img/01_03_Skinning_a_Simple_Mesh/Test-Bones.mp4" width="80%"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/Test-Bones.mp4)
 
 ### 테스트
 
@@ -284,11 +297,12 @@ Blender는 웨이트 페인팅 모드로 전환하기 전에 객체 모드에서
 4. <kbd>Shift</kbd>를 누르고 테스트하려는 뼈를 클릭한 다음 <kbd>R</kbd>을 눌러 회전을 테스트합니다.
 5. <kbd>Alt</kbd><kbd>A</kbd> (<kbd>⌥</kbd><kbd>A</kbd>)를 눌러 현재 뼈를 선택 취소한 다음 다른 뼈를 다시 선택하고 테스트합니다.
 
-   <video controls loop muted src="../img/01_03_Skinning_a_Simple_Mesh/Weight-Painting-Example-Gradient.mp4" width="80%"></video>
+   <!-- <video controls loop muted src="../img/01_03_Skinning_a_Simple_Mesh/Weight-Painting-Example-Gradient.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/Weight-Painting-Example-Gradient.mp4)
 
-<Alert severity="info">
+
    선택된 뼈를 중립으로 되돌리려면 <kbd>Alt</kbd>+<kbd>R</kbd>을 누르십시오. 회전하는 동안 마우스의 스크롤 휠을 눌러 회전 축을 변경할 수도 있습니다. Studio에서 사용할 애니메이션과 포즈에서 기대되는 위치를 우선 테스트하는 것이 좋습니다.
-</Alert>
+
 
 S1 나무 모델은 이제 스킨 메시가 되었으며, Studio로 [내보내기](https://create.roblox.com/docs/art/modeling/export-requirements)할 준비가 되었습니다. <a href="https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/MapleTreeS1.blend" download>Blender 프로젝트 파일</a> 및 [최종 내보내기](https://prod.docsiteassets.roblox.com/assets/modeling/skinned-meshes/MapleLeafTree.fbx) (`.fbx`)를 참조용으로 사용할 수 있습니다.
 

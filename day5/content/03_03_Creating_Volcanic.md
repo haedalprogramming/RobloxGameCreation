@@ -235,10 +235,13 @@ Studio는 이 기술에 사용할 수 있는 두 가지 고급 조명 소스를 
   </figure>
 </GridContainer> -->
 
-|<img src="../img/03_03_Creating_Volcanic/Without-SurfaceRipples.jpg" alt="표면 물결이 없는 칼데라의 위에서 본 모습" width="100%"/>|<video controls src="../img/03_03_Creating_Volcanic/With-SurfaceRipples.mp4" alt="표면 물결이 있는 칼데라의 위에서 본 모습" width="100%"></video>|
+<!-- |<img src="../img/03_03_Creating_Volcanic/Without-SurfaceRipples.jpg" alt="표면 물결이 없는 칼데라의 위에서 본 모습" width="100%"/>|<video controls src="../img/03_03_Creating_Volcanic/With-SurfaceRipples.mp4" alt="표면 물결이 있는 칼데라의 위에서 본 모습" width="100%"></video>|
+|---|---|
+|표면 물결 없음|표면 물결 있음| -->
+
+|<img src="../img/03_03_Creating_Volcanic/Without-SurfaceRipples.jpg" alt="표면 물결이 없는 칼데라의 위에서 본 모습" width="100%"/>|[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-volcanoes/With-SurfaceRipples.mp4)|
 |---|---|
 |표면 물결 없음|표면 물결 있음|
-
 
 이 과정을 시연하기 위해 샘플은 칼데라의 기저 아래 약간에 위치한 `ParticleEmitter` 객체를 사용하여 평평하고 밝은 입자를 어두운 배경 위에 천천히 확장하고 수축시킵니다. 이를 통해 입자가 매끄럽고 연속적으로 끓는 용암의 행동을 모방할 수 있게 합니다.
 
@@ -328,7 +331,8 @@ Studio는 이 기술에 사용할 수 있는 두 가지 고급 조명 소스를 
       12. **빛 영향**을 `0`으로 설정하여 환경 조명이 입자 색상에 미치는 영향을 크게 줄입니다.
       13. **밝기**를 `15`로 설정하여 방출기에서 나오는 빛을 스케일합니다.
 
-   <video controls src="../img/03_03_Creating_Volcanic/With-SurfaceRipples.mp4" alt="표면 물결이 있는 칼데라의 위에서 본 모습" width="90%"></video>
+   <!-- <video controls src="../img/03_03_Creating_Volcanic/With-SurfaceRipples.mp4" alt="표면 물결이 있는 칼데라의 위에서 본 모습" width="90%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-volcanoes/With-SurfaceRipples.mp4)
 
 ### 불꽃
 
@@ -393,7 +397,8 @@ Studio는 이 기술에 사용할 수 있는 두 가지 고급 조명 소스를 
    12. **빛 영향**을 `0`으로 설정하여 환경 조명이 입자 색상에 미치는 영향을 크게 줄입니다.
    13. **밝기**를 `20`으로 설정하여 방출기에서 나오는 빛을 스케일합니다.
 
-   <video controls src="../img/03_03_Creating_Volcanic/Embers-5.mp4" alt="표면이 물결치고 불꽃을 방출하는 칼데라의 앞쪽 보기" width="90%"></video>
+   <!-- <video controls src="../img/03_03_Creating_Volcanic/Embers-5.mp4" alt="표면이 물결치고 불꽃을 방출하는 칼데라의 앞쪽 보기" width="90%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-volcanoes/Embers-5.mp4)
 
 ### 용암 분출
 
@@ -466,7 +471,8 @@ Studio는 이 기술에 사용할 수 있는 두 가지 고급 조명 소스를 
    15. **빛 방출**을 `0.1`로 설정하여 입자를 약간 밝힙니다.
    16. **빛 영향**을 `0.25`로 설정하여 환경 조명이 입자 색상에 미치는 영향을 크게 줄입니다.
 
-   <video controls src="../img/03_03_Creating_Volcanic/Splashes-5.mp4" alt="표면이 물결치고 불꽃과 웹 분출을 방출하는 칼데라의 앞쪽 보기" width="90%"></video>
+   <!-- <video controls src="../img/03_03_Creating_Volcanic/Splashes-5.mp4" alt="표면이 물결치고 불꽃과 웹 분출을 방출하는 칼데라의 앞쪽 보기" width="90%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-volcanoes/Splashes-5.mp4)
 
 6. **DenseSplashes**를 복제한 다음, **속성** 창에서 추가 용암 분출에 변화를 주기 위해 다음 속성을 수정합니다.
    1. **이름**을 **DenseSplashes**로 설정합니다.
@@ -485,7 +491,8 @@ Studio는 이 기술에 사용할 수 있는 두 가지 고급 조명 소스를 
 
    5. **비율**을 `0.289`로 설정하여 약 4초마다 입자를 방출합니다.
 
-   <video controls src="../img/03_03_Creating_Volcanic/Splashes-6.mp4" alt="표면이 물결치고 불꽃과 웹 분출, 고밀도 분출을 방출하는 칼데라의 앞쪽 보기" width="90%"></video>
+   <!-- <video controls src="../img/03_03_Creating_Volcanic/Splashes-6.mp4" alt="표면이 물결치고 불꽃과 웹 분출, 고밀도 분출을 방출하는 칼데라의 앞쪽 보기" width="90%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-volcanoes/Splashes-6.mp4)
 
 7. 칼데라를 추가 분출로 채웁니다.
    1. **SplashingLava**에 **ParticleEmitter**를 삽입한 다음, 이름을 **SplashFill**로 변경합니다.
@@ -520,7 +527,8 @@ Studio는 이 기술에 사용할 수 있는 두 가지 고급 조명 소스를 
       16. **빛 영향**을 `0`으로 설정하여 환경 조명이 입자 색상에 미치는 영향을 크게 줄입니다.
       17. **밝기**를 `8`로 설정하여 방출기에서 나오는 빛을 스케일합니다.
 
-   <video controls src="../img/03_03_Creating_Volcanic/Splashes-7.mp4" alt="표면이 물결치고 불꽃과 다양한 분출을 방출하는 칼데라의 앞쪽 보기" width="90%"></video>
+   <!-- <video controls src="../img/03_03_Creating_Volcanic/Splashes-7.mp4" alt="표면이 물결치고 불꽃과 다양한 분출을 방출하는 칼데라의 앞쪽 보기" width="90%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-volcanoes/Splashes-7.mp4)
 
 <Alert severity = 'warning'>
 플립북과 같은 사용자 정의 텍스처가 있는 기능은 렌더링하는 데 메모리가 필요합니다. 많은 플립북을 다른 고메모리 기능과 함께 사용하면 클라이언트가 메모리가 부족할 때 자동으로 플립북을 비활성화합니다. 이는 오래된 모바일 폰에서 특히 그렇습니다. 플립북의 메모리 사용량을 줄이려면 고유한 애니메이션 입자 효과를 적게 사용하거나 해상도가 낮은 텍스처를 선택하세요.
@@ -618,7 +626,8 @@ Studio는 이 기술에 사용할 수 있는 두 가지 고급 조명 소스를 
       1. **빛 영향**을 `0`으로 설정하여 환경 조명이 빔의 색상에 영향을 미치지 않도록 합니다.
       1. **밝기**를 `8`로 설정하여 빔에서 나오는 빛을 스케일합니다.
 
-   <video controls src="../img/03_03_Creating_Volcanic/LavaFlow-7.mp4" alt="하단 층 사용자 정의 텍스처를 렌더링하는 두 개의 블록 부품이 있는 화산의 위에서 본 비스듬한 보기" width="90%"></video>
+   <!-- <video controls src="../img/03_03_Creating_Volcanic/LavaFlow-7.mp4" alt="하단 층 사용자 정의 텍스처를 렌더링하는 두 개의 블록 부품이 있는 화산의 위에서 본 비스듬한 보기" width="90%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-volcanoes/LavaFlow-7.mp4)
 
 2. **MagmaRiverBeam**에 다른 **Beam**을 삽입하고, 이름을 **Crust1**로 변경한 다음, 6단계에서와 동일한 프로세스를 사용하여 부품의 부착물을 **Crust1**에 연결합니다.
 3. 빔의 시각적 외관을 사용자 정의하여 용암 위의 껍질처럼 보이게 합니다.
@@ -642,7 +651,8 @@ Studio는 이 기술에 사용할 수 있는 두 가지 고급 조명 소스를 
 
       10. **ZOffset**을 `1`로 설정하여 텍스처가 칼데라에서 약간 떨어지도록 합니다.
 
-   <video controls src="../img/03_03_Creating_Volcanic/LavaFlow-9.mp4" alt="하단 층과 중간 층 사용자 정의 텍스처를 렌더링하는 두 개의 블록 부품이 있는 화산의 위에서 본 비스듬한 보기" width="90%"></video>
+   <!-- <video controls src="../img/03_03_Creating_Volcanic/LavaFlow-9.mp4" alt="하단 층과 중간 층 사용자 정의 텍스처를 렌더링하는 두 개의 블록 부품이 있는 화산의 위에서 본 비스듬한 보기" width="90%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-volcanoes/LavaFlow-9.mp4)
 
 4. **Crust1**을 복제하고, 이름을 **Crust2**로 변경한 다음, **속성** 창에서,
    1. **Attachment0**를 틈의 갈래 방향의 부착물로 설정합니다.
@@ -655,11 +665,13 @@ Studio는 이 기술에 사용할 수 있는 두 가지 고급 조명 소스를 
    1. **CurveSize1**을 `50`으로 설정하여 텍스처를 틈의 갈래 방향으로 곡선화합니다.
    1. **ZOffset**을 `2`로 설정하여 다른 껍질과 텍스처를 분리합니다.
 
-   <video controls src="../img/03_03_Creating_Volcanic/LavaFlow-10.mp4" alt="하단 층, 중간 층 및 상단 층 사용자 정의 텍스처를 렌더링하는 두 개의 블록 부품이 있는 화산의 위에서 본 비스듬한 보기" width="90%"></video>
+   <!-- <video controls src="../img/03_03_Creating_Volcanic/LavaFlow-10.mp4" alt="하단 층, 중간 층 및 상단 층 사용자 정의 텍스처를 렌더링하는 두 개의 블록 부품이 있는 화산의 위에서 본 비스듬한 보기" width="90%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-volcanoes/LavaFlow-10.mp4)
 
 1. **(선택 사항)** 동일한 프로세스를 사용하여 틈의 갈래 방향으로 더 많은 빔을 만들어 용암을 분기시킵니다. 텍스처를 느리게 조정하고 용암이 온도가 떨어지면서 더 어두운 색으로 변하는 것을 시뮬레이션하기 위해 속성을 조정해야 합니다.
 
-   <video controls src="../img/03_03_Creating_Volcanic/LavaFlow-11.mp4" alt="하단 층, 중간 층 및 상단 층 사용자 정의 텍스처와 분기 빔을 렌더링하는 두 개의 블록 부품이 있는 화산의 위에서 본 비스듬한 보기" width="90%"></video>
+   <!-- <video controls src="../img/03_03_Creating_Volcanic/LavaFlow-11.mp4" alt="하단 층, 중간 층 및 상단 층 사용자 정의 텍스처와 분기 빔을 렌더링하는 두 개의 블록 부품이 있는 화산의 위에서 본 비스듬한 보기" width="90%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-volcanoes/LavaFlow-11.mp4)
 
 ### 연기 기둥
 
@@ -723,7 +735,8 @@ Studio는 이 기술에 사용할 수 있는 두 가지 고급 조명 소스를 
    workspace.Caldera.SmokePlume.Smoke.Size = NumberSequence.new{NumberSequenceKeypoint.new(0,40,5), NumberSequenceKeypoint.new(1,100,15)}
    ```
 
-   <video controls src="../img/03_03_Creating_Volcanic/Plume-5.mp4" alt="완성된 화산의 비스듬한 측면 보기" width="90%"></video>
+   <!-- <video controls src="../img/03_03_Creating_Volcanic/Plume-5.mp4" alt="완성된 화산의 비스듬한 측면 보기" width="90%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-volcanoes/Plume-5.mp4)
 
 ---
 ## 출처

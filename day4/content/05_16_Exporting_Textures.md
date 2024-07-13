@@ -43,7 +43,8 @@
    <img src="../img/05_16_Exporting_Textures/Cleanup-Disconnect-Node.png" />
 6. 색상 텍스처 맵이 있는 **file26** 노드를 찾아 **Color**를 **Principled BSDF's color** 노드로 클릭하고 드래그합니다.
    <img src="../img/05_16_Exporting_Textures/Cleanup-Node-B.png" />
-   <video controls src="../img/05_16_Exporting_Textures/Exporting_01.mp4" width="100%"></video>
+   <!-- <video controls src="../img/05_16_Exporting_Textures/Exporting_01.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Exporting_01.mp4)
 
 ### 이미지 파일 분리
 

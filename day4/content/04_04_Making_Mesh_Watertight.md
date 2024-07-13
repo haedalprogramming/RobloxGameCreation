@@ -35,7 +35,8 @@
 5. <kbd>G</kbd>를 눌러 새로운 정점을 잡고 의상 메시 내부로 재배치합니다.
 6. **2-5 단계를 반복**하여 메시의 모든 내부 노출 구멍을 닫습니다.
 
-   <video controls src="../img/04_04_Making_Mesh_Watertight/Modeling_08.mp4" width="100%"></video>
+   <!-- <video controls src="../img/04_04_Making_Mesh_Watertight/Modeling_08.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating/Modeling_08.mp4)
 
 
 튜토리얼의 모델링 섹션을 완료했습니다. 원하는 경우, 이 단계의 [참조 프로젝트](https://prod.docsiteassets.roblox.com/assets/art/reference-files/checkpoint/1_LongSleeve-Modeling-Complete.blend)를 다운로드하여 작업과 비교해보세요.

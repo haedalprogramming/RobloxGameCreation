@@ -15,9 +15,10 @@
 
 사용자가 3D 공간에서 객체에 접근할 때 나타나며 사용자 입력에 따라 동작을 트리거하는 인터랙티브 근접 프롬프트를 만들 수 있습니다.
 
-<video controls muted>
+<!-- <video controls muted>
     <source src="../img/04_03_Adding_Proximity_Prompts/PromptsShowcase.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/proximity-prompts/PromptsShowcase.mp4)
 
 이 튜토리얼은 [Dungeon Delve](https://www.roblox.com/games/6749940622/Dungeon-Delve-Learn) 프로젝트를 쇼케이스로 사용합니다. 진행하기 전에 Studio에서 해당 프로젝트를 열어 따라 해 보세요.
 
@@ -90,9 +91,10 @@
 
 <img src="../img/04_03_Adding_Proximity_Prompts/ProximityPrompt-HoldDuration.png" width="320px" />
 
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/04_03_Adding_Proximity_Prompts/HoldDuration.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/proximity-prompts/HoldDuration.mp4)
 
 ## 동작 구현
 

@@ -31,7 +31,8 @@
 5. <kbd>X</kbd>를 누르고 **Vertices**를 선택하여 메시의 해당 섹션을 삭제합니다.
 6. 원하는 의상 모양이 될 때까지 **4단계 반복**합니다.
 
-   <video controls src="../img/04_02_Trimming_Clothing_Shape/Modeling_02.mp4" width="100%"></video>
+   <!-- <video controls src="../img/04_02_Trimming_Clothing_Shape/Modeling_02.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating/Modeling_02.mp4)
 
 ## 정점 추가 및 매끄럽게 하기
 
@@ -59,7 +60,8 @@
 3. **수정자 추가** > **세분화 표면 수정자**를 선택하고 기본 설정으로 **적용**을 클릭합니다.
 4. 뷰포트에서 객체를 오른쪽 클릭하고 **Shade Smooth**를 선택하여 의상의 주름을 제거합니다.
 
-   <video controls src="../img/04_02_Trimming_Clothing_Shape/Modeling_03.mp4" width="100%"></video>
+   <!-- <video controls src="../img/04_02_Trimming_Clothing_Shape/Modeling_03.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating/Modeling_03.mp4)
 
 ## 크기 조정 및 위치 설정
 
@@ -79,7 +81,8 @@
 5. <kbd>S</kbd>를 누르고 마우스를 사용하여 크기를 조정합니다. 대부분의 경우, 크기 조정은 약간의 변화만 필요합니다.
 6. <kbd>G</kbd>를 누르고 클릭하여 셔츠를 잡아당기고, 셔츠가 마네킹 위에 느슨하게 놓이도록 합니다. 이 시점에서는 셔츠가 완벽하게 맞출 필요는 없습니다.
 
-   <video controls src="../img/04_02_Trimming_Clothing_Shape/Modeling_04.mp4" width="100%"></video>
+   <!-- <video controls src="../img/04_02_Trimming_Clothing_Shape/Modeling_04.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating/Modeling_04.mp4)
 
 ---
 ## 출처

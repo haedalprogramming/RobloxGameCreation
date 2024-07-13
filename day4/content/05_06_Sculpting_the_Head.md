@@ -28,9 +28,11 @@ Blender의 다른 조각 도구를 사용할 수 있지만 모델의 정점을 �
 3. 뷰포트의 오른쪽 상단에서 다음 옵션을 설정합니다:
    1. **X-Axis Symmetry**를 활성화합니다.
    2. **Wireframe** 뷰를 활성화합니다.
-      <video controls src="../img/05_06_Sculpting_the_Head/Sculpting_01.mp4" width="100%"></video>
+      <!-- <video controls src="../img/05_06_Sculpting_the_Head/Sculpting_01.mp4" width="100%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Sculpting_01.mp4)
 4. **Mask** 도구를 사용하여 입과 눈을 덮어 예기치 않게 조각하지 않도록 합니다.
-   <video controls muted src="../img/05_06_Sculpting_the_Head/Sculpting_02.mp4" width="100%"></video>
+   <!-- <video controls muted src="../img/05_06_Sculpting_the_Head/Sculpting_02.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Sculpting_02.mp4)
 5. **Grab** 및 **Smooth** 도구를 사용하여 템플릿 머리에 다음 수정을 수행합니다:
 
    1. 머리 모양을 재구성하여 윗부분을 평평하게 하고 크게 만듭니다.
@@ -41,19 +43,23 @@ Blender의 다른 조각 도구를 사용할 수 있지만 모델의 정점을 �
       2. 각 귀를 잡아당기고 확장하여 부드럽게 연결하고 가능한 경우 정점이 비례적으로 유지되도록 합니다.
       3. Flatten 도구를 사용하여 영역을 정렬하고 평평하게 합니다.
       4. Elastic Deform 도구를 사용하여 여러 정점을 늘리고 당깁니다.
-         <video controls muted src="../img/05_06_Sculpting_the_Head/Sculpting_03.mp4" width="100%"></video>
+         <!-- <video controls muted src="../img/05_06_Sculpting_the_Head/Sculpting_03.mp4" width="100%"></video> -->
+         [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Sculpting_03.mp4)
 
    3. 콧등을 늘리고 눈썹 크기를 확장합니다.
-      <video controls src="../img/05_06_Sculpting_the_Head/Sculpting_04.mp4" width="100%" muted></video>
+      <!-- <video controls src="../img/05_06_Sculpting_the_Head/Sculpting_04.mp4" width="100%" muted></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Sculpting_04.mp4)
 
    4. 턱을 넓혀서 눈에 띄게 돌출되게 합니다.
-      <video controls src="../img/05_06_Sculpting_the_Head/Sculpting_06.mp4" width="100%" muted></video>
+      <!-- <video controls src="../img/05_06_Sculpting_the_Head/Sculpting_06.mp4" width="100%" muted></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Sculpting_06.mp4)
 
 6. 최종 디테일을 추가하고 주요 특징을 다듬고 강조하여 정제 작업을 수행합니다. 예를 들어:
    - 외부 및 내부 귀에 디테일 추가
    - 턱과 뺨에 더 많은 디테일 추가
    - 정점이 밀집된 영역에서 엣지 라인과 간격 개선
-     <video controls src="../img/05_06_Sculpting_the_Head/Sculpting_07.mp4" width="100%"></video>
+     <!-- <video controls src="../img/05_06_Sculpting_the_Head/Sculpting_07.mp4" width="100%"></video> -->
+     [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Sculpting_07.mp4)
 
 
 비교 참조를 위해 조각이 완료된 [이 튜토리얼 프로젝트 버전](https://prod.docsiteassets.roblox.com/assets/art/reference-files/checkpoint/1_Goblin-sculpted.blend)을 다운로드할 수 있습니다.

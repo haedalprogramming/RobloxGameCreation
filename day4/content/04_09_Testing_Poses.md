@@ -36,7 +36,8 @@
 
 5. 다양한 자연스러운 캐릭터 포즈를 시도하여 의상이 올바르게 늘어나고 맞는지 확인하십시오.
 
-   <video controls src="../img/04_09_Testing_Poses/Rigging_03.mp4" width="100%"></video>
+   <!-- <video controls src="../img/04_09_Testing_Poses/Rigging_03.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating/Rigging_03.mp4)
 
 
 튜토리얼의 리깅 섹션을 완료했습니다. 원하는 경우, 이 프로젝트의 [참조 샘플](https://prod.docsiteassets.roblox.com/assets/art/reference-files/checkpoint/3_LongSleeve-Rigging-Complete.blend)을 다운로드하여 비교할 수 있습니다.

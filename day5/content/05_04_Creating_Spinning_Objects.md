@@ -27,7 +27,8 @@
 - `HingeConstraint` 기계적 제약을 사용하여 어셈블리 내의 일부를 회전시키기
 - `ApplyAngularImpulse` 메서드를 사용하여 초기 각힘으로 어셈블리를 회전시키기
 
-<video controls src="../img/05_04_Creating_Spinning_Objects/Overview.mp4" width="90%"></video>
+<!-- <video controls src="../img/05_04_Creating_Spinning_Objects/Overview.mp4" width="90%"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-spinning-objects/Overview.mp4)
 
 
    기본 파트나 타사 모델링 도구에서 만든 메시를 사용하여 자신만의 어셈블리를 만들 수 있으며, 자신의 자산을 사용하여 따라 할 수 있습니다. Studio에서 메시를 내보내는 방법에 대한 자세한 내용은 [내보내기 요구사항](https://create.roblox.com/docs/art/modeling/export-requirements)을 참조하세요.
@@ -44,7 +45,8 @@ Roblox Studio는 실시간으로 물리적 행동을 에뮬레이트하는 실�
     <img src="../img/05_04_Creating_Spinning_Objects/Rotational-Axis.png" width="100%"/>
   </figure>
   <figure>
-    <video controls src="../img/05_04_Creating_Spinning_Objects/Rotational-Axis.mp4" width="100%"></video>
+    <!-- <video controls src="../img/05_04_Creating_Spinning_Objects/Rotational-Axis.mp4" width="100%"></video> -->
+    [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-spinning-objects/Rotational-Axis.mp4)
   </figure>
 </GridContainer>
 
@@ -52,7 +54,8 @@ Roblox Studio는 실시간으로 물리적 행동을 에뮬레이트하는 실�
 
 <GridContainer numColumns="2">
   <figure>
-    <video controls src="../img/05_04_Creating_Spinning_Objects/Stop-Propeller.mp4" width="100%"></video>
+    <!-- <video controls src="../img/05_04_Creating_Spinning_Objects/Stop-Propeller.mp4" width="100%"></video> -->
+    [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-spinning-objects/Stop-Propeller.mp4)
   </figure>
   <figure>
   </figure>
@@ -67,7 +70,8 @@ Roblox Studio는 실시간으로 물리적 행동을 에뮬레이트하는 실�
     <img src="../img/05_04_Creating_Spinning_Objects/Dirt-Friction.png" width="100%"/>
   </figure>
   <figure>
-    <video controls src="../img/05_04_Creating_Spinning_Objects/Dirt-Propeller.mp4" width="100%"></video>
+    <!-- <video controls src="../img/05_04_Creating_Spinning_Objects/Dirt-Propeller.mp4" width="100%"></video> -->
+    [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-spinning-objects/Dirt-Propeller.mp4)
   </figure>
 </GridContainer>
 
@@ -83,11 +87,13 @@ Roblox Studio는 실시간으로 물리적 행동을 에뮬레이트하는 실�
 
 <GridContainer numColumns="2">
   <figure>
-    <video controls src="../img/05_04_Creating_Spinning_Objects/Little-Triangle.mp4" width="100%"></video>
+    <!-- <video controls src="../img/05_04_Creating_Spinning_Objects/Little-Triangle.mp4" width="100%"></video> -->
+    [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-spinning-objects/Little-Triangle.mp4)
     <figcaption>작은 삼각형 파트는 관성 모멘트가 낮아 동일한 가속도를 달성하기 위해 적은 각힘이 필요합니다.</figcaption>
   </figure>
   <figure>
-    <video controls src="../img/05_04_Creating_Spinning_Objects/Big-Triangle.mp4" width="100%"></video>
+    <!-- <video controls src="../img/05_04_Creating_Spinning_Objects/Big-Triangle.mp4" width="100%"></video> -->
+    [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-spinning-objects/Big-Triangle.mp4)
     <figcaption>큰 삼각형 파트는 관성 모멘트가 커 동일한 가속도를 달성하기 위해 더 많은 각힘이 필요합니다.</figcaption>
   </figure>
 </GridContainer>
@@ -162,19 +168,22 @@ Roblox Studio는 실시간으로 물리적 행동을 에뮬레이트하는 실�
 
    3. **실행**을 선택합니다. Studio는 3D 공간에서 아바타 없이 현재 카메라 위치에서 경험을 시뮬레이션합니다.
 
-   <video controls src="../img/05_04_Creating_Spinning_Objects/AV-Constraint-2.mp4" width="80%"></video>
+   <!-- <video controls src="../img/05_04_Creating_Spinning_Objects/AV-Constraint-2.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-spinning-objects/AV-Constraint-2.mp4)
 
 설정한 토크는 블록의 크기와 환경 내의 반대 물리적 힘에 따라 달라질 수 있습니다. 예를 들어, 샘플 경험의 `AngularVelocity` 제약 속성은 기본 크기 `4, 1, 2`의 블록 파트, 플라스틱 재질의 평평한 플랫폼, 고전적인 중력 설정 환경에 맞게 작동합니다.
 
 그러나 블록이 더 큰 크기이고 잔디 지형에 있다면, 블록의 질량과 환경의 마찰을 극복하기 위해 `AngularVelocity.MaxTorque` 속성을 증가시켜야 합니다. 예를 들어, 샘플의 파트보다 4배 큰 블록 파트는 설정된 각속도에 도달하기 위해 최소 `300000` Rowton-studs의 일정 각힘이 필요합니다!
 
-<video controls src="../img/05_04_Creating_Spinning_Objects/Big-Block.mp4" width="80%"></video>
+<!-- <video controls src="../img/05_04_Creating_Spinning_Objects/Big-Block.mp4" width="80%"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-spinning-objects/Big-Block.mp4)
 
 ### HingeConstraint 제약 사용
 
 `HingeConstraint` 객체는 두 부착물이 동일한 축을 중심으로 회전하도록 하는 [기계적 제약](https://create.roblox.com/docs/physics/mechanical-constraints)의 일종으로, 부착물이 동일한 위치와 방향을 유지합니다. `HingeConstraint.ActuatorType`을 **Motor**로 설정하면, 이 제약은 두 부착물에 각힘을 가하여 일정한 각속도에 도달하고 유지하려고 합니다.
 
-<video controls src="../img/05_04_Creating_Spinning_Objects/Hinge-ActuatorType-Motor.mp4" alt="모터 동작으로 구성된 각파워를 보여주는 비디오" width="60%"></video>
+<!-- <video controls src="../img/05_04_Creating_Spinning_Objects/Hinge-ActuatorType-Motor.mp4" alt="모터 동작으로 구성된 각파워를 보여주는 비디오" width="60%"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-spinning-objects/Hinge-ActuatorType-Motor.mp4)
 
 더욱이, 두 개체로 구성된 어셈블리에 부착물을 배치하면, 부착물의 고정된 주축에 따라 함께 회전하려고 합니다. 이러한 개체 중 하나를 고정하면, 각힘은 나머지 어셈블리가 정지된 상태에서 다른 개체를 일정한 각속도로 계속 회전시킵니다.
 
@@ -268,7 +277,8 @@ Roblox Studio는 실시간으로 물리적 행동을 에뮬레이트하는 실�
 
    3. **실행**을 선택합니다. Studio는 3D 공간에서 아바타 없이 현재 카메라 위치에서 경험을 시뮬레이션합니다.
 
-   <video controls src="../img/05_04_Creating_Spinning_Objects/HC-Hinge-3.mp4" width="80%"></video>
+   <!-- <video controls src="../img/05_04_Creating_Spinning_Objects/HC-Hinge-3.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-spinning-objects/HC-Hinge-3.mp4)
 
 ## 초기 각힘 적용
 
@@ -305,7 +315,8 @@ part:ApplyAngularImpulse(impulse)
 
 ```
 
-   <video controls src="../img/05_04_Creating_Spinning_Objects/Impulse-3.mp4" width="80%"></video>
+   <!-- <video controls src="../img/05_04_Creating_Spinning_Objects/Impulse-3.mp4" width="80%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-spinning-objects/Impulse-3.mp4)
 
 ---
 ## 출처

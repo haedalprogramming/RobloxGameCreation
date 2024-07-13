@@ -17,9 +17,10 @@
 
 치명적인 용암에서, 사용자 행동에 따라 코드를 실행하는 방법을 배웠습니다. 이번 튜토리얼에서는 사용자가 밟으면 사라지는 플랫폼을 만드는 방법을 배웁니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
 	<source src="../img/02_03_Fading_Trap/completedFadingTrap.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/fading-trap/completedFadingTrap.mp4)
 
 ## 설정하기
 
@@ -205,9 +206,10 @@ platform.Touched:Connect(fade)
 
 더 넓은 간격을 가로지르는 도전적인 장애물을 만들기 위해 이 플랫폼을 복제하고, 난이도 조정을 위해 사라지는 속도를 변경할 수 있습니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
 	<source src="../img/02_03_Fading_Trap/multipleFadingTraps.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/fading-trap/multipleFadingTraps.mp4)
 
 ## 최종 코드
 

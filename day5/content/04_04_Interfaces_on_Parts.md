@@ -120,11 +120,12 @@ GUI 객체와 그 내용물의 테두리 사이에 간격을 만들기 위해 `U
 
 ### LightInfluence
 
-서피스 GUI는 3D 세계에 존재하기 때문에 다른 객체와 마찬가지로 빛의 영향을 받을 수 있습니다. `Class.SurfaceGui.LightInfluence|LightInfluence` 속성은 SurfaceGui가 빛의 영향을 받는 정도를 제어합니다. 일반 값은 1로, GUI 공간이 주변 객체와 동일하게 조명됩니다. 0으로 설정하면 내부 이미지는 설계한 대로 조명이 유지됩니다. 이는 어두운 환경에서도 밝게 빛나는 네온 사인을 만들 때 유용할 수 있습니다.
+서피스 GUI는 3D 세계에 존재하기 때문에 다른 객체와 마찬가지로 빛의 영향을 받을 수 있습니다. `LightInfluence` 속성은 SurfaceGui가 빛의 영향을 받는 정도를 제어합니다. 일반 값은 1로, GUI 공간이 주변 객체와 동일하게 조명됩니다. 0으로 설정하면 내부 이미지는 설계한 대로 조명이 유지됩니다. 이는 어두운 환경에서도 밝게 빛나는 네온 사인을 만들 때 유용할 수 있습니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
   <source src="../img/04_04_Interfaces_on_Parts/Video-Light-Influence.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/interfaces-on-parts/Video-Light-Influence.mp4)
 
 ### Adornee
 
@@ -134,9 +135,10 @@ SurfaceGui가 표시되는 파트는 **Adornee** 속성에 의해 결정됩니�
 
 2. Adornee 입력 상자를 클릭한 다음 보드 파트를 클릭하여 파트에 장식합니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
   <source src="../img/04_04_Interfaces_on_Parts/Video-Adornee.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/interfaces-on-parts/Video-Adornee.mp4)
 
 ---
 ## 출처

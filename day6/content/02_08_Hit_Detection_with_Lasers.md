@@ -33,9 +33,10 @@
 
 이 튜토리얼에서는 [플레이어 도구 생성](https://create.roblox.com/docs/tutorials/scripting/intermediate-scripting/creating-player-tools)에서 만든 블라스터에서 레이저를 쏘고, 플레이어에게 맞았는지 여부를 감지하는 방법을 배웁니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/02_08_Hit_Detection_with_Lasers/Introduction-Video.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/hit-detection-with-lasers/Introduction-Video.mp4)
 
 ## 충돌을 찾기 위한 레이캐스팅
 
@@ -405,11 +406,10 @@ end
 
 3. 한 클라이언트에서 다른 플레이어를 무기로 쏘아보세요. "Player hit"이 출력 창에 표시될 것입니다.
 
-   <video controls loop muted>
+   <!-- <video controls loop muted>
     <source src="../img/02_08_Hit_Detection_with_Lasers/Output-Video.mp4" />
-   </video>
-
-테스트 탭에 대한 자세한 내용은 [여기](../../../studio/test-tab.md)에서 확인할 수 있습니다.
+   </video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/hit-detection-with-lasers/Output-Video.mp4)
 
 ## 레이저 위치 찾기
 
@@ -531,9 +531,10 @@ end
 
 3. **플레이** 버튼을 클릭하여 무기를 테스트합니다. 도구가 활성화될 때 무기와 마우스 사이에 레이저 빔이 보여야 합니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/02_08_Hit_Detection_with_Lasers/Laser-Render-Video.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/hit-detection-with-lasers/Laser-Render-Video.mp4)
 
 ## 무기 발사 속도 제어
 
@@ -808,9 +809,10 @@ end
 
 7. 로컬 서버를 시작하여 2명의 플레이어로 블라스터를 테스트합니다. 두 클라이언트를 모니터의 양쪽에 위치시켜 두 창을 동시에 볼 수 있도록 합니다. 한 클라이언트에서 발사할 때 다른 클라이언트에서 레이저를 볼 수 있어야 합니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/02_08_Hit_Detection_with_Lasers/Client-Laser-Communication-Video.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/hit-detection-with-lasers/Client-Laser-Communication-Video.mp4)
 
 ## 사운드 효과
 
@@ -974,9 +976,10 @@ end
 
 이제 레이저 블라스터가 완성되었으며, 레이캐스팅을 사용한 기본 히트 감지 시스템이 포함되어 있습니다. `사용자 입력 감지` 튜토리얼을 통해 레이저 블라스터에 재장전 동작을 추가하는 방법을 알아보거나, 재미있는 게임 맵을 만들어 다른 플레이어와 함께 레이저 블라스터를 사용해 보세요!
 
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/02_08_Hit_Detection_with_Lasers/Introduction-Video.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/hit-detection-with-lasers/Introduction-Video.mp4)
 
 ## Final Code
 
