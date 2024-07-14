@@ -100,22 +100,15 @@ Roblox Studio는 실제 물리적 행동을 실시간으로 모방하는 시뮬�
 
 필요한 힘의 양은 환경 내의 반대 물리적 힘, 예를 들어 중력이나 마찰뿐만 아니라 물체 자체의 특성에 따라 다릅니다. 예를 들어, 동일한 모양의 두 물체가 같은 축을 따라 움직일 때, 더 많은 질량을 가진 물체는 동일한 선형 가속도를 달성하기 위해 더 많은 힘이 필요합니다.
 
-<GridContainer numColumns="2">
-  <figure>
-    <!-- <video controls src="../img/05_03_Creating_Moving_Objects/Small-Triangle.mp4" alt="작은 삼각형이 이동하는 모습" width="100%"></video> -->
-    
-    <figcaption>작은 삼각형은 질량이 적기 때문에 동일한 가속도를 달성하기 위해 적은 힘이 필요합니다.</figcaption>
-  </figure>
-  <figure>
-    <!-- <video controls src="../img/05_03_Creating_Moving_Objects/Big-Triangle.mp4" alt="큰 삼각형이 이동하는 모습" width="100%"></video> -->
-    
-    <figcaption>큰 삼각형은 질량이 많기 때문에 동일한 가속도를 달성하기 위해 더 많은 힘이 필요합니다.</figcaption>
-  </figure>
-</GridContainer>
+
 
 [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Small-Triangle.mp4)
 
+작은 삼각형은 질량이 적기 때문에 동일한 가속도를 달성하기 위해 적은 힘이 필요합니다.
+
 [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Big-Triangle.mp4)
+
+큰 삼각형은 질량이 많기 때문에 동일한 가속도를 달성하기 위해 더 많은 힘이 필요합니다.
 
 다음 하위 섹션에서는 다양한 모양과 크기의 어셈블리를 사용하여 전체 물체 또는 물체의 일부를 일정한 선형 속도로 이동시키는
 
