@@ -45,20 +45,24 @@ Roblox Studio는 실제 물리적 행동을 실시간으로 모방하는 시뮬�
   </figure>
   <figure>
     <!-- <video controls src="../img/05_03_Creating_Moving_Objects/Move-Block.mp4" alt="회색 블록이 화면의 오른쪽에서 왼쪽으로 움직이는 모습" width="100%"></video> -->
-    [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Move-Block.mp4)
+    
   </figure>
 </GridContainer>
+
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Move-Block.mp4)
 
 선형 운동은 물체를 움직이기 위해 외부의 물리적 힘이 밀거나 당기지 않으면 존재할 수 없습니다. 뉴턴의 [운동의 제1법칙](https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion#First_law)에 따르면, 정지한 물체는 외부 힘이 작용하지 않는 한 계속 정지해 있고, 움직이는 물체는 계속해서 일정한 속도로 움직입니다. 예를 들어, 정지한 블록은 바람과 같은 물리적 힘이 밀어 움직이게 되지 않는 한 계속 정지해 있습니다.
 
 <GridContainer numColumns="2">
   <figure>
     <!-- <video controls src="../img/05_03_Creating_Moving_Objects/Wind-Block.mp4" alt="바람이 회색 블록을 화면의 오른쪽에서 왼쪽으로 밀어 움직이는 모습" width="100%"></video> -->
-    [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Wind-Block.mp4)
+    
   </figure>
   <figure>
   </figure>
 </GridContainer>
+
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Wind-Block.mp4)
 
 **힘**은 물체의 선형 속도를 변화시키는 물리적 밀기 또는 당기기의 방향과 크기를 측정한 것입니다. 속도의 변화는 **가속도**로 알려져 있습니다. 이 개념은 스튜디오에서 물체를 움직이는 데 특히 중요합니다. 더 많은 힘을 물체에 가할수록 더 빨리 가속됩니다.
 
@@ -70,9 +74,11 @@ Roblox Studio는 실제 물리적 행동을 실시간으로 모방하는 시뮬�
   </figure>
   <figure>
     <!-- <video controls src="../img/05_03_Creating_Moving_Objects/Plate-Friction.mp4" alt="이전 이미지의 동일한 회색 블록이 금속판의 마찰 때문에 천천히 움직이는 모습" width="100%"></video> -->
-    [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Plate-Friction.mp4)
+    
   </figure>
 </GridContainer>
+
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Plate-Friction.mp4)
 
 **선형 속도**는 물체의 움직임을 측정한 것으로, 물체가 일정 시간 동안 축을 따라 얼마나 빠르게 위치를 변화시키는지를 나타냅니다. 스튜디오는 선형 속도를 물체가 초당 몇 스터드를 이동하는지에 따라 측정합니다. 스터드는 Roblox의 길이를 측정하는 주요 물리적 단위로, 각 스터드는 실제 세계에서 약 28cm에 해당합니다.
 
@@ -97,15 +103,19 @@ Roblox Studio는 실제 물리적 행동을 실시간으로 모방하는 시뮬�
 <GridContainer numColumns="2">
   <figure>
     <!-- <video controls src="../img/05_03_Creating_Moving_Objects/Small-Triangle.mp4" alt="작은 삼각형이 이동하는 모습" width="100%"></video> -->
-    [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Small-Triangle.mp4)
+    
     <figcaption>작은 삼각형은 질량이 적기 때문에 동일한 가속도를 달성하기 위해 적은 힘이 필요합니다.</figcaption>
   </figure>
   <figure>
     <!-- <video controls src="../img/05_03_Creating_Moving_Objects/Big-Triangle.mp4" alt="큰 삼각형이 이동하는 모습" width="100%"></video> -->
-    [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Big-Triangle.mp4)
+    
     <figcaption>큰 삼각형은 질량이 많기 때문에 동일한 가속도를 달성하기 위해 더 많은 힘이 필요합니다.</figcaption>
   </figure>
 </GridContainer>
+
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Small-Triangle.mp4)
+
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Big-Triangle.mp4)
 
 다음 하위 섹션에서는 다양한 모양과 크기의 어셈블리를 사용하여 전체 물체 또는 물체의 일부를 일정한 선형 속도로 이동시키는
 
