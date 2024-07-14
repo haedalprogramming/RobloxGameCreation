@@ -97,9 +97,9 @@ Roblox 아바타 캐릭터는 15개의 신체 부위로 구성되며, 이는 아
 
 텍스처는 캐릭터의 표면 외관을 정의하는 이미지 파일입니다. 텍스처는 텍스처 페인팅 프로그램이나 3D 모델링 소프트웨어를 사용하여 만들 수 있습니다. Studio에서는 텍스처를 이미지 파일로 가져와 `SurfaceAppearance` 인스턴스를 통해 액세스하거나 `MeshPart.TextureID` 속성으로 설정해야 합니다.
 
-<Alert severity = 'warning'>
+
 캐릭터 모델의 신체 부위를 텍스처링할 때, 캐릭터 모델에 민감한 부위에 대한 최소한의 레이어가 포함되어 있는지 확인하십시오. Roblox 정책에 대한 자세한 내용은 [커뮤니티 기준](https://en.help.roblox.com/hc/en-us/articles/203313410#safety)을 참조하십시오.
-</Alert>
+
 
 ### 리깅 아머처
 
