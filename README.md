@@ -59,11 +59,11 @@
    - [Physics](./day5/content/05_01_Building_a_Hinged_Door.md)
 
  - 6일차 : Use Case Tutorials & Improving Battle Royale Project
-  - Use Case Tutorials
-    - [Animation](./day6/content/01_01_Creating_an_Animation.md)
-    - [Scripting](./day6/content/02_01_Introduction_to_Scripting.md)
-    - [Input and Camera](./day6/content/03_01_Controlling_the_Users_Camera.md)
-  - [Improving Battle Royale Project](./day6/content/04_01_Improving_Improving_Battle_Royale_Project.md)
+   - Use Case Tutorials
+      - [Animation](./day6/content/01_01_Creating_an_Animation.md)
+      - [Scripting](./day6/content/02_01_Introduction_to_Scripting.md)
+      - [Input and Camera](./day6/content/03_01_Controlling_the_Users_Camera.md)
+   - [Improving Battle Royale Project](./day6/content/04_01_Improving_Improving_Battle_Royale_Project.md)
 
 # Reference
  - https://create.roblox.com/docs/ko-kr/tutorials

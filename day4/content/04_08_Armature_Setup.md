@@ -57,7 +57,8 @@ R15 캐릭터 골조를 파일에 가져오려면:
 
       <img src="../img/04_08_Armature_Setup/Rigging-Freeze-Transforms.png" />
 
-<video controls src="../img/04_08_Armature_Setup/Rigging_01.mp4" width="100%"></video>
+<!-- <video controls src="../img/04_08_Armature_Setup/Rigging_01.mp4" width="100%"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating/Rigging_01.mp4)
 
 ## 골조 연결
 
@@ -71,7 +72,8 @@ R15 캐릭터 골조를 파일에 가져오려면:
 
 <img src="../img/04_08_Armature_Setup/Rigging-Auto-Weights.png" />
 
-<video controls src="../img/04_08_Armature_Setup/Rigging_02.mp4" width="100%"></video>
+<!-- <video controls src="../img/04_08_Armature_Setup/Rigging_02.mp4" width="100%"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating/Rigging_02.mp4)
 
 ---
 ## 출처

@@ -61,9 +61,10 @@
 
 블라스터는 현재 **Workspace**의 자식이므로 수집 가능합니다. 플레이어가 도구를 만지면 도구가 캐릭터 모델의 자식이 되어 장착되어 핫바에 배치됩니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
   <source src="../img/02_07_Creating_Player_Tools/video-collection.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-player-tools/video-collection.mp4)
 
 게임 플레이 중에 장착되지 않은 도구는 플레이어의 계층 구조에서 배낭에 저장되었다가 장착되면 캐릭터 모델로 이동됩니다. 캐릭터의 자식이 된 도구는 자동으로 장착됩니다.
 

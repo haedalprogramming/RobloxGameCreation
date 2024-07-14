@@ -14,8 +14,7 @@
 
 ---
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/tzPn6QvU8Bo" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br /><br />
+<a href="https://www.youtube.com/embed/tzPn6QvU8Bo?si=Kn3Rc1HoAUGbswbU"><img src="../img/00_00_Rigid_Accessories/youtube.png"/></a>
 
 리짓 액세서리는 프로프, 무기, 모자 등 아바타 캐릭터에 착용할 수 있는 가장 기본적인 3D 화장품 아이템입니다. 캐릭터 몸 위에 늘어나고 맞춰지는 의상 액세서리와 달리, 리짓 액세서리는 아바타 캐릭터의 특정 지점에 부착되며 변형되거나 대상 위에 감싸지 않습니다.
 
@@ -47,9 +46,9 @@
 |---|---|
 |<img src="../img/00_00_Rigid_Accessories/Mesh-Bow-Example.png" />|<img src="../img/00_00_Rigid_Accessories/Mesh-Example.png"/>|
 
-<Alert severity = 'warning'>
+
 티셔츠와 같은 의상은 3D 객체에 레이어 효과를 적용하기 위해 [추가 의상 구성 요소](https://create.roblox.com/docs/art/accessories/layered-clothing)가 필요합니다.
-</Alert>
+
 
 모든 액세서리는 액세서리 객체의 기하학을 나타내는 단일 메시 객체가 필요합니다. Studio에서 이 메시 객체는 단일 `Model` 아래에 중첩된 `MeshPart`로 나타납니다.
 

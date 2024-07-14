@@ -99,7 +99,7 @@
 1. **탐색기** 창에서 **Lighting**을 선택합니다.
 1. **속성** 창에서 **Technology** 드롭다운을 클릭한 다음 **Future**를 선택합니다.
 
-   <img width="50%" img src="../../../assets/tutorials/enhancing-outdoor-environments/Technology-Property.jpg" alt="Future 기술 속성이 강조 표시된 속성 창의 클로즈업 뷰." />
+   <img width="50%" img src="../img/02_06_Enhancing_Indoor_Environments/Technology-Property.jpg" alt="Future 기술 속성이 강조 표시된 속성 창의 클로즈업 뷰." />
 
    <img width="80%" img src="../img/02_06_Enhancing_Indoor_Environments/Future-1.jpg" alt="Future 조명이 켜진 시작 오두막의 전체 뷰." />
 
@@ -339,22 +339,26 @@
    1. **FillLight** 파트 위로 커서를 이동한 다음 ⊕ 아이콘을 클릭합니다. 컨텍스트 메뉴가 표시됩니다.
    1. 컨텍스트 메뉴에서 **PointLight**를 삽입합니다.
 
-   <video controls src="../img/02_06_Enhancing_Indoor_Environments/Candles-1.mp4" alt="기본 포인트 라이트가 있는 촛불 그룹의 클로즈업 뷰." width="90%"></video>
+   <!-- <video controls src="../img/02_06_Enhancing_Indoor_Environments/Candles-1.mp4" alt="기본 포인트 라이트가 있는 촛불 그룹의 클로즈업 뷰." width="90%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/enhancing-indoor-environments/Candles-1.mp4)
 
 1. 새로운 포인트 라이트를 선택한 다음 **속성** 창에서
    1. **Brightness**를 `0.7`로 설정하여 촛불에 더 적합한 밝기로 빛의 강도를 줄입니다.
    1. **Color**를 `255, 202, 156`으로 설정하여 빛을 복숭아 색조로 틴팅하여 촛불 광원의 따뜻함을 복제합니다.
    1. **Shadows**를 활성화하여 촛불이 그림자를 생성할 수 있도록 합니다.
 
-   <video controls src="../img/02_06_Enhancing_Indoor_Environments/Candles-2.mp4" alt="커스터마이징된 포인트 라이트가 있는 촛불 그룹의 클로즈업 뷰." width="90%"></video>
+   <!-- <video controls src="../img/02_06_Enhancing_Indoor_Environments/Candles-2.mp4" alt="커스터마이징된 포인트 라이트가 있는 촛불 그룹의 클로즈업 뷰." width="90%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/enhancing-indoor-environments/Candles-2.mp4)
 
 1. **Candle_Group_B**에 대해 이 과정을 반복합니다.
 
-   <video controls src="../img/02_06_Enhancing_Indoor_Environments/Candles-3.mp4" alt="두 촛불 그룹이 공간을 밝히는 오두막 드레서의 정면 뷰." width="90%"></video>
+   <!-- <video controls src="../img/02_06_Enhancing_Indoor_Environments/Candles-3.mp4" alt="두 촛불 그룹이 공간을 밝히는 오두막 드레서의 정면 뷰." width="90%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/enhancing-indoor-environments/Candles-3.mp4)
 
 1. **(선택 사항)** 이전 단계의 동일한 기술을 사용하여 벽난로에서 타는 불을 비추기 위해 포인트 라이트를 추가합니다.
 
-   <video controls src="../img/02_06_Enhancing_Indoor_Environments/Candles-4.mp4" alt="모든 불 광원이 공간을 비추는 오두막 전체 뷰." width="90%"></video>
+   <!-- <video controls src="../img/02_06_Enhancing_Indoor_Environments/Candles-4.mp4" alt="모든 불 광원이 공간을 비추는 오두막 전체 뷰." width="90%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/enhancing-indoor-environments/Candles-4.mp4)
 
 ### 책상 램프 켜기
 

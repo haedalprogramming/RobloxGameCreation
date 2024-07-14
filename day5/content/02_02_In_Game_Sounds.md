@@ -24,9 +24,10 @@
 
 **Sound** 객체가 파트나 부착물에 상위로 설정되면 위치 기반이 됩니다. 오디오는 해당 위치에서 방출되며, 플레이어가 가까워질수록 소리가 커집니다. 이 폭포의 경우도 마찬가지입니다.
 
-<video controls muted>
+<!-- <video controls muted>
     <source src="../img/02_02_In_Game_Sounds/ingameSounds-waterfall-web.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/in-game-sounds/ingameSounds-waterfall-web.mp4)
 
 ### 사운드 생성
 
@@ -41,9 +42,9 @@
 
    ![alt](../img/02_02_In_Game_Sounds/ingameSounds-soundID.png)
 
-   <Alert severity="info">
+   
    사용자 지정 소리는 [에셋 관리자](https://create.roblox.com/docs/projects/assets/manager)를 사용하여 가져올 수 있습니다. 또한 Roblox와 커뮤니티가 업로드한 무료 소리는 [툴박스](https://create.roblox.com/docs/projects/assets/toolbox)를 통해 찾을 수 있습니다.
-   </Alert>
+   
 
 3. 게임이 시작될 때 연속 재생되도록 **Playing**과 **Looped**를 **on**으로 전환합니다.
 
@@ -65,9 +66,10 @@
 
 3. 프로젝트를 실행합니다. 소리가 객체 근처에서만 들리는 것을 확인할 수 있습니다.
 
-   <video controls muted>
+   <!-- <video controls muted>
    <source src="../img/02_02_In_Game_Sounds/ingameSounds-waterfall-web.mp4" />
-   </video>
+   </video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/in-game-sounds/ingameSounds-waterfall-web.mp4)
 
 ### 롤오프 미세 조정
 
@@ -80,9 +82,10 @@
 
 사운드는 스크립트를 사용하여 명령에 따라 재생할 수 있습니다. 플레이어가 파트를 터치하거나 메뉴와 상호 작용하는 이벤트에 사운드를 연결할 수 있습니다. 여기에서는 플레이어가 수집 가능한 아이템을 터치할 때 징글을 재생하는 스크립트를 생성합니다.
 
-<video controls muted>
+<!-- <video controls muted>
     <source src="../img/02_02_In_Game_Sounds/ingameSounds-collectables.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/in-game-sounds/ingameSounds-collectables.mp4)
 
 ### 수집품 설정
 
@@ -162,9 +165,10 @@
 
 3. 게임을 테스트하여 플레이어가 수집 가능한 아이템을 터치할 때 그것이 사라지고 소리가 재생되는지 확인합니다.
 
-   <video controls muted>
+   <!-- <video controls muted>
    <source src="../img/02_02_In_Game_Sounds/ingameSounds-collectables.mp4" />
-   </video>
+   </video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/in-game-sounds/ingameSounds-collectables.mp4)
 
 ---
 ## 출처

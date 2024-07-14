@@ -10,7 +10,7 @@
 
 의상 메쉬를 골조에 부모 연결한 후에는 이제 간단한 테스트를 수행하여 의상이 올바르게 변형되는지 확인할 수 있습니다.
 
-<Alert severity ='warning'>
+
 의상의 변형에 문제가 있는 경우, 메쉬에 스키닝 데이터를 수동으로 적용하는 기술인 가중치 페인팅으로 문제를 수정해야 할 수 있습니다.
 
 이 튜토리얼은 가중치 페인팅 과정을 다루지 않습니다. 메쉬의 스키닝 데이터를 수동으로 페인팅하고 업데이트하는 방법에 대한 추가 리소스는 다음을 참조하십시오:
@@ -18,7 +18,7 @@
 - [간단한 메쉬 스키닝](https://create.roblox.com/docs/art/modeling/skinning-a-simple-mesh)
 - [휴머노이드 메쉬 스키닝](https://create.roblox.com/docs/art/modeling/skinning-a-humanoid-model)
 
-</Alert>
+
 
 의상의 움직임을 테스트하려면:
 
@@ -36,12 +36,12 @@
 
 5. 다양한 자연스러운 캐릭터 포즈를 시도하여 의상이 올바르게 늘어나고 맞는지 확인하십시오.
 
-   <video controls src="../img/04_09_Testing_Poses/Rigging_03.mp4" width="100%"></video>
+   <!-- <video controls src="../img/04_09_Testing_Poses/Rigging_03.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating/Rigging_03.mp4)
 
-<Alert severity = 'success'>
+
 튜토리얼의 리깅 섹션을 완료했습니다. 원하는 경우, 이 프로젝트의 [참조 샘플](https://prod.docsiteassets.roblox.com/assets/art/reference-files/checkpoint/3_LongSleeve-Rigging-Complete.blend)을 다운로드하여 비교할 수 있습니다.
 
-</Alert>
 
 ---
 ## 출처

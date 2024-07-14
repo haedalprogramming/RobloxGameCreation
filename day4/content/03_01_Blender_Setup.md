@@ -24,17 +24,18 @@ Blender에서 자산을 올바르게 설정하면 Studio에서 가져오기 및 
 
    <img src="../img/03_01_Blender_Setup/Blender-Scale-1.png" />
 
-   <video controls src="../img/03_01_Blender_Setup/Scaling-FBX-Import.mp4" width="100%"></video>
+   <!-- <video controls src="../img/03_01_Blender_Setup/Scaling-FBX-Import.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating-rigid/Scaling-FBX-Import.mp4)
 
 5. 자산을 처음부터 조각하는 경우, 작업 공간에서 객체를 정렬합니다. 가져오는 경우, 조정이 필요하지 않을 수 있습니다.
    1. 자산이 **-Y 방향**을 향하고 있는지 확인합니다.
    2. 액세서리가 Studio의 카메라 중심에서 가져오기 위해 이상적으로 월드의 `0`,`0`,`0`으로 이동해야 합니다.
 
-<Alert severity='success'>
+
 튜토리얼의 모델링 섹션을 완료했습니다. 원하는 경우, 이 단계의 프로젝트를 비교할 수 있는 [참조 버전](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating-rigid/Rigid_Mask_Texturing-Completed.blend)을 다운로드하세요.
 
 고유한 자산을 만드는 데 사용할 수 있는 많은 도구와 워크플로우가 있습니다. 추가 제안을 위해 어깨 패드나 벨트와 같은 다른 유형의 자산을 만들거나 참조 모델을 Blender에 마네킹으로 가져와 화장품을 처음부터 조각하고 형성해 보세요.
-</Alert>
+
 
 ---
 ## 출처

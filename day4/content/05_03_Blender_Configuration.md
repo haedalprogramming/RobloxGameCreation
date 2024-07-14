@@ -95,10 +95,11 @@ Blender에서 캐릭터의 피부 톤을 미리 보려면:
 3. 노드 패널에서 **객체**가 선택되어 있는지 확인합니다.
 4. **Mix** 노드에 연결된 **PartColor** 노드를 찾습니다.
 5. 노드에서 색상과 값을 선택하여 참조 사용자 지정 피부 톤을 적용합니다.
-   <video
+   <!-- <video
    controls
    src="../img/05_03_Blender_Configuration/Color_Picker_01.mp4"
-   width="100%"></video>
+   width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Color_Picker_01.mp4)
 
 #### 내보내기 설정
 
@@ -125,7 +126,7 @@ Blender 다운로드 템플릿을 사용하는 경우 이 섹션을 건너뛸 �
 
 또는 파일을 내보낼 때 스케일링을 수정할 수 있습니다:
 
-1. **파일** > **내보내기** > **FBX (.fbx)**로 이동합니다.
+1. **파일** > **내보내기** > FBX (.fbx)로 이동합니다.
 2. **변환** > **스케일**을 `.01`로 설정합니다.<br/>
    <img src="../img/05_03_Blender_Configuration/Blender-Export-Settings-2.png" width="320" />
 
@@ -144,9 +145,9 @@ Blender 다운로드 템플릿을 사용하는 경우 이 섹션을 건너뛸 �
 
    <img src="../img/05_03_Blender_Configuration/Timeline-Frames.png" width = "65%"/>
 
-<Alert severity = 'info'>
+
 프로젝트 설정을 변경한 후에는 **파일** > **기본값** > **시작 파일 저장**으로 이동하여 이를 기본 Blender 프로젝트 설정으로 저장할 수 있습니다.
-</Alert>
+
 
 ---
 ## 출처

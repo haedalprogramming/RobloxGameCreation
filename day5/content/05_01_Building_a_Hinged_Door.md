@@ -15,9 +15,10 @@
 
 Roblox의 물리 시스템을 사용하면 **제약 조건**을 사용하여 문, 회전 플랫폼, 차량과 같은 이동 메커니즘을 구성할 수 있습니다. 예를 들어, `HingeConstraint`를 사용하여 스윙 도어를 만들 수 있습니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
    <source src="../img/05_01_Building_a_Hinged_Door/introToConstraints_finalExample.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/building-a-hinged-door/introToConstraints_finalExample.mp4)
 
 ## 문 설정
 
@@ -53,13 +54,14 @@ Roblox의 물리 시스템을 사용하면 **제약 조건**을 사용하여 문
 
 3. <kbd>F</kbd> 키를 눌러 부속품에 초점을 맞추고 필요에 따라 확대합니다. 그런 다음 **Move** 도구를 사용하여 부속품을 도어 프레임의 표면에 문을 향해 위치시킵니다.
 
-   <video controls loop muted>
+   <!-- <video controls loop muted>
       <source src="../img/05_01_Building_a_Hinged_Door/introToConstraints_showMoveAttachment.mp4" />
-   </video>
+   </video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/building-a-hinged-door/introToConstraints_showMoveAttachment.mp4)
 
-   <Alert severity="info">
+   
    부속품을 정확하게 정렬하는 것이 좋습니다. 부정확하게 정렬된 부속품은 문이 올바르게 회전하지 않게 할 수 있습니다. 정확한 위치를 위해 **Snap to Grid**를 사용하고 파트 크기에 맞는 증분을 설정하십시오. 또는 속성 창에서 부속품의 위치를 편집하십시오.
-   </Alert>
+   
 
 4. 동일한 방법으로 **DoorAttachment**를 이동합니다. 부속품이 서로 마주 보도록 표면에 위치해야 합니다.
 
@@ -76,13 +78,14 @@ Roblox의 물리 시스템을 사용하면 **제약 조건**을 사용하여 문
 
    ![alt](../img/05_01_Building_a_Hinged_Door/introToConstraints_showAttachmentAxis.jpg)
 
-   <Alert severity="info">
+   
    **DoorFrame** 객체에 따라 축이 다른 방향을 가리킬 수 있습니다. 위에 표시된 부속품에 추가된 경첩은 아래 동영상처럼 노란색 화살표를 중심으로 회전합니다.
 
-   <video controls loop muted>
+   <!-- <video controls loop muted>
       <source src="../img/05_01_Building_a_Hinged_Door/introToConstraints_doorSwingingWrong.mp4" />
-   </video>
-   </Alert>
+   </video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/building-a-hinged-door/introToConstraints_doorSwingingWrong.mp4)
+   
 
 2. 정확한 회전을 위해 **Model** → **Snap to Grid**에서 스냅을 켜고 **Rotate**를 체크합니다. 값을 `90`으로 설정합니다.
 
@@ -102,9 +105,10 @@ Roblox의 물리 시스템을 사용하면 **제약 조건**을 사용하여 문
 
 2. 제약 조건의 속성에서 **Attachment0**를 찾습니다. 속성 오른쪽의 빈 상자를 클릭한 다음, 탐색기에서 **DoorAttachment**를 클릭합니다.
 
-   <video controls muted>
+   <!-- <video controls muted>
       <source src="../img/05_01_Building_a_Hinged_Door/introToConstraints_selectAttachment0.mp4" />
-   </video>
+   </video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/building-a-hinged-door/introToConstraints_selectAttachment0.mp4)
 
 3. 동일한 방법으로 **Attachment1**을 **FrameAttachment**에 연결합니다. 속성이 아래와 같이 나타납니다.
 
@@ -112,9 +116,10 @@ Roblox의 물리 시스템을 사용하면 **제약 조건**을 사용하여 문
 
 4. 캐릭터로 문에 걸어 들어가 프로젝트를 테스트합니다.
 
-   <video controls loop muted>
+   <!-- <video controls loop muted>
       <source src="../img/05_01_Building_a_Hinged_Door/introToConstraints_finalDoor.mp4" />
-   </video>
+   </video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/building-a-hinged-door/introToConstraints_finalDoor.mp4)
 
    <Alert severity="warning">
    테스트 시 다음 문제에 직면할 수 있습니다:
@@ -154,9 +159,10 @@ Roblox의 물리 시스템을 사용하면 **제약 조건**을 사용하여 문
 
 4. 문을 테스트하고 경첩이 제한된 것을 확인합니다.
 
-   <video controls loop muted>
+   <!-- <video controls loop muted>
       <source src="../img/05_01_Building_a_Hinged_Door/introToConstraints_finalDoor_WithLimits.mp4" />
-   </video>
+   </video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/building-a-hinged-door/introToConstraints_finalDoor_WithLimits.mp4)
 
    <Alert severity="warning">
    문 제한이 예상대로 작동하지 않으면, 부속품의 주황색 축이 제대로 정렬되지 않았을 수 있습니다. DoorAttachment를 선택하고 아래 이미지처럼 초록색 평면이 문 프레임을 향하도록 합니다.

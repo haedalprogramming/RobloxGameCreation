@@ -20,9 +20,10 @@
 
 Roblox Studio 입문에서는 Roblox Studio에서 파트를 생성하고 조작하는 방법을 배웠습니다. 이번 튜토리얼에서는 **스크립트**를 파트에 적용하여 플랫폼이 나타났다 사라지게 만드는 방법을 배웁니다. 이 기능은 사용자가 점프 타이밍을 맞추어 반대편으로 넘어가도록 하는 플랫폼 게임에서 유용하게 사용할 수 있습니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/02_01_Introduction_to_Scripting/finishedSinglePlatformShort.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/intro-to-scripting/finishedSinglePlatformShort.mp4)
 
 ## 장면 설정
 
@@ -38,9 +39,9 @@ Roblox Studio 입문에서는 Roblox Studio에서 파트를 생성하고 조작�
 
    <img src="../img/02_01_Introduction_to_Scripting/anchoredProperty.png" width="320" />
 
-<Alert severity="info">
+
 파트의 Anchored 속성을 **true**로 설정하면 무슨 일이 있어도 제자리에 고정됩니다. 플랫폼이 앵커되지 않으면 떨어집니다.
-</Alert>
+
 
 ## 스크립트 삽입
 
@@ -101,9 +102,10 @@ end
 파트는 `Transparency` 속성을 변경하여 투명하게 만들 수 있습니다. 투명도는 0에서 1 사이의 값일 수 있으며, 1은 완전히 투명하므로 보이지 않습니다.
 
 <figure>
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/02_01_Introduction_to_Scripting/transparency.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/intro-to-scripting/transparency.mp4)
 
 <figcaption>큐브의 Transparency 속성 변경</figcaption>
 </figure>
@@ -111,9 +113,10 @@ end
 `CanCollide` 속성은 다른 파트(및 사용자)가 파트를 통과할 수 있는지 여부를 결정합니다. 이를 **false**로 설정하면 사용자가 플랫폼을 통과합니다.
 
 <figure>
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/02_01_Introduction_to_Scripting/canCollide.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/intro-to-scripting/canCollide.mp4)
 
 <figcaption>큐브의 CanCollide 속성 변경</figcaption>
 </figure>
@@ -233,9 +236,10 @@ end
 
 이 플랫폼을 복제하여 더 넓은 간격을 커버할 수 있지만 각 스크립트의 대기 시간을 변경해야 합니다. 그렇지 않으면 모든 플랫폼이 동시에 사라져 사용자가 결코 건널 수 없습니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
     <source src="../img/02_01_Introduction_to_Scripting/alternatingPlatforms.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/intro-to-scripting/alternatingPlatforms.mp4)
 
 ## 최종 코드
 

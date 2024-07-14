@@ -16,13 +16,14 @@
 4. 색상, 브러시 크기, 폴오프를 선택하여 적용합니다. 적용하려는 수정 사항에 따라 설정을 조정해야 할 수도 있습니다.
 5. UV 2D 맵 또는 3D 메쉬에 그립니다.
 6. **Image** > **Save**를 선택하여 텍스처 맵의 `.png` 파일을 저장합니다.
-   <video controls src="../img/04_07_Texture_Painting/Texturing_04.mp4" width="100%"></video>
+   <!-- <video controls src="../img/04_07_Texture_Painting/Texturing_04.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating/Texturing_04.mp4)
 
-<Alert severity = 'success'>
+
 이 튜토리얼의 텍스처링 섹션을 완료했습니다. 원할 경우, 이 프로젝트와 텍스처 이미지의 [참조 샘플](https://prod.docsiteassets.roblox.com/assets/art/reference-files/checkpoint/2_LongSleeve-Texturing-Complete.blend)을 다운로드하여 비교해보세요.
 
 메쉬에 고유한 외관을 텍스처링하고 적용하는 방법은 다양합니다. 추가 제안을 원한다면 알파 투명도, 독특한 심, [PBR 텍스처](https://create.roblox.com/docs/art/modeling/surface-appearance) 또는 Blender의 기타 텍스처링 도구와 기술을 활용해보세요.
-</Alert>
+
 
 ---
 ## 출처

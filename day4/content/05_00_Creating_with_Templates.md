@@ -29,11 +29,11 @@ Blender와 Roblox의 다운로드 가능한 템플릿 모델 중 하나를 사�
 |---|---|
 |<img src="../img/05_00_Creating_with_Templates/Pre-Tutorial.png" />|<img src="../img/05_00_Creating_with_Templates/Post-Tutorial.png" />|
 
-<Alert severity = 'info'>
+
 이 가이드는 캐릭터 템플릿을 커스터마이징하기 위한 실용적인 예로 [Blender 3.4+](https://www.blender.org/download/releases/3-4/)를 사용합니다. 시작하기 전에 Blender의 인터페이스, 도구 및 보기 컨트롤에 대한 기본 지식을 갖추고 있어야 합니다.
 
 다른 프로그램을 사용하는 경우에도 이 튜토리얼의 일반적인 워크플로를 해당 프로그램의 유사한 도구로 적용할 수 있습니다.
-</Alert>
+
 
 ---
 ## 출처

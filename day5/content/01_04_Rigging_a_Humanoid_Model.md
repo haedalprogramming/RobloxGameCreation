@@ -28,9 +28,9 @@ Blender에서 휴머노이드 모델을 리깅하려면 다음 단계를 수행�
 - 단일 뼈대에 여러 메시를 [종속시켜](#뼈대-종속) 스켈레톤 리그를 결합합니다.
 - 각 메시 객체와 뼈대에 [완전한 영향 할당](#메시를-뼈에-할당)하여 영향을 할당합니다.
 
-<Alert severity="info">
+
 이 가이드에서는 다운로드 가능한 [리그 및 부착 템플릿 Blender 프로젝트](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/reference-files/Rig_and_Attachments_Template.blend), 참조용 [롤라 캐릭터 모델](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/reference-files/lola-base-model.fbx), 그리고 [Blender 버전 3.0](https://www.blender.org/download/releases/3-0/)을 사용합니다. 다른 버전의 Blender를 사용하는 경우 UI 및 설정에 약간의 차이가 있을 수 있습니다.
-</Alert>
+
 
 ## Blender 설정
 
@@ -49,7 +49,8 @@ Blender에서 휴머노이드 모델을 리깅하려면 다음 단계를 수행�
 2. **File** > **Import** > **FBX (.fbx)**를 선택하고 참조 롤라 모델 파일을 가져옵니다.
 3. 필요한 경우, 모델을 뼈대 구조의 크기와 대략적으로 맞추기 위해 크기를 조정합니다. 아웃라이너에서 모든 메시 기하학을 선택하고 <kbd>G</kbd>를 눌러 재배치하고 <kbd>S</kbd>를 눌러 메시 객체의 크기를 조정할 수 있습니다.
 
-   <video controls src="../img/01_04_Rigging_a_Humanoid_Model/1-resizing-base-model.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_04_Rigging_a_Humanoid_Model/1-resizing-base-model.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-humanoid/1-resizing-base-model.mp4)
 
 ### 뷰포트 시각화
 
@@ -60,7 +61,8 @@ Blender에서 휴머노이드 모델을 리깅하려면 다음 단계를 수행�
 1. **뷰포트**에서 뼈대의 임의의 뼈를 클릭합니다.
 2. **속성 편집기 패널**에서 **객체 데이터 속성 탭**을 선택합니다.
 3. 뷰포트 디스플레이를 확장하고, **표시** 속성으로 이동한 다음 **앞에**를 활성화합니다.
-   <video controls src="../img/01_04_Rigging_a_Humanoid_Model/2-bone-visualization.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_04_Rigging_a_Humanoid_Model/2-bone-visualization.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-humanoid/2-bone-visualization.mp4)
 
 스킨닝 과정 중 언제든지, 3D 뷰포트의 오른쪽 상단에 있는 다양한 재질 미리보기 옵션을 전환하여 캐릭터 모델의 시각화를 변경할 수 있습니다. 예를 들어 X-ray 또는 텍스처 보기를 활성화할 수 있습니다.
 
@@ -68,9 +70,9 @@ Blender에서 휴머노이드 모델을 리깅하려면 다음 단계를 수행�
 
 이 가이드에서는 휴머노이드 캐릭터를 대칭적으로 변형하기 위해 X-Axis Mirroring을 설정합니다. 모델을 리깅할 때 가능한 한 대칭을 유지하도록 합니다.
 
-<Alert severity="warning">
+
 뼈대를 수정하거나 새 뼈대 구조를 생성할 경우, R15 캐릭터 모델에 대한 <a href="https://create.roblox.com/docs/art/characters/specifications#humanoid-rigs">특정 뼈대 계층 및 이름 지정 요구 사항</a>을 유의해야 합니다.
-</Alert>
+
 
 ### X-Axis Mirror 활성화
 
@@ -82,7 +84,8 @@ X-Axis Mirror를 설정하려면:
 2. **편집 모드** (<kbd>Tab</kbd>)로 전환합니다.
 3. 뷰포트 오른쪽 사이드바에서 도구 패널을 확장하고 **X-Axis Mirror**를 활성화합니다.
 
-   <video controls src="../img/01_04_Rigging_a_Humanoid_Model/3-x-axis-mirror.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_04_Rigging_a_Humanoid_Model/3-x-axis-mirror.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-humanoid/3-x-axis-mirror.mp4)
 
 ### 뼈 위치 지정
 
@@ -97,11 +100,13 @@ X-Axis Mirror를 설정하려면:
 3. 뼈의 **끝부분**을 클릭하여 강조 표시하고 <kbd>G</kbd>를 누릅니다. 뼈의 끝부분이 커서와 함께 움직입니다.
 4. 이 뼈를 모델의 내부 중심과 정렬되도록 당긴 후 클릭하여 뼈의 위치를 설정합니다.
 
-   <video controls src="../img/01_04_Rigging_a_Humanoid_Model/4-repositioning-bones.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_04_Rigging_a_Humanoid_Model/4-repositioning-bones.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-humanoid/4-repositioning-bones.mp4)
 
 5. 마우스 스크롤 휠을 클릭하고 끌거나 다양한 시점에서 뼈가 메시 객체 내에 있는지 확인합니다.
 
-   <video controls src="../img/01_04_Rigging_a_Humanoid_Model/5-inspect-bones.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_04_Rigging_a_Humanoid_Model/5-inspect-bones.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-humanoid/5-inspect-bones.mp4)
 
 ### 뼈대 종속
 
@@ -112,22 +117,21 @@ X-Axis Mirror를 설정하려면:
 모델을 뼈대에 종속시키려면:
 
 1. **객체 모드**로 전환합니다.
-2. 아웃라이너에서 검색창에 **"geo"**를 입력하여 메시 객체를 필터링합니다.
+2. 아웃라이너에서 검색창에 "geo"를 입력하여 메시 객체를 필터링합니다.
 3. 아웃라이너에서 첫 번째 및 마지막 메시 객체를 클릭하고 <kbd>Shift</kbd>를 누른 상태로 모든 메시 객체를 선택합니다.
 4. 메시가 강조 표시된 상태에서 <kbd>Shift</kbd>를 누른 상태로 뷰포트 또는 아웃라이너에서 뼈대 객체를 클릭합니다.
-5. 뷰포트에서 마우스 오른쪽 버튼을 클릭하고 **종속** > **빈 그룹으로**를
+5. 뷰포트에서 마우스 오른쪽 버튼을 클릭하고 **종속** > **빈 그룹으로**를선택합니다.
 
- 선택합니다.
-
-   <video controls src="../img/01_04_Rigging_a_Humanoid_Model/6-parenting-bones.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_04_Rigging_a_Humanoid_Model/6-parenting-bones.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-humanoid/6-parenting-bones.mp4)
 
 ## 메시를 뼈에 할당
 
 이제 뼈대를 메시 객체에 연결했으므로 개별 팔과 다리의 정점을 대응하는 뼈에 완전히 영향을 받도록 할당할 수 있습니다. 이 과정이 완료되면 모델은 스킨닝 준비가 됩니다. 메시에 여러 뼈 영향을 적용하는 방법은 [휴머노이드 모델 스킨닝](https://create.roblox.com/docs/art/modeling/skinning-a-humanoid-model)을 참조하세요.
 
-<Alert severity="warning">
+
 휴머노이드 리그의 **Root** 및 **HumanoidRootNode** 부모 뼈에는 어떠한 영향도 적용하지 않아야 합니다. 추가된 영향은 Studio로 가져올 때 삭제됩니다.
-</Alert>
+
 
 머리 메시에 완전한 영향을 할당하려면:
 
@@ -137,7 +141,8 @@ X-Axis Mirror를 설정하려면:
 4. 모든 머리 정점이 강조 표시된 상태에서 화면 오른쪽의 **객체 속성 패널**로 이동합니다.
 5. 패널의 **정점 그룹** 섹션에서 할당하려는 뼈의 이름을 선택하고 **할당**을 클릭합니다.
 
-   <video controls src="../img/01_04_Rigging_a_Humanoid_Model/7-assign-influence-head.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_04_Rigging_a_Humanoid_Model/7-assign-influence-head.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-humanoid/7-assign-influence-head.mp4)
 
 이 모드에서는 아웃라이너에서 다음 메시 객체를 선택하고 해당 정점 그룹에 할당하여 모든 메시 객체를 빠르게 반복할 수 있습니다. 이 가이드에서는 **캐릭터의 모든 메시 객체를 해당 뼈에 할당**합니다.
 
@@ -147,7 +152,8 @@ X-Axis Mirror를 설정하려면:
 2. 정점이 강조 표시되지 않은 경우 <kbd>A</kbd>를 눌러 모든 정점을 선택합니다.
 3. **객체 속성 패널** > **정점 그룹** 섹션에서 적절한 정점 그룹을 선택하고 **할당**을 클릭합니다. 검색창을 사용하여 특정 정점 그룹 이름을 찾을 수 있습니다.
 
-   <video controls src="../img/01_04_Rigging_a_Humanoid_Model/8-assign-influence.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_04_Rigging_a_Humanoid_Model/8-assign-influence.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-humanoid/8-assign-influence.mp4)
 
 ## 테스트
 
@@ -160,11 +166,12 @@ X-Axis Mirror를 설정하려면:
 3. <kbd>Shift</kbd>를 누르고 테스트하려는 뼈를 클릭하여 강조 표시한 다음 <kbd>R</kbd>을 눌러 회전을 테스트합니다.
 4. <kbd>Alt</kbd><kbd>A</kbd> (<kbd>⌥</kbd><kbd>A</kbd>)를 눌러 현재 뼈를 선택 취소한 다음 다른 뼈를 다시 선택하고 테스트합니다.
 
-   <video controls src="../img/01_04_Rigging_a_Humanoid_Model/9-test-bones.mp4" width="100%"></video>
+   <!-- <video controls src="../img/01_04_Rigging_a_Humanoid_Model/9-test-bones.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/modeling/meshes/rigging-humanoid/9-test-bones.mp4)
 
-<Alert severity="info">
+
    선택된 뼈를 중립으로 되돌리려면 <KeyboardInput>Alt</KeyboardInput>+<KeyboardInput>R</KeyboardInput>을 누르십시오. 회전하는 동안 마우스의 스크롤 휠을 눌러 회전 축을 변경할 수도 있습니다.
-</Alert>
+
 
 이 단계에서, 모든 메시 객체가 해당 뼈의 영향을 받는 경우, 이 리깅된 모델을 Studio에서 사용할 수 있도록 `.fbx`로 [내보내기](https://create.roblox.com/docs/art/modeling/export-requirements)하거나 [휴머노이드 모델 스킨닝](https://create.roblox.com/docs/art/modeling/skinning-a-humanoid-model)의 다음 단계로 계속 진행할 수 있습니다.
 

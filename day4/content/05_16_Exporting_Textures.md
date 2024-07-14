@@ -11,9 +11,9 @@
 
 ---
 
-<Alert severity = 'warning'>
+
 자산 생성 과정의 모든 단계에서 자산을 여러 번 테스트하는 것이 중요합니다. Blender 내에서든 Studio로 가져온 후든 마찬가지입니다. 자세한 내용은 [캐릭터 테스트](https://create.roblox.com/docs/art/characters/testing)를 참조하세요.
-</Alert>
+
 
 캐릭터를 테스트용으로 내보내거나 Blender에서 최종 내보내기를 수행하는 경우, Blender가 적절한 캐릭터 데이터를 내보내도록 올바른 내보내기 설정을 적용해야 합니다.
 
@@ -43,7 +43,8 @@
    <img src="../img/05_16_Exporting_Textures/Cleanup-Disconnect-Node.png" />
 6. 색상 텍스처 맵이 있는 **file26** 노드를 찾아 **Color**를 **Principled BSDF's color** 노드로 클릭하고 드래그합니다.
    <img src="../img/05_16_Exporting_Textures/Cleanup-Node-B.png" />
-   <video controls src="../img/05_16_Exporting_Textures/Exporting_01.mp4" width="100%"></video>
+   <!-- <video controls src="../img/05_16_Exporting_Textures/Exporting_01.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Exporting_01.mp4)
 
 ### 이미지 파일 분리
 

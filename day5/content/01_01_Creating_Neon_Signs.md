@@ -23,9 +23,9 @@
 - Studio의 솔리드 모델링 도구를 사용하여 간판을 형성합니다.
 - 간판에 3D 텍스트를 포함시키고 모델로 저장합니다.
 
-<Alert severity="info">
+
    타사 모델링 도구에서 자체 자산을 만들고 자신만의 디자인으로 따라 할 수 있습니다. Studio에서 모델을 사용하기 위한 내보내기 정보는 [내보내기 요구 사항](https://create.roblox.com/docs/art/modeling/export-requirements)을 참조하십시오.
-</Alert>
+
 
 ## 뒷면과 테두리 만들기
 
@@ -124,9 +124,9 @@ Studio는 기본적으로 3D 텍스트를 지원하지 않으므로, 이 가이�
 
 4. **Explorer** 창에서 텍스트 모델, **Border**, **Backboard**를 선택한 다음 <kbd>Ctrl</kbd><kbd>G</kbd> (<kbd>⌘</kbd><kbd>G</kbd>)를 눌러 단일 `Class.Model` 객체로 그룹화합니다.
 
-   <Alert severity="info">
+
       이 네온 사인이 Studio 내에서 어떻게 보이는지 참고하려면 [기본 프로젝트 파일](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-neon-signs/neon-sign-baseplate.rbxl)을 다운로드하여 모델과 비교해 보십시오.
-   </Alert>
+
 
 5. 새 모델의 이름을 **NeonSign**으로 변경합니다.
 6. **Explorer** 창에서 **NeonSign**을 마우스 오른쪽 버튼으로 클릭합니다. 컨텍스트 메뉴가 표시됩니다.

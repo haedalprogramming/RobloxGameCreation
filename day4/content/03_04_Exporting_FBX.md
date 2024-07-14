@@ -33,9 +33,9 @@
 
 5. **Export FBX** 버튼을 클릭합니다.
 
-<Alert severity = 'success'>
+
 이 튜토리얼의 내보내기 섹션을 완료했습니다. 원한다면 내보낸 파일의 [참조 샘플](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating-rigid/Rigid_Mask_Export.fbx)을 다운로드하여 비교할 수 있습니다. 이 참조 파일을 다음 가져오기 단계에서 사용할 수 있습니다.
-</Alert>
+
 
 ---
 ## 출처

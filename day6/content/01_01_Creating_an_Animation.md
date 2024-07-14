@@ -17,9 +17,10 @@
 
 Roblox Studio에는 게임 캐릭터를 위한 맞춤형 애니메이션을 설계할 수 있는 내장 애니메이션 편집기가 있습니다. 애니메이션 편집기 사용법을 배우기 위해 캐릭터가 승리 점프를 하는 애니메이션을 만들어 보겠습니다. 완료된 후에는 이 애니메이션을 모든 Roblox 아바타에서 재생할 수 있습니다.
 
-<video controls muted>
+<!-- <video controls muted>
     <source src="../img/01_01_Creating_an_Animation/intro-to-animations-victoryPoseFinal.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-an-animation/intro-to-animations-victoryPoseFinal.mp4)
 
 ## 애니메이션 설정
 
@@ -81,9 +82,10 @@ Roblox Studio에는 게임 캐릭터를 위한 맞춤형 애니메이션을 설�
 
 2. 타임라인 아래의 상단 막대를 마우스 오른쪽 버튼으로 클릭하고 **키프레임 추가**를 선택하여 중립 포즈를 설정합니다. 다이아몬드(키프레임) 세트가 나타납니다.
 
-   <video controls loop muted>
+   <!-- <video controls loop muted>
    <source src="../img/01_01_Creating_an_Animation/creating-an-animation-AddKeyframe.mp4" />
-   </video>
+   </video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-an-animation/creating-an-animation-AddKeyframe.mp4)
 
 3. **...** 버튼을 클릭하고 **저장**을 선택하여 애니메이션을 저장합니다.
 
@@ -103,29 +105,30 @@ Roblox Studio에는 게임 캐릭터를 위한 맞춤형 애니메이션을 설�
 
 2. 다양한 신체 부위를 선택하고 **회전** 도구를 사용하여 리그를 포즈합니다. 애니메이터가 포즈를 취하는 한 가지 방법은 어깨와 같은 몸통에 연결된 부분부터 시작하여 손과 같은 부분으로 이동하는 것입니다.
 
-   <video controls muted>
+   <!-- <video controls muted>
        <source src="../img/01_01_Creating_an_Animation/showRotateArms_web.mp4" />
-   </video>
+   </video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-an-animation/showRotateArms_web.mp4)
 
-   <Alert severity="info">
 
    모델의 부품을 클릭하는 대신 애니메이션 편집기 계층 구조에서 선택하는 것이 도움이 될 수 있습니다. 특히 손과 같은 작은 부품의 경우에 유용합니다.
 
    ![alt](../img/01_01_Creating_an_Animation/creating-an-animation-partHierarchy.png)
 
-   </Alert>
 
 3. 리그를 이동하려면 <kbd>R</kbd>을 눌러 **이동** 도구로 전환합니다. **LowerTorso** 부품(리그 또는 애니메이션 계층 구조에서)을 클릭하고 몸을 약간 아래로 위치시킵니다.
 
-   <video controls muted>
+   <!-- <video controls muted>
     <source src="../img/01_01_Creating_an_Animation/showMoveBody.mp4" />
-   </video>
+   </video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-an-animation/showMoveBody.mp4)
 
 4. **이동**과 **회전**을 번갈아 가며 <kbd>R</kbd>을 눌러 리그를 계속 포즈합니다.
 
-   <video controls muted>
+   <!-- <video controls muted>
     <source src="../img/01_01_Creating_an_Animation/showPose2TimeLapse_optimized.mp4" />
-   </video>
+   </video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-an-animation/showPose2TimeLapse_optimized.mp4)
 
 ### 세 번째 포즈 (점프)
 
@@ -168,9 +171,10 @@ Roblox Studio에는 게임 캐릭터를 위한 맞춤형 애니메이션을 설�
 
 3. 애니메이션이 완료되면 **루프**를 켜고 **재생**을 누릅니다.
 
-   <video controls muted>
+   <!-- <video controls muted>
     <source src="../img/01_01_Creating_an_Animation/showFinalVictoryPose_simple.mp4" />
-   </video>
+   </video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-an-animation/showFinalVictoryPose_simple.mp4)
 
 ## 애니메이션 게시
 
@@ -207,4 +211,4 @@ Roblox Studio에는 게임 캐릭터를 위한 맞춤형 애니메이션을 설�
  - [Creating an Animation](https://create.roblox.com/docs/tutorials/building/animation/creating-an-animation)
 
 ---
-## [다음](./01_)
+## [다음](./01_02_Scripting_Avatar_Animations.md)

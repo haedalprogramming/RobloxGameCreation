@@ -212,15 +212,12 @@
 
 이제 기본 데이터 저장소 사용법을 이해했으므로, 샘플 게임에서 이를 테스트해보세요.
 
-<Grid container spacing={4}>
-    <Grid item xs={6}>
-        <img src="../img/02_06_Saving_Data/Sample-Place-Gold-Rush.jpg" />
-    </Grid>
-    <Grid item xs={6}>
-        [Gold Rush](https://www.roblox.com/games/5268331031/Gold-Rush)<br />
-        가능한 한 많은 골드 조각을 모아 게임 세션 간에 지속되는 개인 기록을 설정하세요.
-    </Grid>
-</Grid>
+<img src="../img/02_06_Saving_Data/Sample-Place-Gold-Rush.jpg" />
+
+[Gold Rush](https://www.roblox.com/games/5268331031/Gold-Rush)
+<br />
+가능한 한 많은 골드 조각을 모아 게임 세션 간에 지속되는 개인 기록을 설정하세요.
+
 
 스튜디오에서 게임을 편집하고, 자동 저장 및 기타 기능이 포함된 향상된 **GoldManager** 스크립트를 탐색할 수도 있습니다.
 

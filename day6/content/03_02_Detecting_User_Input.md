@@ -14,9 +14,10 @@
 
 사용자 입력을 동작에 연결하면 사용자에게 경험의 기능에 대한 더 나은 직관적인 제어를 제공합니다. 이 튜토리얼에서는 특정 키에 재장전 동작을 연결하는 방법을 배우게 됩니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
 	<source src="../img/03_02_Detecting_User_Input/ReloadingSymbol.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/detecting-user-input/ReloadingSymbol.mp4)
 
 ## 시작하기
 
@@ -141,9 +142,10 @@ KeyCodes는 키보드 키나 컨트롤러 버튼과 같은 다양한 입력 버�
 
 3. 도구를 장착하고 키보드에서 <kbd>R</kbd> 키를 눌러 재장전하는 기능을 테스트합니다. 배낭 아이콘이 잠시 동안 대기 기호로 변경되어 무기가 재장전 중임을 나타내야 합니다:
 
-<video controls loop muted>
+<!-- <video controls loop muted>
 	<source src="../img/03_02_Detecting_User_Input/ReloadingSymbolZoomInOnly.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/detecting-user-input/ReloadingSymbolZoomInOnly.mp4)
 
 ## 액션 언바인딩
 
@@ -206,9 +208,10 @@ KeyCodes는 키보드 키나 컨트롤러 버튼과 같은 다양한 입력 버�
 
 3. 모든 기능이 올바르게 작동하는지 확인하기 위해 테스트합니다. 도구가 장착되었을 때 재장전할 수 있어야 하고, 장착 해제되었을 때는 재장전할 수 없어야 합니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
 	<source src="../img/03_02_Detecting_User_Input/ReloadingSymbol.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/detecting-user-input/ReloadingSymbol.mp4)
 
 이제 재장전 애니메이션이 완료되었습니다. 추가 도전 과제로, Blaster를 발사할 때마다 탄약 수를 줄이는 카운터를 추가해 보세요. 그런 다음 총알이 없을 때 `toolActivated` 함수를 비활성화하고 재장전 애니메이션이 완료되면 다시 활성화해 보세요.
 

@@ -25,7 +25,8 @@
    3. 나머지 기본 설정을 그대로 둡니다.
    4. 완료되면 **확인** 버튼을 누릅니다.
 
-   <video controls src="../img/04_06_Creating_Texture_Map/Texturing_03.mp4" width="100%"></video>
+   <!-- <video controls src="../img/04_06_Creating_Texture_Map/Texturing_03.mp4" width="100%"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating/Texturing_03.mp4)
 
 ---
 ## 출처

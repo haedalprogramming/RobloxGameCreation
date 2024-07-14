@@ -34,13 +34,12 @@
 |---|---|
 |<img src="../img/04_14_Converting/Exporting-Clothing-in-Studio-Highlight.png" />|<img src="../img/04_14_Converting/Exporting-Accessory-Explorer.png" />|
 
-<Alert severity = 'success'>
 축하합니다, 의류 튜토리얼을 완료하셨습니다. 이 액세서리를 통해 다음을 할 수 있습니다:
 
 - 액세서리를 기존 모델에 드래그 앤 드롭하거나 [HumanoidDescription](https://create.roblox.com/docs/characters/appearance#humanoiddescription)을 사용하여 아바타 준비가 된 캐릭터에 장착할 수 있습니다.
 - 나중에 경험에서 사용할 수 있도록 액세서리를 [아바타 자산](https://create.roblox.com/docs/projects/assets#for-avatars)으로 저장할 수 있습니다.
 - 특정 계정 요구 사항을 충족하는 경우, [자산을 업로드](https://create.roblox.com/docs/art/marketplace/publishing-to-marketplace)하여 검토를 거쳐 마켓플레이스에서 판매를 시작할 수 있습니다.
-</Alert>
+
 
 ---
 ## 출처

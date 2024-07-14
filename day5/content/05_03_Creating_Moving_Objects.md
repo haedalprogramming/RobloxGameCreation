@@ -26,11 +26,12 @@
 - `PrismaticConstraint`를 사용하여 어셈블리를 단일 축으로 제한하고 3D 공간의 한 지점에 대해 일정한 선형 속도로 이동시키기
 - `ApplyImpulse` 메서드를 사용하여 초기 힘의 임펄스를 사용해 어셈블리를 이동시키고 시간이 지나면서 천천히 감속시키기
 
-<Alert severity="info">
-   기본 부품이나 서드파티 모델링 도구의 메시를 사용하여 자신의 어셈블리를 만들고, 자신의 자산을 사용하여 따라해 볼 수 있습니다. 스튜디오에서 메시를 사용하는 방법에 대한 정보는 [내보내기 요구 사항](https://create.roblox.com/docs/art/modeling/export-requirements)을 참조하세요.
-</Alert>
 
-<video controls src="../img/05_03_Creating_Moving_Objects/Intro.mp4" alt="샘플 경험의 주요 게임 플레이 영역의 측면 뷰, 강 레인에서 떠다니는 통나무와 수련 잎, 밝은 파란색 점프 패드가 포함되어 있음" width="90%"></video>
+   기본 부품이나 서드파티 모델링 도구의 메시를 사용하여 자신의 어셈블리를 만들고, 자신의 자산을 사용하여 따라해 볼 수 있습니다. 스튜디오에서 메시를 사용하는 방법에 대한 정보는 [내보내기 요구 사항](https://create.roblox.com/docs/art/modeling/export-requirements)을 참조하세요.
+
+<!-- 
+<video controls src="../img/05_03_Creating_Moving_Objects/Intro.mp4" alt="샘플 경험의 주요 게임 플레이 영역의 측면 뷰, 강 레인에서 떠다니는 통나무와 수련 잎, 밝은 파란색 점프 패드가 포함되어 있음" width="90%"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Intro.mp4)
 
 ## 선형 운동과 물리적 힘
 
@@ -43,19 +44,25 @@ Roblox Studio는 실제 물리적 행동을 실시간으로 모방하는 시뮬�
     <img src="../img/05_03_Creating_Moving_Objects/Movement-Axis.jpg" alt="어두운 배경 앞의 회색 블록. 움직임 축이 강조 표시되어 있으며, 화면 왼쪽을 향하고 있어 블록이 세계의 Y 축을 따라 움직일 것임을 나타냄." width="100%"/>
   </figure>
   <figure>
-    <video controls src="../img/05_03_Creating_Moving_Objects/Move-Block.mp4" alt="회색 블록이 화면의 오른쪽에서 왼쪽으로 움직이는 모습" width="100%"></video>
+    <!-- <video controls src="../img/05_03_Creating_Moving_Objects/Move-Block.mp4" alt="회색 블록이 화면의 오른쪽에서 왼쪽으로 움직이는 모습" width="100%"></video> -->
+    
   </figure>
 </GridContainer>
+
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Move-Block.mp4)
 
 선형 운동은 물체를 움직이기 위해 외부의 물리적 힘이 밀거나 당기지 않으면 존재할 수 없습니다. 뉴턴의 [운동의 제1법칙](https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion#First_law)에 따르면, 정지한 물체는 외부 힘이 작용하지 않는 한 계속 정지해 있고, 움직이는 물체는 계속해서 일정한 속도로 움직입니다. 예를 들어, 정지한 블록은 바람과 같은 물리적 힘이 밀어 움직이게 되지 않는 한 계속 정지해 있습니다.
 
 <GridContainer numColumns="2">
   <figure>
-    <video controls src="../img/05_03_Creating_Moving_Objects/Wind-Block.mp4" alt="바람이 회색 블록을 화면의 오른쪽에서 왼쪽으로 밀어 움직이는 모습" width="100%"></video>
+    <!-- <video controls src="../img/05_03_Creating_Moving_Objects/Wind-Block.mp4" alt="바람이 회색 블록을 화면의 오른쪽에서 왼쪽으로 밀어 움직이는 모습" width="100%"></video> -->
+    
   </figure>
   <figure>
   </figure>
 </GridContainer>
+
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Wind-Block.mp4)
 
 **힘**은 물체의 선형 속도를 변화시키는 물리적 밀기 또는 당기기의 방향과 크기를 측정한 것입니다. 속도의 변화는 **가속도**로 알려져 있습니다. 이 개념은 스튜디오에서 물체를 움직이는 데 특히 중요합니다. 더 많은 힘을 물체에 가할수록 더 빨리 가속됩니다.
 
@@ -66,9 +73,12 @@ Roblox Studio는 실제 물리적 행동을 실시간으로 모방하는 시뮬�
     <img src="../img/05_03_Creating_Moving_Objects/Plate-Friction.jpg" alt="어두운 회색 금속판 앞의 회색 블록과 바람이 블록을 움직이게 하는 그림" width="100%"/>
   </figure>
   <figure>
-    <video controls src="../img/05_03_Creating_Moving_Objects/Plate-Friction.mp4" alt="이전 이미지의 동일한 회색 블록이 금속판의 마찰 때문에 천천히 움직이는 모습" width="100%"></video>
+    <!-- <video controls src="../img/05_03_Creating_Moving_Objects/Plate-Friction.mp4" alt="이전 이미지의 동일한 회색 블록이 금속판의 마찰 때문에 천천히 움직이는 모습" width="100%"></video> -->
+    
   </figure>
 </GridContainer>
+
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Plate-Friction.mp4)
 
 **선형 속도**는 물체의 움직임을 측정한 것으로, 물체가 일정 시간 동안 축을 따라 얼마나 빠르게 위치를 변화시키는지를 나타냅니다. 스튜디오는 선형 속도를 물체가 초당 몇 스터드를 이동하는지에 따라 측정합니다. 스터드는 Roblox의 길이를 측정하는 주요 물리적 단위로, 각 스터드는 실제 세계에서 약 28cm에 해당합니다.
 
@@ -90,16 +100,15 @@ Roblox Studio는 실제 물리적 행동을 실시간으로 모방하는 시뮬�
 
 필요한 힘의 양은 환경 내의 반대 물리적 힘, 예를 들어 중력이나 마찰뿐만 아니라 물체 자체의 특성에 따라 다릅니다. 예를 들어, 동일한 모양의 두 물체가 같은 축을 따라 움직일 때, 더 많은 질량을 가진 물체는 동일한 선형 가속도를 달성하기 위해 더 많은 힘이 필요합니다.
 
-<GridContainer numColumns="2">
-  <figure>
-    <video controls src="../img/05_03_Creating_Moving_Objects/Small-Triangle.mp4" alt="작은 삼각형이 이동하는 모습" width="100%"></video>
-    <figcaption>작은 삼각형은 질량이 적기 때문에 동일한 가속도를 달성하기 위해 적은 힘이 필요합니다.</figcaption>
-  </figure>
-  <figure>
-    <video controls src="../img/05_03_Creating_Moving_Objects/Big-Triangle.mp4" alt="큰 삼각형이 이동하는 모습" width="100%"></video>
-    <figcaption>큰 삼각형은 질량이 많기 때문에 동일한 가속도를 달성하기 위해 더 많은 힘이 필요합니다.</figcaption>
-  </figure>
-</GridContainer>
+
+
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Small-Triangle.mp4)
+
+작은 삼각형은 질량이 적기 때문에 동일한 가속도를 달성하기 위해 적은 힘이 필요합니다.
+
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Big-Triangle.mp4)
+
+큰 삼각형은 질량이 많기 때문에 동일한 가속도를 달성하기 위해 더 많은 힘이 필요합니다.
 
 다음 하위 섹션에서는 다양한 모양과 크기의 어셈블리를 사용하여 전체 물체 또는 물체의 일부를 일정한 선형 속도로 이동시키는
 
@@ -109,7 +118,8 @@ Roblox Studio는 실제 물리적 행동을 실시간으로 모방하는 시뮬�
 
 `LinearVelocity` 객체는 [이동 제약](https://create.roblox.com/docs/physics/mechanical-constraints)의 일종으로, 전체 어셈블리에 힘을 가하여 일정한 선형 속도를 유지합니다. 어셈블리의 위치를 움직이는 동안 축에 고정하지 않기 때문에, 어셈블리는 3D 공간에서 다른 물체와 충돌할 때 자유롭게 회전할 수 있습니다. 이러한 유형의 움직임은 플레이어가 예측하기 어려운 놀라운 게임플레이 시나리오를 유도합니다.
 
-<video controls src="../img/05_03_Creating_Moving_Objects/LV-Intro.mp4" width="90%" alt="강을 따라 떠다니는 수련 잎이 서로 충돌하며 흐르는 모습"></video>
+<!-- <video controls src="../img/05_03_Creating_Moving_Objects/LV-Intro.mp4" width="90%" alt="강을 따라 떠다니는 수련 잎이 서로 충돌하며 흐르는 모습"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/LV-Intro.mp4)
 <figcaption>수련 잎이 서로 충돌하면서 방향이 바뀌지만 일정한 선형 속도로 계속 흐릅니다.</figcaption>
 
 어셈블리를 이동시키기 위해, `LinearVelocity` 제약은 다음을 알아야 합니다:
@@ -167,9 +177,9 @@ Roblox Studio는 실제 물리적 행동을 실시간으로 모방하는 시뮬�
       5. **LineDirection**을 `-1, 0, 0`으로 설정하여 연꽃잎이 세계의 음의 X 축을 따라 이동하도록 합니다. 이 속성을 `1, 0, 0`으로 설정하면 연꽃잎이 세계의 양의 X 축을 따라 이동합니다.
       6. **LineVelocity**를 `15`로 설정하여 연꽃잎이 초당 15 스터드 이동하도록 합니다.
 
-   <Alert severity="info">
+   
       **RelativeTo**를 **Attachment**로 설정하면 제약이 부착물의 방향에 상대적으로 연꽃잎을 이동시킵니다. 그러나 연꽃잎이 물체와 충돌하면 부착물도 회전하여 새로운 방향으로 연꽃잎을 이동시킵니다.
-   </Alert>
+   
 
    <img width="80%" img src="../img/05_03_Creating_Moving_Objects/LV-3.jpg" alt="연꽃잎과 세계의 음의 X 축을 가리키는 제약 시각적 보조 화살표의 클로즈업 뷰" />
 
@@ -182,19 +192,20 @@ Roblox Studio는 실제 물리적 행동을 실시간으로 모방하는 시뮬�
 
    3. **실행**을 선택합니다. 스튜디오는 3D 공간에서 아바타 없이 현재 카메라 위치에서 경험을 시뮬레이션합니다.
 
-   <video controls src="../img/05_03_Creating_Moving_Objects/LV-4.mp4" width="80%" alt="연꽃잎이 강을 따라 화면 왼쪽에서 오른쪽으로
-
- 흐르는 모습"></video>
+   <!-- <video controls src="../img/05_03_Creating_Moving_Objects/LV-4.mp4" width="80%" alt="연꽃잎이 강을 따라 화면 왼쪽에서 오른쪽으로 흐르는 모습"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/LV-4.mp4)
 
 ### PrismaticConstraint 제약 사용
 
 `PrismaticConstraint` 객체는 [기계적 제약](https://create.roblox.com/docs/physics/mechanical-constraints)의 일종으로, 두 부착물 사이에 강성 조인트를 생성하여 부모 어셈블리가 서로 **상대적으로** 단일 축을 따라 이동할 수 있게 합니다. 두 어셈블리의 위치를 단일 축에 고정함으로써, 어셈블리는 동일한 방향으로 함께 회전할 때만 회전할 수 있습니다.
 
-<video controls src="../img/05_03_Creating_Moving_Objects/Prismatic-Demo.mp4" width="90%" alt="PrismaticConstraint 데모 비디오"></video>
+<!-- <video controls src="../img/05_03_Creating_Moving_Objects/Prismatic-Demo.mp4" width="90%" alt="PrismaticConstraint 데모 비디오"></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Prismatic-Demo.mp4)
 
 이러한 유형의 움직임은 플레이어가 예측하기 쉬운 안정적인 게임플레이 시나리오를 유도합니다. 예를 들어, 샘플 [움직이는 물체](https://www.roblox.com/games/17560154079/UCT-Linear-Movement) 경험에서는 `PrismaticConstraint` 객체를 사용하여 플레이어가 거대한 강을 신중하게 건널 수 있는 통나무 플랫폼을 이동시킵니다.
 
-<video controls src="../img/05_03_Creating_Moving_Objects/PC-Intro.mp4" width="90%" alt="강을 따라 떠다니는 통나무의 측면 뷰. 일부 행은 화면의 상단에서 하단으로 흐르고, 하나의 행은 화면의 하단에서 상단으로 흐릅니다."></video>
+<!-- <video controls src="../img/05_03_Creating_Moving_Objects/PC-Intro.mp4" width="90%" alt="강을 따라 떠다니는 통나무의 측면 뷰. 일부 행은 화면의 상단에서 하단으로 흐르고, 하나의 행은 화면의 하단에서 상단으로 흐릅니다."></video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/PC-Intro.mp4)
 
 `PrismaticConstraint.ActuatorType`을 **Motor**로 설정하면, 이 제약은 목표 선형 속도에 도달하고 유지하기 위해 두 부착물에 힘을 가합니다. 부착물 중 하나의 부모 어셈블리를 고정하면, 힘은 고정된 어셈블리는 정지 상태로 유지되는 반면 고정되지 않은 어셈블리를 일정한 선형 속도로 계속 이동시킵니다.
 
@@ -273,7 +284,8 @@ Roblox Studio는 실제 물리적 행동을 실시간으로 모방하는 시뮬�
 
    1. **실행**을 선택합니다. 스튜디오는 3D 공간에서 아바타 없이 현재 카메라 위치에서 경험을 시뮬레이션합니다.
 
-   <video controls src="../img/05_03_Creating_Moving_Objects/PC-4.mp4" width="90%" alt="통나무가 강을 따라 화면 왼쪽에서 오른쪽으로 흐르는 모습"></video>
+   <!-- <video controls src="../img/05_03_Creating_Moving_Objects/PC-4.mp4" width="90%" alt="통나무가 강을 따라 화면 왼쪽에서 오른쪽으로 흐르는 모습"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/PC-4.mp4)
 
 ## 초기 선형 힘 적용
 
@@ -317,7 +329,8 @@ volume.Touched:Connect(onTouched)
 
 ```
 
-   <video controls src="../img/05_03_Creating_Moving_Objects/Impulse-3.mp4" width="90%" alt="벌 캐릭터가 점프 패드로 뛰어가고, 점프 패드에 닿으면 공중으로 발사되는 모습"></video>
+   <!-- <video controls src="../img/05_03_Creating_Moving_Objects/Impulse-3.mp4" width="90%" alt="벌 캐릭터가 점프 패드로 뛰어가고, 점프 패드에 닿으면 공중으로 발사되는 모습"></video> -->
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/creating-moving-objects/Impulse-3.mp4)
 
 ---
 ## 출처

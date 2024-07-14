@@ -17,9 +17,10 @@
 
 [스크립트 입문](https://create.roblox.com/docs/tutorials/scripting/basic-scripting/intro-to-scripting)에서, 경험 속에서 시간이 지남에 따라 루프를 통해 변경을 가하는 방법을 배웠습니다. 사용자 행동에 따라 변경을 가하고 싶다면 어떻게 해야 할까요? 이번 튜토리얼에서는 사용자가 밟았을 때 죽는 치명적인 용암 바닥을 만드는 방법을 배웁니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
   <source src="../img/02_02_Deadly_Lava/lavaFloorGameplay.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/deadly-lava/lavaFloorGameplay.mp4)
 
 ## 설정하기
 

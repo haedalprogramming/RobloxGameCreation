@@ -25,9 +25,9 @@
 
 기본 텍스처링 과정을 설명하기 위해 이 튜토리얼에서는 기본 텍스처 페인팅 설정을 다루고, 캐릭터의 눈 부분에 완전히 불투명한 텍스처를 적용하고 얼굴에 부분적으로 불투명한 세부 사항을 추가합니다. 이러한 기술을 캐릭터 지오메트리의 다른 부분에도 적용할 수 있습니다.
 
-<Alert severity = 'warning'>
+
 캐릭터 모델의 신체 일부를 텍스처링할 때 캐릭터 모델이 민감한 부위에 겸손한 레이어를 포함하고 있는지 확인하십시오. 자세한 내용은 [커뮤니티 기준](https://create.roblox.com/docs/art/marketplace/marketplace-policy)을 참조하십시오.
-</Alert>
+
 
 ## 텍스처 해상도 설정
 
@@ -54,7 +54,8 @@ Roblox Studio는 알베도 텍스처 맵에 대해 **1024 x 1024** 해상도를 
 4. 텍스처 크기를 설정합니다:
    1. 세부 텍스처 작업을 위한 더 높은 해상도로 **2048** 또는 **4096**을 사용합니다.
    2. 기본 Roblox 지원 해상도로 **1024**를 사용합니다.
-      <video controls src="../img/05_07_Texturing_Setup/Texturing_09.mp4" width="100%"></video>
+      <!-- <video controls src="../img/05_07_Texturing_Setup/Texturing_09.mp4" width="100%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Texturing_09.mp4)
 
 ---
 ## 출처

@@ -37,17 +37,18 @@
    2. 작업 공간에서 **이동**, **크기 조정**, **회전** 도구를 사용하여 엄격한 액세서리의 위치를 조정합니다.
    3. 실수로 다른 것을 선택한 경우, AFT 패널로 다시 클릭하여 액세서리를 다시 선택하고 변환 도구를 사용하여 조정을 계속합니다.
 
-      <video controls src="../img/03_06_Using_the_Accessory_Fitting_Tool/Fitting-Mask.mp4" width="100%"></video>
+      <!-- <video controls src="../img/03_06_Using_the_Accessory_Fitting_Tool/Fitting-Mask.mp4" width="100%"></video> -->
+      [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/accessories/creating-rigid/Fitting-Mask.mp4)
 
 6. 자산을 미리 보고 맞춘 후, **Generate MeshPart Accessory**를 선택하여 Accessory를 생성하고 탐색기에 추가합니다.
 
-<Alert severity = 'success'>
+
 성공적으로 맞추고 변환한 후, 3D 모델이 `Accessory`로 프로젝트에 나타납니다. 이 `Accessory`를 사용하여 다음 작업을 수행할 수 있습니다:
 
 - 액세서리를 [마켓플레이스에 업로드](https://create.roblox.com/docs/art/accessories/creating-rigid/publishing)합니다.
 - [HumanoidDescription](https://create.roblox.com/docs/characters/appearance#humanoiddescription)을 사용하여 현재 경험에서 캐릭터 모델에 장착하거나, 액세서리를 적절한 캐릭터 `Model` 객체 아래로 드래그 앤 드롭하여 사용합니다.
 - [Toolbox](https://create.roblox.com/docs/projects/assets/toolbox)에 액세서리를 저장하여 모든 경험에서 공유하거나 사용할 수 있습니다.
-</Alert>
+
 
 ---
 ## 출처

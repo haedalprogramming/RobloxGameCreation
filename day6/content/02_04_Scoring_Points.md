@@ -22,9 +22,10 @@
 
 이전 튜토리얼에서는 [사라지는 플랫폼](./02_03_Fading_Trap.md)과 [치명적인 용암](./02_02_Deadly_Lava.md)을 포함한 다양한 경험 기능을 만들었습니다. 이번 튜토리얼에서는 이러한 기능을 통합하여 사용자가 누가 가장 오래 살아남는지 경쟁할 수 있는 플레이 가능한 경험을 만듭니다. 사용자가 살아남는 매 순간마다 점수가 추가됩니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
 	<source src="../img/02_04_Scoring_Points/finishedScoringPointsSolo.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/scoring-points/finishedScoringPointsSolo.mp4)
 
 ## 설정하기
 
@@ -74,7 +75,7 @@ Roblox에서 **서비스**는 다양한 유용한 기능을 수행하는 객체�
 
 ## 통계 폴더 만들기
 
-리더보드에 사용자의 포인트를 표시하려면 사용자의 `Player` 객체에 `"leaderstats"`라는 새 `Folder`를 만들고 그 안에 포인트를 넣기만 하면 됩니다. 새 객체는 `Datatype.Instance.new()` 함수를 통해 스크립트 내에서 만들 수 있습니다.
+리더보드에 사용자의 포인트를 표시하려면 사용자의 `Player` 객체에 `leaderstats`라는 새 `Folder`를 만들고 그 안에 포인트를 넣기만 하면 됩니다. 새 객체는 `Datatype.Instance.new()` 함수를 통해 스크립트 내에서 만들 수 있습니다.
 
 1. `Instance.new("Folder")`를 사용하여 새 `Folder` 객체를 만들고 결과를 `leaderstats`라는 새 변수에 저장합니다.
 
@@ -99,11 +100,11 @@ Roblox에서 **서비스**는 다양한 유용한 기능을 수행하는 객체�
    Players.PlayerAdded:Connect(onPlayerAdded)
    ```
 
-<Alert severity="warning">
 
-폴더의 이름을 정확히 **"leaderstats"**로 설정해야 작동합니다!
 
-</Alert>
+폴더의 이름을 정확히 "leaderstats"로 설정해야 작동합니다!
+
+
 
 ## 포인트 만들기
 
@@ -193,9 +194,10 @@ end
 
 경험을 테스트하면 리더보드에 플레이어의 점수가 매초 1씩 증가하는 것을 볼 수 있습니다.
 
-<video controls loop muted>
+<!-- <video controls loop muted>
 	<source src="../img/02_04_Scoring_Points/leaderboardCounting.mp4" />
-</video>
+</video> -->
+[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/tutorials/scoring-points/leaderboardCounting.mp4)
 
 ## 캐릭터 듣기
 
