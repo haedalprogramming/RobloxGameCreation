@@ -35,8 +35,8 @@
 1. Layout 탭에서 시작하여, Outliner에서 **Head_OuterCage**와 **Head_Geo** 객체를 제외한 모든 항목을 숨깁니다.
 
    <img src="../img/05_11_Caging/Caging-Outer-Cage-Objects.png" />
-   <!-- <video controls src="../img/05_11_Caging/Caging_01.mp4" width="100%"></video> -->
-   <br/>[![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Caging_01.mp4)
+   
+   [![](../img/youtube.png)](https://prod.docsiteassets.roblox.com/assets/art/avatar/basic-creation/Caging_01.mp4)
    
 
 2. **Head_OuterCage**를 선택한 상태에서 **Object Properties** > **Viewport Display**로 이동하여 **Display As**를 **Wire**로 설정합니다. 완료 후 이 설정을 **Solid**로 다시 전환합니다.
